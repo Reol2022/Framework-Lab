@@ -1,0 +1,57 @@
+# Operating systems
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node.js
+node_modules/
+dist/
+build/
+.nuxt/
+.next/
+coverage/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+
+# Test and browser artifacts
+test-results/
+playwright-report/
+blob-report/
+screenshots/
+
+# Environment files (allow a public template)
+.env
+.env.*
+!.env.example
+
+# Secrets and local configuration
+*.pem
+*.key
+*.p12
+secrets/
+local-config/
+
+# Private data
+private/
+private-data/
+production-data/

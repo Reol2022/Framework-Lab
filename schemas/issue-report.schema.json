@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://framework-lab.example/schemas/issue-report.schema.json",
+  "title": "Issue Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "framework", "framework_commit", "category", "severity", "title", "task_id", "environment", "steps_to_reproduce", "expected", "actual", "evidence", "workaround", "knowledge_cards_affected", "regression_tests", "upstream_reference", "status"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0.0" },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "framework": { "type": "string" },
+    "framework_commit": { "type": ["string", "null"] },
+    "category": { "enum": ["framework-bug", "documentation-gap", "documentation-error", "api-design", "developer-experience", "compatibility", "performance", "knowledge-error", "prompt-error", "test-gap", "example-error"] },
+    "severity": { "enum": ["low", "medium", "high", "critical"] },
+    "title": { "type": "string", "minLength": 1 },
+    "task_id": { "type": ["string", "null"] },
+    "environment": { "type": "object", "additionalProperties": true },
+    "steps_to_reproduce": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "expected": { "type": "string" },
+    "actual": { "type": "string" },
+    "evidence": { "type": "array", "items": { "type": "string" } },
+    "workaround": { "type": ["string", "null"] },
+    "knowledge_cards_affected": { "type": "array", "items": { "type": "string" } },
+    "regression_tests": { "type": "array", "items": { "type": "string" } },
+    "upstream_reference": { "type": ["string", "null"] },
+    "status": { "enum": ["example", "open", "confirmed", "resolved", "closed", "needs-review"] }
+  }
+}

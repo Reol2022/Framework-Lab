@@ -1,0 +1,28 @@
+schema_version: 1.0.0
+id: baseline-build-example
+title: 抽象框架 L0 基线任务示例
+framework: example-framework
+framework_commit: null
+level: L0
+status: draft
+objective: 在锁定 commit 后记录并执行仓库声明的构建流程。
+non_goals:
+  - 不总结框架 API 或内部机制
+prerequisites:
+  - 已锁定框架 commit
+context:
+  knowledge_cards: []
+  source_files: []
+  documents: []
+  notes: TODO：基线阶段确认后填写
+allowed_paths:
+  - frameworks/example-framework/playgrounds/
+forbidden_paths:
+  - private/
+acceptance_criteria:
+  - 实际执行构建命令并如实记录退出状态与关键输出
+commands: []
+expected_result: 仓库声明的构建命令成功完成。
+actual_result: null
+failure_category: null
+knowledge_updates: []

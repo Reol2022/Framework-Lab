@@ -1,0 +1,22 @@
+schema_version: 1.0.0
+framework_id: ncom
+framework_name: New Component
+repository_url: https://gitee.com/weblabsw/ncom
+repository_provider: gitee
+branch: null
+commit: null
+version: null
+captured_at: null
+environment:
+  os: null
+  runtime: null
+  package_manager: null
+  browser: null
+commands:
+  install: null
+  build: null
+  check: null
+  example: null
+  test: null
+documentation_sources: []
+status: pending-baseline

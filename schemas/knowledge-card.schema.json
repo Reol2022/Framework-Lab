@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://framework-lab.example/schemas/knowledge-card.schema.json",
+  "title": "Knowledge Card",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "title", "framework", "framework_commit", "status", "summary", "when_to_use", "rules", "anti_patterns", "examples", "evidence", "verification", "confidence", "created_at", "last_verified_at", "tags"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0.0" },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "title": { "type": "string", "minLength": 1 },
+    "framework": { "type": "string", "minLength": 1 },
+    "framework_commit": { "type": ["string", "null"] },
+    "status": { "enum": ["draft", "verified", "conflicted", "deprecated", "needs-review"] },
+    "summary": { "type": "string" },
+    "when_to_use": { "type": "array", "items": { "type": "string" } },
+    "rules": { "type": "array", "items": { "type": "string" } },
+    "anti_patterns": { "type": "array", "items": { "type": "string" } },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["description", "content", "status"],
+        "properties": {
+          "description": { "type": "string" },
+          "content": { "type": ["string", "null"] },
+          "status": { "enum": ["pending", "verified", "rejected"] }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "reference", "location", "claim", "status"],
+        "properties": {
+          "type": { "enum": ["source", "documentation", "example", "experiment", "issue", "pull-request"] },
+          "reference": { "type": "string" },
+          "location": { "type": ["string", "null"] },
+          "claim": { "type": "string" },
+          "status": { "enum": ["candidate", "supports", "contradicts", "unavailable"] }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "commands", "expected", "actual", "status"],
+      "properties": {
+        "method": { "type": ["string", "null"] },
+        "commands": { "type": "array", "items": { "type": "string" } },
+        "expected": { "type": ["string", "null"] },
+        "actual": { "type": ["string", "null"] },
+        "status": { "enum": ["not-run", "passed", "failed", "blocked"] }
+      }
+    },
+    "confidence": { "enum": ["low", "medium", "high"] },
+    "created_at": { "type": ["string", "null"], "format": "date-time" },
+    "last_verified_at": { "type": ["string", "null"], "format": "date-time" },
+    "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+  }
+}

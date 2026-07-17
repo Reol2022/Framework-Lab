@@ -1,0 +1,20 @@
+schema_version: 1.0.0
+id: example-build-failure
+framework: example-framework
+framework_commit: null
+category: example-error
+severity: low
+title: EXAMPLE：文档命令与示例环境不一致
+task_id: baseline-build-example
+environment:
+  status: not-verified
+steps_to_reproduce:
+  - EXAMPLE：在隔离环境中执行文档声明的命令
+expected: EXAMPLE：命令完成并生成声明的产物。
+actual: EXAMPLE：此处为虚构结构示例，未执行命令。
+evidence: []
+workaround: null
+knowledge_cards_affected: []
+regression_tests: []
+upstream_reference: null
+status: example

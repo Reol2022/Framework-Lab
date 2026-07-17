@@ -1,0 +1,170 @@
+schema_version: 1.0.0
+framework: ncom
+framework_commit: null
+status: not-started
+domains:
+  - id: repository-and-build
+    title: 仓库与构建
+    status: not-started
+    dependencies: []
+    source_scope: []
+    document_scope: []
+    official_examples: []
+    key_questions: [如何安装、构建、检查并启动官方示例？]
+    experiments: []
+    acceptance_tasks: []
+    unknowns: [运行时、包管理器、命令和产物均待基线确认。]
+  - id: core-abstractions
+    title: 核心抽象
+    status: not-started
+    dependencies: [repository-and-build]
+    source_scope: []
+    document_scope: []
+    official_examples: []
+    key_questions: [公开材料定义了哪些核心抽象？]
+    experiments: []
+    acceptance_tasks: []
+    unknowns: [尚未调查。]
+  - id: component-lifecycle
+    title: 组件生命周期
+    status: not-started
+    dependencies: [core-abstractions]
+    source_scope: []
+    document_scope: []
+    official_examples: []
+    key_questions: [是否存在生命周期概念及其可观察顺序？]
+    experiments: []
+    acceptance_tasks: []
+    unknowns: [尚未调查。]
+  - id: properties-and-state
+    title: 属性与状态
+    status: not-started
+    dependencies: [core-abstractions]
+    source_scope: []
+    document_scope: []
+    official_examples: []
+    key_questions: [数据输入和状态变化如何表达与观察？]
+    experiments: []
+    acceptance_tasks: []
+    unknowns: [尚未调查。]
+  - id: events
+    title: 事件
+    status: not-started
+    dependencies: [core-abstractions]
+    source_scope: []
+    document_scope: []
+    official_examples: []
+    key_questions: [事件模型、传播边界和错误行为是什么？]
+    experiments: []
+    acceptance_tasks: []
+    unknowns: [尚未调查。]
+  - id: styles
+    title: 样式
+    status: not-started
+    dependencies: [core-abstractions]
+    source_scope: []
+    document_scope: []
+    official_examples: []
+    key_questions: [样式作用域、覆盖和构建处理方式是什么？]
+    experiments: []
+    acceptance_tasks: []
+    unknowns: [尚未调查。]
+  - id: composition-and-communication
+    title: 组合与通信
+    status: not-started
+    dependencies: [properties-and-state, events]
+    source_scope: []
+    document_scope: []
+    official_examples: []
+    key_questions: [模块如何组合和通信？]
+    experiments: []
+    acceptance_tasks: []
+    unknowns: [尚未调查。]
+  - id: forms
+    title: 表单
+    status: not-started
+    dependencies: [properties-and-state, events]
+    source_scope: []
+    document_scope: []
+    official_examples: []
+    key_questions: [表单输入、验证和提交如何处理？]
+    experiments: []
+    acceptance_tasks: []
+    unknowns: [该学习域是否适用尚待确认。]
+  - id: routing-or-extension
+    title: 路由或扩展机制
+    status: not-started
+    dependencies: [composition-and-communication]
+    source_scope: []
+    document_scope: []
+    official_examples: []
+    key_questions: [是否提供路由或通用扩展机制？]
+    experiments: []
+    acceptance_tasks: []
+    unknowns: [该学习域是否适用尚待确认。]
+  - id: internationalization
+    title: 国际化
+    status: not-started
+    dependencies: [core-abstractions]
+    source_scope: []
+    document_scope: []
+    official_examples: []
+    key_questions: [国际化由框架、扩展还是应用层负责？]
+    experiments: []
+    acceptance_tasks: []
+    unknowns: [该学习域是否适用尚待确认。]
+  - id: packaging-and-release
+    title: 打包与发布
+    status: not-started
+    dependencies: [repository-and-build]
+    source_scope: []
+    document_scope: []
+    official_examples: []
+    key_questions: [产物、版本和发布流程如何定义？]
+    experiments: []
+    acceptance_tasks: []
+    unknowns: [尚未调查。]
+  - id: debugging-and-errors
+    title: 调试与错误
+    status: not-started
+    dependencies: [repository-and-build]
+    source_scope: []
+    document_scope: []
+    official_examples: []
+    key_questions: [构建和运行错误如何定位与呈现？]
+    experiments: []
+    acceptance_tasks: []
+    unknowns: [尚未调查。]
+  - id: compatibility
+    title: 兼容性
+    status: not-started
+    dependencies: [repository-and-build, packaging-and-release]
+    source_scope: []
+    document_scope: []
+    official_examples: []
+    key_questions: [支持哪些运行时、浏览器和依赖版本？]
+    experiments: []
+    acceptance_tasks: []
+    unknowns: [尚未调查。]
+  - id: performance
+    title: 性能
+    status: not-started
+    dependencies: [repository-and-build, core-abstractions]
+    source_scope: []
+    document_scope: []
+    official_examples: []
+    key_questions: [哪些指标和场景值得建立基线？]
+    experiments: []
+    acceptance_tasks: []
+    unknowns: [尚无环境、数据规模或基线。]
+  - id: framework-integration
+    title: 工程集成
+    status: not-started
+    dependencies: [packaging-and-release, compatibility]
+    source_scope: []
+    document_scope: []
+    official_examples: []
+    key_questions: [如何与真实工程工具链集成并独立回退？]
+    experiments: []
+    acceptance_tasks: []
+    unknowns: [尚未调查。]

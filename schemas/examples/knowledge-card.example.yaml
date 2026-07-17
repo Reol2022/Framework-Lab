@@ -1,0 +1,27 @@
+schema_version: 1.0.0
+id: abstract-concept-example
+title: 抽象框架概念示例
+framework: example-framework
+framework_commit: null
+status: draft
+summary: 仅展示知识卡结构，不表示任何框架事实。
+when_to_use:
+  - TODO：在证据确认后描述适用场景
+rules: []
+anti_patterns: []
+examples:
+  - description: 待验证的最小示例
+    content: null
+    status: pending
+evidence: []
+verification:
+  method: null
+  commands: []
+  expected: null
+  actual: null
+  status: not-run
+confidence: low
+created_at: null
+last_verified_at: null
+tags:
+  - example

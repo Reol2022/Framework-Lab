@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://framework-lab.example/schemas/framework-manifest.schema.json",
+  "title": "Framework Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "framework_id", "framework_name", "repository_url", "repository_provider", "branch", "commit", "version", "captured_at", "environment", "commands", "documentation_sources", "status"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0.0" },
+    "framework_id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "framework_name": { "type": "string", "minLength": 1 },
+    "repository_url": { "type": "string", "format": "uri" },
+    "repository_provider": { "type": "string", "minLength": 1 },
+    "branch": { "type": ["string", "null"] },
+    "commit": { "type": ["string", "null"], "description": "null 明确表示尚未锁定 commit。" },
+    "version": { "type": ["string", "null"], "description": "null 明确表示尚未锁定版本。" },
+    "captured_at": { "type": ["string", "null"], "format": "date-time" },
+    "environment": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "os": { "type": ["string", "null"] },
+        "runtime": { "type": ["string", "null"] },
+        "package_manager": { "type": ["string", "null"] },
+        "browser": { "type": ["string", "null"] }
+      }
+    },
+    "commands": {
+      "type": "object",
+      "additionalProperties": { "type": ["string", "null"] },
+      "properties": {
+        "install": { "type": ["string", "null"] },
+        "build": { "type": ["string", "null"] },
+        "check": { "type": ["string", "null"] },
+        "example": { "type": ["string", "null"] },
+        "test": { "type": ["string", "null"] }
+      }
+    },
+    "documentation_sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "url", "status"],
+        "properties": {
+          "title": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "status": { "enum": ["pending", "captured", "unavailable"] }
+        }
+      }
+    },
+    "status": { "enum": ["pending-baseline", "captured", "verified", "needs-review"] }
+  }
+}

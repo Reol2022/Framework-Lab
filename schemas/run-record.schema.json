@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://framework-lab.example/schemas/run-record.schema.json",
+  "title": "Run Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "run_id", "task_id", "framework_commit", "model", "started_at", "finished_at", "context_card_count", "extra_source_files_read", "first_attempt_passed", "retry_count", "build_error_count", "runtime_error_count", "test_result", "human_review_findings", "knowledge_cards_created", "knowledge_cards_updated", "framework_issues_found", "notes"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0.0" },
+    "run_id": { "type": "string", "minLength": 1 },
+    "task_id": { "type": "string", "minLength": 1 },
+    "framework_commit": { "type": ["string", "null"] },
+    "model": { "type": ["string", "null"] },
+    "started_at": { "type": ["string", "null"], "format": "date-time" },
+    "finished_at": { "type": ["string", "null"], "format": "date-time" },
+    "context_card_count": { "type": ["integer", "null"], "minimum": 0 },
+    "extra_source_files_read": { "type": ["integer", "null"], "minimum": 0 },
+    "first_attempt_passed": { "type": ["boolean", "null"] },
+    "retry_count": { "type": ["integer", "null"], "minimum": 0 },
+    "build_error_count": { "type": ["integer", "null"], "minimum": 0 },
+    "runtime_error_count": { "type": ["integer", "null"], "minimum": 0 },
+    "test_result": { "type": ["string", "null"], "enum": [null, "not-run", "passed", "failed", "blocked"] },
+    "human_review_findings": { "type": ["array", "null"], "items": { "type": "string" } },
+    "knowledge_cards_created": { "type": ["integer", "null"], "minimum": 0 },
+    "knowledge_cards_updated": { "type": ["integer", "null"], "minimum": 0 },
+    "framework_issues_found": { "type": ["integer", "null"], "minimum": 0 },
+    "notes": { "type": ["string", "null"] }
+  }
+}
