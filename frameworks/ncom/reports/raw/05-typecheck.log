@@ -1,0 +1,10 @@
+working_directory: E:\我的项目\framework-lab-workflow\.framework-sources\ncom
+command: not-provided
+started_at: 2026-07-17T16:52:18+08:00
+--- stdout ---
+No typecheck script was declared in the root or workspace package manifests inspected for this baseline.
+--- stderr ---
+none
+ended_at: 2026-07-17T16:52:18+08:00
+exit_code: not-applicable
+final_status: Not Provided

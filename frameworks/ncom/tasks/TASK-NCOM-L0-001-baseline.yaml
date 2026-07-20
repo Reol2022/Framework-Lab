@@ -1,0 +1,64 @@
+schema_version: 1.0.0
+id: task-ncom-l0-001-baseline
+title: NCom repository and build baseline
+framework: ncom
+framework_commit: 4c1fdf745afe1d08c1c00c3de3b11feb9d5b71ac
+level: L0
+status: blocked
+objective: 在只读上游副本中锁定仓库与环境，并复现仓库声明的安装、静态检查、构建和示例启动入口。
+non_goals:
+  - 不总结 NCom API、组件能力或内部机制。
+  - 不修改上游源码、测试或锁文件。
+  - 不验证发布流程，不发布 package。
+prerequisites:
+  - Windows PowerShell 可执行 Git、Node.js 和 Corepack。
+  - Node.js 满足 package.json 的 >=20.16.0 约束。
+  - 通过 FRAMEWORK_LAB_PNPM 显式绑定仓库本地 pnpm 10.26.1。
+  - pnpm-lock.yaml 与全部 workspace package.json 保持一致。
+context:
+  knowledge_cards: []
+  source_files:
+    - .framework-sources/ncom/package.json
+    - .framework-sources/ncom/pnpm-lock.yaml
+    - .framework-sources/ncom/pnpm-workspace.yaml
+    - .framework-sources/ncom/packages/all/package.json
+    - .framework-sources/ncom/example/package.json
+    - .framework-sources/ncom/example/vite.config.ts
+  documents:
+    - .framework-sources/ncom/README.md
+    - .framework-sources/ncom/doc/develop.md
+  notes: Run 001 位于 reports/raw/，Run 002 与 Run 003 分别位于 run-002/ 和 run-003/；上游副本只读。
+allowed_paths:
+  - .framework-sources/ncom/** (read and execute only)
+  - frameworks/ncom/**
+  - schemas/framework-manifest.schema.json
+forbidden_paths:
+  - .framework-sources/ncom/** (modify, format, or commit)
+  - GaitLogic/**
+  - private/**
+acceptance_criteria:
+  - 锁定 remote、branch、完整 commit、tag 和根 package 版本。
+  - 记录 Git、Node、npm、pnpm、Corepack、Windows 和 PowerShell 的实际状态。
+  - 使用冻结锁文件安装入口，不更新依赖或锁文件。
+  - 对仓库提供的 lint、build 和 example 入口记录命令、时间、退出码及原始输出。
+  - 将未提供的 typecheck 和 test 入口标记为 Not Provided。
+  - 上游工作树在执行前后均保持干净。
+commands:
+  - git -C .framework-sources/ncom status --short --branch
+  - git --version
+  - node --version
+  - npm --version
+  - pnpm --version
+  - where.exe pnpm
+  - corepack --version
+  - $env:FRAMEWORK_LAB_PNPM
+  - "& $env:FRAMEWORK_LAB_PNPM --version"
+  - "& $env:FRAMEWORK_LAB_PNPM install --frozen-lockfile"
+  - "& $env:FRAMEWORK_LAB_PNPM lint:eslint"
+  - "& $env:FRAMEWORK_LAB_PNPM build"
+  - "& $env:FRAMEWORK_LAB_PNPM dev:example"
+expected_result: 声明版本的 pnpm 可用，冻结安装、lint、build 和限时示例冒烟均完成，并保留原始日志。
+actual_result: Run 001 因 Corepack 无法取得 pnpm 而阻塞；Run 002 因 PATH 命中 pnpm 11.9.0 而停止。Run 003 通过 FRAMEWORK_LAB_PNPM 使用精确 pnpm 10.26.1，预检通过，但 frozen install 以 ERR_PNPM_OUTDATED_LOCKFILE 退出 1，确认 packages/all 清单与锁文件不一致。lint、build 和 example 未运行；typecheck 与 test 为 Not Provided；上游工作树与 lockfile 保持不变。
+failure_category: developer-experience
+knowledge_updates:
+  - 不新增知识卡；锁文件一致性问题修复后重跑本 L0 任务。

@@ -1,151 +1,176 @@
 schema_version: 1.0.0
 framework: ncom
-framework_commit: null
+framework_commit: 4c1fdf745afe1d08c1c00c3de3b11feb9d5b71ac
 status: not-started
 domains:
   - id: repository-and-build
     title: 仓库与构建
-    status: not-started
+    status: blocked
     dependencies: []
-    source_scope: []
-    document_scope: []
-    official_examples: []
-    key_questions: [如何安装、构建、检查并启动官方示例？]
-    experiments: []
-    acceptance_tasks: []
-    unknowns: [运行时、包管理器、命令和产物均待基线确认。]
+    source_scope:
+      - package.json
+      - pnpm-lock.yaml
+      - pnpm-workspace.yaml
+      - .npmrc
+      - packages/*/package.json
+      - packages/all/build/
+      - example/package.json
+      - example/vite.config.ts
+    document_scope:
+      - README.md
+      - doc/develop.md
+    official_examples:
+      - example/
+    key_questions:
+      - 在声明工具链下，安装、静态检查、构建和示例入口能否复现？
+      - 根 build script 与 packages/all/package.json 的实际 scripts 是否一致？
+    experiments:
+      - TASK-NCOM-L0-001-baseline：冻结安装、lint、build 与限时示例启动
+      - Run 002：commit 与工具链版本预检
+      - Run 003：显式固定 pnpm 10.26.1 与 frozen install
+    acceptance_tasks:
+      - task-ncom-l0-001-baseline
+    unknowns:
+      - packages/all 清单与 pnpm-lock.yaml 不一致，冻结安装无法完成。
+      - 安装修复后的 lint、build 和 example 结果尚未验证。
+      - typecheck 与 test 入口未提供。
   - id: core-abstractions
     title: 核心抽象
     status: not-started
     dependencies: [repository-and-build]
-    source_scope: []
-    document_scope: []
-    official_examples: []
-    key_questions: [公开材料定义了哪些核心抽象？]
+    source_scope: [packages/core/]
+    document_scope: [doc/api/core/, doc/develop.md]
+    official_examples: [example/tuturial/]
+    key_questions: [公开材料中的核心抽象分别由哪些路径和实验验证？]
     experiments: []
     acceptance_tasks: []
-    unknowns: [尚未调查。]
+    unknowns: [尚未调查，不预填机制答案。]
   - id: component-lifecycle
     title: 组件生命周期
     status: not-started
     dependencies: [core-abstractions]
-    source_scope: []
-    document_scope: []
-    official_examples: []
-    key_questions: [是否存在生命周期概念及其可观察顺序？]
+    source_scope: [packages/core/src/component.ts]
+    document_scope: [doc/api/core/component.md, doc/develop.md]
+    official_examples: [example/tuturial/]
+    key_questions: [生命周期概念及可观察顺序如何由源码与最小实验交叉验证？]
     experiments: []
     acceptance_tasks: []
-    unknowns: [尚未调查。]
+    unknowns: [尚未验证。]
   - id: properties-and-state
     title: 属性与状态
     status: not-started
     dependencies: [core-abstractions]
-    source_scope: []
-    document_scope: []
-    official_examples: []
+    source_scope: [packages/core/src/, packages/components/src/]
+    document_scope: [doc/api/core/, doc/api/components/]
+    official_examples: [example/component/, example/tuturial/]
     key_questions: [数据输入和状态变化如何表达与观察？]
     experiments: []
     acceptance_tasks: []
-    unknowns: [尚未调查。]
+    unknowns: [尚未验证。]
   - id: events
     title: 事件
     status: not-started
     dependencies: [core-abstractions]
-    source_scope: []
-    document_scope: []
-    official_examples: []
+    source_scope: [packages/core/src/eventmanager.ts, packages/components/src/base/events.ts]
+    document_scope: [doc/api/core/eventmanager.md, doc/develop.md]
+    official_examples: [example/tuturial/event/]
     key_questions: [事件模型、传播边界和错误行为是什么？]
     experiments: []
     acceptance_tasks: []
-    unknowns: [尚未调查。]
+    unknowns: [尚未验证。]
   - id: styles
     title: 样式
     status: not-started
     dependencies: [core-abstractions]
-    source_scope: []
-    document_scope: []
-    official_examples: []
+    source_scope: [packages/theme/, packages/components/src/**/*.scss]
+    document_scope: [packages/theme/src/README.md, doc/develop.md]
+    official_examples: [example/css/]
     key_questions: [样式作用域、覆盖和构建处理方式是什么？]
     experiments: []
     acceptance_tasks: []
-    unknowns: [尚未调查。]
+    unknowns: [尚未验证。]
   - id: composition-and-communication
     title: 组合与通信
     status: not-started
     dependencies: [properties-and-state, events]
-    source_scope: []
-    document_scope: []
-    official_examples: []
+    source_scope: [packages/core/, packages/components/]
+    document_scope: [doc/api/core/, doc/api/components/]
+    official_examples: [example/component/]
     key_questions: [模块如何组合和通信？]
     experiments: []
     acceptance_tasks: []
-    unknowns: [尚未调查。]
+    unknowns: [尚未验证。]
   - id: forms
     title: 表单
     status: not-started
     dependencies: [properties-and-state, events]
-    source_scope: []
-    document_scope: []
-    official_examples: []
+    source_scope: [packages/components/src/form/]
+    document_scope: [doc/api/components/form.md, doc/api/components/form-item.md]
+    official_examples: [example/component/form/]
     key_questions: [表单输入、验证和提交如何处理？]
     experiments: []
     acceptance_tasks: []
-    unknowns: [该学习域是否适用尚待确认。]
+    unknowns: [该学习域的完整边界尚未验证。]
   - id: routing-or-extension
     title: 路由或扩展机制
     status: not-started
     dependencies: [composition-and-communication]
-    source_scope: []
-    document_scope: []
-    official_examples: []
-    key_questions: [是否提供路由或通用扩展机制？]
+    source_scope: [packages/extensions/, packages/components/src/router/]
+    document_scope: [doc/api/components/route.md, doc/api/components/router.md]
+    official_examples: [example/index/router.ts]
+    key_questions: [路由与扩展路径的边界和关系是什么？]
     experiments: []
     acceptance_tasks: []
-    unknowns: [该学习域是否适用尚待确认。]
+    unknowns: [适用范围尚未验证。]
   - id: internationalization
     title: 国际化
     status: not-started
     dependencies: [core-abstractions]
-    source_scope: []
+    source_scope: [packages/locale/]
     document_scope: []
     official_examples: []
-    key_questions: [国际化由框架、扩展还是应用层负责？]
+    key_questions: [国际化由哪些公开入口和实验验证？]
     experiments: []
     acceptance_tasks: []
-    unknowns: [该学习域是否适用尚待确认。]
+    unknowns: [未发现独立官方说明或示例，尚未验证。]
   - id: packaging-and-release
     title: 打包与发布
     status: not-started
     dependencies: [repository-and-build]
-    source_scope: []
-    document_scope: []
+    source_scope: [packages/all/build/, packages/*/package.json, packages/*/package-pub.json]
+    document_scope: [README.md]
     official_examples: []
     key_questions: [产物、版本和发布流程如何定义？]
     experiments: []
     acceptance_tasks: []
-    unknowns: [尚未调查。]
+    unknowns:
+      - 构建未运行，产物与发布入口未验证。
+      - packages/all 的预期依赖清单与锁文件修复方式尚待上游确认。
   - id: debugging-and-errors
     title: 调试与错误
     status: not-started
     dependencies: [repository-and-build]
-    source_scope: []
-    document_scope: []
-    official_examples: []
+    source_scope: [eslint.config.js, tsconfig.json, example/vite.config.ts]
+    document_scope: [README.md]
+    official_examples: [example/]
     key_questions: [构建和运行错误如何定位与呈现？]
     experiments: []
     acceptance_tasks: []
-    unknowns: [尚未调查。]
+    unknowns: [尚未进入项目级命令，错误基线缺失。]
   - id: compatibility
     title: 兼容性
     status: not-started
     dependencies: [repository-and-build, packaging-and-release]
-    source_scope: []
-    document_scope: []
-    official_examples: []
-    key_questions: [支持哪些运行时、浏览器和依赖版本？]
+    source_scope: [package.json, .npmrc, example/vite.config.ts]
+    document_scope: [README.md]
+    official_examples: [example/]
+    key_questions: [声明与实际支持的运行时、浏览器和依赖版本是否一致？]
     experiments: []
     acceptance_tasks: []
-    unknowns: [尚未调查。]
+    unknowns:
+      - npm 11.7.0 与本机 Node 21.7.3 存在版本警告。
+      - PATH pnpm 为 11.9.0；Run 003 已通过显式路径绑定 10.26.1，后续仍需保持该解析方式。
+      - 浏览器行为未验证。
   - id: performance
     title: 性能
     status: not-started
@@ -161,10 +186,10 @@ domains:
     title: 工程集成
     status: not-started
     dependencies: [packaging-and-release, compatibility]
-    source_scope: []
-    document_scope: []
-    official_examples: []
-    key_questions: [如何与真实工程工具链集成并独立回退？]
+    source_scope: [packages/all/, example/]
+    document_scope: [README.md, doc/develop.md]
+    official_examples: [example/]
+    key_questions: [如何与真实工程工具链集成并保持可回退？]
     experiments: []
     acceptance_tasks: []
-    unknowns: [尚未调查。]
+    unknowns: [尚未调查，不涉及 GaitLogic。]

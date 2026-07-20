@@ -1,0 +1,31 @@
+schema_version: 1.0.0
+id: ncom-frozen-lockfile-mismatch
+framework: ncom
+framework_commit: 4c1fdf745afe1d08c1c00c3de3b11feb9d5b71ac
+category: developer-experience
+severity: high
+title: pnpm frozen install 因 packages/all 清单与锁文件不一致而失败
+task_id: task-ncom-l0-001-baseline
+environment:
+  os: Windows 10 Home China 22H2 (build 19045, x64)
+  node: v21.7.3
+  npm: 11.7.0
+  pnpm_requested: 10.26.1
+  pnpm_resolved: 10.26.1
+  pnpm_resolution_source: repository-local explicit executable path
+  upstream_submission_suitable: true
+steps_to_reproduce:
+  - 将 NCom 仓库锁定到 commit 4c1fdf745afe1d08c1c00c3de3b11feb9d5b71ac，并确认工作树干净。
+  - 使用 pnpm 10.26.1 在仓库根目录执行 pnpm install --frozen-lockfile。
+expected: 冻结安装使用现有 pnpm-lock.yaml 完成，且不修改 package.json、workspace 配置或锁文件。
+actual: 命令退出 1 并报告 ERR_PNPM_OUTDATED_LOCKFILE；pnpm-lock.yaml 的 packages/all importer 比当前 packages/all/package.json 多出 11 项依赖声明。
+evidence:
+  - frameworks/ncom/reports/raw/run-003/02-install.log
+  - .framework-sources/ncom/pnpm-lock.yaml:94
+  - .framework-sources/ncom/packages/all/package.json
+workaround: 仅可由上游维护者确认 packages/all 的预期清单后重新生成并提交一致的锁文件；本基线不采用 --no-frozen-lockfile 绕过问题。
+knowledge_cards_affected: []
+regression_tests:
+  - 使用显式固定的 pnpm 10.26.1 执行 pnpm install --frozen-lockfile，并要求 exit code 0 且锁文件哈希不变。
+upstream_reference: null
+status: confirmed

@@ -49,6 +49,6 @@
         }
       }
     },
-    "status": { "enum": ["pending-baseline", "captured", "verified", "needs-review"] }
+    "status": { "enum": ["pending-baseline", "baseline-passed", "baseline-partial", "baseline-blocked", "captured", "verified", "needs-review"] }
   }
 }

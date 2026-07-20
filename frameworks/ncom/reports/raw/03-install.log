@@ -1,0 +1,16 @@
+working_directory: E:\我的项目\framework-lab-workflow\.framework-sources\ncom
+command: corepack pnpm install --frozen-lockfile
+started_at: 2026-07-17T16:47:11.7485620+08:00
+--- stdout and stderr (combined, original order) ---
+[31m[1mInternal Error[22m[39m: Error when performing the request to https://registry.npmjs.org/pnpm/-/pnpm-10.26.1.tgz; for troubleshooting help, see https://github.com/nodejs/corepack#troubleshooting
+    at fetch (D:\node21\node_modules\corepack\dist\lib\corepack.cjs:22882:11)
+    at async fetchUrlStream (D:\node21\node_modules\corepack\dist\lib\corepack.cjs:22914:20)
+    at async installVersion (D:\node21\node_modules\corepack\dist\lib\corepack.cjs:23084:18)
+    at async Engine.ensurePackageManager (D:\node21\node_modules\corepack\dist\lib\corepack.cjs:23380:32)
+    at async executePackageManagerRequest (D:\node21\node_modules\corepack\dist\lib\corepack.cjs:24236:23)
+    at async BinaryCommand.validateAndExecute (D:\node21\node_modules\corepack\dist\lib\corepack.cjs:21173:22)
+    at async _Cli.run (D:\node21\node_modules\corepack\dist\lib\corepack.cjs:22148:18)
+    at async Object.runMain (D:\node21\node_modules\corepack\dist\lib\corepack.cjs:24279:12)
+ended_at: 2026-07-17T16:47:12.3147174+08:00
+exit_code: 1
+final_status: Failed

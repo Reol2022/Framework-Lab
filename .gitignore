@@ -28,6 +28,7 @@ venv/
 
 # Logs and temporary files
 *.log
+!frameworks/*/reports/raw/*.log
 logs/
 tmp/
 temp/
@@ -55,3 +56,12 @@ local-config/
 private/
 private-data/
 production-data/
+
+# Local framework source repositories
+.framework-sources/
+
+# Repository-local framework toolchains
+.framework-tools/
+
+# Repository-local framework toolchains
+.framework-tools/

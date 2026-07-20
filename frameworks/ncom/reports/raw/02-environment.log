@@ -1,0 +1,64 @@
+working_directory: E:\我的项目\framework-lab-workflow\.framework-sources\ncom
+command: git --version; node --version; npm --version; pnpm --version; corepack --version; corepack pnpm --version; OS and PowerShell inspection
+started_at: 2026-07-17T16:57:42.6188063+08:00
+--- stdout and stderr by subcommand (combined, original order) ---
+$ git --version
+git version 2.38.0.windows.1
+subcommand_exit_code: 0
+$ node --version
+v21.7.3
+subcommand_exit_code: 0
+$ npm --version
+npm warn cli npm v11.7.0 does not support Node.js v21.7.3. This version of npm supports the following node versions: `^20.17.0 || >=22.9.0`. You can find the latest version at https://nodejs.org/.
+11.7.0
+subcommand_exit_code: 0
+$ pnpm --version
+& : The term 'pnpm' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the sp
+elling of the name, or if a path was included, verify that the path is correct and try again.
+At line:2 char:502
++ ... tive($label,$exe,$argv){$lines.Add("$ $label"); try{$o=& $exe @argv 2 ...
++                                                              ~~~~
+    + CategoryInfo          : ObjectNotFound: (pnpm:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+
+subcommand_exit_code: command-not-found
+$ corepack --version
+0.25.2
+subcommand_exit_code: 0
+$ corepack pnpm --version
+[31m[1mInternal Error[22m[39m: Error when performing the request to https://registry.npmjs.org/pnpm/-/pnpm-10.26.1.tgz; for troubleshooting help, see https://github.com/nodejs/corepack#troubleshooting
+    at fetch (D:\node21\node_modules\corepack\dist\lib\corepack.cjs:22882:11)
+    at async fetchUrlStream (D:\node21\node_modules\corepack\dist\lib\corepack.cjs:22914:20)
+    at async installVersion (D:\node21\node_modules\corepack\dist\lib\corepack.cjs:23084:18)
+    at async Engine.ensurePackageManager (D:\node21\node_modules\corepack\dist\lib\corepack.cjs:23380:32)
+    at async executePackageManagerRequest (D:\node21\node_modules\corepack\dist\lib\corepack.cjs:24236:23)
+    at async BinaryCommand.validateAndExecute (D:\node21\node_modules\corepack\dist\lib\corepack.cjs:21173:22)
+    at async _Cli.run (D:\node21\node_modules\corepack\dist\lib\corepack.cjs:22148:18)
+    at async Object.runMain (D:\node21\node_modules\corepack\dist\lib\corepack.cjs:24279:12)
+subcommand_exit_code: 1
+$ OS information
+ProductName: Windows 10 Home China
+DisplayVersion: 22H2
+CurrentBuildNumber: 19045
+OSArchitecture: AMD64
+subcommand_exit_code: 0
+$ PowerShell version
+
+Name                           Value                                                                                   
+----                           -----                                                                                   
+PSVersion                      5.1.19041.6456                                                                          
+PSEdition                      Desktop                                                                                 
+PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0...}                                                                 
+BuildVersion                   10.0.19041.6456                                                                         
+CLRVersion                     4.0.30319.42000                                                                         
+WSManStackVersion              3.0                                                                                     
+PSRemotingProtocolVersion      2.3                                                                                     
+SerializationVersion           1.1.0.1                                                                                 
+
+
+
+subcommand_exit_code: 0
+ended_at: 2026-07-17T16:57:44.6063836+08:00
+exit_code: 1
+final_status: Failed

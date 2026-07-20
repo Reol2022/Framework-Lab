@@ -3,20 +3,35 @@ framework_id: ncom
 framework_name: New Component
 repository_url: https://gitee.com/weblabsw/ncom
 repository_provider: gitee
-branch: null
-commit: null
-version: null
-captured_at: null
+branch: main
+commit: 4c1fdf745afe1d08c1c00c3de3b11feb9d5b71ac
+version: 0.0.1-alpha.2
+captured_at: "2026-07-19T15:59:23+08:00"
 environment:
-  os: null
-  runtime: null
-  package_manager: null
-  browser: null
+  os: Windows 10 Home China 22H2 (build 19045, x64)
+  runtime: Node.js v21.7.3
+  package_manager: pnpm@10.26.1 (repository-local explicit executable)
+  executable_path: .framework-tools/pnpm-10.26.1/node_modules/.bin/pnpm.cmd
+  resolution_source: FRAMEWORK_LAB_PNPM
+  requested_version: 10.26.1
+  resolved_version: 10.26.1
+  path_package_manager: pnpm@11.9.0 (diagnostic only; not used for project commands)
+  browser: Not Verified
 commands:
-  install: null
-  build: null
-  check: null
-  example: null
+  install: "& $env:FRAMEWORK_LAB_PNPM install --frozen-lockfile"
+  build: "& $env:FRAMEWORK_LAB_PNPM build"
+  check: "& $env:FRAMEWORK_LAB_PNPM lint:eslint"
+  typecheck: null
+  example: "& $env:FRAMEWORK_LAB_PNPM dev:example"
   test: null
-documentation_sources: []
-status: pending-baseline
+documentation_sources:
+  - title: NCom README at locked commit
+    url: https://gitee.com/weblabsw/ncom/blob/4c1fdf745afe1d08c1c00c3de3b11feb9d5b71ac/README.md
+    status: captured
+  - title: Root package manifest at locked commit
+    url: https://gitee.com/weblabsw/ncom/blob/4c1fdf745afe1d08c1c00c3de3b11feb9d5b71ac/package.json
+    status: captured
+  - title: pnpm workspace configuration at locked commit
+    url: https://gitee.com/weblabsw/ncom/blob/4c1fdf745afe1d08c1c00c3de3b11feb9d5b71ac/pnpm-workspace.yaml
+    status: captured
+status: baseline-blocked

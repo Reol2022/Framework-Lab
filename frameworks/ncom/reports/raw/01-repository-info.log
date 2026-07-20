@@ -1,0 +1,43 @@
+working_directory: E:\我的项目\framework-lab-workflow\.framework-sources\ncom
+command: git repository metadata; package/workspace/lockfile/script inspection
+started_at: 2026-07-17T16:07:27.0987753+08:00
+--- stdout ---
+remote_url: https://gitee.com/weblabsw/ncom
+branch: main
+commit: 4c1fdf745afe1d08c1c00c3de3b11feb9d5b71ac
+short_commit: 4c1fdf7
+git_status:
+## main...origin/main
+tag: not-found
+tag_lookup_output: fatal: No names found, cannot describe anything.
+version: 0.0.1-alpha.2
+packageManager: pnpm@10.26.1
+node_engine: >=20.16.0
+npm_engine: >=11.7.0
+pnpm_engine: >=10.26.1
+workspace_config: packages/*, example
+lockfile: pnpm-lock.yaml (lockfileVersion 9.0)
+monorepo: yes (README and pnpm-workspace.yaml)
+root_scripts:
+  build: cross-env NODE_ENV=production pnpm --filter @ncom/all build
+  build:watch: cross-env NODE_ENV=development pnpm --filter @ncom/all build:watch
+  build-workspaces: pnpm --filter @ncom/all build-workspaces
+  build:core: pnpm --filter @ncom/all build:core
+  build:locale: pnpm --filter @ncom/all build:locale
+  build:extensions: pnpm --filter @ncom/all build:extensions
+  build:components: pnpm --filter @ncom/all build:components
+  dev:example: pnpm --filter ncom-example dev
+  lint:prettier: prettier --write "**/*.{js,ts,mjs,cjs,json,tsx, css, less,scss, html,md}"
+  lint:eslint: eslint
+  prepare: husky
+  commit: git-cz
+  precommit: lint-staged
+official_readme_commands: pnpm install; pnpm build; pnpm dev:example; pnpm lint:eslint (contribution recommendation)
+contributing_document: not-found
+test_command: not-provided
+typecheck_command: not-provided
+--- stderr ---
+none (except exact-tag lookup reported above as not-found)
+ended_at: 2026-07-17T16:07:27.9031671+08:00
+exit_code: 0
+final_status: Passed
