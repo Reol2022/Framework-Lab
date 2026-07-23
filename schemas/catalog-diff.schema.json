@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Catalog Snapshot Diff",
+  "type": "object",
+  "required": ["schemaVersion", "frameworkId", "fromSnapshot", "toSnapshot", "fromCommit", "toCommit", "rootHashChanged", "added", "removed", "modified", "renamed", "reclassified", "packageAdded", "packageRemoved", "packageModified", "documentsChanged", "examplesChanged", "configsChanged"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "frameworkId": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "fromCommit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "toCommit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "rootHashChanged": { "type": "boolean" },
+    "added": { "type": "array", "items": { "type": "string", "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\).+$" } },
+    "removed": { "type": "array", "items": { "type": "string", "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\).+$" } }
+  }
+}

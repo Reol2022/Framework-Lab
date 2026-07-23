@@ -1,15 +1,12 @@
 # NCom 未知项
 
-以下问题绑定 commit `4c1fdf745afe1d08c1c00c3de3b11feb9d5b71ac`。本文件只列未解决问题，不给出框架机制结论。
+以下问题绑定 commit `faf42ba101975befb79629c63d92e962194e4abe`。本文件只列未解决问题，不给出框架机制结论。
 
-- 上游应如何修复 `packages/all/package.json` 与 `pnpm-lock.yaml` importer 的不一致，并在 pnpm `10.26.1` 下恢复 frozen install？
-- 根 `pnpm build` 调用 `@ncom/all` 的 `build`，但当前 `packages/all/package.json` 未声明 scripts；该命令在依赖安装后会如何退出，README 是否已与当前包清单失配？
 - 仓库未提供 typecheck 和 test 脚本；是否存在未公开或文档未列出的正式入口？
-- Node `v21.7.3` 满足仓库最低约束，但 npm `11.7.0` 警告不支持该 Node 版本；锁文件问题修复后，这是否会影响其他项目脚本？
-- 示例服务是否还需要 README 未声明的环境变量、网络服务或浏览器条件？
-- 示例在端口 `3000` 监听后能否完成最小 HTTP 请求与浏览器页面行为验证？
-- ESLint 在依赖可用后是否无错误、无警告通过？
-- 构建在依赖可用后会生成哪些实际产物，是否存在平台相关警告？
+- example 启动前应通过什么已提交且可复现的流程生成 `packages/theme/dist/ncom-deepblue.css`，还是该 dist 本应由上游提交？
+- theme build 入口修复并生成 dist 后，example 页面、导航、组件渲染和交互能否通过浏览器冒烟？
+- lint 中已确认的 30 个错误与 11 个警告在上游后续提交中何时修复？
+- 缺失的 `packages/theme/scripts/build.mjs` 是否会由上游补回，补回后构建会生成哪些实际产物？
 - 核心抽象、生命周期、属性、状态、事件、样式和组合边界是什么？
 - 表单、路由或扩展、国际化等学习域是否适用？
 - 构建产物、发布方式、错误诊断和兼容范围是什么？

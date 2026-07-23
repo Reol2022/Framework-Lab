@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://framework-lab.example/schemas/verification-plan.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "steps"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "type", "phase", "command", "args", "cwd", "timeoutSeconds", "allowFailure", "required", "dependencies", "environment", "expectedExitCode", "expectedHttpStatus", "outputLogs", "status"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+          "type": { "enum": ["command", "http", "static_check", "acceptance", "manual"] },
+          "phase": { "enum": ["before", "after", "both"] },
+          "command": { "type": ["string", "null"] },
+          "args": { "type": "array", "items": { "type": "string" } },
+          "cwd": { "type": "string", "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\)(?!.*(?:^|/)\\.\\.(?:/|$)).+$" },
+          "timeoutSeconds": { "type": "integer", "minimum": 1 },
+          "allowFailure": { "type": "boolean" },
+          "required": { "type": "boolean" },
+          "dependencies": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "environment": { "type": "object", "additionalProperties": { "type": "string" } },
+          "expectedExitCode": { "type": ["integer", "null"] },
+          "expectedHttpStatus": { "type": ["integer", "null"], "minimum": 100, "maximum": 599 },
+          "outputLogs": {
+            "oneOf": [
+              { "type": "null" },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["stdout", "stderr"],
+                "properties": { "stdout": { "type": "string" }, "stderr": { "type": "string" } }
+              }
+            ]
+          },
+          "status": { "enum": ["pending", "passed", "failed", "skipped", "timed_out", "manual_required"] },
+          "url": { "type": "string" },
+          "background": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+schema_version: 1.0.0
+framework:
+  id: ncom
+  name: New Component
+  source_dir: .framework-sources/ncom-a350b57
+package_manager:
+  name: pnpm
+  version: 10.26.1
+  executable: .framework-tools/pnpm-10.26.1/node_modules/.bin/pnpm.cmd
+stop_on_failure: true
+baseline_steps:
+  - id: install
+    command: .framework-tools/pnpm-10.26.1/node_modules/.bin/pnpm.cmd
+    args: [install, --frozen-lockfile]
+    timeout_seconds: 600
+    allow_failure: false
+  - id: lint
+    command: .framework-tools/pnpm-10.26.1/node_modules/.bin/pnpm.cmd
+    args: [lint:eslint]
+    timeout_seconds: 300
+    allow_failure: true
+  - id: build
+    command: .framework-tools/pnpm-10.26.1/node_modules/.bin/pnpm.cmd
+    args: [build]
+    timeout_seconds: 900
+    allow_failure: false
+analysis:
+  retrieval:
+    identifierPrefixes:
+      - NC
+    aliases:
+      button:
+        - 按钮
+      input:
+        - 输入框
+        - 输入
+      disabled:
+        - 禁用
+      click:
+        - 点击
+      value:
+        - 值
+      change:
+        - 变化
+      sass:
+        - 样式
+        - 构建
+  typescript:
+    componentDetection:
+      sourceGlobs:
+        - packages/components/src/**/*.ts
+      baseTypes:
+        - NComponent
+        - NCBaseInput
+      publicPackages:
+        - "@ncom/components"
+        - "@ncom/all"
+      stylePatterns:
+        - "{dir}/style.scss"
+        - "{dir}/{basename}.scss"
+      examplePatterns:
+        - "example/component/{component}/**/*.ts"
+      lifecycleMethods:
+        - connectedCallback
+        - disconnectedCallback
+        - attributeChangedCallback
+        - firstUpdated
+        - updated
+        - displayCallback
+        - hideCallback
+      registrationFunctions:
+        - defineComponent

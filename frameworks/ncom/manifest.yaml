@@ -4,19 +4,21 @@ framework_name: New Component
 repository_url: https://gitee.com/weblabsw/ncom
 repository_provider: gitee
 branch: main
-commit: 4c1fdf745afe1d08c1c00c3de3b11feb9d5b71ac
-version: 0.0.1-alpha.2
-captured_at: "2026-07-19T15:59:23+08:00"
+commit: faf42ba101975befb79629c63d92e962194e4abe
+version: 0.0.8
+captured_at: "2026-07-22T17:11:16+08:00"
 environment:
   os: Windows 10 Home China 22H2 (build 19045, x64)
-  runtime: Node.js v21.7.3
+  runtime: Node.js v24.18.0
+  npm: 11.7.0
+  corepack: 0.35.0
   package_manager: pnpm@10.26.1 (repository-local explicit executable)
   executable_path: .framework-tools/pnpm-10.26.1/node_modules/.bin/pnpm.cmd
-  resolution_source: FRAMEWORK_LAB_PNPM
+  resolution_source: repository-local explicit executable path
   requested_version: 10.26.1
   resolved_version: 10.26.1
-  path_package_manager: pnpm@11.9.0 (diagnostic only; not used for project commands)
-  browser: Not Verified
+  path_package_manager: unavailable before the pinned pnpm directory is prepended to PATH
+  browser: Failed in Run 007 (Vite overlay; unresolved @ncom/all/theme/deepblue import)
 commands:
   install: "& $env:FRAMEWORK_LAB_PNPM install --frozen-lockfile"
   build: "& $env:FRAMEWORK_LAB_PNPM build"
@@ -26,12 +28,12 @@ commands:
   test: null
 documentation_sources:
   - title: NCom README at locked commit
-    url: https://gitee.com/weblabsw/ncom/blob/4c1fdf745afe1d08c1c00c3de3b11feb9d5b71ac/README.md
+    url: https://gitee.com/weblabsw/ncom/blob/faf42ba101975befb79629c63d92e962194e4abe/README.md
     status: captured
   - title: Root package manifest at locked commit
-    url: https://gitee.com/weblabsw/ncom/blob/4c1fdf745afe1d08c1c00c3de3b11feb9d5b71ac/package.json
+    url: https://gitee.com/weblabsw/ncom/blob/faf42ba101975befb79629c63d92e962194e4abe/package.json
     status: captured
   - title: pnpm workspace configuration at locked commit
-    url: https://gitee.com/weblabsw/ncom/blob/4c1fdf745afe1d08c1c00c3de3b11feb9d5b71ac/pnpm-workspace.yaml
+    url: https://gitee.com/weblabsw/ncom/blob/faf42ba101975befb79629c63d92e962194e4abe/pnpm-workspace.yaml
     status: captured
-status: baseline-blocked
+status: baseline-partial

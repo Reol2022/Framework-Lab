@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0.0",
+  "allowedPaths": ["example/component/button/**"],
+  "deniedPaths": ["packages/**", "package.json", "pnpm-lock.yaml", "**/package.json", "**/pnpm-lock.yaml"],
+  "maxChangedFiles": 3,
+  "maxAddedFiles": 2,
+  "maxDeletedFiles": 0,
+  "maxDiffLines": 160,
+  "allowUntrackedFiles": true,
+  "allowedUntrackedPaths": ["example/component/button/components/**"],
+  "deniedExtensions": [".lock", ".bin"],
+  "requireCleanStart": true,
+  "lockfilesReadOnly": true,
+  "manifestsReadOnly": true,
+  "generatedDirectoriesIgnored": ["example/dist/**", "packages/theme/dist/**", "node_modules/**", "**/node_modules/**", "**/dist/**"],
+  "requirePatch": true,
+  "requireDiffCheck": true,
+  "requireNoConflictMarkers": true
+}

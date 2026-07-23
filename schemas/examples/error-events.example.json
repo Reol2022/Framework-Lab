@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0.0",
+  "runId": "run-001",
+  "frameworkId": "example",
+  "generatedAt": "2026-01-01T00:00:00.000Z",
+  "summary": {
+    "total": 1,
+    "errors": 1,
+    "warnings": 0,
+    "recognized": 1,
+    "unrecognized": 0,
+    "byTool": {
+      "typescript": 1
+    },
+    "byCategory": {
+      "typecheck": 1
+    }
+  },
+  "firstBlockingErrorId": "error-0123456789ab",
+  "events": [
+    {
+      "id": "error-0123456789ab",
+      "parser": "typescript",
+      "parserVersion": "1.0.0",
+      "tool": "typescript",
+      "category": "typecheck",
+      "severity": "error",
+      "stepId": "typecheck",
+      "message": "Type string is not assignable to number",
+      "file": "src/example.ts",
+      "line": 4,
+      "column": 9,
+      "rule": null,
+      "code": "TS2322",
+      "plugin": null,
+      "rawExcerpt": "src/example.ts(4,9): error TS2322: Type string is not assignable to number",
+      "sourceLog": "steps/typecheck.stderr.log",
+      "fingerprint": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+      "blocking": true,
+      "confidence": "high"
+    }
+  ]
+}

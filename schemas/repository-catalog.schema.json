@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Framework Repository Catalog",
+  "type": "object",
+  "required": ["schemaVersion", "frameworkId", "sourceCommit", "clean", "trackedChangedFiles", "untrackedFileCount", "sourceRootRelative", "scannedAt", "scannerVersion"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "frameworkId": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "repositoryUrl": { "type": ["string", "null"] },
+    "sourceCommit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "branch": { "type": ["string", "null"] },
+    "detached": { "type": "boolean" },
+    "clean": { "type": "boolean" },
+    "trackedChangedFiles": { "type": "array", "items": { "$ref": "#/$defs/path" } },
+    "untrackedFileCount": { "type": "integer", "minimum": 0 },
+    "ignoredGeneratedDirectories": { "type": "array", "items": { "$ref": "#/$defs/path" } },
+    "packageManager": { "type": "object", "required": ["name", "version"] },
+    "lockfiles": { "type": "array", "items": { "$ref": "#/$defs/path" } },
+    "workspaceType": { "enum": ["pnpm", "npm-yarn", "single-package"] },
+    "sourceRootRelative": { "$ref": "#/$defs/path" },
+    "scannedAt": { "type": "string", "format": "date-time" },
+    "scannerVersion": { "type": "string", "pattern": "^0\\.1\\.5$" }
+  },
+  "$defs": { "path": { "type": "string", "minLength": 1, "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\)(?!.*(?:^|/)\\.\\.(?:/|$)).+$" } }
+}

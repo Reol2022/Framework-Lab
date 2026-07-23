@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["id", "type", "candidateId", "path", "lineStart", "lineEnd", "fileSha256", "commit", "content", "estimatedTokens"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^snippet-[a-f0-9]{16}$" },
+    "type": { "enum": ["declaration", "public_signature", "implementation_excerpt", "example_excerpt", "document_excerpt", "config_excerpt", "export_chain_excerpt"] },
+    "candidateId": { "type": "string", "pattern": "^candidate-[a-f0-9]{16}$" },
+    "path": { "type": "string", "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\)(?!.*(?:^|/)(?:node_modules|dist)(?:/|$)).+$" },
+    "lineStart": { "type": "integer", "minimum": 1 },
+    "lineEnd": { "type": "integer", "minimum": 1 },
+    "fileSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "commit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "content": { "type": "string" },
+    "estimatedTokens": { "type": "integer", "minimum": 0 }
+  }
+}

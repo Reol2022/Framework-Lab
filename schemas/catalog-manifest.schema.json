@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Catalog Output Manifest",
+  "type": "object",
+  "required": ["schemaVersion", "catalogFiles", "sourceRootHash", "scannerVersion", "schemaVersions", "sourceCommit", "scanOptions", "exclusionRules", "warningCount", "createdAt"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "catalogFiles": {
+      "type": "object",
+      "minProperties": 9,
+      "additionalProperties": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+    },
+    "sourceRootHash": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "scannerVersion": { "const": "0.1.5" },
+    "sourceCommit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "warningCount": { "type": "integer", "minimum": 0 },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Catalog Relationships",
+  "type": "object",
+  "required": ["schemaVersion", "relationships"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "from", "to", "evidencePath", "confidence"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^relation-[a-f0-9]{16}$" },
+          "type": { "enum": ["workspace_dependency", "package_contains_file", "document_belongs_to_package", "example_belongs_to_package", "config_belongs_to_package", "package_export_target"] },
+          "evidencePath": { "type": "string", "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\).+$" },
+          "confidence": { "enum": ["high", "medium"] }
+        }
+      }
+    }
+  }
+}

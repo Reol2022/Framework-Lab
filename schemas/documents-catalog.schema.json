@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Markdown Documents Catalog",
+  "type": "object",
+  "required": ["schemaVersion", "documents"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "path", "title", "sha256", "lineCount", "sections", "links", "codeFences", "warnings"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^document-[a-f0-9]{12}$" },
+          "path": { "type": "string", "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\).+$" },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "lineCount": { "type": "integer", "minimum": 0 },
+          "sections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "heading", "level", "lineStart", "lineEnd", "parentSectionId", "anchor", "contentSha256"],
+              "properties": {
+                "level": { "type": "integer", "minimum": 1, "maximum": 6 },
+                "lineStart": { "type": "integer", "minimum": 1 },
+                "lineEnd": { "type": "integer", "minimum": 1 },
+                "contentSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

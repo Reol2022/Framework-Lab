@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Workspace Packages Catalog",
+  "type": "object",
+  "required": ["schemaVersion", "packages"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "packages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "directory", "manifestPath", "manifestSha256", "scripts", "dependencies", "devDependencies", "peerDependencies", "optionalDependencies", "exports", "sourceFileCount", "documentCount", "exampleCount", "testCount"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^(?:root|package-[a-z0-9-]+)$" },
+          "name": { "type": "string", "minLength": 1 },
+          "directory": { "type": "string", "pattern": "^(?:\\.|(?![A-Za-z]:)(?!/)(?!.*\\\\).+)$" },
+          "manifestPath": { "type": "string", "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\).+$" },
+          "manifestSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "sourceFileCount": { "type": "integer", "minimum": 0 },
+          "documentCount": { "type": "integer", "minimum": 0 },
+          "exampleCount": { "type": "integer", "minimum": 0 },
+          "testCount": { "type": "integer", "minimum": 0 }
+        }
+      }
+    }
+  }
+}

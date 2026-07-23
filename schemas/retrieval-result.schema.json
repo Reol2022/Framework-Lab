@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "retrievalId", "frameworkId", "generatedAt", "taskProfile", "sourceCommit", "catalogSnapshotId", "catalogRootHash", "symbolSnapshotId", "symbolRootHash", "semanticAvailable", "candidates", "selectedIds", "excludedIds", "counts", "businessHash", "warnings"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "retrievalId": { "type": "string", "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]*$" },
+    "frameworkId": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "taskProfile": { "type": "object" },
+    "sourceCommit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "catalogRootHash": { "$ref": "#/$defs/hash" },
+    "symbolRootHash": { "$ref": "#/$defs/hash" },
+    "semanticAvailable": { "type": "boolean" },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "frameworkId", "type", "title", "summary", "sourceId", "sourcePath", "packageId", "symbolId", "componentId", "documentSectionId", "exampleId", "knowledgeCardId", "scope", "evidence", "score", "scoreBreakdown", "confidence", "reasons", "relations", "estimatedTokens", "selected", "excludedReason"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^candidate-[a-f0-9]{16}$" },
+          "type": { "enum": ["symbol", "component", "package", "module", "public_export", "document_section", "example", "style", "config", "validated_command", "environment_requirement", "known_issue", "verified_patch", "workflow_constraint", "framework_overview"] },
+          "sourcePath": { "anyOf": [{ "$ref": "#/$defs/path" }, { "type": "null" }] },
+          "score": { "type": "number" },
+          "scoreBreakdown": { "type": "object", "additionalProperties": { "type": "number" } },
+          "confidence": { "enum": ["high", "medium", "low"] },
+          "selected": { "type": "boolean" }
+        }
+      }
+    },
+    "selectedIds": { "type": "array", "uniqueItems": true, "items": { "type": "string", "pattern": "^candidate-[a-f0-9]{16}$" } },
+    "businessHash": { "$ref": "#/$defs/hash" }
+  },
+  "$defs": {
+    "hash": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "path": { "type": "string", "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\).+$" }
+  }
+}

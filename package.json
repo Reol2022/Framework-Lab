@@ -1,0 +1,36 @@
+{
+  "name": "framework-lab-workflow",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "可追溯的框架基线学习与验证工作流",
+  "license": "Apache-2.0",
+  "bin": {
+    "framework-lab": "./dist/cli/index.js"
+  },
+  "scripts": {
+    "framework-lab": "tsx cli/index.ts",
+    "lint": "eslint cli test",
+    "test": "tsx --test test/framework-lab.test.ts test/errors.test.ts test/knowledge.test.ts test/catalog.test.ts test/symbols.test.ts test/retrieval.test.ts test/task.test.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "engines": {
+    "node": ">=20.16.0",
+    "pnpm": ">=10.26.1"
+  },
+  "dependencies": {
+    "ajv": "^8.18.0",
+    "ajv-formats": "^3.0.1",
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^24.10.1",
+    "eslint": "^9.39.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.53.0"
+  },
+  "packageManager": "pnpm@10.26.1"
+}

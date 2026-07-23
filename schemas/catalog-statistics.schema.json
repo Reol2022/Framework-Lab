@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Catalog Statistics",
+  "type": "object",
+  "required": ["schemaVersion", "totalFiles", "textFiles", "binaryFiles", "totalBytes", "totalTextLines", "countsByCategory", "countsByLanguage", "countsByPackage", "documentCount", "documentSectionCount", "exampleCount", "configCount", "testCount", "largestFiles", "filesSkippedBySize", "warningsCount"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "totalFiles": { "type": "integer", "minimum": 0 },
+    "textFiles": { "type": "integer", "minimum": 0 },
+    "binaryFiles": { "type": "integer", "minimum": 0 },
+    "totalBytes": { "type": "integer", "minimum": 0 },
+    "totalTextLines": { "type": "integer", "minimum": 0 },
+    "documentCount": { "type": "integer", "minimum": 0 },
+    "documentSectionCount": { "type": "integer", "minimum": 0 },
+    "exampleCount": { "type": "integer", "minimum": 0 },
+    "configCount": { "type": "integer", "minimum": 0 },
+    "testCount": { "type": "integer", "minimum": 0 },
+    "filesSkippedBySize": { "type": "integer", "minimum": 0 },
+    "warningsCount": { "type": "integer", "minimum": 0 }
+  }
+}

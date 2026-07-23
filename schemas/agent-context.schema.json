@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "contextId", "frameworkId", "task", "generatedAt", "sourceScope", "budget", "estimatedTokens", "selectedCards", "claims", "constraints", "evidenceIndex", "warnings"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "contextId": { "type": "string" },
+    "frameworkId": { "type": "string" },
+    "task": { "type": "string" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "sourceScope": { "type": "object" },
+    "budget": { "type": "integer" },
+    "estimatedTokens": { "type": "integer" },
+    "selectedCards": { "type": "array", "items": { "type": "string" } },
+    "claims": { "type": "array", "items": { "type": "object" } },
+    "constraints": { "type": "array", "items": { "type": "string" } },
+    "evidenceIndex": { "type": "array", "items": { "type": "object" } },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "frameworkKnowledge": {
+      "type": ["object", "null"],
+      "properties": {
+        "retrievalId": { "type": "string" },
+        "businessHash": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+        "selectedCandidates": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+        "snippets": { "type": "array", "items": { "type": "object" } },
+        "semanticAvailable": { "type": "boolean" },
+        "catalogRootHash": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+        "symbolRootHash": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+      }
+    }
+  }
+}

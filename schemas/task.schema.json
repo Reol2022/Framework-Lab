@@ -2,41 +2,81 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://framework-lab.example/schemas/task.schema.json",
   "title": "Framework Task",
-  "type": "object",
-  "additionalProperties": false,
-  "required": ["schema_version", "id", "title", "framework", "framework_commit", "level", "status", "objective", "non_goals", "prerequisites", "context", "allowed_paths", "forbidden_paths", "acceptance_criteria", "commands", "expected_result", "actual_result", "failure_category", "knowledge_updates"],
-  "properties": {
-    "schema_version": { "type": "string", "const": "1.0.0" },
-    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
-    "title": { "type": "string", "minLength": 1 },
-    "framework": { "type": "string", "minLength": 1 },
-    "framework_commit": { "type": ["string", "null"] },
-    "level": { "enum": ["L0", "L1", "L2", "L3", "L4", "L5"] },
-    "status": { "enum": ["draft", "ready", "in-progress", "passed", "failed", "blocked"] },
-    "objective": { "type": "string" },
-    "non_goals": { "type": "array", "items": { "type": "string" } },
-    "prerequisites": { "type": "array", "items": { "type": "string" } },
-    "context": {
+  "oneOf": [
+    {
       "type": "object",
-      "additionalProperties": false,
-      "required": ["knowledge_cards", "source_files", "documents", "notes"],
+      "required": ["schema_version", "id", "framework", "framework_commit", "level", "status"],
       "properties": {
-        "knowledge_cards": { "type": "array", "items": { "type": "string" } },
-        "source_files": { "type": "array", "items": { "type": "string" } },
-        "documents": { "type": "array", "items": { "type": "string" } },
-        "notes": { "type": ["string", "null"] }
+        "schema_version": { "const": "1.0.0" },
+        "id": { "type": "string" },
+        "framework": { "type": "string" },
+        "framework_commit": { "type": ["string", "null"] },
+        "level": { "enum": ["L0", "L1", "L2", "L3", "L4", "L5"] },
+        "status": { "enum": ["draft", "ready", "in-progress", "passed", "failed", "blocked"] }
       }
     },
-    "allowed_paths": { "type": "array", "items": { "type": "string" } },
-    "forbidden_paths": { "type": "array", "items": { "type": "string" } },
-    "acceptance_criteria": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-    "commands": { "type": "array", "items": { "type": "string" } },
-    "expected_result": { "type": "string" },
-    "actual_result": { "type": ["string", "null"] },
-    "failure_category": {
-      "type": ["string", "null"],
-      "enum": [null, "framework-bug", "documentation-gap", "documentation-error", "api-design", "developer-experience", "compatibility", "performance", "knowledge-error", "prompt-error", "test-gap", "example-error"]
-    },
-    "knowledge_updates": { "type": "array", "items": { "type": "string" } }
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schemaVersion", "taskId", "frameworkId", "title", "description", "originalTask", "normalizedTask", "intents", "constraints", "sourceCommit", "sourceRunId", "catalogSnapshotId", "catalogRootHash", "symbolSnapshotId", "symbolRootHash", "knowledgeIndexSha256", "retrievalId", "contextId", "contextSha256", "budget", "status", "createdAt", "updatedAt", "createdBy", "currentPhase", "warnings", "metrics"],
+      "properties": {
+        "schemaVersion": { "const": "1.0.0" },
+        "taskId": { "$ref": "#/$defs/id" },
+        "frameworkId": { "$ref": "#/$defs/id" },
+        "title": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "originalTask": { "type": "string", "minLength": 1 },
+        "normalizedTask": { "type": "string", "minLength": 1 },
+        "intents": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "constraints": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "sourceCommit": { "$ref": "#/$defs/commit" },
+        "sourceRunId": { "type": ["string", "null"] },
+        "catalogSnapshotId": { "type": "string", "minLength": 1 },
+        "catalogRootHash": { "$ref": "#/$defs/hash" },
+        "symbolSnapshotId": { "type": "string", "minLength": 1 },
+        "symbolRootHash": { "$ref": "#/$defs/hash" },
+        "knowledgeIndexSha256": { "$ref": "#/$defs/hash" },
+        "retrievalId": { "$ref": "#/$defs/id" },
+        "contextId": { "$ref": "#/$defs/id" },
+        "contextSha256": { "$ref": "#/$defs/hash" },
+        "budget": { "type": "integer", "minimum": 400 },
+        "status": { "enum": ["draft", "validated", "prepared", "handed_off", "modified", "policy_failed", "verification_failed", "verification_partial", "verification_passed", "closed", "aborted"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "createdBy": { "type": "string", "minLength": 1 },
+        "currentPhase": { "type": "string", "minLength": 1 },
+        "warnings": { "type": "array", "items": { "type": "string" } },
+        "metrics": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["contextEstimatedTokens", "contextCharacters", "selectedCandidateCount", "selectedSnippetCount", "sourceFilesRepresented", "sourceCharactersRepresented", "changedFiles", "diffLines", "commandCount", "verificationCommandCount", "failedVerificationCount", "policyViolationCount", "manualInterventionCount", "agentReportedFilesRead", "agentReportedSearches", "agentReportedCommands", "agentReportedUsage", "wallClockDuration"],
+          "properties": {
+            "contextEstimatedTokens": { "type": "integer", "minimum": 0 },
+            "contextCharacters": { "type": "integer", "minimum": 0 },
+            "selectedCandidateCount": { "type": "integer", "minimum": 0 },
+            "selectedSnippetCount": { "type": "integer", "minimum": 0 },
+            "sourceFilesRepresented": { "type": "integer", "minimum": 0 },
+            "sourceCharactersRepresented": { "type": "integer", "minimum": 0 },
+            "changedFiles": { "type": "integer", "minimum": 0 },
+            "diffLines": { "type": "integer", "minimum": 0 },
+            "commandCount": { "type": "integer", "minimum": 0 },
+            "verificationCommandCount": { "type": "integer", "minimum": 0 },
+            "failedVerificationCount": { "type": "integer", "minimum": 0 },
+            "policyViolationCount": { "type": "integer", "minimum": 0 },
+            "manualInterventionCount": { "type": "integer", "minimum": 0 },
+            "agentReportedFilesRead": { "type": ["integer", "null"], "minimum": 0 },
+            "agentReportedSearches": { "type": ["integer", "null"], "minimum": 0 },
+            "agentReportedCommands": { "type": ["integer", "null"], "minimum": 0 },
+            "agentReportedUsage": { "type": ["object", "null"] },
+            "wallClockDuration": { "type": ["integer", "null"], "minimum": 0 }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "commit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "hash": { "type": "string", "pattern": "^(?:sha256:)?[a-f0-9]{64}$" }
   }
 }

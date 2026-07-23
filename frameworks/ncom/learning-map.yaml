@@ -1,11 +1,11 @@
 schema_version: 1.0.0
 framework: ncom
-framework_commit: 4c1fdf745afe1d08c1c00c3de3b11feb9d5b71ac
+framework_commit: faf42ba101975befb79629c63d92e962194e4abe
 status: not-started
 domains:
   - id: repository-and-build
     title: 仓库与构建
-    status: blocked
+    status: partial
     dependencies: []
     source_scope:
       - package.json
@@ -28,11 +28,17 @@ domains:
       - TASK-NCOM-L0-001-baseline：冻结安装、lint、build 与限时示例启动
       - Run 002：commit 与工具链版本预检
       - Run 003：显式固定 pnpm 10.26.1 与 frozen install
+      - Run 004：切换到 faf42ba 的独立工作树，原始命令输出未完整保留
+      - Run 005：支持环境准备，原始命令输出未完整保留
+      - Run 006：frozen install、lint 与 build 基线
+      - Run 007：example 开发服务器、HTTP 与人工浏览器冒烟
     acceptance_tasks:
       - task-ncom-l0-001-baseline
     unknowns:
-      - packages/all 清单与 pnpm-lock.yaml 不一致，冻结安装无法完成。
-      - 安装修复后的 lint、build 和 example 结果尚未验证。
+      - lint 已执行并确认 30 errors、11 warnings，尚未修复。
+      - build 因 packages/theme/scripts/build.mjs 缺失而失败。
+      - example 可启动并监听 3000，但页面入口因 deepblue theme dist 缺失返回 500，浏览器显示 Vite overlay。
+      - 上游预期应提交 theme dist，还是在 example 启动前生成该产物，尚未验证。
       - typecheck 与 test 入口未提供。
   - id: core-abstractions
     title: 核心抽象
@@ -168,8 +174,7 @@ domains:
     experiments: []
     acceptance_tasks: []
     unknowns:
-      - npm 11.7.0 与本机 Node 21.7.3 存在版本警告。
-      - PATH pnpm 为 11.9.0；Run 003 已通过显式路径绑定 10.26.1，后续仍需保持该解析方式。
+      - Run 006 使用 Node v24.18.0、npm 11.7.0 与显式固定的 pnpm 10.26.1；普通 PATH 在预检时没有 pnpm。
       - 浏览器行为未验证。
   - id: performance
     title: 性能

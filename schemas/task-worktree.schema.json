@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://framework-lab.example/schemas/task-worktree.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "taskId", "directory", "sourceRepository", "sourceCommit", "head", "detached", "initialTrackedClean", "initialUntracked", "createdAt", "status"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "taskId": { "type": "string" },
+    "directory": { "$ref": "#/$defs/path" },
+    "sourceRepository": { "$ref": "#/$defs/path" },
+    "sourceCommit": { "$ref": "#/$defs/commit" },
+    "head": { "$ref": "#/$defs/commit" },
+    "detached": { "const": true },
+    "initialTrackedClean": { "const": true },
+    "initialUntracked": { "type": "array", "items": { "type": "string" } },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "status": { "enum": ["ready", "removed"] }
+  },
+  "$defs": {
+    "path": { "type": "string", "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\)(?!.*(?:^|/)\\.\\.(?:/|$)).+$" },
+    "commit": { "type": "string", "pattern": "^[a-f0-9]{40}$" }
+  }
+}

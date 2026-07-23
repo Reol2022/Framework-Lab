@@ -28,7 +28,6 @@ venv/
 
 # Logs and temporary files
 *.log
-!frameworks/*/reports/raw/*.log
 logs/
 tmp/
 temp/
@@ -63,5 +62,35 @@ production-data/
 # Repository-local framework toolchains
 .framework-tools/
 
-# Repository-local framework toolchains
-.framework-tools/
+# Local baseline evidence may contain large logs and machine-specific paths
+frameworks/*/runs/*
+!frameworks/*/runs/README.md
+
+# Raw run evidence may include machine paths, process output and browser sessions
+frameworks/*/reports/raw/**
+
+# Local generated Agent contexts
+frameworks/*/contexts/*
+!frameworks/*/contexts/README.md
+
+# Local source catalogs may expose repository structure and binary metadata
+frameworks/*/catalog/current.json
+frameworks/*/catalog/snapshots/*
+frameworks/*/catalog/diffs/*
+!frameworks/*/catalog/README.md
+
+# Local symbol snapshots derive from local source catalogs
+frameworks/*/symbols/current.json
+frameworks/*/symbols/snapshots/*
+frameworks/*/symbols/diffs/*
+!frameworks/*/symbols/README.md
+
+# Local task retrievals may contain source excerpts and framework structure
+frameworks/*/retrievals/*
+!frameworks/*/retrievals/README.md
+
+# Controlled task bundles may contain local Context, raw patches, logs and worktree evidence
+frameworks/*/tasks/task-*/
+
+# Source patches are kept locally until their publication policy is decided
+frameworks/*/patches/*.patch

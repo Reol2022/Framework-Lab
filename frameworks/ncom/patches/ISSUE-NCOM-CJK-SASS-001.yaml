@@ -1,0 +1,19 @@
+issue_id: ISSUE-NCOM-CJK-SASS-001
+framework: ncom
+base_commit: a350b576bbeae6c6254273037a17d2a8730fb80f
+candidate_source_dir: .framework-sources/ncom-a350b57-cjk-fix
+modified_files:
+  - packages/all/build/shared.ts
+root_cause: >-
+  createStyleConfig 的 Sass additionalData 为非 theme SCSS 注入包含 CJK
+  绝对路径的 @use；本次 Windows 环境中的 sass-embedded 无法解析该导入。
+fix_rationale: >-
+  已有组件样式显式导入 @ncom/theme/index，未显式导入的样式不使用 theme
+  变量、mixin 或 function，因此移除该冗余 additionalData，不修改组件业务代码。
+expected_effect: >-
+  构建不再生成包含本机绝对路径的 Sass @use 注入，并继续使用各 SCSS
+  文件已有的显式 theme 导入。
+created_at: 2026-07-23T02:37:17.885Z
+patch_file: ISSUE-NCOM-CJK-SASS-001.patch
+patch_sha256: e4c0112fd30ac7ca2e701fa2793cbe55f1e641dbf75bb07cf57a00e1c7f3b81d
+verification_run_id: run-010

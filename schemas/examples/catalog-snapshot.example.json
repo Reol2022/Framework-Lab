@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "frameworkId": "example",
+  "snapshotId": "0123456789abcdef0123456789abcdef01234567",
+  "sourceCommit": "0123456789abcdef0123456789abcdef01234567",
+  "dirty": false,
+  "dirtyFingerprint": null,
+  "generatedAt": "2026-01-01T00:00:00.000Z",
+  "scannerVersion": "0.1.5",
+  "rootHash": "sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+  "counts": {
+    "files": 1,
+    "packages": 1,
+    "documents": 0,
+    "examples": 0,
+    "configs": 1,
+    "relationships": 1
+  },
+  "files": [
+    "package.json"
+  ],
+  "catalogFiles": [
+    "repository.json",
+    "files.json",
+    "packages.json",
+    "documents.json",
+    "examples.json",
+    "configs.json",
+    "relationships.json",
+    "statistics.json",
+    "snapshot.json"
+  ],
+  "warnings": [],
+  "exclusions": {
+    "trackedOnly": true,
+    "untrackedExcluded": 0,
+    "include": [],
+    "exclude": [],
+    "maxFileSize": 2097152
+  },
+  "previousSnapshotId": null
+}

@@ -1,27 +1,47 @@
-schema_version: 1.0.0
-id: abstract-concept-example
-title: 抽象框架概念示例
-framework: example-framework
-framework_commit: null
+schemaVersion: 1.0.0
+id: example-observed-command
+frameworkId: example-framework
+type: validated_command
+title: 脱敏的已验证命令示例
+summary: 仅展示知识卡结构，不表示任何真实框架事实。
 status: draft
-summary: 仅展示知识卡结构，不表示任何框架事实。
-when_to_use:
-  - TODO：在证据确认后描述适用场景
-rules: []
-anti_patterns: []
-examples:
-  - description: 待验证的最小示例
-    content: null
-    status: pending
-evidence: []
-verification:
-  method: null
-  commands: []
-  expected: null
-  actual: null
-  status: not-run
-confidence: low
-created_at: null
-last_verified_at: null
+scope:
+  exactCommits:
+    - 0123456789abcdef0123456789abcdef01234567
+  commitRange: null
+  branch: null
+  os:
+    - win32
+  architecture:
+    - x64
+  nodeVersion: v24.0.0
+  packageManager: pnpm@10.0.0
+  frameworkVersion: null
+  validFrom: null
+  validUntil: null
+  scopeUnknown: false
+claims:
+  - id: example-command
+    text: 示例基线命令在脱敏的证据文件中被记录为成功。
+    status: observed
+    evidence:
+      - id: example-run-step
+        type: run_error
+        path: schemas/examples/error-events.example.json
+        jsonPointer: /events/0
+        runId: run-001
+        stepId: typecheck
+        eventId: error-0123456789ab
+        commit: 0123456789abcdef0123456789abcdef01234567
+        lineStart: null
+        lineEnd: null
+        sha256: 70c528d209ecadea58e27b2a2800a1102f7ca754d599306302ed16bfc6e35851
+        note: 引用仓库内的脱敏示例事件。
+limitations:
+  - 本示例只验证结构，不可作为框架事实使用。
 tags:
   - example
+createdAt: 2026-07-23T00:00:00.000Z
+updatedAt: 2026-07-23T00:00:00.000Z
+supersedes: []
+supersededBy: []

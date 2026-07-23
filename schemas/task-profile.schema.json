@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "originalText", "normalizedText", "tokens", "identifiers", "cjkSegments", "paths", "quoted", "packages", "explicitSymbols", "explicitComponents", "technicalKeywords", "intents", "constraints", "negativeConstraints"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "originalText": { "type": "string", "minLength": 1 },
+    "normalizedText": { "type": "string", "minLength": 1 },
+    "tokens": { "type": "array", "items": { "type": "string" } },
+    "identifiers": { "type": "array", "items": { "type": "string" } },
+    "cjkSegments": { "type": "array", "items": { "type": "string" } },
+    "paths": { "type": "array", "items": { "$ref": "#/$defs/path" } },
+    "quoted": { "type": "array", "items": { "type": "string" } },
+    "packages": { "type": "array", "items": { "type": "string" } },
+    "explicitSymbols": { "type": "array", "items": { "type": "string" } },
+    "explicitComponents": { "type": "array", "items": { "type": "string" } },
+    "technicalKeywords": { "type": "array", "items": { "type": "string" } },
+    "intents": { "type": "array", "items": { "enum": ["understand", "use", "add", "modify", "fix", "validate", "migrate", "debug", "document", "test"] } },
+    "constraints": { "type": "array", "items": { "type": "string" } },
+    "negativeConstraints": { "type": "array", "items": { "type": "string" } }
+  },
+  "$defs": { "path": { "type": "string", "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\).+$" } }
+}

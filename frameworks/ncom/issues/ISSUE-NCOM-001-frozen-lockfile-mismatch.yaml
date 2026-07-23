@@ -14,6 +14,8 @@ environment:
   pnpm_resolved: 10.26.1
   pnpm_resolution_source: repository-local explicit executable path
   upstream_submission_suitable: true
+  resolved_in_later_commit: faf42ba101975befb79629c63d92e962194e4abe
+  later_commit_verification: frozen install passed with Node v24.18.0 and pnpm 10.26.1
 steps_to_reproduce:
   - 将 NCom 仓库锁定到 commit 4c1fdf745afe1d08c1c00c3de3b11feb9d5b71ac，并确认工作树干净。
   - 使用 pnpm 10.26.1 在仓库根目录执行 pnpm install --frozen-lockfile。
@@ -21,11 +23,12 @@ expected: 冻结安装使用现有 pnpm-lock.yaml 完成，且不修改 package.
 actual: 命令退出 1 并报告 ERR_PNPM_OUTDATED_LOCKFILE；pnpm-lock.yaml 的 packages/all importer 比当前 packages/all/package.json 多出 11 项依赖声明。
 evidence:
   - frameworks/ncom/reports/raw/run-003/02-install.log
+  - frameworks/ncom/reports/run-006-supported-environment-baseline.md
   - .framework-sources/ncom/pnpm-lock.yaml:94
   - .framework-sources/ncom/packages/all/package.json
 workaround: 仅可由上游维护者确认 packages/all 的预期清单后重新生成并提交一致的锁文件；本基线不采用 --no-frozen-lockfile 绕过问题。
 knowledge_cards_affected: []
 regression_tests:
   - 使用显式固定的 pnpm 10.26.1 执行 pnpm install --frozen-lockfile，并要求 exit code 0 且锁文件哈希不变。
-upstream_reference: null
-status: confirmed
+upstream_reference: faf42ba101975befb79629c63d92e962194e4abe
+status: resolved

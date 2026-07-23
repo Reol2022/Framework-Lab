@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://framework-lab.example/schemas/task-history.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "timestamp", "previousStatus", "nextStatus", "command", "reason", "evidenceFile", "toolVersion"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "previousStatus": { "type": ["string", "null"], "enum": [null, "draft", "validated", "prepared", "handed_off", "modified", "policy_failed", "verification_failed", "verification_partial", "verification_passed", "closed", "aborted"] },
+    "nextStatus": { "enum": ["draft", "validated", "prepared", "handed_off", "modified", "policy_failed", "verification_failed", "verification_partial", "verification_passed", "closed", "aborted"] },
+    "command": { "type": "string", "minLength": 1 },
+    "reason": { "type": "string", "minLength": 1 },
+    "evidenceFile": { "type": "string", "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\)(?!.*(?:^|/)\\.\\.(?:/|$)).+$" },
+    "toolVersion": { "type": "string", "minLength": 1 }
+  }
+}

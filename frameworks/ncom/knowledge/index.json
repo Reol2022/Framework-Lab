@@ -1,0 +1,246 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-23T08:42:06.520Z",
+  "frameworkId": "ncom",
+  "cardCount": 6,
+  "activeCardCount": 6,
+  "cards": [
+    {
+      "id": "framework-lab-evidence-preservation",
+      "title": "Isolated worktree and evidence preservation constraint",
+      "type": "workflow_constraint",
+      "status": "active",
+      "tags": [
+        "constraint",
+        "evidence",
+        "workflow",
+        "worktree"
+      ],
+      "scope": {
+        "exactCommits": [
+          "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        ],
+        "commitRange": null,
+        "branch": null,
+        "os": [],
+        "architecture": [],
+        "nodeVersion": null,
+        "packageManager": null,
+        "frameworkVersion": "0.0.8",
+        "validFrom": null,
+        "validUntil": null,
+        "scopeUnknown": false
+      },
+      "claimCount": 1,
+      "evidenceCount": 1,
+      "sha256": "63dddb7d380dbc1a0b852633c10b879c3e29019502d82e54e323902f206db7e6"
+    },
+    {
+      "id": "ncom-framework-overview",
+      "title": "NCom framework overview",
+      "type": "framework_overview",
+      "status": "active",
+      "tags": [
+        "ncom",
+        "overview"
+      ],
+      "scope": {
+        "exactCommits": [
+          "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        ],
+        "commitRange": null,
+        "branch": "main",
+        "os": [],
+        "architecture": [],
+        "nodeVersion": null,
+        "packageManager": null,
+        "frameworkVersion": "0.0.8",
+        "validFrom": null,
+        "validUntil": null,
+        "scopeUnknown": false
+      },
+      "claimCount": 1,
+      "evidenceCount": 1,
+      "sha256": "a5c4f5610fc31705ceb7c888160c5f1e2f8092cff26e1deca9966bc5ad8ba02a"
+    },
+    {
+      "id": "ncom-run009-cjk-sass-issue",
+      "title": "Run 009 CJK Sass import failure",
+      "type": "known_issue",
+      "status": "active",
+      "tags": [
+        "build",
+        "cjk",
+        "run-009",
+        "sass"
+      ],
+      "scope": {
+        "exactCommits": [
+          "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        ],
+        "commitRange": null,
+        "branch": null,
+        "os": [
+          "win32"
+        ],
+        "architecture": [
+          "x64"
+        ],
+        "nodeVersion": "v24.18.0",
+        "packageManager": {
+          "name": "pnpm",
+          "version": "10.26.1"
+        },
+        "frameworkVersion": "0.0.8",
+        "validFrom": null,
+        "validUntil": null,
+        "scopeUnknown": false
+      },
+      "claimCount": 1,
+      "evidenceCount": 1,
+      "sha256": "44e22f24d8f05390534957de7f011438a35b8fe8305d4a1ca2a7c62b2014f11a"
+    },
+    {
+      "id": "ncom-run010-verified-patch",
+      "title": "Run 010 verified CJK Sass patch",
+      "type": "verified_patch",
+      "status": "active",
+      "tags": [
+        "build",
+        "cjk",
+        "patch",
+        "run-010",
+        "sass"
+      ],
+      "scope": {
+        "exactCommits": [
+          "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        ],
+        "commitRange": null,
+        "branch": null,
+        "os": [
+          "win32"
+        ],
+        "architecture": [
+          "x64"
+        ],
+        "nodeVersion": "v24.18.0",
+        "packageManager": {
+          "name": "pnpm",
+          "version": "10.26.1"
+        },
+        "frameworkVersion": "0.0.8",
+        "validFrom": null,
+        "validUntil": null,
+        "scopeUnknown": false
+      },
+      "claimCount": 2,
+      "evidenceCount": 2,
+      "sha256": "35e6e51a76271a529f88276977ff085dc64b1fcab75b8e249a80565188e2e3dd"
+    },
+    {
+      "id": "ncom-supported-environment",
+      "title": "NCom supported environment baseline",
+      "type": "environment_requirement",
+      "status": "active",
+      "tags": [
+        "environment",
+        "node",
+        "pnpm",
+        "windows"
+      ],
+      "scope": {
+        "exactCommits": [
+          "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        ],
+        "commitRange": null,
+        "branch": null,
+        "os": [
+          "win32"
+        ],
+        "architecture": [
+          "x64"
+        ],
+        "nodeVersion": "v24.18.0",
+        "packageManager": {
+          "name": "pnpm",
+          "version": "10.26.1"
+        },
+        "frameworkVersion": "0.0.8",
+        "validFrom": null,
+        "validUntil": null,
+        "scopeUnknown": false
+      },
+      "claimCount": 1,
+      "evidenceCount": 1,
+      "sha256": "6866685c8933c47a882448578e5c303475262dbfa222c2fc51315215e510b41e"
+    },
+    {
+      "id": "ncom-validated-commands",
+      "title": "NCom validated install and build commands",
+      "type": "validated_command",
+      "status": "active",
+      "tags": [
+        "build",
+        "command",
+        "install",
+        "lint"
+      ],
+      "scope": {
+        "exactCommits": [
+          "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        ],
+        "commitRange": null,
+        "branch": null,
+        "os": [
+          "win32"
+        ],
+        "architecture": [
+          "x64"
+        ],
+        "nodeVersion": "v24.18.0",
+        "packageManager": {
+          "name": "pnpm",
+          "version": "10.26.1"
+        },
+        "frameworkVersion": "0.0.8",
+        "validFrom": null,
+        "validUntil": null,
+        "scopeUnknown": false
+      },
+      "claimCount": 1,
+      "evidenceCount": 1,
+      "sha256": "59abaad343586529bd68dcc829301547b966d3ee13962127b435d1223b133d76"
+    }
+  ],
+  "tags": [
+    "build",
+    "cjk",
+    "command",
+    "constraint",
+    "environment",
+    "evidence",
+    "install",
+    "lint",
+    "ncom",
+    "node",
+    "overview",
+    "patch",
+    "pnpm",
+    "run-009",
+    "run-010",
+    "sass",
+    "windows",
+    "workflow",
+    "worktree"
+  ],
+  "types": [
+    "environment_requirement",
+    "framework_overview",
+    "known_issue",
+    "validated_command",
+    "verified_patch",
+    "workflow_constraint"
+  ],
+  "indexSha256": "329d73b683010a072e8dece139c3327a38deda3c73bc65b01a02e886978a7ad5"
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Examples Catalog",
+  "type": "object",
+  "required": ["schemaVersion", "examples"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "rootPath", "packageId", "entryFiles", "relatedFiles", "detectedBy", "confidence", "scripts", "referencedPackages", "sha256", "warnings"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^example-[a-f0-9]{12}$" },
+          "rootPath": { "type": "string", "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\).+$" },
+          "entryFiles": { "type": "array", "items": { "type": "string", "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\).+$" } },
+          "confidence": { "enum": ["high", "medium"] },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+        }
+      }
+    }
+  }
+}

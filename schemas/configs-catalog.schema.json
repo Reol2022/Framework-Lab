@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Static Config Catalog",
+  "type": "object",
+  "required": ["schemaVersion", "configs"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "configs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "path", "type", "packageId", "sha256", "detectedTool", "references", "warnings"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^config-[a-f0-9]{12}$" },
+          "path": { "type": "string", "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\).+$" },
+          "type": { "enum": ["TypeScript", "Vite", "Rollup", "ESLint", "Prettier", "Vitest", "Jest", "workspace", "package_manager", "generic"] },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+        }
+      }
+    }
+  }
+}

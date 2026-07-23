@@ -1,64 +1,70 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://framework-lab.example/schemas/knowledge-card.schema.json",
-  "title": "Knowledge Card",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "id", "title", "framework", "framework_commit", "status", "summary", "when_to_use", "rules", "anti_patterns", "examples", "evidence", "verification", "confidence", "created_at", "last_verified_at", "tags"],
+  "required": ["schemaVersion", "id", "frameworkId", "type", "title", "summary", "status", "scope", "claims", "limitations", "tags", "createdAt", "updatedAt", "supersedes", "supersededBy"],
   "properties": {
-    "schema_version": { "type": "string", "const": "1.0.0" },
+    "schemaVersion": { "const": "1.0.0" },
     "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "frameworkId": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "type": { "enum": ["framework_overview", "environment_requirement", "validated_command", "known_issue", "verified_patch", "workflow_constraint"] },
     "title": { "type": "string", "minLength": 1 },
-    "framework": { "type": "string", "minLength": 1 },
-    "framework_commit": { "type": ["string", "null"] },
-    "status": { "enum": ["draft", "verified", "conflicted", "deprecated", "needs-review"] },
-    "summary": { "type": "string" },
-    "when_to_use": { "type": "array", "items": { "type": "string" } },
-    "rules": { "type": "array", "items": { "type": "string" } },
-    "anti_patterns": { "type": "array", "items": { "type": "string" } },
-    "examples": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": ["description", "content", "status"],
-        "properties": {
-          "description": { "type": "string" },
-          "content": { "type": ["string", "null"] },
-          "status": { "enum": ["pending", "verified", "rejected"] }
-        }
+    "summary": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["active", "draft", "superseded", "invalid"] },
+    "scope": { "$ref": "#/$defs/scope" },
+    "claims": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/claim" } },
+    "limitations": { "type": "array", "items": { "type": "string" } },
+    "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "supersedes": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "supersededBy": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+  },
+  "$defs": {
+    "scope": {
+      "type": "object", "additionalProperties": false,
+      "required": ["exactCommits", "commitRange", "branch", "os", "architecture", "nodeVersion", "packageManager", "frameworkVersion", "validFrom", "validUntil", "scopeUnknown"],
+      "properties": {
+        "exactCommits": { "type": "array", "items": { "type": "string", "pattern": "^[a-f0-9]{40}$" }, "uniqueItems": true },
+        "commitRange": { "type": ["string", "null"] }, "branch": { "type": ["string", "null"] },
+        "os": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "architecture": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "nodeVersion": { "type": ["string", "null"] },
+        "packageManager": {
+          "type": ["object", "null"], "additionalProperties": false,
+          "required": ["name", "version"],
+          "properties": { "name": { "type": "string" }, "version": { "type": "string" } }
+        },
+        "frameworkVersion": { "type": ["string", "null"] },
+        "validFrom": { "type": ["string", "null"], "format": "date-time" },
+        "validUntil": { "type": ["string", "null"], "format": "date-time" },
+        "scopeUnknown": { "type": "boolean" }
+      }
+    },
+    "claim": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "text", "status", "evidence"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+        "text": { "type": "string", "minLength": 1 },
+        "status": { "enum": ["observed", "verified", "manual", "inferred"] },
+        "evidence": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/evidence" } }
       }
     },
     "evidence": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": ["type", "reference", "location", "claim", "status"],
-        "properties": {
-          "type": { "enum": ["source", "documentation", "example", "experiment", "issue", "pull-request"] },
-          "reference": { "type": "string" },
-          "location": { "type": ["string", "null"] },
-          "claim": { "type": "string" },
-          "status": { "enum": ["candidate", "supports", "contradicts", "unavailable"] }
-        }
-      }
-    },
-    "verification": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["method", "commands", "expected", "actual", "status"],
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "type", "path", "jsonPointer", "runId", "stepId", "eventId", "commit", "lineStart", "lineEnd", "sha256", "note"],
       "properties": {
-        "method": { "type": ["string", "null"] },
-        "commands": { "type": "array", "items": { "type": "string" } },
-        "expected": { "type": ["string", "null"] },
-        "actual": { "type": ["string", "null"] },
-        "status": { "enum": ["not-run", "passed", "failed", "blocked"] }
+        "id": { "type": "string", "pattern": "^[a-zA-Z0-9-]+$" },
+        "type": { "enum": ["framework_config", "run", "run_step", "run_error", "source_file", "commit", "patch", "comparison_report", "documentation", "manual_reference"] },
+        "path": { "type": ["string", "null"] }, "jsonPointer": { "type": ["string", "null"] },
+        "runId": { "type": ["string", "null"] }, "stepId": { "type": ["string", "null"] },
+        "eventId": { "type": ["string", "null"] }, "commit": { "type": ["string", "null"] },
+        "lineStart": { "type": ["integer", "null"], "minimum": 1 }, "lineEnd": { "type": ["integer", "null"], "minimum": 1 },
+        "sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+        "note": { "type": ["string", "null"] }
       }
-    },
-    "confidence": { "enum": ["low", "medium", "high"] },
-    "created_at": { "type": ["string", "null"], "format": "date-time" },
-    "last_verified_at": { "type": ["string", "null"], "format": "date-time" },
-    "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+    }
   }
 }

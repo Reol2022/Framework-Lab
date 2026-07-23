@@ -1,0 +1,32 @@
+schema_version: 1.0.0
+id: ncom-theme-build-entry-missing
+framework: ncom
+framework_commit: faf42ba101975befb79629c63d92e962194e4abe
+category: framework-bug
+severity: high
+title: theme 构建脚本引用不存在的 scripts/build.mjs
+task_id: task-ncom-l0-001-baseline
+environment:
+  os: Windows 10 Home China 22H2 (build 19045, x64)
+  node: v24.18.0
+  npm: 11.7.0
+  pnpm: 10.26.1
+  shell: Windows PowerShell 5.1.19041.6456
+steps_to_reproduce:
+  - 将独立 NCom 工作树锁定到 commit faf42ba101975befb79629c63d92e962194e4abe。
+  - 使用仓库固定的 pnpm 10.26.1 完成 pnpm install --frozen-lockfile。
+  - 将固定 pnpm 的目录置于 PATH 后执行 pnpm build。
+expected: 根 build 依次进入 @ncom/all 与 @ncom/theme，并由已提交的 theme 构建入口完成构建。
+actual: 构建进入 @ncom/all 和 @ncom/theme；@ncom/theme 执行 node scripts/build.mjs，但 Node 报 MODULE_NOT_FOUND，因为 packages/theme/scripts/build.mjs 在该 commit 的 Git tree 中不存在。
+evidence:
+  - frameworks/ncom/reports/run-006-supported-environment-baseline.md
+  - frameworks/ncom/reports/raw/run-006/README.md
+  - .framework-sources/ncom-faf42ba/packages/theme/package.json:11
+  - git -C .framework-sources/ncom-faf42ba ls-tree -r --name-only HEAD -- packages/theme/scripts/build.mjs
+workaround: null
+knowledge_cards_affected: []
+regression_tests:
+  - 在不修改源码的干净 commit 工作树中使用 Node v24.18.0 与 pnpm 10.26.1 执行 pnpm build，并要求 exit code 0。
+  - 在执行 build 前确认 package.json 中引用的构建入口存在于同一 commit 的 Git tree。
+upstream_reference: null
+status: confirmed

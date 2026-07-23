@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://framework-lab.example/schemas/change-policy.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "allowedPaths", "deniedPaths", "maxChangedFiles", "maxAddedFiles", "maxDeletedFiles", "maxDiffLines", "allowUntrackedFiles", "allowedUntrackedPaths", "deniedExtensions", "requireCleanStart", "lockfilesReadOnly", "manifestsReadOnly", "generatedDirectoriesIgnored", "requirePatch", "requireDiffCheck", "requireNoConflictMarkers"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "allowedPaths": { "$ref": "#/$defs/paths" },
+    "deniedPaths": { "$ref": "#/$defs/paths" },
+    "maxChangedFiles": { "type": "integer", "minimum": 0 },
+    "maxAddedFiles": { "type": "integer", "minimum": 0 },
+    "maxDeletedFiles": { "type": "integer", "minimum": 0 },
+    "maxDiffLines": { "type": "integer", "minimum": 0 },
+    "allowUntrackedFiles": { "type": "boolean" },
+    "allowedUntrackedPaths": { "$ref": "#/$defs/paths" },
+    "deniedExtensions": { "type": "array", "items": { "type": "string", "pattern": "^\\.[A-Za-z0-9]+$" } },
+    "requireCleanStart": { "type": "boolean" },
+    "lockfilesReadOnly": { "type": "boolean" },
+    "manifestsReadOnly": { "type": "boolean" },
+    "generatedDirectoriesIgnored": { "$ref": "#/$defs/paths" },
+    "requirePatch": { "type": "boolean" },
+    "requireDiffCheck": { "type": "boolean" },
+    "requireNoConflictMarkers": { "type": "boolean" }
+  },
+  "$defs": {
+    "path": { "type": "string", "minLength": 1, "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\)(?!.*(?:^|/)\\.\\.(?:/|$)).+$" },
+    "paths": { "type": "array", "items": { "$ref": "#/$defs/path" } }
+  }
+}

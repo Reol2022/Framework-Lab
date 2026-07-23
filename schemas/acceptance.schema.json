@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://framework-lab.example/schemas/acceptance.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "criteria", "summary"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "type", "title", "description", "required", "automated", "status", "evidence", "expected", "actual", "evaluator", "warnings"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+          "type": { "enum": ["source_change", "file_exists", "file_not_changed", "path_allowed", "path_denied", "text_present", "text_absent", "export_present", "symbol_used", "command_passes", "http_status", "manual_check", "browser_check", "custom"] },
+          "title": { "type": "string", "minLength": 1 },
+          "description": { "type": "string" },
+          "required": { "type": "boolean" },
+          "automated": { "type": "boolean" },
+          "status": { "enum": ["pending", "passed", "failed", "skipped", "manual_required"] },
+          "evidence": { "type": "array", "items": { "type": "string" } },
+          "expected": {},
+          "actual": {},
+          "evaluator": { "type": "string", "minLength": 1 },
+          "warnings": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passed", "failed", "pending", "skipped", "manualRequired"],
+      "properties": {
+        "passed": { "type": "integer", "minimum": 0 },
+        "failed": { "type": "integer", "minimum": 0 },
+        "pending": { "type": "integer", "minimum": 0 },
+        "skipped": { "type": "integer", "minimum": 0 },
+        "manualRequired": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

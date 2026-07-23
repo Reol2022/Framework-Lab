@@ -1,3 +1,5 @@
 # NCom 知识卡
 
-此目录当前为空，因为尚未锁定 NCom commit 或验证任何知识。新增卡片必须符合知识规范，绑定实际 commit，并附公开证据和可复现验证。
+本目录只保存由现有配置、Run、错误事件、补丁和对照报告支持的证据卡。每条 claim 必须绑定仓库相对 EvidenceRef、SHA256 和精确适用 scope。
+
+`index.json` 由 `framework-lab knowledge index ncom` 确定性生成。知识卡不代表 NCom 上游接受补丁，也不覆盖未验证架构、API 或浏览器行为。
