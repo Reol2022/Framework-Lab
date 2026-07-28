@@ -1,0 +1,414 @@
+{
+  "schemaVersion": "1.0.0",
+  "frameworkId": "ncom",
+  "generatedAt": "2026-07-28T03:28:04.289Z",
+  "records": [
+    {
+      "knowledgeId": "ncom-component-base-model",
+      "learningBundleEstimatedTokens": 477,
+      "draftEstimatedTokens": 429,
+      "publishedKnowledgeEstimatedTokens": 430,
+      "reviewCount": 1,
+      "reuseCount": 0,
+      "taskHitCount": 0,
+      "replacedRawSnippetCharacters": 0,
+      "estimatedContextDifference": 0,
+      "breakEvenEstimate": null,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-event-state-update-workflow",
+      "learningBundleEstimatedTokens": 567,
+      "draftEstimatedTokens": 547,
+      "publishedKnowledgeEstimatedTokens": 548,
+      "reviewCount": 1,
+      "reuseCount": 0,
+      "taskHitCount": 0,
+      "replacedRawSnippetCharacters": 0,
+      "estimatedContextDifference": 0,
+      "breakEvenEstimate": null,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-event-system",
+      "learningBundleEstimatedTokens": 566,
+      "draftEstimatedTokens": 404,
+      "publishedKnowledgeEstimatedTokens": 405,
+      "reviewCount": 1,
+      "reuseCount": 0,
+      "taskHitCount": 0,
+      "replacedRawSnippetCharacters": 0,
+      "estimatedContextDifference": 0,
+      "breakEvenEstimate": null,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-example-workflow",
+      "learningBundleEstimatedTokens": 566,
+      "draftEstimatedTokens": 667,
+      "publishedKnowledgeEstimatedTokens": 668,
+      "reviewCount": 1,
+      "reuseCount": 1,
+      "taskHitCount": 1,
+      "replacedRawSnippetCharacters": 211,
+      "estimatedContextDifference": -158,
+      "breakEvenEstimate": 8,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-family-closable-feedback-overlay",
+      "learningBundleEstimatedTokens": 302,
+      "draftEstimatedTokens": 531,
+      "publishedKnowledgeEstimatedTokens": 532,
+      "reviewCount": 1,
+      "reuseCount": 2,
+      "taskHitCount": 2,
+      "replacedRawSnippetCharacters": 1429,
+      "estimatedContextDifference": -890,
+      "breakEvenEstimate": 2,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-family-input-controls",
+      "learningBundleEstimatedTokens": 575,
+      "draftEstimatedTokens": 761,
+      "publishedKnowledgeEstimatedTokens": 762,
+      "reviewCount": 1,
+      "reuseCount": 1,
+      "taskHitCount": 1,
+      "replacedRawSnippetCharacters": 469,
+      "estimatedContextDifference": -468,
+      "breakEvenEstimate": 3,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-family-reference-popup",
+      "learningBundleEstimatedTokens": 670,
+      "draftEstimatedTokens": 556,
+      "publishedKnowledgeEstimatedTokens": 557,
+      "reviewCount": 1,
+      "reuseCount": 1,
+      "taskHitCount": 1,
+      "replacedRawSnippetCharacters": 2601,
+      "estimatedContextDifference": -651,
+      "breakEvenEstimate": 2,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-lifecycle-callback-structure",
+      "learningBundleEstimatedTokens": 564,
+      "draftEstimatedTokens": 456,
+      "publishedKnowledgeEstimatedTokens": 457,
+      "reviewCount": 1,
+      "reuseCount": 2,
+      "taskHitCount": 2,
+      "replacedRawSnippetCharacters": 379,
+      "estimatedContextDifference": -394,
+      "breakEvenEstimate": 6,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-ncalert-structure",
+      "learningBundleEstimatedTokens": 301,
+      "draftEstimatedTokens": 458,
+      "publishedKnowledgeEstimatedTokens": 459,
+      "reviewCount": 1,
+      "reuseCount": 2,
+      "taskHitCount": 2,
+      "replacedRawSnippetCharacters": 1108,
+      "estimatedContextDifference": -584,
+      "breakEvenEstimate": 3,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-ncbutton-api",
+      "learningBundleEstimatedTokens": 301,
+      "draftEstimatedTokens": 505,
+      "publishedKnowledgeEstimatedTokens": 506,
+      "reviewCount": 1,
+      "reuseCount": 0,
+      "taskHitCount": 0,
+      "replacedRawSnippetCharacters": 0,
+      "estimatedContextDifference": 0,
+      "breakEvenEstimate": null,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-nccard-structure",
+      "learningBundleEstimatedTokens": 755,
+      "draftEstimatedTokens": 521,
+      "publishedKnowledgeEstimatedTokens": 522,
+      "reviewCount": 1,
+      "reuseCount": 2,
+      "taskHitCount": 2,
+      "replacedRawSnippetCharacters": 2302,
+      "estimatedContextDifference": -612,
+      "breakEvenEstimate": 5,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-nccheckbox-structure",
+      "learningBundleEstimatedTokens": 761,
+      "draftEstimatedTokens": 513,
+      "publishedKnowledgeEstimatedTokens": 514,
+      "reviewCount": 1,
+      "reuseCount": 2,
+      "taskHitCount": 2,
+      "replacedRawSnippetCharacters": 2816,
+      "estimatedContextDifference": -1055,
+      "breakEvenEstimate": 3,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-ncdrawer-structure",
+      "learningBundleEstimatedTokens": 757,
+      "draftEstimatedTokens": 515,
+      "publishedKnowledgeEstimatedTokens": 516,
+      "reviewCount": 1,
+      "reuseCount": 2,
+      "taskHitCount": 2,
+      "replacedRawSnippetCharacters": 379,
+      "estimatedContextDifference": -394,
+      "breakEvenEstimate": 7,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-ncinput-events",
+      "learningBundleEstimatedTokens": 302,
+      "draftEstimatedTokens": 428,
+      "publishedKnowledgeEstimatedTokens": 429,
+      "reviewCount": 1,
+      "reuseCount": 1,
+      "taskHitCount": 1,
+      "replacedRawSnippetCharacters": 469,
+      "estimatedContextDifference": -468,
+      "breakEvenEstimate": 2,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-ncselect-structure",
+      "learningBundleEstimatedTokens": 488,
+      "draftEstimatedTokens": 473,
+      "publishedKnowledgeEstimatedTokens": 474,
+      "reviewCount": 1,
+      "reuseCount": 2,
+      "taskHitCount": 2,
+      "replacedRawSnippetCharacters": 2773,
+      "estimatedContextDifference": -1044,
+      "breakEvenEstimate": 2,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-nctable-structure",
+      "learningBundleEstimatedTokens": 582,
+      "draftEstimatedTokens": 491,
+      "publishedKnowledgeEstimatedTokens": 492,
+      "reviewCount": 1,
+      "reuseCount": 2,
+      "taskHitCount": 2,
+      "replacedRawSnippetCharacters": 2972,
+      "estimatedContextDifference": -780,
+      "breakEvenEstimate": 3,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-package-public-exports",
+      "learningBundleEstimatedTokens": 389,
+      "draftEstimatedTokens": 434,
+      "publishedKnowledgeEstimatedTokens": 435,
+      "reviewCount": 1,
+      "reuseCount": 0,
+      "taskHitCount": 0,
+      "replacedRawSnippetCharacters": 0,
+      "estimatedContextDifference": 0,
+      "breakEvenEstimate": null,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-props-declaration-structure",
+      "learningBundleEstimatedTokens": 393,
+      "draftEstimatedTokens": 435,
+      "publishedKnowledgeEstimatedTokens": 436,
+      "reviewCount": 1,
+      "reuseCount": 2,
+      "taskHitCount": 2,
+      "replacedRawSnippetCharacters": 1260,
+      "estimatedContextDifference": -630,
+      "breakEvenEstimate": 3,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-public-import-type-location-workflow",
+      "learningBundleEstimatedTokens": 394,
+      "draftEstimatedTokens": 538,
+      "publishedKnowledgeEstimatedTokens": 539,
+      "reviewCount": 1,
+      "reuseCount": 2,
+      "taskHitCount": 2,
+      "replacedRawSnippetCharacters": 1260,
+      "estimatedContextDifference": -630,
+      "breakEvenEstimate": 3,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-template-rendering-structure",
+      "learningBundleEstimatedTokens": 564,
+      "draftEstimatedTokens": 461,
+      "publishedKnowledgeEstimatedTokens": 462,
+      "reviewCount": 1,
+      "reuseCount": 2,
+      "taskHitCount": 2,
+      "replacedRawSnippetCharacters": 379,
+      "estimatedContextDifference": -394,
+      "breakEvenEstimate": 6,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-theme-example-build-chain-workflow",
+      "learningBundleEstimatedTokens": 388,
+      "draftEstimatedTokens": 543,
+      "publishedKnowledgeEstimatedTokens": 544,
+      "reviewCount": 1,
+      "reuseCount": 1,
+      "taskHitCount": 1,
+      "replacedRawSnippetCharacters": 211,
+      "estimatedContextDifference": -158,
+      "breakEvenEstimate": 6,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    },
+    {
+      "knowledgeId": "ncom-theme-style-verification-structure",
+      "learningBundleEstimatedTokens": 387,
+      "draftEstimatedTokens": 455,
+      "publishedKnowledgeEstimatedTokens": 456,
+      "reviewCount": 1,
+      "reuseCount": 1,
+      "taskHitCount": 1,
+      "replacedRawSnippetCharacters": 211,
+      "estimatedContextDifference": -158,
+      "breakEvenEstimate": 6,
+      "confidence": "low",
+      "limitations": [
+        "字符数按 ceil(characters / 4) 估算，不是账单 Token。",
+        "不包含模型内部推理、缓存和人工时间。"
+      ]
+    }
+  ],
+  "knownFacts": {
+    "publishedKnowledgeUnits": 22,
+    "evaluatedTasks": 12,
+    "reusedKnowledgeSelections": 28,
+    "rawFallbackSelections": 36
+  },
+  "estimates": {
+    "rawEstimatedTokens": {
+      "mean": 1844.5,
+      "median": 1872,
+      "min": 1346,
+      "max": 2164
+    },
+    "knowledgeFirstEstimatedTokens": {
+      "mean": 1402.1666666666667,
+      "median": 1384,
+      "min": 1154,
+      "max": 1594
+    },
+    "shorterTasks": 12,
+    "longerTasks": 0,
+    "ties": 0
+  },
+  "formulas": {
+    "estimatedTokens": "ceil(characterCount / 4)",
+    "reuseCount": "sum(reusedKnowledgeUnitCount)",
+    "fallbackCount": "sum(rawFallbackCount)"
+  },
+  "limitations": [
+    "estimatedTokens 是字符启发式估计，不是模型 API 的真实 token usage。",
+    "未记录人工分钟数时，不估算学习、复核或维护成本。",
+    "不根据单次实验推断生产 ROI。"
+  ]
+}

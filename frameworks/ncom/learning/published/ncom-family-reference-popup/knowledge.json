@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ncom-family-reference-popup",
+  "frameworkId": "ncom",
+  "type": "framework_concept",
+  "title": "Reference-anchored popup family",
+  "summary": "经显式复核、共享 reference slot 结构信号的 NCPopmenu 与 NCPopover 家族。",
+  "scope": {
+    "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+    "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+    "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297"
+  },
+  "relatedPackages": [
+    "package-ncom-components"
+  ],
+  "relatedSymbols": [
+    "symbol-e4fb7679687c5b4f",
+    "symbol-17e19666670a862f"
+  ],
+  "relatedComponents": [
+    "component-1211c985a80a45a7",
+    "component-baf8eef39d4e3bee"
+  ],
+  "prerequisites": [],
+  "claims": [
+    {
+      "id": "ncom-family-reference-popup-claim-1",
+      "text": "NCPopmenu 与 NCPopover 在锁定 Symbol Snapshot 中都登记了 reference slot。",
+      "status": "observed",
+      "confidence": "high",
+      "evidenceIds": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7"
+      ],
+      "appliesTo": [
+        "a350b576bbeae6c6254273037a17d2a8730fb80f"
+      ],
+      "exceptions": [],
+      "limitations": [
+        "仅适用于锁定 commit 与所列 Evidence；不推断未提供的运行时行为。",
+        "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+        "发布家族知识前必须显式复核成员范围。",
+        "共享 reference slot 不证明定位和触发策略相同。"
+      ],
+      "tags": [
+        "family",
+        "popup",
+        "slot"
+      ]
+    }
+  ],
+  "recipes": [],
+  "constraints": [],
+  "limitations": [
+    "仅适用于锁定 commit 与所列 Evidence；不推断未提供的运行时行为。",
+    "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+    "发布家族知识前必须显式复核成员范围。",
+    "共享 reference slot 不证明定位和触发策略相同。"
+  ],
+  "evidence": [
+    {
+      "id": "E1"
+    },
+    {
+      "id": "E2"
+    },
+    {
+      "id": "E3"
+    },
+    {
+      "id": "E4"
+    },
+    {
+      "id": "E5"
+    },
+    {
+      "id": "E6"
+    },
+    {
+      "id": "E7"
+    }
+  ],
+  "sourceBundleId": "bundle-family-reference-popup-a350b57-1fa112c8",
+  "generator": "manual-evidence-normalization-v0.2.3",
+  "reviewStatus": "reviewed",
+  "publicationStatus": "published",
+  "createdAt": "2026-07-27T00:00:00.000Z",
+  "updatedAt": "2026-07-27T06:33:36.263Z"
+}

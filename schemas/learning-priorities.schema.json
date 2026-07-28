@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "frameworkId", "sourceCommit", "generatedAt", "formula", "priorities", "businessHash"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "frameworkId": { "type": "string" },
+    "sourceCommit": { "type": "string" },
+    "generatedAt": { "type": "string" },
+    "formula": { "type": "string" },
+    "priorities": { "type": "array", "items": { "type": "object", "required": ["id", "factors", "score"] } },
+    "businessHash": { "type": "string", "pattern": "^sha256:" }
+  }
+}

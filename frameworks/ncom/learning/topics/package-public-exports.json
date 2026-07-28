@@ -1,0 +1,27 @@
+{
+  "id": "package-public-exports",
+  "frameworkId": "ncom",
+  "type": "framework_concept",
+  "title": "NCom package and public export structure",
+  "description": "Learn package boundaries and public exports.",
+  "packageIds": [
+    "package-ncom-all",
+    "package-ncom-components",
+    "package-ncom-core"
+  ],
+  "symbolIds": [],
+  "componentIds": [],
+  "documentSectionIds": [],
+  "exampleIds": [],
+  "prerequisiteTopicIds": [],
+  "priority": 100,
+  "learningStatus": "published",
+  "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+  "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+  "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+  "coverageTargets": [
+    "package",
+    "public_symbol"
+  ],
+  "warnings": []
+}

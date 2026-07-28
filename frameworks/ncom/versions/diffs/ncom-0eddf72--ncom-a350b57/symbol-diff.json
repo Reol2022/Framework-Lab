@@ -1,0 +1,236 @@
+{
+  "schemaVersion": "1.0.0",
+  "frameworkId": "ncom",
+  "fromSnapshot": "0eddf72d37579c3670770c0f73d22ffc769d3a12",
+  "toSnapshot": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+  "modules": {
+    "added": [
+      "module-8531b69ffa23bd03",
+      "module-118b2fa6597508d7",
+      "module-eb807acc94ca71bd",
+      "module-412ef20c7c54aaf8",
+      "module-618dad79759f3253",
+      "module-d9465b2073b0f0b7"
+    ],
+    "removed": [],
+    "modified": [
+      "module-56994273c5a39fdf",
+      "module-2553008a8203c758",
+      "module-57e6ededd6f52567",
+      "module-b44e02cf70443db7",
+      "module-9192fc77c3c7aa33",
+      "module-215ad6a3e89af44b",
+      "module-9b76e3272e914c6a",
+      "module-d20517f281c970ac",
+      "module-175a2115ce9bf2a7"
+    ]
+  },
+  "symbols": {
+    "added": [
+      "symbol-12f0ef40c1031b25",
+      "symbol-a2aeb52ad63e946f",
+      "symbol-762f039d9c8bb1c1",
+      "symbol-b57bff21d33fe289",
+      "symbol-921a1a026f9c4b99"
+    ],
+    "removed": [
+      "symbol-28d43f67966ad108",
+      "symbol-174280ab7cb2ca89",
+      "symbol-197501028e4378f7",
+      "symbol-16e45ee55882cf4d",
+      "symbol-d971dfc8e47c731a"
+    ],
+    "modified": [
+      "symbol-76260fd2db4bf29b",
+      "symbol-98733ef852af0233"
+    ],
+    "moved": [
+      {
+        "from": "symbol-28d43f67966ad108",
+        "to": "symbol-12f0ef40c1031b25",
+        "declarationSha256": "3129a3a671316dd6da9843ccd64b574165688cece8e47b7a918c20a4c21a4aa3"
+      },
+      {
+        "from": "symbol-174280ab7cb2ca89",
+        "to": "symbol-a2aeb52ad63e946f",
+        "declarationSha256": "e9537d4075d84ba1dc6b845337e912b482f2206730eac4ed74b5e281effdb37d"
+      },
+      {
+        "from": "symbol-197501028e4378f7",
+        "to": "symbol-762f039d9c8bb1c1",
+        "declarationSha256": "cc86e476edd76cc60ebe9e37bfefadcf8f5e2fa28e4228527092d973d06b32e7"
+      },
+      {
+        "from": "symbol-16e45ee55882cf4d",
+        "to": "symbol-b57bff21d33fe289",
+        "declarationSha256": "e9150ef153480c1fa6b09ac300554d86fbf087043594fd0cdb7207c8a58db7ee"
+      },
+      {
+        "from": "symbol-d971dfc8e47c731a",
+        "to": "symbol-921a1a026f9c4b99",
+        "declarationSha256": "16fa4412c1ff42f322a3005ad77822d2b6b808187f29fe509c0c66ebb7c1bccb"
+      }
+    ],
+    "signatureChanged": [
+      "symbol-76260fd2db4bf29b",
+      "symbol-98733ef852af0233"
+    ]
+  },
+  "exports": {
+    "added": [
+      "export-74c6c42990065954",
+      "export-41ae5c5da1554c6a",
+      "export-7ad7a0ff83ef8023",
+      "export-2b64ad5a3f70a6b4",
+      "export-9c15593a1aa0a09d",
+      "export-d7c3f07ce0d6b8af",
+      "export-f6d958065c68ef41",
+      "export-82a9a4022219bd60",
+      "export-5c3ad2366ee451df",
+      "export-606a32767fd4d2b3",
+      "export-9c113bff8008813d",
+      "export-46d34a1e2030e9e9"
+    ],
+    "removed": [
+      "export-580229421d6ab3d4",
+      "export-f7045ff80b1ceb73",
+      "export-9c5acd9bae0e57de",
+      "export-cc48ce82271fef1f"
+    ],
+    "modified": [
+      "export-36df6291d5ef50b8"
+    ]
+  },
+  "components": {
+    "added": [],
+    "removed": [],
+    "modified": [
+      "component-d955af7be8075ee6",
+      "component-1cc29c62f560e54e",
+      "component-c2db5ccb52857601",
+      "component-a0159c51d9981e02",
+      "component-4b9e9229e841370f",
+      "component-7f73d7fa16d35de4",
+      "component-cc0c6107ce50a14d",
+      "component-9c18762714c09034",
+      "component-a0d4c93ecb479f12",
+      "component-8c1ef37a621188d9",
+      "component-44797f1cf18b738c",
+      "component-ca4adceb9e70c54d",
+      "component-3cbb829be47ac290"
+    ]
+  },
+  "relationships": {
+    "added": [
+      "relationship-050883e6da9b674b",
+      "relationship-069388909859a07b",
+      "relationship-08d942280674741e",
+      "relationship-0c52c0b8b80f6404",
+      "relationship-172738aade557c3b",
+      "relationship-1b94be1f0acb04ed",
+      "relationship-2040c664f93472fb",
+      "relationship-39119de4f36f164c",
+      "relationship-3b298b85fd49045c",
+      "relationship-4a93a7298fd869bc",
+      "relationship-7332b78c79855c40",
+      "relationship-75617f6f1bb4b37f",
+      "relationship-7ec4d04924a1adae",
+      "relationship-823edada3bb54405",
+      "relationship-82fd60218721de5e",
+      "relationship-839c7159a762fd16",
+      "relationship-8bf32df62cbebeea",
+      "relationship-90af41e343dc4e1e",
+      "relationship-ac33afa6a268cef2",
+      "relationship-c195a82ed5423cde",
+      "relationship-c8e5359171ed3938",
+      "relationship-cb2abf568679b28f",
+      "relationship-ce4821a9c59b9a2e",
+      "relationship-e1f9cd64e374b9f4",
+      "relationship-e8c3d5921b86aa21",
+      "relationship-eaecb82ff1e5b8e2",
+      "relationship-f3f0d2594fe011c4",
+      "relationship-fef554bb3ac00c35"
+    ],
+    "removed": [
+      "relationship-2f37b1ae7635e571",
+      "relationship-4403c0d4325b9842",
+      "relationship-88b803ba06503af7",
+      "relationship-8db0062022831afc",
+      "relationship-b1a97ef47fba89e8",
+      "relationship-bff4fb07ae89c744"
+    ],
+    "modified": [
+      "relationship-009bedb3c6ee33ef",
+      "relationship-044542cfcb621d25",
+      "relationship-0920304bd2c48483",
+      "relationship-0a82909ef0f79d2e",
+      "relationship-0a9454622b947590",
+      "relationship-0db05632d7dfc401",
+      "relationship-10895e7ef0c725e6",
+      "relationship-161ddbb3309c22c5",
+      "relationship-1698002a999721f4",
+      "relationship-191693318b47fafd",
+      "relationship-20cb51cedd8062d3",
+      "relationship-27cffd623ffb4755",
+      "relationship-29877ac22bedc49b",
+      "relationship-29d977ac392d2bea",
+      "relationship-2e10aab2124cf4c9",
+      "relationship-2fe97a44c1ccea86",
+      "relationship-30f8644b8e5a3f9e",
+      "relationship-33ffb8065fe1bd72",
+      "relationship-357c998671fac224",
+      "relationship-39d54820a9b19dfc",
+      "relationship-39f1dbe4d1071f37",
+      "relationship-3b7b88d1592dc7fc",
+      "relationship-40912fa1460b84b9",
+      "relationship-45ef6025148c579d",
+      "relationship-4726a7e95e36704c",
+      "relationship-474470f2e05e0b3e",
+      "relationship-51be883edd67c75d",
+      "relationship-53138d912a93c5a0",
+      "relationship-53d1ceedcf4a57e1",
+      "relationship-542944b6af78d3da",
+      "relationship-5640552c84d6584c",
+      "relationship-5765803915470c92",
+      "relationship-5bed74bce8f15c72",
+      "relationship-623ff35c507574bf",
+      "relationship-6d21498df6325521",
+      "relationship-7295b74b82975820",
+      "relationship-7465976b3805af54",
+      "relationship-756c92e9815095cb",
+      "relationship-7bb8a994718daeb1",
+      "relationship-7fa915b9abb73033",
+      "relationship-8132bed0eebdfc98",
+      "relationship-88d26015bf7c6d86",
+      "relationship-956bc834356f5a87",
+      "relationship-97f61b57a1b5f193",
+      "relationship-9a0bc6c212fa9bb9",
+      "relationship-a49159bead650b98",
+      "relationship-a5e623d0acad7c47",
+      "relationship-ab94fb1416b52bfb",
+      "relationship-afe6df321d078344",
+      "relationship-b44886b8497fdeb8",
+      "relationship-b894a4a0a9b67bd7",
+      "relationship-bd60a85089ab29cd",
+      "relationship-c115d9a827e1543b",
+      "relationship-cae8eb8a1a2ebdf1",
+      "relationship-cbadfd0ae5639cd3",
+      "relationship-cbff80bceccc0c62",
+      "relationship-cc7b9e1bc59dd382",
+      "relationship-cd7c8ed20a07a2cc",
+      "relationship-df23cbc50c202263",
+      "relationship-e011768597333b67",
+      "relationship-e0f153b08bcab3cb",
+      "relationship-e3588e2ee3124750",
+      "relationship-e733b9b9723ae457",
+      "relationship-e976f79f323211a8",
+      "relationship-edbc1da61899bae5",
+      "relationship-eee04a9e599a3b53",
+      "relationship-ef57bc37f6f3fffc",
+      "relationship-f141c39fcaa315ca",
+      "relationship-f1d83ec076cc356d",
+      "relationship-f62420d3c88e79ce",
+      "relationship-f849f0b57a51c5a4"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "demo": "demo-b-knowledge-first",
+  "codexVersion": "0.146.0-alpha.3",
+  "requestedModel": null,
+  "observedModel": null,
+  "modelLimitation": "Codex JSONL did not expose the default model name; all successful demo sessions used the same default configuration.",
+  "commandCount": 14,
+  "commandKinds": {
+    "build": 1,
+    "lint": 1,
+    "read": 11,
+    "static-acceptance": 1
+  },
+  "readCommandCount": 11,
+  "searchCommandCount": 0,
+  "lintCommandObserved": true,
+  "buildCommandObserved": true,
+  "sessionUsage": {
+    "input_tokens": 816687,
+    "cached_input_tokens": 762624,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 8808,
+    "reasoning_output_tokens": 3648
+  },
+  "finalSha256": "sha256:61f8df6b96e56b2e7cccc0cd402ba89c9c1dc1da13c5a69c6cb7c618e727ecb8",
+  "limitations": [
+    "Command counts are derived from Codex command_execution events, not wall-clock process tracing.",
+    "Files read through a compound shell command are counted as one read command.",
+    "Raw events and final Agent text are private evaluation evidence and may contain machine paths."
+  ]
+}

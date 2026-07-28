@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ncom-theme-example-build-chain-workflow",
+  "frameworkId": "ncom",
+  "type": "build_workflow",
+  "title": "Theme and example dependency chain",
+  "summary": "Framework Lab 配置、Run 与 example 包脚本共同限定的构建验证链证据。",
+  "scope": {
+    "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+    "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+    "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297"
+  },
+  "relatedPackages": [
+    "package-ncom-all",
+    "package-ncom-theme"
+  ],
+  "relatedSymbols": [],
+  "relatedComponents": [],
+  "prerequisites": [],
+  "claims": [
+    {
+      "id": "ncom-theme-example-build-chain-workflow-claim-1",
+      "text": "当前 baseline 配置以固定 pnpm 执行 install、lint:eslint 和 build；example/package.json 另登记 dev 与 build 脚本。",
+      "status": "observed",
+      "confidence": "high",
+      "evidenceIds": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "appliesTo": [
+        "a350b576bbeae6c6254273037a17d2a8730fb80f"
+      ],
+      "exceptions": [],
+      "limitations": [
+        "仅适用于锁定 commit 与所列 Evidence；不推断未提供的运行时行为。"
+      ],
+      "tags": [
+        "workflow",
+        "theme",
+        "example",
+        "build"
+      ]
+    }
+  ],
+  "recipes": [
+    {
+      "id": "ncom-theme-example-build-chain-workflow-recipe-1",
+      "steps": [
+        "先保留固定 pnpm 与锁文件安装证据。",
+        "再执行 lint 与必需 build，并把 example 行为验证单独记录。"
+      ],
+      "evidenceIds": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "limitations": [
+        "步骤是证据约束的最小流程，不替代目标项目的验收标准。"
+      ]
+    }
+  ],
+  "constraints": [],
+  "limitations": [
+    "仅适用于锁定 commit 与所列 Evidence；不推断未提供的运行时行为。"
+  ],
+  "evidence": [
+    {
+      "id": "E1"
+    },
+    {
+      "id": "E2"
+    },
+    {
+      "id": "E3"
+    },
+    {
+      "id": "E4"
+    }
+  ],
+  "sourceBundleId": "bundle-theme-example-chain-a350b57-5a91e024",
+  "generator": "manual-evidence-normalization-v0.2.3",
+  "reviewStatus": "reviewed",
+  "publicationStatus": "published",
+  "createdAt": "2026-07-27T00:00:00.000Z",
+  "updatedAt": "2026-07-27T06:35:06.966Z"
+}

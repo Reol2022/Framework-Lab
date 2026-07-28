@@ -1,5 +1,23 @@
 # CLI
 
+## v0.2.3 覆盖、质量与评测
+
+```text
+framework-lab learn gaps <framework-id>
+framework-lab learn prioritize <framework-id>
+framework-lab learn families <framework-id>
+framework-lab learn review-family <framework-id> <family-id>
+  --decision <approved|rejected> --name <name> --reviewer <reviewer>
+  [--component <component-id>]... [--add-limitation <text>]...
+framework-lab learn quality <framework-id>
+framework-lab learn conflicts <framework-id>
+framework-lab learn validate-evaluation <framework-id>
+framework-lab learn evaluate <framework-id>
+framework-lab learn economics <framework-id>
+```
+
+`families` 只从 Symbol Snapshot 的 base/event/slot 结构信号生成候选；`review-family` 才保存明确名称和成员范围。`conflicts` 只报告精确结构化值冲突，不做文本语义猜测。`evaluate` 使用固定任务集生成 Raw 与 Knowledge-first Context，并明确把 tokens 标为字符启发式估计。
+
 ## Symbols
 
 ```text
@@ -89,6 +107,20 @@ framework-lab retrieval explain <framework-id> <retrieval-id>
 检索不调用 LLM、embedding 或外部服务；候选按精确标识符、公共可达性、任务意图、图距离、Scope、证据完整度和诊断完整度透明计分。
 # v0.2.0 受控任务命令
 
+## v0.2.1 学习命令
+
+```text
+pnpm framework-lab learn plan <framework-id>
+pnpm framework-lab learn bundle <framework-id> <topic-id>
+pnpm framework-lab learn handoff <framework-id> <bundle-id>
+pnpm framework-lab learn import <framework-id> <bundle-id> --input <file>
+pnpm framework-lab learn validate|review|publish|supersede <framework-id> <knowledge-id>
+pnpm framework-lab learn coverage|list <framework-id>
+pnpm framework-lab learn show <framework-id> <knowledge-id>
+```
+
+学习 Bundle 与 Draft 默认保持本地；`publish` 只在 Schema、Evidence 和人工 review 都通过后写入可复用知识单元。
+
 ```text
 pnpm framework-lab task create <framework-id> --task <text> [options]
 pnpm framework-lab task validate <framework-id> <task-id>
@@ -103,3 +135,19 @@ pnpm framework-lab task list <framework-id>
 ```
 
 `create` 只生成任务包；`prepare` 才创建 detached worktree；`handoff` 只输出说明，不启动 Agent。Agent 完成后由 `inspect` 与 `verify` 独立采集 Git 和运行证据。`--force` 只刷新允许重算的派生产物，不覆盖历史状态记录。
+# v0.2.2 版本与新鲜度命令
+
+```text
+framework-lab version create <framework-id> [--version-id <id>] [--catalog-snapshot <id>] [--symbol-snapshot <id>] [--tag <tag>] [--branch <branch>]
+framework-lab version validate <framework-id> <version-id>
+framework-lab version list <framework-id>
+framework-lab version diff <framework-id> <from-version> <to-version>
+framework-lab knowledge impact <framework-id> <version-diff-id>
+framework-lab knowledge freshness <framework-id> [--target-version <version-id>]
+framework-lab learn refresh-plan <framework-id> <impact-id>
+framework-lab learn refresh-bundle <framework-id> <refresh-id> <refresh-topic-id>
+framework-lab learn carry-forward <framework-id> <knowledge-id>
+framework-lab learn retire <framework-id> <knowledge-id>
+```
+
+`version diff` 只组合已有 Catalog 与 Symbol Diff，不执行源码。`learn import --dry-run` 只做 Draft 预校验，不写入草稿。

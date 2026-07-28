@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "frameworkId": "ncom",
+  "generatedAt": "2026-07-28T03:27:49.782Z",
+  "scannedKnowledgeUnits": 22,
+  "conflicts": [],
+  "summary": {
+    "total": 0,
+    "exactDuplicates": 0,
+    "structuredValueConflicts": 0,
+    "autoResolved": 0
+  },
+  "limitations": [
+    "只报告相同结构化 target/claim key 的不同 value 标签。",
+    "不使用文本相似度推断语义冲突，不自动删除或覆盖知识。"
+  ]
+}

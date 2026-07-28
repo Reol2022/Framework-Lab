@@ -1,0 +1,58 @@
+{
+  "units": [
+    {
+      "knowledgeId": "ncom-component-base-model",
+      "publicationStatus": "published",
+      "freshnessStatus": "current",
+      "affectedClaimCount": 0,
+      "requiredClaimAffectedCount": 0,
+      "recommendedAction": "keep",
+      "impactId": "impact-ncom-0eddf72--ncom-a350b57"
+    },
+    {
+      "knowledgeId": "ncom-event-system",
+      "publicationStatus": "published",
+      "freshnessStatus": "current",
+      "affectedClaimCount": 0,
+      "requiredClaimAffectedCount": 0,
+      "recommendedAction": "keep",
+      "impactId": "impact-ncom-0eddf72--ncom-a350b57"
+    },
+    {
+      "knowledgeId": "ncom-example-workflow",
+      "publicationStatus": "published",
+      "freshnessStatus": "current",
+      "affectedClaimCount": 0,
+      "requiredClaimAffectedCount": 0,
+      "recommendedAction": "keep",
+      "impactId": "impact-ncom-0eddf72--ncom-a350b57"
+    },
+    {
+      "knowledgeId": "ncom-ncbutton-api",
+      "publicationStatus": "published",
+      "freshnessStatus": "current",
+      "affectedClaimCount": 0,
+      "requiredClaimAffectedCount": 0,
+      "recommendedAction": "keep",
+      "impactId": "impact-ncom-0eddf72--ncom-a350b57"
+    },
+    {
+      "knowledgeId": "ncom-ncinput-events",
+      "publicationStatus": "published",
+      "freshnessStatus": "current",
+      "affectedClaimCount": 0,
+      "requiredClaimAffectedCount": 0,
+      "recommendedAction": "keep",
+      "impactId": "impact-ncom-0eddf72--ncom-a350b57"
+    },
+    {
+      "knowledgeId": "ncom-package-public-exports",
+      "publicationStatus": "published",
+      "freshnessStatus": "current",
+      "affectedClaimCount": 0,
+      "requiredClaimAffectedCount": 0,
+      "recommendedAction": "keep",
+      "impactId": "impact-ncom-0eddf72--ncom-a350b57"
+    }
+  ]
+}

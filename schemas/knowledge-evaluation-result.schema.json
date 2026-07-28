@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "frameworkId", "sourceCommit", "generatedAt", "estimator", "results", "aggregate", "businessHash", "limitations"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "frameworkId": { "type": "string" },
+    "sourceCommit": { "type": "string" },
+    "generatedAt": { "type": "string" },
+    "estimator": { "const": "ceil(characterCount / 4)" },
+    "results": { "type": "array", "minItems": 10, "items": { "type": "object", "required": ["taskId", "rawEstimatedTokens", "knowledgeFirstEstimatedTokens", "raw", "knowledgeFirst", "rawFallbackCount", "manualReviewStatus"] } },
+    "aggregate": { "type": "object" },
+    "businessHash": { "type": "string", "pattern": "^sha256:" },
+    "limitations": { "type": "array", "items": { "type": "string" } }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "frameworkId", "generatedAt", "scannedKnowledgeUnits", "conflicts", "summary", "limitations"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "frameworkId": { "type": "string" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "scannedKnowledgeUnits": { "type": "integer", "minimum": 0 },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "involvedKnowledge", "involvedClaims", "scopes", "evidence", "severity", "recommendedAction", "reviewStatus"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "enum": ["exact_duplicate_claim", "structured_value_conflict", "public_import_conflict", "event_name_conflict", "workflow_order_conflict", "scope_fact_conflict", "superseded_retrieval", "legacy_card_duplicate"] },
+          "involvedKnowledge": { "type": "array", "minItems": 2, "items": { "type": "string" } },
+          "involvedClaims": { "type": "array", "minItems": 2, "items": { "type": "object" } },
+          "scopes": { "type": "array", "items": { "type": "string" } },
+          "evidence": { "type": "array", "items": { "type": "object" } },
+          "severity": { "type": "string" },
+          "recommendedAction": { "type": "string" },
+          "reviewStatus": { "type": "string" }
+        }
+      }
+    },
+    "summary": { "type": "object" },
+    "limitations": { "type": "array", "items": { "type": "string" } }
+  }
+}

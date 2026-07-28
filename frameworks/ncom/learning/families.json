@@ -1,0 +1,1545 @@
+{
+  "schemaVersion": "1.0.0",
+  "frameworkId": "ncom",
+  "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+  "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+  "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+  "generatedAt": "2026-07-28T03:27:49.438Z",
+  "candidates": [
+    {
+      "id": "family-base-ncomponent-81565f5c",
+      "structuralSignal": "base:NComponent",
+      "proposedName": "NComponent structural family",
+      "componentIds": [
+        "component-078563e274bd74a1",
+        "component-09c7b8e4e89a5ecd",
+        "component-0bbbfda64ac8f3b0",
+        "component-1211c985a80a45a7",
+        "component-1cc29c62f560e54e",
+        "component-3cbb829be47ac290",
+        "component-4311e7da3e44f9af",
+        "component-4b9e9229e841370f",
+        "component-5569bcc4a06f7f4b",
+        "component-59e4204498fb6bcd",
+        "component-6279f9bfe1af1227",
+        "component-67803aa18e4c7439",
+        "component-6e6b9f678416815b",
+        "component-6f0816f819325665",
+        "component-7f73d7fa16d35de4",
+        "component-87a3d1af2276c69f",
+        "component-8945793b5db3b667",
+        "component-8c1ef37a621188d9",
+        "component-8ccdaa5f7832eb45",
+        "component-9c18762714c09034",
+        "component-9e35ff4c0d6a10f7",
+        "component-a0d4c93ecb479f12",
+        "component-a8a82141f9b2d6ff",
+        "component-a8e56b3c514601b8",
+        "component-b0714fa03081d56f",
+        "component-baf8eef39d4e3bee",
+        "component-bda4be073762fd47",
+        "component-c2db5ccb52857601",
+        "component-c91f200eac7580c2",
+        "component-ca4adceb9e70c54d",
+        "component-cc0c6107ce50a14d",
+        "component-d61ac725a2d438d4",
+        "component-d955af7be8075ee6",
+        "component-df5a34475981652d",
+        "component-dfbeb8641165a603",
+        "component-ea5dc8d798d1d252",
+        "component-ef4ae138733907d4",
+        "component-ef6fa2ad8e7750e7",
+        "component-f58fc0fa34333b7b",
+        "component-fa43e7d214230283",
+        "component-fa59b198eb92db14"
+      ],
+      "componentNames": [
+        "NCAlert",
+        "NCBadge",
+        "NCBaseInput",
+        "NCBreadcrumb",
+        "NCButton",
+        "NCCalendar",
+        "NCCard",
+        "NCCarousel",
+        "NCCol",
+        "NCCollapse",
+        "NCComplextTable",
+        "NCDivider",
+        "NCDrawer",
+        "NCEmpty",
+        "NCForm",
+        "NCFormItem",
+        "NCLayout",
+        "NCLoading",
+        "NCMenu",
+        "NCMessage",
+        "NCModal",
+        "NCPagination",
+        "NCPopconfirm",
+        "NCPopmenu",
+        "NCPopover",
+        "NCProgress",
+        "NCRoute",
+        "NCRouter",
+        "NCRow",
+        "NCSkeleton",
+        "NCSplitPanel",
+        "NCStatistic",
+        "NCSteps",
+        "NCTable",
+        "NCTabs",
+        "NCTag",
+        "NCTimeline",
+        "NCTooltip",
+        "NCTour",
+        "NCWaterfall",
+        "NCWatermark"
+      ],
+      "representativeComponents": [
+        "NCAlert",
+        "NCBadge",
+        "NCBaseInput"
+      ],
+      "sharedBaseTypes": [
+        "NComponent"
+      ],
+      "sharedInterfaces": [],
+      "sharedEvents": [],
+      "sharedMethods": [],
+      "sharedProperties": [],
+      "sharedStylePatterns": [],
+      "publicPackages": [
+        "@ncom/all",
+        "@ncom/components"
+      ],
+      "evidence": [
+        {
+          "componentId": "component-078563e274bd74a1",
+          "path": "packages/components/src/alert/index.ts",
+          "line": 13,
+          "sha256": "11a6fc230fa24a22d47bb7d4c59da203e699afd5be00146f98d6f7f6fc676857"
+        },
+        {
+          "componentId": "component-fa59b198eb92db14",
+          "path": "packages/components/src/badge/index.ts",
+          "line": 6,
+          "sha256": "22a4cd9de974191be0eae50ee2d13dafcc49cf1ad2b559f27d41b535c468095a"
+        },
+        {
+          "componentId": "component-a8a82141f9b2d6ff",
+          "path": "packages/components/src/form/baseinput.ts",
+          "line": 7,
+          "sha256": "01d9576e5f3976e060d7b12e6ed6b87f182f6474f79785d61e2f9e3002088d89"
+        },
+        {
+          "componentId": "component-d955af7be8075ee6",
+          "path": "packages/components/src/breadcrumb/index.ts",
+          "line": 13,
+          "sha256": "f9523e57f9d323edddef6d2fdf04073dd17a8f77f8502220930751a6197d945e"
+        },
+        {
+          "componentId": "component-6279f9bfe1af1227",
+          "path": "packages/components/src/button/index.ts",
+          "line": 9,
+          "sha256": "3817dfdeb01a4b929991d66eb1f1217903b0a27df346587afeaa15a178daa401"
+        },
+        {
+          "componentId": "component-1cc29c62f560e54e",
+          "path": "packages/components/src/calendar/index.ts",
+          "line": 43,
+          "sha256": "6adac850c64fc61d9cb009789d216012fc816c1639978c63d6a1f68cb34b4836"
+        },
+        {
+          "componentId": "component-8945793b5db3b667",
+          "path": "packages/components/src/card/index.ts",
+          "line": 25,
+          "sha256": "37cd9d9ede0cc520809dc0c85fe76ba5c3e63e8d53a1cd9cbc1de4c56005dd69"
+        },
+        {
+          "componentId": "component-c91f200eac7580c2",
+          "path": "packages/components/src/carousel/index.ts",
+          "line": 6,
+          "sha256": "ed0438ec0f3c3a5cb44bd6428a19f40d1fb9f9f68795c27592b5a5d369d7d48f"
+        },
+        {
+          "componentId": "component-fa43e7d214230283",
+          "path": "packages/components/src/grid/col.ts",
+          "line": 5,
+          "sha256": "8d8562c6feed33b733bd7af1c76e0ff3c929ed981b9aef2980cc8161a5eff217"
+        },
+        {
+          "componentId": "component-c2db5ccb52857601",
+          "path": "packages/components/src/collapse/index.ts",
+          "line": 13,
+          "sha256": "07fbd941a048550dbd11768bf88051a78e9f859171ac8e5ba50ea083308e5e20"
+        },
+        {
+          "componentId": "component-67803aa18e4c7439",
+          "path": "packages/components/src/complexttable/index.ts",
+          "line": 39,
+          "sha256": "bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535"
+        },
+        {
+          "componentId": "component-4b9e9229e841370f",
+          "path": "packages/components/src/divider/index.ts",
+          "line": 13,
+          "sha256": "b6b3c2e56265d6faeaeae84902bb5d03c694e2fff7ea7425e7b53ec8d79e53a9"
+        },
+        {
+          "componentId": "component-59e4204498fb6bcd",
+          "path": "packages/components/src/drawer/index.ts",
+          "line": 7,
+          "sha256": "d68a73bcd4262952a6789e72dd8ec484c3d27c99c36a2792ce23246f44b9c4c5"
+        },
+        {
+          "componentId": "component-a8e56b3c514601b8",
+          "path": "packages/components/src/empty/index.ts",
+          "line": 8,
+          "sha256": "8bb5d77ee2ef3e515a6b07fa6cdb7001ff1a2a56b982d89017138c0622ff5585"
+        },
+        {
+          "componentId": "component-8ccdaa5f7832eb45",
+          "path": "packages/components/src/form/form.ts",
+          "line": 17,
+          "sha256": "73e2e793af40bff484b76f34ce12026daf215f1e42efc9ed86132b8a461f9309"
+        },
+        {
+          "componentId": "component-dfbeb8641165a603",
+          "path": "packages/components/src/form/formitem.ts",
+          "line": 22,
+          "sha256": "135729d3ef2460ba47784826bf19e09ec016bdb23f3687bdbed57a2b7a0b9511"
+        },
+        {
+          "componentId": "component-09c7b8e4e89a5ecd",
+          "path": "packages/components/src/layout/index.ts",
+          "line": 33,
+          "sha256": "74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d"
+        },
+        {
+          "componentId": "component-4311e7da3e44f9af",
+          "path": "packages/components/src/loading/index.ts",
+          "line": 8,
+          "sha256": "052f857e44e767af25e00ed6927a884189cbc2cd89ef6c4a1a34025b9e8e24c2"
+        },
+        {
+          "componentId": "component-f58fc0fa34333b7b",
+          "path": "packages/components/src/menu/index.ts",
+          "line": 6,
+          "sha256": "c37bc428425a1edcb70e4543eb493755d761cab69bbdc895a3a8fea2ca378330"
+        },
+        {
+          "componentId": "component-ef4ae138733907d4",
+          "path": "packages/components/src/message/index.ts",
+          "line": 8,
+          "sha256": "1693eb9da91d921f8b247a21839c34569809b67e71031918dd7d24e58d81d7b6"
+        },
+        {
+          "componentId": "component-ea5dc8d798d1d252",
+          "path": "packages/components/src/modal/index.ts",
+          "line": 6,
+          "sha256": "8b2bc0f49a2eb04013bf63e750652677077c935ac243fb714f396b254f3d943a"
+        },
+        {
+          "componentId": "component-5569bcc4a06f7f4b",
+          "path": "packages/components/src/pagination/index.ts",
+          "line": 61,
+          "sha256": "59be4b2c6a8ea11b33a808f3c9fb6a820f8f938079669a643e37ace67460acad"
+        },
+        {
+          "componentId": "component-9e35ff4c0d6a10f7",
+          "path": "packages/components/src/popconfirm/index.ts",
+          "line": 11,
+          "sha256": "91534aefbaec47d3e9f49983664e8b62a23c4c88dc39baa4901ba06ace4fcfc9"
+        },
+        {
+          "componentId": "component-baf8eef39d4e3bee",
+          "path": "packages/components/src/popmenu/index.ts",
+          "line": 41,
+          "sha256": "c1d3870ac0f834a702c2b1d584c4231e63e20b9ad3c2fee97594133adc47246b"
+        },
+        {
+          "componentId": "component-1211c985a80a45a7",
+          "path": "packages/components/src/popover/index.ts",
+          "line": 5,
+          "sha256": "087686f36f1df42d123ba73c542c551d8923d91bffc1e8bbb9a079f90b0b10a9"
+        },
+        {
+          "componentId": "component-87a3d1af2276c69f",
+          "path": "packages/components/src/progress/index.ts",
+          "line": 13,
+          "sha256": "38518642c991a8f9f7c733df2092acd2b03964cc72324e5a87559336635a5bf1"
+        },
+        {
+          "componentId": "component-bda4be073762fd47",
+          "path": "packages/components/src/router/ncroute.ts",
+          "line": 4,
+          "sha256": "f1124f25bd74fa923c39bc0472d5a2ffb77a2b8de6a6864d26bb96ae7e1fcb7f"
+        },
+        {
+          "componentId": "component-0bbbfda64ac8f3b0",
+          "path": "packages/components/src/router/ncrouter.ts",
+          "line": 4,
+          "sha256": "b865162d8bac4e173af2566904996ed489b75f0614b14df00dd9cd76c664df4c"
+        },
+        {
+          "componentId": "component-ef6fa2ad8e7750e7",
+          "path": "packages/components/src/grid/row.ts",
+          "line": 5,
+          "sha256": "63796189ae0dcc9f7a58ba9dc76f8edb3acb6b1f12dc5f34e9182a3d7bfdf8fc"
+        },
+        {
+          "componentId": "component-7f73d7fa16d35de4",
+          "path": "packages/components/src/skeleton/index.ts",
+          "line": 12,
+          "sha256": "a69cbc53f6f3948a4502d40b1d7b60779f7e369bc93165ac15b9e9f1e659fd93"
+        },
+        {
+          "componentId": "component-cc0c6107ce50a14d",
+          "path": "packages/components/src/splitpanel/index.ts",
+          "line": 34,
+          "sha256": "856ab68d3296e614fc6a69056f38d112cbc4a921e914031d77aad7d97c6f24af"
+        },
+        {
+          "componentId": "component-9c18762714c09034",
+          "path": "packages/components/src/statistic/index.ts",
+          "line": 26,
+          "sha256": "6111c476da90c9039f1a0c08f2dfe0d23d5c0d4470848d20d21827be2439cde1"
+        },
+        {
+          "componentId": "component-df5a34475981652d",
+          "path": "packages/components/src/steps/index.ts",
+          "line": 18,
+          "sha256": "cd3f56503837ad01ec186614d2e18459f1c74cce8242d83c488990375b37603a"
+        },
+        {
+          "componentId": "component-d61ac725a2d438d4",
+          "path": "packages/components/src/table/index.ts",
+          "line": 27,
+          "sha256": "50e0d9ea2e13d7ad45c469c29a1a722d100d44e3b6db604c35616df73f4e6f6a"
+        },
+        {
+          "componentId": "component-b0714fa03081d56f",
+          "path": "packages/components/src/tabs/index.ts",
+          "line": 5,
+          "sha256": "d78dbee6c11e24df360737ec1fe6c2bc925fa8adb6fa31e986d7cb449dd41679"
+        },
+        {
+          "componentId": "component-6e6b9f678416815b",
+          "path": "packages/components/src/tag/index.ts",
+          "line": 17,
+          "sha256": "a1a7e04795886d3e5c60587cd471e83ded1d8c6c044240b7d109d6a67d763fd3"
+        },
+        {
+          "componentId": "component-6f0816f819325665",
+          "path": "packages/components/src/timeline/index.ts",
+          "line": 25,
+          "sha256": "d379de9c6a22a17da26b7c33fbdc7508a07db7736aea801b022248b30a6c67d8"
+        },
+        {
+          "componentId": "component-a0d4c93ecb479f12",
+          "path": "packages/components/src/tooltip/index.ts",
+          "line": 13,
+          "sha256": "c80592d3a32c7b566711c07b3e7f0263c6c2cfc7d94c9f5a5c29b197693daa8b"
+        },
+        {
+          "componentId": "component-8c1ef37a621188d9",
+          "path": "packages/components/src/tour/index.ts",
+          "line": 14,
+          "sha256": "5c4134bf872fa7960d5cf67e7878dea781c0ddf0374395c3a2c597a48ba94431"
+        },
+        {
+          "componentId": "component-ca4adceb9e70c54d",
+          "path": "packages/components/src/waterfall/index.ts",
+          "line": 10,
+          "sha256": "d2c78665465fbf8f2dde5b01b5e20e3fd42b8afd90714f8c90695c8e03a7aed7"
+        },
+        {
+          "componentId": "component-3cbb829be47ac290",
+          "path": "packages/components/src/watermark/index.ts",
+          "line": 13,
+          "sha256": "9c5e00d7aeee5184247fa34541d8c0b3fc668b976e68494200f944bd25184a4a"
+        }
+      ],
+      "confidence": "structural-candidate",
+      "detectionReasons": [
+        "41 个 public component 共享结构化信号 base:NComponent"
+      ],
+      "reviewStatus": "pending",
+      "limitations": [
+        "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+        "未登记的共享 API 或样式字段保持为空，不从名称推断。",
+        "发布家族知识前必须显式复核成员范围。"
+      ]
+    },
+    {
+      "id": "family-event-change-50f4ad72",
+      "structuralSignal": "event:change",
+      "proposedName": "change structural family",
+      "componentIds": [
+        "component-09c7b8e4e89a5ecd",
+        "component-0cf2173ee5c9baab",
+        "component-1cc29c62f560e54e",
+        "component-247dab7c3d974ab8",
+        "component-353a17298f2a74aa",
+        "component-44797f1cf18b738c",
+        "component-5569bcc4a06f7f4b",
+        "component-61ecc5922c337020",
+        "component-67803aa18e4c7439",
+        "component-79de77ea33744632",
+        "component-8c1ef37a621188d9",
+        "component-a0159c51d9981e02",
+        "component-a40ddae472421817",
+        "component-a9e97a2a50625851",
+        "component-b030cf34d4b5f037",
+        "component-b0714fa03081d56f",
+        "component-b0fbcb97a7f707f4",
+        "component-ba3fa1dc30a1d901",
+        "component-c2db5ccb52857601",
+        "component-c91f200eac7580c2",
+        "component-cc0c6107ce50a14d",
+        "component-d2272a6ffe49ae44",
+        "component-d3cbe986913febae",
+        "component-ebce2e77ab9efccd",
+        "component-f58fc0fa34333b7b"
+      ],
+      "componentNames": [
+        "NCCalendar",
+        "NCCarousel",
+        "NCCascader",
+        "NCCheckbox",
+        "NCCollapse",
+        "NCColorPicker",
+        "NCComplextTable",
+        "NCDatepicker",
+        "NCInput",
+        "NCLayout",
+        "NCMenu",
+        "NCPagination",
+        "NCRadio",
+        "NCRadioGroup",
+        "NCRange",
+        "NCRanking",
+        "NCSelect",
+        "NCSlider",
+        "NCSplitPanel",
+        "NCSwitch",
+        "NCTabs",
+        "NCTour",
+        "NCTransfer",
+        "NCTreeSelect",
+        "NCUpload"
+      ],
+      "representativeComponents": [
+        "NCCalendar",
+        "NCCarousel",
+        "NCCascader"
+      ],
+      "sharedBaseTypes": [],
+      "sharedInterfaces": [],
+      "sharedEvents": [
+        "change"
+      ],
+      "sharedMethods": [],
+      "sharedProperties": [],
+      "sharedStylePatterns": [],
+      "publicPackages": [
+        "@ncom/all",
+        "@ncom/components"
+      ],
+      "evidence": [
+        {
+          "componentId": "component-1cc29c62f560e54e",
+          "path": "packages/components/src/calendar/index.ts",
+          "line": 43,
+          "sha256": "6adac850c64fc61d9cb009789d216012fc816c1639978c63d6a1f68cb34b4836"
+        },
+        {
+          "componentId": "component-c91f200eac7580c2",
+          "path": "packages/components/src/carousel/index.ts",
+          "line": 6,
+          "sha256": "ed0438ec0f3c3a5cb44bd6428a19f40d1fb9f9f68795c27592b5a5d369d7d48f"
+        },
+        {
+          "componentId": "component-d2272a6ffe49ae44",
+          "path": "packages/components/src/cascader/index.ts",
+          "line": 9,
+          "sha256": "9911b8dbb8f2609fc935d8e0eac5f588eb66d74411e838be0416607def9406b3"
+        },
+        {
+          "componentId": "component-0cf2173ee5c9baab",
+          "path": "packages/components/src/checkbox/index.ts",
+          "line": 12,
+          "sha256": "982a003822f54de1f742f2180aa64e18ac17d69dd62e528311f0cd1b599b4ef5"
+        },
+        {
+          "componentId": "component-c2db5ccb52857601",
+          "path": "packages/components/src/collapse/index.ts",
+          "line": 13,
+          "sha256": "07fbd941a048550dbd11768bf88051a78e9f859171ac8e5ba50ea083308e5e20"
+        },
+        {
+          "componentId": "component-a0159c51d9981e02",
+          "path": "packages/components/src/colorpicker/index.ts",
+          "line": 27,
+          "sha256": "11e507c71be2488f522055c6e619888d2a8983d35d1138e9fc027248cd2e78a6"
+        },
+        {
+          "componentId": "component-67803aa18e4c7439",
+          "path": "packages/components/src/complexttable/index.ts",
+          "line": 39,
+          "sha256": "bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535"
+        },
+        {
+          "componentId": "component-ba3fa1dc30a1d901",
+          "path": "packages/components/src/datepicker/index.ts",
+          "line": 19,
+          "sha256": "373ed3be038af7759f17655e2fbc74d5a37f0845a614bb89676421f6fc1b78d4"
+        },
+        {
+          "componentId": "component-79de77ea33744632",
+          "path": "packages/components/src/input/index.ts",
+          "line": 22,
+          "sha256": "0891cc9cc6197cda760d13ef94ec27b41d1bc696139e53ace106eea99e65cf68"
+        },
+        {
+          "componentId": "component-09c7b8e4e89a5ecd",
+          "path": "packages/components/src/layout/index.ts",
+          "line": 33,
+          "sha256": "74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d"
+        },
+        {
+          "componentId": "component-f58fc0fa34333b7b",
+          "path": "packages/components/src/menu/index.ts",
+          "line": 6,
+          "sha256": "c37bc428425a1edcb70e4543eb493755d761cab69bbdc895a3a8fea2ca378330"
+        },
+        {
+          "componentId": "component-5569bcc4a06f7f4b",
+          "path": "packages/components/src/pagination/index.ts",
+          "line": 61,
+          "sha256": "59be4b2c6a8ea11b33a808f3c9fb6a820f8f938079669a643e37ace67460acad"
+        },
+        {
+          "componentId": "component-353a17298f2a74aa",
+          "path": "packages/components/src/radio/index.ts",
+          "line": 11,
+          "sha256": "ba2675028f7d83a3e47b1570bc4f27e96e706a13fdb5d099a1484fd048cd91e9"
+        },
+        {
+          "componentId": "component-a9e97a2a50625851",
+          "path": "packages/components/src/radiogroup/index.ts",
+          "line": 12,
+          "sha256": "511c1c9d87334de0c6d5ede69b555fe90af149f28e6efb0f4ff7ec14918db74f"
+        },
+        {
+          "componentId": "component-61ecc5922c337020",
+          "path": "packages/components/src/range/index.ts",
+          "line": 63,
+          "sha256": "9f984ec573e3039a7ea475e982f56128da3c623b8e95b6b87a62b822ed242509"
+        },
+        {
+          "componentId": "component-a40ddae472421817",
+          "path": "packages/components/src/ranking/index.ts",
+          "line": 22,
+          "sha256": "3346461e5748853aaea2c2c415b09b8002a09b83b0a1b7d754c806f5728a0ce3"
+        },
+        {
+          "componentId": "component-b0fbcb97a7f707f4",
+          "path": "packages/components/src/select/index.ts",
+          "line": 7,
+          "sha256": "f900aa02f249d9cfbbe4a2d52064511a8a36bead062fd726b181d6123a1fb719"
+        },
+        {
+          "componentId": "component-d3cbe986913febae",
+          "path": "packages/components/src/slider/index.ts",
+          "line": 21,
+          "sha256": "8048173fa05db03bd10b964dfa072065d29502c33a3584129cbea58021f73160"
+        },
+        {
+          "componentId": "component-cc0c6107ce50a14d",
+          "path": "packages/components/src/splitpanel/index.ts",
+          "line": 34,
+          "sha256": "856ab68d3296e614fc6a69056f38d112cbc4a921e914031d77aad7d97c6f24af"
+        },
+        {
+          "componentId": "component-247dab7c3d974ab8",
+          "path": "packages/components/src/switch/index.ts",
+          "line": 7,
+          "sha256": "5af91582c08f89eebc7a7990fa727088e33e00e3d85e18a33ab048cf45a68195"
+        },
+        {
+          "componentId": "component-b0714fa03081d56f",
+          "path": "packages/components/src/tabs/index.ts",
+          "line": 5,
+          "sha256": "d78dbee6c11e24df360737ec1fe6c2bc925fa8adb6fa31e986d7cb449dd41679"
+        },
+        {
+          "componentId": "component-8c1ef37a621188d9",
+          "path": "packages/components/src/tour/index.ts",
+          "line": 14,
+          "sha256": "5c4134bf872fa7960d5cf67e7878dea781c0ddf0374395c3a2c597a48ba94431"
+        },
+        {
+          "componentId": "component-b030cf34d4b5f037",
+          "path": "packages/components/src/transfer/index.ts",
+          "line": 10,
+          "sha256": "4c25bfbfbb3c0739eb4a59d66d8157d8c8fe00fc831adfe7812c9a9bae12ecea"
+        },
+        {
+          "componentId": "component-44797f1cf18b738c",
+          "path": "packages/components/src/treeselect/index.ts",
+          "line": 19,
+          "sha256": "449262245d3425b7ba58dcd273d99d4441b1ceba9082bc7794c19b322699c62e"
+        },
+        {
+          "componentId": "component-ebce2e77ab9efccd",
+          "path": "packages/components/src/upload/index.ts",
+          "line": 19,
+          "sha256": "0edc6cb1990de00dbb089c1805cf2613343e0597f63409e9a975ed14d1e41125"
+        }
+      ],
+      "confidence": "structural-candidate",
+      "detectionReasons": [
+        "25 个 public component 共享结构化信号 event:change"
+      ],
+      "reviewStatus": "pending",
+      "limitations": [
+        "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+        "未登记的共享 API 或样式字段保持为空，不从名称推断。",
+        "发布家族知识前必须显式复核成员范围。"
+      ]
+    },
+    {
+      "id": "family-slot-default-be4d9bab",
+      "structuralSignal": "slot:default",
+      "proposedName": "default structural family",
+      "componentIds": [
+        "component-0cf2173ee5c9baab",
+        "component-1211c985a80a45a7",
+        "component-353a17298f2a74aa",
+        "component-3cbb829be47ac290",
+        "component-4b9e9229e841370f",
+        "component-59e4204498fb6bcd",
+        "component-6279f9bfe1af1227",
+        "component-67803aa18e4c7439",
+        "component-6e6b9f678416815b",
+        "component-7f73d7fa16d35de4",
+        "component-8945793b5db3b667",
+        "component-8ccdaa5f7832eb45",
+        "component-9e35ff4c0d6a10f7",
+        "component-a0d4c93ecb479f12",
+        "component-bda4be073762fd47",
+        "component-c91f200eac7580c2",
+        "component-ca4adceb9e70c54d",
+        "component-d61ac725a2d438d4",
+        "component-dfbeb8641165a603",
+        "component-ebce2e77ab9efccd",
+        "component-ef6fa2ad8e7750e7",
+        "component-fa43e7d214230283",
+        "component-fa59b198eb92db14"
+      ],
+      "componentNames": [
+        "NCBadge",
+        "NCButton",
+        "NCCard",
+        "NCCarousel",
+        "NCCheckbox",
+        "NCCol",
+        "NCComplextTable",
+        "NCDivider",
+        "NCDrawer",
+        "NCForm",
+        "NCFormItem",
+        "NCPopconfirm",
+        "NCPopover",
+        "NCRadio",
+        "NCRoute",
+        "NCRow",
+        "NCSkeleton",
+        "NCTable",
+        "NCTag",
+        "NCTooltip",
+        "NCUpload",
+        "NCWaterfall",
+        "NCWatermark"
+      ],
+      "representativeComponents": [
+        "NCBadge",
+        "NCButton",
+        "NCCard"
+      ],
+      "sharedBaseTypes": [],
+      "sharedInterfaces": [],
+      "sharedEvents": [],
+      "sharedMethods": [],
+      "sharedProperties": [],
+      "sharedStylePatterns": [],
+      "publicPackages": [
+        "@ncom/all",
+        "@ncom/components"
+      ],
+      "evidence": [
+        {
+          "componentId": "component-fa59b198eb92db14",
+          "path": "packages/components/src/badge/index.ts",
+          "line": 6,
+          "sha256": "22a4cd9de974191be0eae50ee2d13dafcc49cf1ad2b559f27d41b535c468095a"
+        },
+        {
+          "componentId": "component-6279f9bfe1af1227",
+          "path": "packages/components/src/button/index.ts",
+          "line": 9,
+          "sha256": "3817dfdeb01a4b929991d66eb1f1217903b0a27df346587afeaa15a178daa401"
+        },
+        {
+          "componentId": "component-8945793b5db3b667",
+          "path": "packages/components/src/card/index.ts",
+          "line": 25,
+          "sha256": "37cd9d9ede0cc520809dc0c85fe76ba5c3e63e8d53a1cd9cbc1de4c56005dd69"
+        },
+        {
+          "componentId": "component-c91f200eac7580c2",
+          "path": "packages/components/src/carousel/index.ts",
+          "line": 6,
+          "sha256": "ed0438ec0f3c3a5cb44bd6428a19f40d1fb9f9f68795c27592b5a5d369d7d48f"
+        },
+        {
+          "componentId": "component-0cf2173ee5c9baab",
+          "path": "packages/components/src/checkbox/index.ts",
+          "line": 12,
+          "sha256": "982a003822f54de1f742f2180aa64e18ac17d69dd62e528311f0cd1b599b4ef5"
+        },
+        {
+          "componentId": "component-fa43e7d214230283",
+          "path": "packages/components/src/grid/col.ts",
+          "line": 5,
+          "sha256": "8d8562c6feed33b733bd7af1c76e0ff3c929ed981b9aef2980cc8161a5eff217"
+        },
+        {
+          "componentId": "component-67803aa18e4c7439",
+          "path": "packages/components/src/complexttable/index.ts",
+          "line": 39,
+          "sha256": "bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535"
+        },
+        {
+          "componentId": "component-4b9e9229e841370f",
+          "path": "packages/components/src/divider/index.ts",
+          "line": 13,
+          "sha256": "b6b3c2e56265d6faeaeae84902bb5d03c694e2fff7ea7425e7b53ec8d79e53a9"
+        },
+        {
+          "componentId": "component-59e4204498fb6bcd",
+          "path": "packages/components/src/drawer/index.ts",
+          "line": 7,
+          "sha256": "d68a73bcd4262952a6789e72dd8ec484c3d27c99c36a2792ce23246f44b9c4c5"
+        },
+        {
+          "componentId": "component-8ccdaa5f7832eb45",
+          "path": "packages/components/src/form/form.ts",
+          "line": 17,
+          "sha256": "73e2e793af40bff484b76f34ce12026daf215f1e42efc9ed86132b8a461f9309"
+        },
+        {
+          "componentId": "component-dfbeb8641165a603",
+          "path": "packages/components/src/form/formitem.ts",
+          "line": 22,
+          "sha256": "135729d3ef2460ba47784826bf19e09ec016bdb23f3687bdbed57a2b7a0b9511"
+        },
+        {
+          "componentId": "component-9e35ff4c0d6a10f7",
+          "path": "packages/components/src/popconfirm/index.ts",
+          "line": 11,
+          "sha256": "91534aefbaec47d3e9f49983664e8b62a23c4c88dc39baa4901ba06ace4fcfc9"
+        },
+        {
+          "componentId": "component-1211c985a80a45a7",
+          "path": "packages/components/src/popover/index.ts",
+          "line": 5,
+          "sha256": "087686f36f1df42d123ba73c542c551d8923d91bffc1e8bbb9a079f90b0b10a9"
+        },
+        {
+          "componentId": "component-353a17298f2a74aa",
+          "path": "packages/components/src/radio/index.ts",
+          "line": 11,
+          "sha256": "ba2675028f7d83a3e47b1570bc4f27e96e706a13fdb5d099a1484fd048cd91e9"
+        },
+        {
+          "componentId": "component-bda4be073762fd47",
+          "path": "packages/components/src/router/ncroute.ts",
+          "line": 4,
+          "sha256": "f1124f25bd74fa923c39bc0472d5a2ffb77a2b8de6a6864d26bb96ae7e1fcb7f"
+        },
+        {
+          "componentId": "component-ef6fa2ad8e7750e7",
+          "path": "packages/components/src/grid/row.ts",
+          "line": 5,
+          "sha256": "63796189ae0dcc9f7a58ba9dc76f8edb3acb6b1f12dc5f34e9182a3d7bfdf8fc"
+        },
+        {
+          "componentId": "component-7f73d7fa16d35de4",
+          "path": "packages/components/src/skeleton/index.ts",
+          "line": 12,
+          "sha256": "a69cbc53f6f3948a4502d40b1d7b60779f7e369bc93165ac15b9e9f1e659fd93"
+        },
+        {
+          "componentId": "component-d61ac725a2d438d4",
+          "path": "packages/components/src/table/index.ts",
+          "line": 27,
+          "sha256": "50e0d9ea2e13d7ad45c469c29a1a722d100d44e3b6db604c35616df73f4e6f6a"
+        },
+        {
+          "componentId": "component-6e6b9f678416815b",
+          "path": "packages/components/src/tag/index.ts",
+          "line": 17,
+          "sha256": "a1a7e04795886d3e5c60587cd471e83ded1d8c6c044240b7d109d6a67d763fd3"
+        },
+        {
+          "componentId": "component-a0d4c93ecb479f12",
+          "path": "packages/components/src/tooltip/index.ts",
+          "line": 13,
+          "sha256": "c80592d3a32c7b566711c07b3e7f0263c6c2cfc7d94c9f5a5c29b197693daa8b"
+        },
+        {
+          "componentId": "component-ebce2e77ab9efccd",
+          "path": "packages/components/src/upload/index.ts",
+          "line": 19,
+          "sha256": "0edc6cb1990de00dbb089c1805cf2613343e0597f63409e9a975ed14d1e41125"
+        },
+        {
+          "componentId": "component-ca4adceb9e70c54d",
+          "path": "packages/components/src/waterfall/index.ts",
+          "line": 10,
+          "sha256": "d2c78665465fbf8f2dde5b01b5e20e3fd42b8afd90714f8c90695c8e03a7aed7"
+        },
+        {
+          "componentId": "component-3cbb829be47ac290",
+          "path": "packages/components/src/watermark/index.ts",
+          "line": 13,
+          "sha256": "9c5e00d7aeee5184247fa34541d8c0b3fc668b976e68494200f944bd25184a4a"
+        }
+      ],
+      "confidence": "structural-candidate",
+      "detectionReasons": [
+        "23 个 public component 共享结构化信号 slot:default"
+      ],
+      "reviewStatus": "pending",
+      "limitations": [
+        "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+        "未登记的共享 API 或样式字段保持为空，不从名称推断。",
+        "发布家族知识前必须显式复核成员范围。"
+      ]
+    },
+    {
+      "id": "family-base-ncbaseinput-992f1bdb",
+      "structuralSignal": "base:NCBaseInput",
+      "proposedName": "NCBaseInput structural family",
+      "componentIds": [
+        "component-0cf2173ee5c9baab",
+        "component-20fc80ccb1f0e2fc",
+        "component-247dab7c3d974ab8",
+        "component-353a17298f2a74aa",
+        "component-44797f1cf18b738c",
+        "component-61ecc5922c337020",
+        "component-79de77ea33744632",
+        "component-a0159c51d9981e02",
+        "component-a40ddae472421817",
+        "component-a9e97a2a50625851",
+        "component-b030cf34d4b5f037",
+        "component-b0fbcb97a7f707f4",
+        "component-ba3fa1dc30a1d901",
+        "component-d2272a6ffe49ae44",
+        "component-d3cbe986913febae",
+        "component-ebce2e77ab9efccd"
+      ],
+      "componentNames": [
+        "NCCascader",
+        "NCCheckbox",
+        "NCColorPicker",
+        "NCDatepicker",
+        "NCInput",
+        "NCRadio",
+        "NCRadioGroup",
+        "NCRange",
+        "NCRanking",
+        "NCSelect",
+        "NCSlider",
+        "NCSwitch",
+        "NCTransfer",
+        "NCTree",
+        "NCTreeSelect",
+        "NCUpload"
+      ],
+      "representativeComponents": [
+        "NCCascader",
+        "NCCheckbox",
+        "NCColorPicker"
+      ],
+      "sharedBaseTypes": [
+        "NCBaseInput"
+      ],
+      "sharedInterfaces": [],
+      "sharedEvents": [],
+      "sharedMethods": [],
+      "sharedProperties": [],
+      "sharedStylePatterns": [],
+      "publicPackages": [
+        "@ncom/all",
+        "@ncom/components"
+      ],
+      "evidence": [
+        {
+          "componentId": "component-d2272a6ffe49ae44",
+          "path": "packages/components/src/cascader/index.ts",
+          "line": 9,
+          "sha256": "9911b8dbb8f2609fc935d8e0eac5f588eb66d74411e838be0416607def9406b3"
+        },
+        {
+          "componentId": "component-0cf2173ee5c9baab",
+          "path": "packages/components/src/checkbox/index.ts",
+          "line": 12,
+          "sha256": "982a003822f54de1f742f2180aa64e18ac17d69dd62e528311f0cd1b599b4ef5"
+        },
+        {
+          "componentId": "component-a0159c51d9981e02",
+          "path": "packages/components/src/colorpicker/index.ts",
+          "line": 27,
+          "sha256": "11e507c71be2488f522055c6e619888d2a8983d35d1138e9fc027248cd2e78a6"
+        },
+        {
+          "componentId": "component-ba3fa1dc30a1d901",
+          "path": "packages/components/src/datepicker/index.ts",
+          "line": 19,
+          "sha256": "373ed3be038af7759f17655e2fbc74d5a37f0845a614bb89676421f6fc1b78d4"
+        },
+        {
+          "componentId": "component-79de77ea33744632",
+          "path": "packages/components/src/input/index.ts",
+          "line": 22,
+          "sha256": "0891cc9cc6197cda760d13ef94ec27b41d1bc696139e53ace106eea99e65cf68"
+        },
+        {
+          "componentId": "component-353a17298f2a74aa",
+          "path": "packages/components/src/radio/index.ts",
+          "line": 11,
+          "sha256": "ba2675028f7d83a3e47b1570bc4f27e96e706a13fdb5d099a1484fd048cd91e9"
+        },
+        {
+          "componentId": "component-a9e97a2a50625851",
+          "path": "packages/components/src/radiogroup/index.ts",
+          "line": 12,
+          "sha256": "511c1c9d87334de0c6d5ede69b555fe90af149f28e6efb0f4ff7ec14918db74f"
+        },
+        {
+          "componentId": "component-61ecc5922c337020",
+          "path": "packages/components/src/range/index.ts",
+          "line": 63,
+          "sha256": "9f984ec573e3039a7ea475e982f56128da3c623b8e95b6b87a62b822ed242509"
+        },
+        {
+          "componentId": "component-a40ddae472421817",
+          "path": "packages/components/src/ranking/index.ts",
+          "line": 22,
+          "sha256": "3346461e5748853aaea2c2c415b09b8002a09b83b0a1b7d754c806f5728a0ce3"
+        },
+        {
+          "componentId": "component-b0fbcb97a7f707f4",
+          "path": "packages/components/src/select/index.ts",
+          "line": 7,
+          "sha256": "f900aa02f249d9cfbbe4a2d52064511a8a36bead062fd726b181d6123a1fb719"
+        },
+        {
+          "componentId": "component-d3cbe986913febae",
+          "path": "packages/components/src/slider/index.ts",
+          "line": 21,
+          "sha256": "8048173fa05db03bd10b964dfa072065d29502c33a3584129cbea58021f73160"
+        },
+        {
+          "componentId": "component-247dab7c3d974ab8",
+          "path": "packages/components/src/switch/index.ts",
+          "line": 7,
+          "sha256": "5af91582c08f89eebc7a7990fa727088e33e00e3d85e18a33ab048cf45a68195"
+        },
+        {
+          "componentId": "component-b030cf34d4b5f037",
+          "path": "packages/components/src/transfer/index.ts",
+          "line": 10,
+          "sha256": "4c25bfbfbb3c0739eb4a59d66d8157d8c8fe00fc831adfe7812c9a9bae12ecea"
+        },
+        {
+          "componentId": "component-20fc80ccb1f0e2fc",
+          "path": "packages/components/src/tree/index.ts",
+          "line": 14,
+          "sha256": "e1bde03d3ae7be118544e86eb890297a16ba5799086685a4b941bf61ba8f8e12"
+        },
+        {
+          "componentId": "component-44797f1cf18b738c",
+          "path": "packages/components/src/treeselect/index.ts",
+          "line": 19,
+          "sha256": "449262245d3425b7ba58dcd273d99d4441b1ceba9082bc7794c19b322699c62e"
+        },
+        {
+          "componentId": "component-ebce2e77ab9efccd",
+          "path": "packages/components/src/upload/index.ts",
+          "line": 19,
+          "sha256": "0edc6cb1990de00dbb089c1805cf2613343e0597f63409e9a975ed14d1e41125"
+        }
+      ],
+      "confidence": "structural-candidate",
+      "detectionReasons": [
+        "16 个 public component 共享结构化信号 base:NCBaseInput"
+      ],
+      "reviewStatus": "approved",
+      "limitations": [
+        "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+        "未登记的共享 API 或样式字段保持为空，不从名称推断。",
+        "发布家族知识前必须显式复核成员范围。"
+      ]
+    },
+    {
+      "id": "family-event-click-dfaf2dc1",
+      "structuralSignal": "event:click",
+      "proposedName": "click structural family",
+      "componentIds": [
+        "component-6279f9bfe1af1227",
+        "component-d955af7be8075ee6",
+        "component-f58fc0fa34333b7b"
+      ],
+      "componentNames": [
+        "NCBreadcrumb",
+        "NCButton",
+        "NCMenu"
+      ],
+      "representativeComponents": [
+        "NCBreadcrumb",
+        "NCButton",
+        "NCMenu"
+      ],
+      "sharedBaseTypes": [],
+      "sharedInterfaces": [],
+      "sharedEvents": [
+        "click"
+      ],
+      "sharedMethods": [],
+      "sharedProperties": [],
+      "sharedStylePatterns": [],
+      "publicPackages": [
+        "@ncom/all",
+        "@ncom/components"
+      ],
+      "evidence": [
+        {
+          "componentId": "component-d955af7be8075ee6",
+          "path": "packages/components/src/breadcrumb/index.ts",
+          "line": 13,
+          "sha256": "f9523e57f9d323edddef6d2fdf04073dd17a8f77f8502220930751a6197d945e"
+        },
+        {
+          "componentId": "component-6279f9bfe1af1227",
+          "path": "packages/components/src/button/index.ts",
+          "line": 9,
+          "sha256": "3817dfdeb01a4b929991d66eb1f1217903b0a27df346587afeaa15a178daa401"
+        },
+        {
+          "componentId": "component-f58fc0fa34333b7b",
+          "path": "packages/components/src/menu/index.ts",
+          "line": 6,
+          "sha256": "c37bc428425a1edcb70e4543eb493755d761cab69bbdc895a3a8fea2ca378330"
+        }
+      ],
+      "confidence": "structural-candidate",
+      "detectionReasons": [
+        "3 个 public component 共享结构化信号 event:click"
+      ],
+      "reviewStatus": "pending",
+      "limitations": [
+        "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+        "未登记的共享 API 或样式字段保持为空，不从名称推断。",
+        "发布家族知识前必须显式复核成员范围。"
+      ]
+    },
+    {
+      "id": "family-event-close-f995da3e",
+      "structuralSignal": "event:close",
+      "proposedName": "close structural family",
+      "componentIds": [
+        "component-078563e274bd74a1",
+        "component-59e4204498fb6bcd",
+        "component-ea5dc8d798d1d252"
+      ],
+      "componentNames": [
+        "NCAlert",
+        "NCDrawer",
+        "NCModal"
+      ],
+      "representativeComponents": [
+        "NCAlert",
+        "NCDrawer",
+        "NCModal"
+      ],
+      "sharedBaseTypes": [],
+      "sharedInterfaces": [],
+      "sharedEvents": [
+        "close"
+      ],
+      "sharedMethods": [],
+      "sharedProperties": [],
+      "sharedStylePatterns": [],
+      "publicPackages": [
+        "@ncom/all",
+        "@ncom/components"
+      ],
+      "evidence": [
+        {
+          "componentId": "component-078563e274bd74a1",
+          "path": "packages/components/src/alert/index.ts",
+          "line": 13,
+          "sha256": "11a6fc230fa24a22d47bb7d4c59da203e699afd5be00146f98d6f7f6fc676857"
+        },
+        {
+          "componentId": "component-59e4204498fb6bcd",
+          "path": "packages/components/src/drawer/index.ts",
+          "line": 7,
+          "sha256": "d68a73bcd4262952a6789e72dd8ec484c3d27c99c36a2792ce23246f44b9c4c5"
+        },
+        {
+          "componentId": "component-ea5dc8d798d1d252",
+          "path": "packages/components/src/modal/index.ts",
+          "line": 6,
+          "sha256": "8b2bc0f49a2eb04013bf63e750652677077c935ac243fb714f396b254f3d943a"
+        }
+      ],
+      "confidence": "structural-candidate",
+      "detectionReasons": [
+        "3 个 public component 共享结构化信号 event:close"
+      ],
+      "reviewStatus": "approved",
+      "limitations": [
+        "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+        "未登记的共享 API 或样式字段保持为空，不从名称推断。",
+        "发布家族知识前必须显式复核成员范围。"
+      ]
+    },
+    {
+      "id": "family-event-cancel-6c689296",
+      "structuralSignal": "event:cancel",
+      "proposedName": "cancel structural family",
+      "componentIds": [
+        "component-67803aa18e4c7439",
+        "component-9e35ff4c0d6a10f7"
+      ],
+      "componentNames": [
+        "NCComplextTable",
+        "NCPopconfirm"
+      ],
+      "representativeComponents": [
+        "NCComplextTable",
+        "NCPopconfirm"
+      ],
+      "sharedBaseTypes": [],
+      "sharedInterfaces": [],
+      "sharedEvents": [
+        "cancel"
+      ],
+      "sharedMethods": [],
+      "sharedProperties": [],
+      "sharedStylePatterns": [],
+      "publicPackages": [
+        "@ncom/all",
+        "@ncom/components"
+      ],
+      "evidence": [
+        {
+          "componentId": "component-67803aa18e4c7439",
+          "path": "packages/components/src/complexttable/index.ts",
+          "line": 39,
+          "sha256": "bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535"
+        },
+        {
+          "componentId": "component-9e35ff4c0d6a10f7",
+          "path": "packages/components/src/popconfirm/index.ts",
+          "line": 11,
+          "sha256": "91534aefbaec47d3e9f49983664e8b62a23c4c88dc39baa4901ba06ace4fcfc9"
+        }
+      ],
+      "confidence": "structural-candidate",
+      "detectionReasons": [
+        "2 个 public component 共享结构化信号 event:cancel"
+      ],
+      "reviewStatus": "pending",
+      "limitations": [
+        "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+        "未登记的共享 API 或样式字段保持为空，不从名称推断。",
+        "发布家族知识前必须显式复核成员范围。"
+      ]
+    },
+    {
+      "id": "family-event-collapse-2557558f",
+      "structuralSignal": "event:collapse",
+      "proposedName": "collapse structural family",
+      "componentIds": [
+        "component-20fc80ccb1f0e2fc",
+        "component-67803aa18e4c7439"
+      ],
+      "componentNames": [
+        "NCComplextTable",
+        "NCTree"
+      ],
+      "representativeComponents": [
+        "NCComplextTable",
+        "NCTree"
+      ],
+      "sharedBaseTypes": [],
+      "sharedInterfaces": [],
+      "sharedEvents": [
+        "collapse"
+      ],
+      "sharedMethods": [],
+      "sharedProperties": [],
+      "sharedStylePatterns": [],
+      "publicPackages": [
+        "@ncom/all",
+        "@ncom/components"
+      ],
+      "evidence": [
+        {
+          "componentId": "component-67803aa18e4c7439",
+          "path": "packages/components/src/complexttable/index.ts",
+          "line": 39,
+          "sha256": "bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535"
+        },
+        {
+          "componentId": "component-20fc80ccb1f0e2fc",
+          "path": "packages/components/src/tree/index.ts",
+          "line": 14,
+          "sha256": "e1bde03d3ae7be118544e86eb890297a16ba5799086685a4b941bf61ba8f8e12"
+        }
+      ],
+      "confidence": "structural-candidate",
+      "detectionReasons": [
+        "2 个 public component 共享结构化信号 event:collapse"
+      ],
+      "reviewStatus": "pending",
+      "limitations": [
+        "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+        "未登记的共享 API 或样式字段保持为空，不从名称推断。",
+        "发布家族知识前必须显式复核成员范围。"
+      ]
+    },
+    {
+      "id": "family-event-expand-2557558f",
+      "structuralSignal": "event:expand",
+      "proposedName": "expand structural family",
+      "componentIds": [
+        "component-20fc80ccb1f0e2fc",
+        "component-67803aa18e4c7439"
+      ],
+      "componentNames": [
+        "NCComplextTable",
+        "NCTree"
+      ],
+      "representativeComponents": [
+        "NCComplextTable",
+        "NCTree"
+      ],
+      "sharedBaseTypes": [],
+      "sharedInterfaces": [],
+      "sharedEvents": [
+        "expand"
+      ],
+      "sharedMethods": [],
+      "sharedProperties": [],
+      "sharedStylePatterns": [],
+      "publicPackages": [
+        "@ncom/all",
+        "@ncom/components"
+      ],
+      "evidence": [
+        {
+          "componentId": "component-67803aa18e4c7439",
+          "path": "packages/components/src/complexttable/index.ts",
+          "line": 39,
+          "sha256": "bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535"
+        },
+        {
+          "componentId": "component-20fc80ccb1f0e2fc",
+          "path": "packages/components/src/tree/index.ts",
+          "line": 14,
+          "sha256": "e1bde03d3ae7be118544e86eb890297a16ba5799086685a4b941bf61ba8f8e12"
+        }
+      ],
+      "confidence": "structural-candidate",
+      "detectionReasons": [
+        "2 个 public component 共享结构化信号 event:expand"
+      ],
+      "reviewStatus": "pending",
+      "limitations": [
+        "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+        "未登记的共享 API 或样式字段保持为空，不从名称推断。",
+        "发布家族知识前必须显式复核成员范围。"
+      ]
+    },
+    {
+      "id": "family-event-open-e1f200f2",
+      "structuralSignal": "event:open",
+      "proposedName": "open structural family",
+      "componentIds": [
+        "component-59e4204498fb6bcd",
+        "component-ea5dc8d798d1d252"
+      ],
+      "componentNames": [
+        "NCDrawer",
+        "NCModal"
+      ],
+      "representativeComponents": [
+        "NCDrawer",
+        "NCModal"
+      ],
+      "sharedBaseTypes": [],
+      "sharedInterfaces": [],
+      "sharedEvents": [
+        "open"
+      ],
+      "sharedMethods": [],
+      "sharedProperties": [],
+      "sharedStylePatterns": [],
+      "publicPackages": [
+        "@ncom/all",
+        "@ncom/components"
+      ],
+      "evidence": [
+        {
+          "componentId": "component-59e4204498fb6bcd",
+          "path": "packages/components/src/drawer/index.ts",
+          "line": 7,
+          "sha256": "d68a73bcd4262952a6789e72dd8ec484c3d27c99c36a2792ce23246f44b9c4c5"
+        },
+        {
+          "componentId": "component-ea5dc8d798d1d252",
+          "path": "packages/components/src/modal/index.ts",
+          "line": 6,
+          "sha256": "8b2bc0f49a2eb04013bf63e750652677077c935ac243fb714f396b254f3d943a"
+        }
+      ],
+      "confidence": "structural-candidate",
+      "detectionReasons": [
+        "2 个 public component 共享结构化信号 event:open"
+      ],
+      "reviewStatus": "pending",
+      "limitations": [
+        "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+        "未登记的共享 API 或样式字段保持为空，不从名称推断。",
+        "发布家族知识前必须显式复核成员范围。"
+      ]
+    },
+    {
+      "id": "family-event-rowclick-e58c31f8",
+      "structuralSignal": "event:rowclick",
+      "proposedName": "rowclick structural family",
+      "componentIds": [
+        "component-67803aa18e4c7439",
+        "component-d61ac725a2d438d4"
+      ],
+      "componentNames": [
+        "NCComplextTable",
+        "NCTable"
+      ],
+      "representativeComponents": [
+        "NCComplextTable",
+        "NCTable"
+      ],
+      "sharedBaseTypes": [],
+      "sharedInterfaces": [],
+      "sharedEvents": [
+        "rowclick"
+      ],
+      "sharedMethods": [],
+      "sharedProperties": [],
+      "sharedStylePatterns": [],
+      "publicPackages": [
+        "@ncom/all",
+        "@ncom/components"
+      ],
+      "evidence": [
+        {
+          "componentId": "component-67803aa18e4c7439",
+          "path": "packages/components/src/complexttable/index.ts",
+          "line": 39,
+          "sha256": "bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535"
+        },
+        {
+          "componentId": "component-d61ac725a2d438d4",
+          "path": "packages/components/src/table/index.ts",
+          "line": 27,
+          "sha256": "50e0d9ea2e13d7ad45c469c29a1a722d100d44e3b6db604c35616df73f4e6f6a"
+        }
+      ],
+      "confidence": "structural-candidate",
+      "detectionReasons": [
+        "2 个 public component 共享结构化信号 event:rowclick"
+      ],
+      "reviewStatus": "pending",
+      "limitations": [
+        "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+        "未登记的共享 API 或样式字段保持为空，不从名称推断。",
+        "发布家族知识前必须显式复核成员范围。"
+      ]
+    },
+    {
+      "id": "family-event-rowdblclick-e58c31f8",
+      "structuralSignal": "event:rowdblclick",
+      "proposedName": "rowdblclick structural family",
+      "componentIds": [
+        "component-67803aa18e4c7439",
+        "component-d61ac725a2d438d4"
+      ],
+      "componentNames": [
+        "NCComplextTable",
+        "NCTable"
+      ],
+      "representativeComponents": [
+        "NCComplextTable",
+        "NCTable"
+      ],
+      "sharedBaseTypes": [],
+      "sharedInterfaces": [],
+      "sharedEvents": [
+        "rowdblclick"
+      ],
+      "sharedMethods": [],
+      "sharedProperties": [],
+      "sharedStylePatterns": [],
+      "publicPackages": [
+        "@ncom/all",
+        "@ncom/components"
+      ],
+      "evidence": [
+        {
+          "componentId": "component-67803aa18e4c7439",
+          "path": "packages/components/src/complexttable/index.ts",
+          "line": 39,
+          "sha256": "bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535"
+        },
+        {
+          "componentId": "component-d61ac725a2d438d4",
+          "path": "packages/components/src/table/index.ts",
+          "line": 27,
+          "sha256": "50e0d9ea2e13d7ad45c469c29a1a722d100d44e3b6db604c35616df73f4e6f6a"
+        }
+      ],
+      "confidence": "structural-candidate",
+      "detectionReasons": [
+        "2 个 public component 共享结构化信号 event:rowdblclick"
+      ],
+      "reviewStatus": "pending",
+      "limitations": [
+        "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+        "未登记的共享 API 或样式字段保持为空，不从名称推断。",
+        "发布家族知识前必须显式复核成员范围。"
+      ]
+    },
+    {
+      "id": "family-slot-footer-7909ca34",
+      "structuralSignal": "slot:footer",
+      "proposedName": "footer structural family",
+      "componentIds": [
+        "component-8945793b5db3b667",
+        "component-ea5dc8d798d1d252"
+      ],
+      "componentNames": [
+        "NCCard",
+        "NCModal"
+      ],
+      "representativeComponents": [
+        "NCCard",
+        "NCModal"
+      ],
+      "sharedBaseTypes": [],
+      "sharedInterfaces": [],
+      "sharedEvents": [],
+      "sharedMethods": [],
+      "sharedProperties": [],
+      "sharedStylePatterns": [],
+      "publicPackages": [
+        "@ncom/all",
+        "@ncom/components"
+      ],
+      "evidence": [
+        {
+          "componentId": "component-8945793b5db3b667",
+          "path": "packages/components/src/card/index.ts",
+          "line": 25,
+          "sha256": "37cd9d9ede0cc520809dc0c85fe76ba5c3e63e8d53a1cd9cbc1de4c56005dd69"
+        },
+        {
+          "componentId": "component-ea5dc8d798d1d252",
+          "path": "packages/components/src/modal/index.ts",
+          "line": 6,
+          "sha256": "8b2bc0f49a2eb04013bf63e750652677077c935ac243fb714f396b254f3d943a"
+        }
+      ],
+      "confidence": "structural-candidate",
+      "detectionReasons": [
+        "2 个 public component 共享结构化信号 slot:footer"
+      ],
+      "reviewStatus": "pending",
+      "limitations": [
+        "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+        "未登记的共享 API 或样式字段保持为空，不从名称推断。",
+        "发布家族知识前必须显式复核成员范围。"
+      ]
+    },
+    {
+      "id": "family-slot-reference-b8102051",
+      "structuralSignal": "slot:reference",
+      "proposedName": "reference structural family",
+      "componentIds": [
+        "component-1211c985a80a45a7",
+        "component-baf8eef39d4e3bee"
+      ],
+      "componentNames": [
+        "NCPopmenu",
+        "NCPopover"
+      ],
+      "representativeComponents": [
+        "NCPopmenu",
+        "NCPopover"
+      ],
+      "sharedBaseTypes": [],
+      "sharedInterfaces": [],
+      "sharedEvents": [],
+      "sharedMethods": [],
+      "sharedProperties": [],
+      "sharedStylePatterns": [],
+      "publicPackages": [
+        "@ncom/all",
+        "@ncom/components"
+      ],
+      "evidence": [
+        {
+          "componentId": "component-baf8eef39d4e3bee",
+          "path": "packages/components/src/popmenu/index.ts",
+          "line": 41,
+          "sha256": "c1d3870ac0f834a702c2b1d584c4231e63e20b9ad3c2fee97594133adc47246b"
+        },
+        {
+          "componentId": "component-1211c985a80a45a7",
+          "path": "packages/components/src/popover/index.ts",
+          "line": 5,
+          "sha256": "087686f36f1df42d123ba73c542c551d8923d91bffc1e8bbb9a079f90b0b10a9"
+        }
+      ],
+      "confidence": "structural-candidate",
+      "detectionReasons": [
+        "2 个 public component 共享结构化信号 slot:reference"
+      ],
+      "reviewStatus": "approved",
+      "limitations": [
+        "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+        "未登记的共享 API 或样式字段保持为空，不从名称推断。",
+        "发布家族知识前必须显式复核成员范围。"
+      ]
+    }
+  ],
+  "businessHash": "sha256:b8841311fbfbd58350cc68a95e2f8461396cc34b1927e40f08968fcf5f32fa53"
+}

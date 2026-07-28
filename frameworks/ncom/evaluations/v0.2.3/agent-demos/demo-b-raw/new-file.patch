@@ -1,0 +1,80 @@
+diff --git a/example/component/input/components/ex9.ts b/example/component/input/components/ex9.ts
+new file mode 100644
+index 0000000..c7fd99d
+--- /dev/null
++++ b/example/component/input/components/ex9.ts
+@@ -0,0 +1,74 @@
++import { ChangeEventDetail, defineComponent, NComponent } from "@ncom/all";
++
++interface InputEventDetail {
++  value: unknown;
++}
++
++export default class Input9 extends NComponent {
++  inputValue: unknown = "";
++  selectValue: unknown = "red";
++  checkboxValue: unknown = 0;
++
++  options = [
++    { label: "Red", value: "red" },
++    { label: "Green", value: "green" },
++    { label: "Blue", value: "blue" },
++  ];
++
++  template() {
++    return `
++      <div style="display: grid; gap: 12px; max-width: 360px; padding: 12px 0;">
++        <label>
++          <span style="display: block; margin-bottom: 4px;">Input (nc-input)</span>
++          <nc-input placeholder="Type a value" clearable @nc-input={this.handleInput}></nc-input>
++        </label>
++
++        <label>
++          <span style="display: block; margin-bottom: 4px;">Select (nc-change)</span>
++          <nc-select items={this.options} value="red" @nc-change={this.handleSelectChange}></nc-select>
++        </label>
++
++        <nc-checkbox value={0} @nc-change={this.handleCheckboxChange}>
++          Checkbox (nc-change)
++        </nc-checkbox>
++
++        <div aria-live="polite" style="padding: 8px; border: 1px solid #dcdfe6; border-radius: 4px;">
++          <div>Input state: <code data-state="input">(empty)</code></div>
++          <div>Select state: <code data-state="select">red</code></div>
++          <div>Checkbox state: <code data-state="checkbox">0</code></div>
++        </div>
++      </div>
++    `;
++  }
++
++  handleInput(event: CustomEvent<InputEventDetail>) {
++    this.inputValue = event.detail.value;
++    this.updateState("input", this.inputValue);
++  }
++
++  handleSelectChange(event: CustomEvent<ChangeEventDetail>) {
++    this.selectValue = event.detail.value;
++    this.updateState("select", this.selectValue);
++  }
++
++  handleCheckboxChange(event: CustomEvent<ChangeEventDetail>) {
++    this.checkboxValue = event.detail.value;
++    this.updateState("checkbox", this.checkboxValue);
++  }
++
++  private updateState(name: string, value: unknown) {
++    const display = this.shadowRoot?.querySelector<HTMLElement>(`[data-state="${name}"]`);
++    if (display) {
++      display.textContent = this.formatState(value);
++    }
++  }
++
++  private formatState(value: unknown) {
++    if (value === "" || value === undefined || value === null) {
++      return "(empty)";
++    }
++    return Array.isArray(value) ? value.join(", ") : String(value);
++  }
++}
++
++defineComponent("nc-input-ex9", Input9);

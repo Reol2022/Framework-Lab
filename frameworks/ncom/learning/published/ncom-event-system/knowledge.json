@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ncom-event-system",
+  "frameworkId": "ncom",
+  "type": "event_pattern",
+  "title": "NCom event system",
+  "summary": "Observed event detail type evidence.",
+  "scope": {
+    "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+    "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+    "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297"
+  },
+  "relatedPackages": [
+    "package-ncom-components"
+  ],
+  "relatedSymbols": [
+    "symbol-4ef0a65933001699"
+  ],
+  "relatedComponents": [],
+  "prerequisites": [],
+  "claims": [
+    {
+      "id": "event-detail-observed",
+      "text": "ClickEventDetail is present in the bounded event-system evidence for this commit.",
+      "status": "observed",
+      "confidence": "high",
+      "evidenceIds": [
+        "E1"
+      ],
+      "appliesTo": [
+        "a350b576bbeae6c6254273037a17d2a8730fb80f"
+      ],
+      "exceptions": [],
+      "limitations": [
+        "The bundle does not prove every event name or dispatch path."
+      ],
+      "tags": [
+        "event"
+      ]
+    }
+  ],
+  "recipes": [],
+  "constraints": [],
+  "limitations": [
+    "Static evidence only.",
+    "Published after evidence validation and explicit review."
+  ],
+  "evidence": [
+    {
+      "id": "E1"
+    }
+  ],
+  "sourceBundleId": "bundle-event-system-a350b57-338afc75",
+  "generator": "manual-evidence-normalization",
+  "reviewStatus": "reviewed",
+  "publicationStatus": "published",
+  "createdAt": "2026-07-23T09:20:00.000Z",
+  "updatedAt": "2026-07-23T09:18:22.932Z"
+}

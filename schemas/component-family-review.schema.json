@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "frameworkId", "familyId", "familyName", "decision", "reviewer", "reviewMethod", "sourceCommit", "structuralSignal", "candidateComponentIds", "approvedComponentIds", "excludedComponentIds", "evidence", "limitations", "reviewedAt"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "frameworkId": { "type": "string" },
+    "familyId": { "type": "string" },
+    "familyName": { "type": "string", "minLength": 1 },
+    "decision": { "enum": ["approved", "rejected"] },
+    "reviewer": { "type": "string", "minLength": 1 },
+    "reviewMethod": { "const": "explicit-cli-review" },
+    "sourceCommit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "structuralSignal": { "type": "string" },
+    "candidateComponentIds": { "type": "array", "items": { "type": "string" } },
+    "approvedComponentIds": { "type": "array", "items": { "type": "string" } },
+    "excludedComponentIds": { "type": "array", "items": { "type": "string" } },
+    "evidence": { "type": "array", "items": { "type": "object" } },
+    "limitations": { "type": "array", "items": { "type": "string" } },
+    "reviewedAt": { "type": "string" }
+  }
+}

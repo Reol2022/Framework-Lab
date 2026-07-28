@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "frameworkId", "generatedAt", "records", "knownFacts", "estimates", "formulas", "limitations"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "frameworkId": { "type": "string" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["knowledgeId", "learningBundleEstimatedTokens", "draftEstimatedTokens", "publishedKnowledgeEstimatedTokens", "reviewCount", "reuseCount", "taskHitCount", "replacedRawSnippetCharacters", "estimatedContextDifference", "breakEvenEstimate", "confidence", "limitations"],
+        "properties": {
+          "knowledgeId": { "type": "string" },
+          "learningBundleEstimatedTokens": { "type": ["integer", "null"], "minimum": 0 },
+          "draftEstimatedTokens": { "type": ["integer", "null"], "minimum": 0 },
+          "publishedKnowledgeEstimatedTokens": { "type": ["integer", "null"], "minimum": 0 },
+          "reviewCount": { "type": "integer", "minimum": 0 },
+          "reuseCount": { "type": "integer", "minimum": 0 },
+          "taskHitCount": { "type": "integer", "minimum": 0 },
+          "replacedRawSnippetCharacters": { "type": "integer", "minimum": 0 },
+          "estimatedContextDifference": { "type": "number" },
+          "breakEvenEstimate": { "type": ["integer", "null"], "minimum": 0 },
+          "confidence": { "enum": ["low", "medium", "high"] },
+          "limitations": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "knownFacts": { "type": "object" },
+    "estimates": { "type": "object" },
+    "formulas": { "type": "object" },
+    "limitations": { "type": "array", "items": { "type": "string" } }
+  }
+}

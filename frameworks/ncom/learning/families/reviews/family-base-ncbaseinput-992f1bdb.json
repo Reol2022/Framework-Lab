@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "1.0.0",
+  "frameworkId": "ncom",
+  "familyId": "family-base-ncbaseinput-992f1bdb",
+  "familyName": "Input controls",
+  "decision": "approved",
+  "reviewer": "codex-assisted-manual-review",
+  "reviewMethod": "explicit-cli-review",
+  "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+  "structuralSignal": "base:NCBaseInput",
+  "candidateComponentIds": [
+    "component-0cf2173ee5c9baab",
+    "component-20fc80ccb1f0e2fc",
+    "component-247dab7c3d974ab8",
+    "component-353a17298f2a74aa",
+    "component-44797f1cf18b738c",
+    "component-61ecc5922c337020",
+    "component-79de77ea33744632",
+    "component-a0159c51d9981e02",
+    "component-a40ddae472421817",
+    "component-a9e97a2a50625851",
+    "component-b030cf34d4b5f037",
+    "component-b0fbcb97a7f707f4",
+    "component-ba3fa1dc30a1d901",
+    "component-d2272a6ffe49ae44",
+    "component-d3cbe986913febae",
+    "component-ebce2e77ab9efccd"
+  ],
+  "approvedComponentIds": [
+    "component-0cf2173ee5c9baab",
+    "component-20fc80ccb1f0e2fc",
+    "component-247dab7c3d974ab8",
+    "component-353a17298f2a74aa",
+    "component-44797f1cf18b738c",
+    "component-61ecc5922c337020",
+    "component-79de77ea33744632",
+    "component-a0159c51d9981e02",
+    "component-a40ddae472421817",
+    "component-a9e97a2a50625851",
+    "component-b030cf34d4b5f037",
+    "component-b0fbcb97a7f707f4",
+    "component-ba3fa1dc30a1d901",
+    "component-d2272a6ffe49ae44",
+    "component-d3cbe986913febae",
+    "component-ebce2e77ab9efccd"
+  ],
+  "excludedComponentIds": [],
+  "evidence": [
+    {
+      "componentId": "component-d2272a6ffe49ae44",
+      "path": "packages/components/src/cascader/index.ts",
+      "line": 9,
+      "sha256": "9911b8dbb8f2609fc935d8e0eac5f588eb66d74411e838be0416607def9406b3"
+    },
+    {
+      "componentId": "component-0cf2173ee5c9baab",
+      "path": "packages/components/src/checkbox/index.ts",
+      "line": 12,
+      "sha256": "982a003822f54de1f742f2180aa64e18ac17d69dd62e528311f0cd1b599b4ef5"
+    },
+    {
+      "componentId": "component-a0159c51d9981e02",
+      "path": "packages/components/src/colorpicker/index.ts",
+      "line": 27,
+      "sha256": "11e507c71be2488f522055c6e619888d2a8983d35d1138e9fc027248cd2e78a6"
+    },
+    {
+      "componentId": "component-ba3fa1dc30a1d901",
+      "path": "packages/components/src/datepicker/index.ts",
+      "line": 19,
+      "sha256": "373ed3be038af7759f17655e2fbc74d5a37f0845a614bb89676421f6fc1b78d4"
+    },
+    {
+      "componentId": "component-79de77ea33744632",
+      "path": "packages/components/src/input/index.ts",
+      "line": 22,
+      "sha256": "0891cc9cc6197cda760d13ef94ec27b41d1bc696139e53ace106eea99e65cf68"
+    },
+    {
+      "componentId": "component-353a17298f2a74aa",
+      "path": "packages/components/src/radio/index.ts",
+      "line": 11,
+      "sha256": "ba2675028f7d83a3e47b1570bc4f27e96e706a13fdb5d099a1484fd048cd91e9"
+    },
+    {
+      "componentId": "component-a9e97a2a50625851",
+      "path": "packages/components/src/radiogroup/index.ts",
+      "line": 12,
+      "sha256": "511c1c9d87334de0c6d5ede69b555fe90af149f28e6efb0f4ff7ec14918db74f"
+    },
+    {
+      "componentId": "component-61ecc5922c337020",
+      "path": "packages/components/src/range/index.ts",
+      "line": 63,
+      "sha256": "9f984ec573e3039a7ea475e982f56128da3c623b8e95b6b87a62b822ed242509"
+    },
+    {
+      "componentId": "component-a40ddae472421817",
+      "path": "packages/components/src/ranking/index.ts",
+      "line": 22,
+      "sha256": "3346461e5748853aaea2c2c415b09b8002a09b83b0a1b7d754c806f5728a0ce3"
+    },
+    {
+      "componentId": "component-b0fbcb97a7f707f4",
+      "path": "packages/components/src/select/index.ts",
+      "line": 7,
+      "sha256": "f900aa02f249d9cfbbe4a2d52064511a8a36bead062fd726b181d6123a1fb719"
+    },
+    {
+      "componentId": "component-d3cbe986913febae",
+      "path": "packages/components/src/slider/index.ts",
+      "line": 21,
+      "sha256": "8048173fa05db03bd10b964dfa072065d29502c33a3584129cbea58021f73160"
+    },
+    {
+      "componentId": "component-247dab7c3d974ab8",
+      "path": "packages/components/src/switch/index.ts",
+      "line": 7,
+      "sha256": "5af91582c08f89eebc7a7990fa727088e33e00e3d85e18a33ab048cf45a68195"
+    },
+    {
+      "componentId": "component-b030cf34d4b5f037",
+      "path": "packages/components/src/transfer/index.ts",
+      "line": 10,
+      "sha256": "4c25bfbfbb3c0739eb4a59d66d8157d8c8fe00fc831adfe7812c9a9bae12ecea"
+    },
+    {
+      "componentId": "component-20fc80ccb1f0e2fc",
+      "path": "packages/components/src/tree/index.ts",
+      "line": 14,
+      "sha256": "e1bde03d3ae7be118544e86eb890297a16ba5799086685a4b941bf61ba8f8e12"
+    },
+    {
+      "componentId": "component-44797f1cf18b738c",
+      "path": "packages/components/src/treeselect/index.ts",
+      "line": 19,
+      "sha256": "449262245d3425b7ba58dcd273d99d4441b1ceba9082bc7794c19b322699c62e"
+    },
+    {
+      "componentId": "component-ebce2e77ab9efccd",
+      "path": "packages/components/src/upload/index.ts",
+      "line": 19,
+      "sha256": "0edc6cb1990de00dbb089c1805cf2613343e0597f63409e9a975ed14d1e41125"
+    }
+  ],
+  "limitations": [
+    "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+    "发布家族知识前必须显式复核成员范围。",
+    "共享 NCBaseInput 基类不表示 props 或事件完全相同。"
+  ],
+  "reviewedAt": "2026-07-27T06:28:47.281Z"
+}

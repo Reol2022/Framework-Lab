@@ -1,0 +1,25 @@
+diff --git a/example/component/card/components/ex5.ts b/example/component/card/components/ex5.ts
+new file mode 100644
+index 0000000..6b2a2ed
+--- /dev/null
++++ b/example/component/card/components/ex5.ts
+@@ -0,0 +1,19 @@
++import { NComponent, defineComponent } from "@ncom/all";
++
++export default class CardEx5 extends NComponent {
++  template() {
++    return `
++      <nc-card style="max-width: 480px">
++        <div slot="header">
++          <strong>Order summary</strong>
++        </div>
++        <p>Your card's default slot holds the main content.</p>
++        <div slot="footer">
++          <button type="button">View details</button>
++        </div>
++      </nc-card>
++    `;
++  }
++}
++
++defineComponent("nc-card-ex5", CardEx5);

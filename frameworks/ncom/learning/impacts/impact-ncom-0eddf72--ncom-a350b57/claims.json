@@ -1,0 +1,174 @@
+{
+  "claims": [
+    {
+      "claimId": "base-model-observed",
+      "knowledgeId": "ncom-component-base-model",
+      "previousStatus": "observed",
+      "freshnessStatus": "current",
+      "impactLevel": "none",
+      "evidenceStatuses": [
+        "unchanged",
+        "unchanged",
+        "unchanged",
+        "changed",
+        "changed"
+      ],
+      "affectedEvidence": [],
+      "unchangedEvidence": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "reasons": [
+        "knowledge scope already matches target commit"
+      ],
+      "autoCarryForwardEligible": false,
+      "revalidationRequired": false,
+      "manualReviewRequired": false,
+      "recommendedAction": "keep",
+      "targetScope": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "warnings": []
+    },
+    {
+      "claimId": "event-detail-observed",
+      "knowledgeId": "ncom-event-system",
+      "previousStatus": "observed",
+      "freshnessStatus": "current",
+      "impactLevel": "none",
+      "evidenceStatuses": [
+        "unchanged",
+        "unchanged",
+        "unchanged",
+        "changed",
+        "unchanged",
+        "changed"
+      ],
+      "affectedEvidence": [],
+      "unchangedEvidence": [
+        "E1",
+        "E2",
+        "E3",
+        "E5"
+      ],
+      "reasons": [
+        "knowledge scope already matches target commit"
+      ],
+      "autoCarryForwardEligible": false,
+      "revalidationRequired": false,
+      "manualReviewRequired": false,
+      "recommendedAction": "keep",
+      "targetScope": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "warnings": []
+    },
+    {
+      "claimId": "example-workflow-observed",
+      "knowledgeId": "ncom-example-workflow",
+      "previousStatus": "observed",
+      "freshnessStatus": "current",
+      "impactLevel": "none",
+      "evidenceStatuses": [
+        "unchanged",
+        "unchanged",
+        "unchanged",
+        "changed",
+        "changed",
+        "changed"
+      ],
+      "affectedEvidence": [],
+      "unchangedEvidence": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "reasons": [
+        "knowledge scope already matches target commit"
+      ],
+      "autoCarryForwardEligible": false,
+      "revalidationRequired": false,
+      "manualReviewRequired": false,
+      "recommendedAction": "keep",
+      "targetScope": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "warnings": []
+    },
+    {
+      "claimId": "button-observed",
+      "knowledgeId": "ncom-ncbutton-api",
+      "previousStatus": "observed",
+      "freshnessStatus": "current",
+      "impactLevel": "none",
+      "evidenceStatuses": [
+        "unchanged",
+        "unchanged",
+        "unchanged"
+      ],
+      "affectedEvidence": [],
+      "unchangedEvidence": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "reasons": [
+        "knowledge scope already matches target commit"
+      ],
+      "autoCarryForwardEligible": false,
+      "revalidationRequired": false,
+      "manualReviewRequired": false,
+      "recommendedAction": "keep",
+      "targetScope": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "warnings": []
+    },
+    {
+      "claimId": "input-observed",
+      "knowledgeId": "ncom-ncinput-events",
+      "previousStatus": "observed",
+      "freshnessStatus": "current",
+      "impactLevel": "none",
+      "evidenceStatuses": [
+        "unchanged",
+        "unchanged",
+        "unchanged"
+      ],
+      "affectedEvidence": [],
+      "unchangedEvidence": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "reasons": [
+        "knowledge scope already matches target commit"
+      ],
+      "autoCarryForwardEligible": false,
+      "revalidationRequired": false,
+      "manualReviewRequired": false,
+      "recommendedAction": "keep",
+      "targetScope": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "warnings": []
+    },
+    {
+      "claimId": "package-export-observed",
+      "knowledgeId": "ncom-package-public-exports",
+      "previousStatus": "observed",
+      "freshnessStatus": "current",
+      "impactLevel": "medium",
+      "evidenceStatuses": [
+        "removed",
+        "removed",
+        "removed",
+        "removed"
+      ],
+      "affectedEvidence": [
+        "E1"
+      ],
+      "unchangedEvidence": [],
+      "reasons": [
+        "knowledge scope already matches target commit"
+      ],
+      "autoCarryForwardEligible": false,
+      "revalidationRequired": false,
+      "manualReviewRequired": false,
+      "recommendedAction": "keep",
+      "targetScope": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "warnings": []
+    }
+  ]
+}

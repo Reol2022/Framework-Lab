@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0.0",
+  "versionId": "ncom-a350b57",
+  "frameworkId": "ncom",
+  "repositoryUrl": null,
+  "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+  "sourceTag": null,
+  "branch": null,
+  "catalogSnapshotId": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+  "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+  "symbolSnapshotId": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+  "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+  "knowledgeIndexSha256": "sha256:d7527e1f8e3c73f4a88be691657a2948c8daa7199de90c87c09bbdf4883bf68c",
+  "createdAt": "2026-07-23T10:56:15.783Z",
+  "sourceClean": true,
+  "previousVersionId": "ncom-0eddf72",
+  "scannerVersions": {
+    "catalog": "0.1.5",
+    "symbols": "0.1.6"
+  },
+  "warnings": []
+}

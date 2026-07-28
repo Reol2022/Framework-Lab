@@ -92,5 +92,19 @@ frameworks/*/retrievals/*
 # Controlled task bundles may contain local Context, raw patches, logs and worktree evidence
 frameworks/*/tasks/task-*/
 
+# Learning bundles and drafts contain bounded source excerpts and external Agent output
+frameworks/*/learning/bundles/**
+frameworks/*/learning/drafts/**
+frameworks/*/learning/refresh/*/bundles/**
+
+# External Agent drafts and raw session transcripts are private evaluation evidence
+frameworks/*/learning/interoperability/**
+frameworks/*/evaluations/*/agent-demos/**/events.jsonl
+frameworks/*/evaluations/*/agent-demos/**/final.md
+
 # Source patches are kept locally until their publication policy is decided
 frameworks/*/patches/*.patch
+
+# Resume-specific notes may contain personal or unrelated private-project material
+docs/learning/14-简历高频追问与答题卡.md
+docs/learning/changelog/2026-07-24.md

@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.2.3 - 2026-07-27
+
+- 新增 Knowledge Gap、透明 Priority、结构化 Component Family 与显式 family review。
+- 新增 Knowledge Quality、严格结构化 Conflict Detector、Economics 和 12 项固定任务 Evaluation。
+- NCom Published Knowledge 从 6 个扩展到 22 个，新增机制、家族、组件与工作流知识。
+- Knowledge-first 选择按精确组件、家族、机制、工作流、验证知识、Raw fallback 排序，并保留首轮过宽召回失败证据。
+- 完成真实 Learning Agent 互操作、NCCard Demo 和 Raw/Knowledge-first 输入组件双会话 Demo；Framework Lab 核心不自动调用 Agent。
+- 新增 v0.2.3 Schema、回归测试、面试展示文档和开源/私有边界。
+
+## 0.2.2 - 2026-07-23
+
+- 新增 FrameworkVersion、复用 Catalog/Symbol Diff 的版本差异和结构化 Evidence/Claim/Knowledge Impact。
+- 新增 freshness 查询与仅面向受影响知识的 refresh plan/bundle、显式 carry-forward/retire 命令。
+- Learning Handoff 现在包含合法 Draft 模板、机器可读预校验提示和 80 KiB 上限；不自动调用外部 Agent。
+- 完成 NCom `0eddf72...` 到 `a350b57...` 的真实跟踪文件 Catalog/Symbol 对照；六个现有知识单元均保持 current。
+
 ## 0.1.8 - 2026-07-23
 
 - 归档相同 NCom commit 上 NCButton 示例开发的无 Context / 有 Context 双会话实验。
@@ -91,3 +107,7 @@
 - 复用既有进程运行器与 ErrorEvent 解析；HTTP 验证在步骤 timeout 内轮询服务就绪。
 - 新增 113 项任务系统测试和真实 NCButton 任务证据。
 - Framework Lab 不直接调用 Coding Agent、OpenAI API，也不自动接受、commit 或 push 修改。
+# v0.2.1
+
+- 新增确定性 Learning Plan、有限 Evidence Bundle、外部学习 Handoff、Draft 导入、审核、发布、失效标记和覆盖统计。
+- 新增 Knowledge-first Context 选项；它记录知识命中与 raw fallback，不声明真实 Token 节省。

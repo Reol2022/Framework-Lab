@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0.0",
+  "diffId": "ncom-0eddf72--ncom-a350b57",
+  "rootHash": "sha256:588e9f4da7193010a96d5619d7139f229e958d4c49c246022cf0fc23be2abd34",
+  "files": {
+    "version-diff.json": "sha256:97107b4cce336a72b5d4f797cb9310ff345528ed760f94e16ebb47a9f17ff92e",
+    "catalog-diff.json": "sha256:87ac17154a00a423347876574b0a38948bc149aa4e2a0f80b98f3e994cf02cd4",
+    "symbol-diff.json": "sha256:a303a06ab68bbe7ce5ad29fe99cd8157dbefb1edf953d856e0fdff27e0dec1b2",
+    "report.md": "sha256:198cd9210a6056024c176539f084928057453b9d6aef3f90656708243188ebea"
+  }
+}

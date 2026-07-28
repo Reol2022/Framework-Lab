@@ -2,7 +2,36 @@
 
 Framework Lab 是一个面向 Coding Agent 的框架学习与验证工作流。它固定框架源码版本、采集环境、执行声明式基线步骤并保存可复现证据；它不是聊天机器人或自动修复平台。
 
-当前版本：`v0.1.8`
+当前版本：`v0.2.3`
+
+## NCom 知识覆盖与多任务评测
+
+```powershell
+pnpm framework-lab learn gaps ncom
+pnpm framework-lab learn prioritize ncom
+pnpm framework-lab learn families ncom
+pnpm framework-lab learn quality ncom
+pnpm framework-lab learn conflicts ncom
+pnpm framework-lab learn validate-evaluation ncom
+pnpm framework-lab learn evaluate ncom
+pnpm framework-lab learn economics ncom
+```
+
+v0.2.3 将 NCom Published Knowledge 从 6 个扩展到 22 个，并加入结构化组件族、Gap/Priority、逐维质量、严格冲突检测和 12 项固定任务对照。组件族候选只使用 base/event/slot 结构信号，必须显式复核。`estimatedTokens = ceil(characterCount / 4)` 仅为字符启发式，不代表真实模型 usage。
+
+Framework Lab 仍不自动调用 Codex/OpenAI API。真实 Agent Demo 由实施者在独立 worktree 中手动启动；结果显示 Knowledge-first 可以减少搜索，但单个复杂任务的实际 input usage 反而更高，因此不宣称普遍 token 或质量收益。详见 [v0.2.3 实施报告](docs/v0.2.3-implementation-report.md)。
+
+## 版本变化与知识新鲜度
+
+```powershell
+pnpm framework-lab version create ncom --version-id ncom-a350b57
+pnpm framework-lab version diff ncom <from-version> <to-version>
+pnpm framework-lab knowledge impact ncom <version-diff-id>
+pnpm framework-lab knowledge freshness ncom --target-version <version-id>
+pnpm framework-lab learn refresh-plan ncom <impact-id>
+```
+
+版本差异复用 Catalog 和 Symbol 的确定性差异；知识影响只依赖精确 Evidence hash 和结构化引用，不把结构变化自动描述为 breaking change。未受影响知识不会被重新学习；旧发布知识不会被静默改写或删除。
 
 ## NCButton Context A/B 探索性实验
 
@@ -176,7 +205,9 @@ CLI、parser registry、通用解析器、类型、Schema、脱敏 fixture、fin
 详见 [CLI 说明](cli/README.md)、[Schema 说明](schemas/README.md) 和 [开源边界](docs/02-open-source-boundary.md)。
 # Framework Lab
 
-当前版本：v0.2.0。
+当前版本：v0.2.1。
+
+Framework Lab 使用一次性框架学习结果，为后续 Coding Agent 任务复用知识。AI 生成的知识默认是草稿，只有经过证据校验和审核后才能发布。
 
 Framework Lab 当前不直接调用 Coding Agent。它生成任务包并在 Agent 修改后执行独立验证。
 

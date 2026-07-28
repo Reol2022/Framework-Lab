@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "frameworkId", "sourceCommit", "generatedAt", "tasks"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "frameworkId": { "type": "string" },
+    "sourceCommit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "generatedAt": { "type": "string" },
+    "tasks": {
+      "type": "array",
+      "minItems": 10,
+      "items": {
+        "type": "object",
+        "required": ["id", "task", "category", "targetComponents", "targetFamilies", "expectedKnowledgeTypes", "expectedSymbols", "expectedDocs", "expectedExamples", "expectedValidationKnowledge", "mustRecall", "mustNotInclude", "manualReviewItems", "allowedRawFallback"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "task": { "type": "string", "minLength": 8 },
+          "category": { "type": "string" },
+          "targetComponents": { "type": "array", "items": { "type": "string" } },
+          "targetFamilies": { "type": "array", "items": { "type": "string" } },
+          "expectedKnowledgeTypes": { "type": "array", "items": { "type": "string" } },
+          "expectedSymbols": { "type": "array", "items": { "type": "string" } },
+          "expectedDocs": { "type": "array", "items": { "type": "string" } },
+          "expectedExamples": { "type": "array", "items": { "type": "string" } },
+          "expectedValidationKnowledge": { "type": "array", "items": { "type": "string" } },
+          "mustRecall": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+          "mustNotInclude": { "type": "array", "items": { "type": "string" } },
+          "manualReviewItems": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+          "allowedRawFallback": { "type": "integer", "minimum": 0 }
+        }
+      }
+    }
+  }
+}

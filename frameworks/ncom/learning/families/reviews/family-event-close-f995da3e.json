@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "frameworkId": "ncom",
+  "familyId": "family-event-close-f995da3e",
+  "familyName": "Closable feedback and overlay components",
+  "decision": "approved",
+  "reviewer": "codex-assisted-manual-review",
+  "reviewMethod": "explicit-cli-review",
+  "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+  "structuralSignal": "event:close",
+  "candidateComponentIds": [
+    "component-078563e274bd74a1",
+    "component-59e4204498fb6bcd",
+    "component-ea5dc8d798d1d252"
+  ],
+  "approvedComponentIds": [
+    "component-078563e274bd74a1",
+    "component-59e4204498fb6bcd",
+    "component-ea5dc8d798d1d252"
+  ],
+  "excludedComponentIds": [],
+  "evidence": [
+    {
+      "componentId": "component-078563e274bd74a1",
+      "path": "packages/components/src/alert/index.ts",
+      "line": 13,
+      "sha256": "11a6fc230fa24a22d47bb7d4c59da203e699afd5be00146f98d6f7f6fc676857"
+    },
+    {
+      "componentId": "component-59e4204498fb6bcd",
+      "path": "packages/components/src/drawer/index.ts",
+      "line": 7,
+      "sha256": "d68a73bcd4262952a6789e72dd8ec484c3d27c99c36a2792ce23246f44b9c4c5"
+    },
+    {
+      "componentId": "component-ea5dc8d798d1d252",
+      "path": "packages/components/src/modal/index.ts",
+      "line": 6,
+      "sha256": "8b2bc0f49a2eb04013bf63e750652677077c935ac243fb714f396b254f3d943a"
+    }
+  ],
+  "limitations": [
+    "候选只表示共享结构信号，不自动证明组件具有相同语义或行为。",
+    "发布家族知识前必须显式复核成员范围。",
+    "该家族仅确认共享 close 事件，不统一视觉或打开方式。"
+  ],
+  "reviewedAt": "2026-07-27T06:28:47.094Z"
+}

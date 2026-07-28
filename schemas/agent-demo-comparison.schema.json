@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "frameworkId", "sourceCommit", "codexVersion", "model", "modelLimitation", "sharedInitialTrackedPatch", "sharedTask", "sharedPolicy", "raw", "knowledgeFirst", "observations"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "frameworkId": { "type": "string" },
+    "sourceCommit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "codexVersion": { "type": "string" },
+    "model": { "type": ["string", "null"] },
+    "modelLimitation": { "type": "string" },
+    "sharedInitialTrackedPatch": { "type": "object" },
+    "sharedTask": { "type": "string" },
+    "sharedPolicy": { "type": "object" },
+    "raw": { "type": "object" },
+    "knowledgeFirst": { "type": "object" },
+    "observations": { "type": "array", "items": { "type": "string" } }
+  }
+}

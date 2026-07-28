@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0.0",
+  "refreshId": "refresh-impact-ncom-0eddf72--ncom-a350b57",
+  "frameworkId": "ncom",
+  "impactId": "impact-ncom-0eddf72--ncom-a350b57",
+  "targetVersionId": "ncom-a350b57",
+  "topics": [],
+  "rootHash": "sha256:e8dd7afe9e91becbe872d8d30934828c4924dfa489530c2d753a32b01d917484"
+}

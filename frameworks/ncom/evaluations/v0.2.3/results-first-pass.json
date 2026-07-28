@@ -1,0 +1,1453 @@
+{
+  "schemaVersion": "1.0.0",
+  "frameworkId": "ncom",
+  "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+  "generatedAt": "2026-07-27T06:42:22.735Z",
+  "estimator": "ceil(characterCount / 4)",
+  "results": [
+    {
+      "taskId": "ncselect-change",
+      "category": "component-input",
+      "rawEstimatedTokens": 1843,
+      "knowledgeFirstEstimatedTokens": 1802,
+      "rawCharacterCount": 7371,
+      "knowledgeFirstCharacterCount": 7207,
+      "deltaEstimatedTokens": -41,
+      "lengthComparison": "shorter",
+      "raw": {
+        "estimatedTokens": 1843,
+        "characterCount": 7371,
+        "selectedKnowledgeUnitIds": [],
+        "selectedKnowledgeCategories": [],
+        "selectedRawCandidateIds": [
+          "candidate-1907d00f40340aec",
+          "candidate-7f415afb22a0bf2e",
+          "candidate-57aded2efdeb0d08",
+          "candidate-9e37bf4f5676e1b7",
+          "candidate-a3a511d8754e02a2",
+          "candidate-1e53e1205d6bc61e",
+          "candidate-2e2a488519070dec",
+          "candidate-6ac6f26f2cd29e68",
+          "candidate-80bae64516892f48",
+          "candidate-05f6dcb61d29fc4a",
+          "candidate-a3d06d58f9234dc7",
+          "candidate-8213da717fa24e2d",
+          "candidate-9a00a5709d16641e",
+          "candidate-6c34911409a2ff21",
+          "candidate-ae7049e4b3f32cf6",
+          "candidate-e24c66b428c63082",
+          "candidate-76386fecdb469dc8",
+          "candidate-e50c7de6c168a8ea",
+          "candidate-c0db3c1866a6e53e"
+        ],
+        "reusedKnowledgeUnitCount": 0,
+        "rawFallbackCount": 19,
+        "recall": {
+          "recalled": 2,
+          "expected": 2,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "NCTour"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认事件名称和示例入口足以支持实现。"
+        ]
+      },
+      "knowledgeFirst": {
+        "estimatedTokens": 1802,
+        "characterCount": 7207,
+        "selectedKnowledgeUnitIds": [
+          "ncom-ncselect-structure",
+          "ncom-nccheckbox-structure",
+          "ncom-ncalert-structure",
+          "ncom-nccard-structure",
+          "ncom-ncdrawer-structure",
+          "ncom-ncinput-events",
+          "ncom-nctable-structure",
+          "ncom-family-closable-feedback-overlay",
+          "ncom-event-state-update-workflow"
+        ],
+        "selectedKnowledgeCategories": [
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "component_family",
+          "mechanism"
+        ],
+        "selectedRawCandidateIds": [
+          "candidate-1907d00f40340aec",
+          "candidate-7f415afb22a0bf2e",
+          "candidate-57aded2efdeb0d08"
+        ],
+        "reusedKnowledgeUnitCount": 9,
+        "rawFallbackCount": 3,
+        "recall": {
+          "recalled": 2,
+          "expected": 2,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "NCTour"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认事件名称和示例入口足以支持实现。"
+        ]
+      },
+      "reusedKnowledgeUnitCount": 9,
+      "rawFallbackCount": 3,
+      "fallbackWithinAllowance": true,
+      "manualReviewStatus": "pending",
+      "failure": null
+    },
+    {
+      "taskId": "nccheckbox-state",
+      "category": "component-input",
+      "rawEstimatedTokens": 1943,
+      "knowledgeFirstEstimatedTokens": 1889,
+      "rawCharacterCount": 7769,
+      "knowledgeFirstCharacterCount": 7556,
+      "deltaEstimatedTokens": -54,
+      "lengthComparison": "shorter",
+      "raw": {
+        "estimatedTokens": 1943,
+        "characterCount": 7769,
+        "selectedKnowledgeUnitIds": [],
+        "selectedKnowledgeCategories": [],
+        "selectedRawCandidateIds": [
+          "candidate-4fa3e0a30b38fbd7",
+          "candidate-32d842d409647182",
+          "candidate-1e53e1205d6bc61e",
+          "candidate-6ac6f26f2cd29e68",
+          "candidate-80bae64516892f48",
+          "candidate-15d6d6d236e11607",
+          "candidate-2fa5c8cf4cdecfa4",
+          "candidate-5855c49d3fecddc5",
+          "candidate-24e4297374010e17",
+          "candidate-372241c5028eac4d",
+          "candidate-154b9262b09041f3",
+          "candidate-194e221ff7a1b466",
+          "candidate-2ce56f5c7c05f404",
+          "candidate-6c34911409a2ff21",
+          "candidate-ae7049e4b3f32cf6",
+          "candidate-e24c66b428c63082",
+          "candidate-76386fecdb469dc8",
+          "candidate-e50c7de6c168a8ea",
+          "candidate-c0db3c1866a6e53e",
+          "candidate-5cd7594ea38f4e1d"
+        ],
+        "reusedKnowledgeUnitCount": 0,
+        "rawFallbackCount": 20,
+        "recall": {
+          "recalled": 3,
+          "expected": 3,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "NCWatermark"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认 Context 没有臆造事件 detail 字段。"
+        ]
+      },
+      "knowledgeFirst": {
+        "estimatedTokens": 1889,
+        "characterCount": 7556,
+        "selectedKnowledgeUnitIds": [
+          "ncom-nccheckbox-structure",
+          "ncom-nccard-structure",
+          "ncom-ncdrawer-structure",
+          "ncom-ncselect-structure",
+          "ncom-nctable-structure",
+          "ncom-ncalert-structure",
+          "ncom-ncinput-events",
+          "ncom-family-reference-popup",
+          "ncom-event-state-update-workflow"
+        ],
+        "selectedKnowledgeCategories": [
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "component_family",
+          "mechanism"
+        ],
+        "selectedRawCandidateIds": [
+          "candidate-4fa3e0a30b38fbd7",
+          "candidate-32d842d409647182",
+          "candidate-1e53e1205d6bc61e"
+        ],
+        "reusedKnowledgeUnitCount": 9,
+        "rawFallbackCount": 3,
+        "recall": {
+          "recalled": 3,
+          "expected": 3,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "NCWatermark"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认 Context 没有臆造事件 detail 字段。"
+        ]
+      },
+      "reusedKnowledgeUnitCount": 9,
+      "rawFallbackCount": 3,
+      "fallbackWithinAllowance": true,
+      "manualReviewStatus": "pending",
+      "failure": null
+    },
+    {
+      "taskId": "ncalert-close",
+      "category": "component-feedback",
+      "rawEstimatedTokens": 1856,
+      "knowledgeFirstEstimatedTokens": 1930,
+      "rawCharacterCount": 7421,
+      "knowledgeFirstCharacterCount": 7719,
+      "deltaEstimatedTokens": 74,
+      "lengthComparison": "longer",
+      "raw": {
+        "estimatedTokens": 1856,
+        "characterCount": 7421,
+        "selectedKnowledgeUnitIds": [],
+        "selectedKnowledgeCategories": [],
+        "selectedRawCandidateIds": [
+          "candidate-91d6a08ff298cd7f",
+          "candidate-e962d30f79f1be15",
+          "candidate-2db22e9e1c388546",
+          "candidate-af800e5ccda84027",
+          "candidate-05f6d09f5fd0cd64",
+          "candidate-61d26dc9021916c6",
+          "candidate-0500c533524d0593",
+          "candidate-05e0f39a176b35c1",
+          "candidate-7e7ed86ac313ef21",
+          "candidate-8be565bf4aef2596",
+          "candidate-2f1ff0e7cb58942c",
+          "candidate-7ce681a1d9357fbd",
+          "candidate-8695c4018bc68aff",
+          "candidate-6c34911409a2ff21",
+          "candidate-ae7049e4b3f32cf6",
+          "candidate-e24c66b428c63082",
+          "candidate-76386fecdb469dc8",
+          "candidate-c0db3c1866a6e53e",
+          "candidate-e50c7de6c168a8ea",
+          "candidate-622814e672b353d8"
+        ],
+        "reusedKnowledgeUnitCount": 0,
+        "rawFallbackCount": 20,
+        "recall": {
+          "recalled": 2,
+          "expected": 2,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "NCSelect"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认只陈述结构化 close 事件事实。"
+        ]
+      },
+      "knowledgeFirst": {
+        "estimatedTokens": 1930,
+        "characterCount": 7719,
+        "selectedKnowledgeUnitIds": [
+          "ncom-ncalert-structure",
+          "ncom-ncdrawer-structure",
+          "ncom-nccard-structure",
+          "ncom-nccheckbox-structure",
+          "ncom-ncselect-structure",
+          "ncom-nctable-structure",
+          "ncom-family-closable-feedback-overlay",
+          "ncom-event-state-update-workflow",
+          "ncom-theme-style-verification-structure",
+          "ncom-public-import-type-location-workflow"
+        ],
+        "selectedKnowledgeCategories": [
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "component_family",
+          "mechanism",
+          "mechanism",
+          "workflow"
+        ],
+        "selectedRawCandidateIds": [
+          "candidate-91d6a08ff298cd7f",
+          "candidate-e962d30f79f1be15",
+          "candidate-2db22e9e1c388546"
+        ],
+        "reusedKnowledgeUnitCount": 10,
+        "rawFallbackCount": 3,
+        "recall": {
+          "recalled": 2,
+          "expected": 2,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 1,
+          "checkedTerms": [
+            "NCSelect"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认只陈述结构化 close 事件事实。"
+        ]
+      },
+      "reusedKnowledgeUnitCount": 10,
+      "rawFallbackCount": 3,
+      "fallbackWithinAllowance": true,
+      "manualReviewStatus": "pending",
+      "failure": null
+    },
+    {
+      "taskId": "ncdrawer-events",
+      "category": "component-overlay",
+      "rawEstimatedTokens": 1888,
+      "knowledgeFirstEstimatedTokens": 2047,
+      "rawCharacterCount": 7551,
+      "knowledgeFirstCharacterCount": 8188,
+      "deltaEstimatedTokens": 159,
+      "lengthComparison": "longer",
+      "raw": {
+        "estimatedTokens": 1888,
+        "characterCount": 7551,
+        "selectedKnowledgeUnitIds": [],
+        "selectedKnowledgeCategories": [],
+        "selectedRawCandidateIds": [
+          "candidate-baa732c0d9ef1728",
+          "candidate-22de48f82029f79a",
+          "candidate-3e966bee7f6cffd6",
+          "candidate-0699cf0de40286f7",
+          "candidate-2c39874ffbf2b9b0",
+          "candidate-3375fdddc9dad7ff",
+          "candidate-495eed3d6ffc722b",
+          "candidate-6a050b497ab7fe69",
+          "candidate-43025140c1fe72d8",
+          "candidate-5f581ddeb261faa9",
+          "candidate-0ba381c121ee5475",
+          "candidate-91b3ce7603f232ca",
+          "candidate-d393e973c0b7949c",
+          "candidate-6c34911409a2ff21",
+          "candidate-ae7049e4b3f32cf6",
+          "candidate-e24c66b428c63082",
+          "candidate-76386fecdb469dc8",
+          "candidate-c0db3c1866a6e53e",
+          "candidate-e50c7de6c168a8ea",
+          "candidate-1f1b383e221783fd"
+        ],
+        "reusedKnowledgeUnitCount": 0,
+        "rawFallbackCount": 20,
+        "recall": {
+          "recalled": 4,
+          "expected": 4,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "NCCheckbox"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认 Context 未推断未记录的打开方式。"
+        ]
+      },
+      "knowledgeFirst": {
+        "estimatedTokens": 2047,
+        "characterCount": 8188,
+        "selectedKnowledgeUnitIds": [
+          "ncom-ncdrawer-structure",
+          "ncom-ncalert-structure",
+          "ncom-nccard-structure",
+          "ncom-nccheckbox-structure",
+          "ncom-nctable-structure",
+          "ncom-ncselect-structure",
+          "ncom-family-closable-feedback-overlay",
+          "ncom-family-reference-popup",
+          "ncom-event-state-update-workflow",
+          "ncom-lifecycle-callback-structure",
+          "ncom-template-rendering-structure"
+        ],
+        "selectedKnowledgeCategories": [
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "component_family",
+          "component_family",
+          "mechanism",
+          "mechanism",
+          "mechanism"
+        ],
+        "selectedRawCandidateIds": [
+          "candidate-baa732c0d9ef1728",
+          "candidate-22de48f82029f79a",
+          "candidate-3e966bee7f6cffd6"
+        ],
+        "reusedKnowledgeUnitCount": 11,
+        "rawFallbackCount": 3,
+        "recall": {
+          "recalled": 4,
+          "expected": 4,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 1,
+          "checkedTerms": [
+            "NCCheckbox"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认 Context 未推断未记录的打开方式。"
+        ]
+      },
+      "reusedKnowledgeUnitCount": 11,
+      "rawFallbackCount": 3,
+      "fallbackWithinAllowance": true,
+      "manualReviewStatus": "pending",
+      "failure": null
+    },
+    {
+      "taskId": "nccard-slots",
+      "category": "component-container",
+      "rawEstimatedTokens": 1895,
+      "knowledgeFirstEstimatedTokens": 1761,
+      "rawCharacterCount": 7579,
+      "knowledgeFirstCharacterCount": 7044,
+      "deltaEstimatedTokens": -134,
+      "lengthComparison": "shorter",
+      "raw": {
+        "estimatedTokens": 1895,
+        "characterCount": 7579,
+        "selectedKnowledgeUnitIds": [],
+        "selectedKnowledgeCategories": [],
+        "selectedRawCandidateIds": [
+          "candidate-deb540a301445166",
+          "candidate-fd9d371c33dd4f9d",
+          "candidate-7c5392c067509ebc",
+          "candidate-3a37fb6dad93598a",
+          "candidate-0699cf0de40286f7",
+          "candidate-1cb44e68bd75b107",
+          "candidate-37315d9a48e78a06",
+          "candidate-441c356be89269e4",
+          "candidate-723bb6b38ff587d5",
+          "candidate-0ad0cbe143924169",
+          "candidate-136e2dd4844ca776",
+          "candidate-3698d5d75a841556",
+          "candidate-6c34911409a2ff21",
+          "candidate-ae7049e4b3f32cf6",
+          "candidate-e24c66b428c63082",
+          "candidate-76386fecdb469dc8",
+          "candidate-e50c7de6c168a8ea",
+          "candidate-c0db3c1866a6e53e",
+          "candidate-5c1093831d7a081f",
+          "candidate-4de3f46889e54b0e",
+          "candidate-eea39e97c7958359"
+        ],
+        "reusedKnowledgeUnitCount": 0,
+        "rawFallbackCount": 21,
+        "recall": {
+          "recalled": 4,
+          "expected": 4,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "NCDrawer"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认三个 slot 名称均来自结构化证据。"
+        ]
+      },
+      "knowledgeFirst": {
+        "estimatedTokens": 1761,
+        "characterCount": 7044,
+        "selectedKnowledgeUnitIds": [
+          "ncom-nccard-structure",
+          "ncom-nccheckbox-structure",
+          "ncom-ncdrawer-structure",
+          "ncom-nctable-structure",
+          "ncom-ncalert-structure",
+          "ncom-ncselect-structure",
+          "ncom-event-state-update-workflow"
+        ],
+        "selectedKnowledgeCategories": [
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "mechanism"
+        ],
+        "selectedRawCandidateIds": [
+          "candidate-deb540a301445166",
+          "candidate-fd9d371c33dd4f9d",
+          "candidate-7c5392c067509ebc"
+        ],
+        "reusedKnowledgeUnitCount": 7,
+        "rawFallbackCount": 3,
+        "recall": {
+          "recalled": 4,
+          "expected": 4,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 1,
+          "checkedTerms": [
+            "NCDrawer"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认三个 slot 名称均来自结构化证据。"
+        ]
+      },
+      "reusedKnowledgeUnitCount": 7,
+      "rawFallbackCount": 3,
+      "fallbackWithinAllowance": true,
+      "manualReviewStatus": "pending",
+      "failure": null
+    },
+    {
+      "taskId": "nctable-row-events",
+      "category": "component-complex",
+      "rawEstimatedTokens": 2164,
+      "knowledgeFirstEstimatedTokens": 2011,
+      "rawCharacterCount": 8654,
+      "knowledgeFirstCharacterCount": 8043,
+      "deltaEstimatedTokens": -153,
+      "lengthComparison": "shorter",
+      "raw": {
+        "estimatedTokens": 2164,
+        "characterCount": 8654,
+        "selectedKnowledgeUnitIds": [],
+        "selectedKnowledgeCategories": [],
+        "selectedRawCandidateIds": [
+          "candidate-d31e400e84c7f32d",
+          "candidate-84152bfc6940e8b2",
+          "candidate-ef69f7bb22b50cc0",
+          "candidate-5302dcd2aa9acb54",
+          "candidate-e5cab5eb97ba949a",
+          "candidate-66f0b8231704a4a9",
+          "candidate-86129ec8a769ae5b",
+          "candidate-e9ca48dabd4c53e8",
+          "candidate-0699cf0de40286f7",
+          "candidate-19a69fd9c699af1f",
+          "candidate-6e6afaef59c87b21",
+          "candidate-266143b213cd26e4",
+          "candidate-ccc550717f6d5066",
+          "candidate-11b8407e8eda1593",
+          "candidate-20a4b85be458a05f",
+          "candidate-268d52fc0f209bba",
+          "candidate-6c34911409a2ff21",
+          "candidate-ae7049e4b3f32cf6",
+          "candidate-e24c66b428c63082",
+          "candidate-76386fecdb469dc8",
+          "candidate-c0db3c1866a6e53e",
+          "candidate-e50c7de6c168a8ea",
+          "candidate-0b807e885a16ff7c"
+        ],
+        "reusedKnowledgeUnitCount": 0,
+        "rawFallbackCount": 23,
+        "recall": {
+          "recalled": 3,
+          "expected": 3,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "NCAlert"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认没有把结构索引当作行为测试。"
+        ]
+      },
+      "knowledgeFirst": {
+        "estimatedTokens": 2011,
+        "characterCount": 8043,
+        "selectedKnowledgeUnitIds": [
+          "ncom-nctable-structure",
+          "ncom-nccard-structure",
+          "ncom-nccheckbox-structure",
+          "ncom-ncdrawer-structure",
+          "ncom-ncalert-structure",
+          "ncom-ncselect-structure",
+          "ncom-family-reference-popup",
+          "ncom-theme-style-verification-structure",
+          "ncom-public-import-type-location-workflow"
+        ],
+        "selectedKnowledgeCategories": [
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "component_family",
+          "mechanism",
+          "workflow"
+        ],
+        "selectedRawCandidateIds": [
+          "candidate-d31e400e84c7f32d",
+          "candidate-84152bfc6940e8b2",
+          "candidate-ef69f7bb22b50cc0"
+        ],
+        "reusedKnowledgeUnitCount": 9,
+        "rawFallbackCount": 3,
+        "recall": {
+          "recalled": 3,
+          "expected": 3,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 1,
+          "checkedTerms": [
+            "NCAlert"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认没有把结构索引当作行为测试。"
+        ]
+      },
+      "reusedKnowledgeUnitCount": 9,
+      "rawFallbackCount": 3,
+      "fallbackWithinAllowance": true,
+      "manualReviewStatus": "pending",
+      "failure": null
+    },
+    {
+      "taskId": "input-family-selection",
+      "category": "component-family",
+      "rawEstimatedTokens": 2062,
+      "knowledgeFirstEstimatedTokens": 2689,
+      "rawCharacterCount": 8248,
+      "knowledgeFirstCharacterCount": 10753,
+      "deltaEstimatedTokens": 627,
+      "lengthComparison": "longer",
+      "raw": {
+        "estimatedTokens": 2062,
+        "characterCount": 8248,
+        "selectedKnowledgeUnitIds": [],
+        "selectedKnowledgeCategories": [],
+        "selectedRawCandidateIds": [
+          "candidate-1907d00f40340aec",
+          "candidate-4fa3e0a30b38fbd7",
+          "candidate-94e10a8c08f5ccaa",
+          "candidate-982fa8dfeeb814a1",
+          "candidate-b8342b73179ea478",
+          "candidate-32d842d409647182",
+          "candidate-57aded2efdeb0d08",
+          "candidate-d928be6cf643b8b5",
+          "candidate-9e37bf4f5676e1b7",
+          "candidate-a3a511d8754e02a2",
+          "candidate-2e2a488519070dec",
+          "candidate-05f6dcb61d29fc4a",
+          "candidate-14d4316dda194abe",
+          "candidate-24e4297374010e17",
+          "candidate-574174218e8d55d7",
+          "candidate-a3d06d58f9234dc7",
+          "candidate-6c34911409a2ff21",
+          "candidate-76386fecdb469dc8",
+          "candidate-c0db3c1866a6e53e",
+          "candidate-c88f12625aa9941d",
+          "candidate-e50c7de6c168a8ea"
+        ],
+        "reusedKnowledgeUnitCount": 0,
+        "rawFallbackCount": 21,
+        "recall": {
+          "recalled": 4,
+          "expected": 4,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "NCTour"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认家族知识只表示共享基类。"
+        ]
+      },
+      "knowledgeFirst": {
+        "estimatedTokens": 2689,
+        "characterCount": 10753,
+        "selectedKnowledgeUnitIds": [
+          "ncom-nccheckbox-structure",
+          "ncom-ncselect-structure",
+          "ncom-ncinput-events",
+          "ncom-ncalert-structure",
+          "ncom-ncbutton-api",
+          "ncom-nccard-structure",
+          "ncom-ncdrawer-structure",
+          "ncom-nctable-structure",
+          "ncom-family-input-controls",
+          "ncom-family-closable-feedback-overlay",
+          "ncom-family-reference-popup",
+          "ncom-component-base-model",
+          "ncom-event-state-update-workflow",
+          "ncom-event-system",
+          "ncom-lifecycle-callback-structure",
+          "ncom-props-declaration-structure",
+          "ncom-template-rendering-structure",
+          "ncom-theme-style-verification-structure",
+          "ncom-example-workflow",
+          "ncom-public-import-type-location-workflow",
+          "ncom-theme-example-build-chain-workflow",
+          "ncom-package-public-exports"
+        ],
+        "selectedKnowledgeCategories": [
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "component_family",
+          "component_family",
+          "component_family",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "workflow",
+          "workflow",
+          "workflow",
+          "other_knowledge"
+        ],
+        "selectedRawCandidateIds": [
+          "candidate-1907d00f40340aec",
+          "candidate-4fa3e0a30b38fbd7",
+          "candidate-94e10a8c08f5ccaa"
+        ],
+        "reusedKnowledgeUnitCount": 22,
+        "rawFallbackCount": 3,
+        "recall": {
+          "recalled": 4,
+          "expected": 4,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "NCTour"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认家族知识只表示共享基类。"
+        ]
+      },
+      "reusedKnowledgeUnitCount": 22,
+      "rawFallbackCount": 3,
+      "fallbackWithinAllowance": true,
+      "manualReviewStatus": "pending",
+      "failure": null
+    },
+    {
+      "taskId": "reference-popup-family",
+      "category": "component-family",
+      "rawEstimatedTokens": 2035,
+      "knowledgeFirstEstimatedTokens": 1886,
+      "rawCharacterCount": 8137,
+      "knowledgeFirstCharacterCount": 7543,
+      "deltaEstimatedTokens": -149,
+      "lengthComparison": "shorter",
+      "raw": {
+        "estimatedTokens": 2035,
+        "characterCount": 8137,
+        "selectedKnowledgeUnitIds": [],
+        "selectedKnowledgeCategories": [],
+        "selectedRawCandidateIds": [
+          "candidate-54d528fd4b9e33ca",
+          "candidate-80f4c27842c496bb",
+          "candidate-5feed4d692959f1c",
+          "candidate-b905c87bdcaa21bc",
+          "candidate-d4a6188073eacbdb",
+          "candidate-df6371ccad83c5d5",
+          "candidate-90b3fc1031bd198e",
+          "candidate-0699cf0de40286f7",
+          "candidate-01540e4126d073d6",
+          "candidate-95ca4e07a18e976b",
+          "candidate-963db7cd646e4554",
+          "candidate-02b0b501365a67e3",
+          "candidate-03cf9ceb373c2b96",
+          "candidate-1717ceeb85096fe2",
+          "candidate-6c34911409a2ff21",
+          "candidate-ae7049e4b3f32cf6",
+          "candidate-e24c66b428c63082",
+          "candidate-76386fecdb469dc8",
+          "candidate-c0db3c1866a6e53e",
+          "candidate-e50c7de6c168a8ea",
+          "candidate-19b396ee2c5e242c",
+          "candidate-9f34a24ba4e6d78b"
+        ],
+        "reusedKnowledgeUnitCount": 0,
+        "rawFallbackCount": 22,
+        "recall": {
+          "recalled": 3,
+          "expected": 3,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "NCUpload"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认未把共享 slot 扩大为相同定位行为。"
+        ]
+      },
+      "knowledgeFirst": {
+        "estimatedTokens": 1886,
+        "characterCount": 7543,
+        "selectedKnowledgeUnitIds": [
+          "ncom-family-reference-popup",
+          "ncom-ncalert-structure",
+          "ncom-nccard-structure",
+          "ncom-nccheckbox-structure",
+          "ncom-ncdrawer-structure",
+          "ncom-ncselect-structure",
+          "ncom-nctable-structure",
+          "ncom-example-workflow",
+          "ncom-package-public-exports"
+        ],
+        "selectedKnowledgeCategories": [
+          "component_family",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "workflow",
+          "other_knowledge"
+        ],
+        "selectedRawCandidateIds": [
+          "candidate-54d528fd4b9e33ca",
+          "candidate-80f4c27842c496bb",
+          "candidate-5feed4d692959f1c"
+        ],
+        "reusedKnowledgeUnitCount": 9,
+        "rawFallbackCount": 3,
+        "recall": {
+          "recalled": 3,
+          "expected": 3,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "NCUpload"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认未把共享 slot 扩大为相同定位行为。"
+        ]
+      },
+      "reusedKnowledgeUnitCount": 9,
+      "rawFallbackCount": 3,
+      "fallbackWithinAllowance": true,
+      "manualReviewStatus": "pending",
+      "failure": null
+    },
+    {
+      "taskId": "public-import-types",
+      "category": "workflow-public-api",
+      "rawEstimatedTokens": 1346,
+      "knowledgeFirstEstimatedTokens": 2359,
+      "rawCharacterCount": 5382,
+      "knowledgeFirstCharacterCount": 9435,
+      "deltaEstimatedTokens": 1013,
+      "lengthComparison": "longer",
+      "raw": {
+        "estimatedTokens": 1346,
+        "characterCount": 5382,
+        "selectedKnowledgeUnitIds": [],
+        "selectedKnowledgeCategories": [],
+        "selectedRawCandidateIds": [
+          "candidate-001795236f1da6da",
+          "candidate-0c1c1cfb8253f41d",
+          "candidate-145a24ed81b559b3",
+          "candidate-149a95512254ac09",
+          "candidate-2db22e9e1c388546",
+          "candidate-41ab8454860a4348",
+          "candidate-4aeeb5b678724f0e",
+          "candidate-76386fecdb469dc8",
+          "candidate-c0db3c1866a6e53e",
+          "candidate-c88f12625aa9941d",
+          "candidate-e50c7de6c168a8ea",
+          "candidate-4de3f46889e54b0e"
+        ],
+        "reusedKnowledgeUnitCount": 0,
+        "rawFallbackCount": 12,
+        "recall": {
+          "recalled": 1,
+          "expected": 3,
+          "ratio": 0.3333333333333333,
+          "missing": [
+            "dist/index.js",
+            "dist/types/index.d.ts"
+          ]
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "@ncom/extensions"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认 exports 与 types 路径来自同一 package 证据。"
+        ]
+      },
+      "knowledgeFirst": {
+        "estimatedTokens": 2359,
+        "characterCount": 9435,
+        "selectedKnowledgeUnitIds": [
+          "ncom-ncbutton-api",
+          "ncom-ncalert-structure",
+          "ncom-nccard-structure",
+          "ncom-nccheckbox-structure",
+          "ncom-ncdrawer-structure",
+          "ncom-ncinput-events",
+          "ncom-ncselect-structure",
+          "ncom-nctable-structure",
+          "ncom-family-closable-feedback-overlay",
+          "ncom-family-input-controls",
+          "ncom-family-reference-popup",
+          "ncom-props-declaration-structure",
+          "ncom-theme-style-verification-structure",
+          "ncom-component-base-model",
+          "ncom-event-state-update-workflow",
+          "ncom-event-system",
+          "ncom-lifecycle-callback-structure",
+          "ncom-template-rendering-structure",
+          "ncom-public-import-type-location-workflow",
+          "ncom-example-workflow",
+          "ncom-theme-example-build-chain-workflow",
+          "ncom-package-public-exports"
+        ],
+        "selectedKnowledgeCategories": [
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "component_family",
+          "component_family",
+          "component_family",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "workflow",
+          "workflow",
+          "workflow",
+          "other_knowledge"
+        ],
+        "selectedRawCandidateIds": [
+          "candidate-001795236f1da6da",
+          "candidate-0c1c1cfb8253f41d",
+          "candidate-145a24ed81b559b3"
+        ],
+        "reusedKnowledgeUnitCount": 22,
+        "rawFallbackCount": 3,
+        "recall": {
+          "recalled": 3,
+          "expected": 3,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "@ncom/extensions"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认 exports 与 types 路径来自同一 package 证据。"
+        ]
+      },
+      "reusedKnowledgeUnitCount": 22,
+      "rawFallbackCount": 3,
+      "fallbackWithinAllowance": true,
+      "manualReviewStatus": "pending",
+      "failure": null
+    },
+    {
+      "taskId": "theme-example-build",
+      "category": "workflow-build",
+      "rawEstimatedTokens": 1695,
+      "knowledgeFirstEstimatedTokens": 2704,
+      "rawCharacterCount": 6779,
+      "knowledgeFirstCharacterCount": 10816,
+      "deltaEstimatedTokens": 1009,
+      "lengthComparison": "longer",
+      "raw": {
+        "estimatedTokens": 1695,
+        "characterCount": 6779,
+        "selectedKnowledgeUnitIds": [],
+        "selectedKnowledgeCategories": [],
+        "selectedRawCandidateIds": [
+          "candidate-43b4ffa84d8216bc",
+          "candidate-0699cf0de40286f7",
+          "candidate-4f751b7ffc7770f2",
+          "candidate-76386fecdb469dc8",
+          "candidate-c0db3c1866a6e53e",
+          "candidate-c88f12625aa9941d",
+          "candidate-bc7a5a2591d1f8bf",
+          "candidate-d50c1964a5c0c947",
+          "candidate-e50c7de6c168a8ea",
+          "candidate-ec21dbfb63b96c6a",
+          "candidate-eea39e97c7958359"
+        ],
+        "reusedKnowledgeUnitCount": 0,
+        "rawFallbackCount": 11,
+        "recall": {
+          "recalled": 4,
+          "expected": 4,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "Browser Behavior: Passed"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认报告没有把 HTTP 或 build 成功等同于浏览器行为成功。"
+        ]
+      },
+      "knowledgeFirst": {
+        "estimatedTokens": 2704,
+        "characterCount": 10816,
+        "selectedKnowledgeUnitIds": [
+          "ncom-ncalert-structure",
+          "ncom-ncbutton-api",
+          "ncom-nccard-structure",
+          "ncom-nccheckbox-structure",
+          "ncom-ncdrawer-structure",
+          "ncom-ncinput-events",
+          "ncom-ncselect-structure",
+          "ncom-nctable-structure",
+          "ncom-family-closable-feedback-overlay",
+          "ncom-family-input-controls",
+          "ncom-family-reference-popup",
+          "ncom-theme-style-verification-structure",
+          "ncom-component-base-model",
+          "ncom-event-state-update-workflow",
+          "ncom-event-system",
+          "ncom-lifecycle-callback-structure",
+          "ncom-props-declaration-structure",
+          "ncom-template-rendering-structure",
+          "ncom-theme-example-build-chain-workflow",
+          "ncom-example-workflow",
+          "ncom-public-import-type-location-workflow",
+          "ncom-package-public-exports"
+        ],
+        "selectedKnowledgeCategories": [
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "component_family",
+          "component_family",
+          "component_family",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "workflow",
+          "workflow",
+          "workflow",
+          "other_knowledge"
+        ],
+        "selectedRawCandidateIds": [
+          "candidate-43b4ffa84d8216bc",
+          "candidate-0699cf0de40286f7",
+          "candidate-4f751b7ffc7770f2"
+        ],
+        "reusedKnowledgeUnitCount": 22,
+        "rawFallbackCount": 3,
+        "recall": {
+          "recalled": 4,
+          "expected": 4,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "Browser Behavior: Passed"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认报告没有把 HTTP 或 build 成功等同于浏览器行为成功。"
+        ]
+      },
+      "reusedKnowledgeUnitCount": 22,
+      "rawFallbackCount": 3,
+      "fallbackWithinAllowance": true,
+      "manualReviewStatus": "pending",
+      "failure": null
+    },
+    {
+      "taskId": "ncomponent-template",
+      "category": "mechanism-render",
+      "rawEstimatedTokens": 1585,
+      "knowledgeFirstEstimatedTokens": 1766,
+      "rawCharacterCount": 6339,
+      "knowledgeFirstCharacterCount": 7063,
+      "deltaEstimatedTokens": 181,
+      "lengthComparison": "longer",
+      "raw": {
+        "estimatedTokens": 1585,
+        "characterCount": 6339,
+        "selectedKnowledgeUnitIds": [],
+        "selectedKnowledgeCategories": [],
+        "selectedRawCandidateIds": [
+          "candidate-0699cf0de40286f7",
+          "candidate-064b350a341c253b",
+          "candidate-0c1e6dc14576e2db",
+          "candidate-3a37fb6dad93598a",
+          "candidate-633f20f3949650f9",
+          "candidate-43b4ffa84d8216bc",
+          "candidate-e7ddff7a011252ad",
+          "candidate-c88f12625aa9941d",
+          "candidate-76386fecdb469dc8",
+          "candidate-c0db3c1866a6e53e",
+          "candidate-e50c7de6c168a8ea",
+          "candidate-4de3f46889e54b0e",
+          "candidate-8d77cf724befd31d",
+          "candidate-ec21dbfb63b96c6a"
+        ],
+        "reusedKnowledgeUnitCount": 0,
+        "rawFallbackCount": 14,
+        "recall": {
+          "recalled": 1,
+          "expected": 3,
+          "ratio": 0.3333333333333333,
+          "missing": [
+            "_templateFrag",
+            "ShadowRoot"
+          ]
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "NCUpload"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认 Context 不推断 lifecycle 调用顺序。"
+        ]
+      },
+      "knowledgeFirst": {
+        "estimatedTokens": 1766,
+        "characterCount": 7063,
+        "selectedKnowledgeUnitIds": [
+          "ncom-ncalert-structure",
+          "ncom-nccard-structure",
+          "ncom-ncdrawer-structure",
+          "ncom-nctable-structure",
+          "ncom-template-rendering-structure",
+          "ncom-family-closable-feedback-overlay",
+          "ncom-family-input-controls",
+          "ncom-family-reference-popup",
+          "ncom-lifecycle-callback-structure",
+          "ncom-component-base-model"
+        ],
+        "selectedKnowledgeCategories": [
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "mechanism",
+          "component_family",
+          "component_family",
+          "component_family",
+          "mechanism",
+          "mechanism"
+        ],
+        "selectedRawCandidateIds": [
+          "candidate-0699cf0de40286f7",
+          "candidate-064b350a341c253b",
+          "candidate-0c1e6dc14576e2db"
+        ],
+        "reusedKnowledgeUnitCount": 10,
+        "rawFallbackCount": 3,
+        "recall": {
+          "recalled": 3,
+          "expected": 3,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "NCUpload"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认 Context 不推断 lifecycle 调用顺序。"
+        ]
+      },
+      "reusedKnowledgeUnitCount": 10,
+      "rawFallbackCount": 3,
+      "fallbackWithinAllowance": true,
+      "manualReviewStatus": "pending",
+      "failure": null
+    },
+    {
+      "taskId": "props-interfaces",
+      "category": "mechanism-props",
+      "rawEstimatedTokens": 1822,
+      "knowledgeFirstEstimatedTokens": 2589,
+      "rawCharacterCount": 7287,
+      "knowledgeFirstCharacterCount": 10354,
+      "deltaEstimatedTokens": 767,
+      "lengthComparison": "longer",
+      "raw": {
+        "estimatedTokens": 1822,
+        "characterCount": 7287,
+        "selectedKnowledgeUnitIds": [],
+        "selectedKnowledgeCategories": [],
+        "selectedRawCandidateIds": [
+          "candidate-0d3f7746274cb419",
+          "candidate-a2d1461dbb4a8963",
+          "candidate-bc310b094ab42498",
+          "candidate-001795236f1da6da",
+          "candidate-0c1c1cfb8253f41d",
+          "candidate-145a24ed81b559b3",
+          "candidate-14f52c73e40f56d1",
+          "candidate-acb8bee086d09591",
+          "candidate-c9133953d1739997",
+          "candidate-149a95512254ac09",
+          "candidate-0ae5f254461676ea",
+          "candidate-2d4cc301b989f1b5",
+          "candidate-fb1d097fa90f1e58",
+          "candidate-7698f67030f8632a",
+          "candidate-76386fecdb469dc8",
+          "candidate-c0db3c1866a6e53e",
+          "candidate-c88f12625aa9941d",
+          "candidate-e50c7de6c168a8ea"
+        ],
+        "reusedKnowledgeUnitCount": 0,
+        "rawFallbackCount": 18,
+        "recall": {
+          "recalled": 3,
+          "expected": 3,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 0,
+          "checkedTerms": [
+            "NCDrawer"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认只描述接口字段，不推断 attribute reflection 行为。"
+        ]
+      },
+      "knowledgeFirst": {
+        "estimatedTokens": 2589,
+        "characterCount": 10354,
+        "selectedKnowledgeUnitIds": [
+          "ncom-ncbutton-api",
+          "ncom-ncalert-structure",
+          "ncom-nccard-structure",
+          "ncom-nccheckbox-structure",
+          "ncom-ncdrawer-structure",
+          "ncom-ncinput-events",
+          "ncom-ncselect-structure",
+          "ncom-nctable-structure",
+          "ncom-family-input-controls",
+          "ncom-family-closable-feedback-overlay",
+          "ncom-family-reference-popup",
+          "ncom-props-declaration-structure",
+          "ncom-event-state-update-workflow",
+          "ncom-theme-style-verification-structure",
+          "ncom-component-base-model",
+          "ncom-event-system",
+          "ncom-lifecycle-callback-structure",
+          "ncom-template-rendering-structure",
+          "ncom-public-import-type-location-workflow",
+          "ncom-example-workflow",
+          "ncom-theme-example-build-chain-workflow",
+          "ncom-package-public-exports"
+        ],
+        "selectedKnowledgeCategories": [
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "exact_component",
+          "component_family",
+          "component_family",
+          "component_family",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "mechanism",
+          "workflow",
+          "workflow",
+          "workflow",
+          "other_knowledge"
+        ],
+        "selectedRawCandidateIds": [
+          "candidate-0d3f7746274cb419",
+          "candidate-a2d1461dbb4a8963",
+          "candidate-bc310b094ab42498"
+        ],
+        "reusedKnowledgeUnitCount": 22,
+        "rawFallbackCount": 3,
+        "recall": {
+          "recalled": 3,
+          "expected": 3,
+          "ratio": 1,
+          "missing": []
+        },
+        "irrelevant": {
+          "prohibitedMatches": 1,
+          "checkedTerms": [
+            "NCDrawer"
+          ]
+        },
+        "unsupportedClaims": null,
+        "manualReviewItems": [
+          "确认只描述接口字段，不推断 attribute reflection 行为。"
+        ]
+      },
+      "reusedKnowledgeUnitCount": 22,
+      "rawFallbackCount": 3,
+      "fallbackWithinAllowance": true,
+      "manualReviewStatus": "pending",
+      "failure": null
+    }
+  ],
+  "aggregate": {
+    "taskCount": 12,
+    "rawEstimatedTokens": {
+      "mean": 1844.5,
+      "median": 1872,
+      "min": 1346,
+      "max": 2164
+    },
+    "knowledgeFirstEstimatedTokens": {
+      "mean": 2119.4166666666665,
+      "median": 1970.5,
+      "min": 1761,
+      "max": 2704
+    },
+    "shorter": 5,
+    "longer": 7,
+    "ties": 0,
+    "meanKnowledgeFirstRecall": 1,
+    "totalReusedKnowledgeUnits": 162,
+    "totalRawFallbacks": 36,
+    "failures": 0,
+    "pendingManualReviews": 12
+  },
+  "businessHash": "sha256:3735d6af23414ae64d23aac8f63baee79c353897187609373107f8792e25ecf1",
+  "limitations": [
+    "estimatedTokens 是字符启发式，不是模型 API 的真实 token usage。",
+    "unsupportedClaims 与任务质量仍需人工复核；pending 不计为通过。",
+    "Context 长短不单独代表开发质量。"
+  ]
+}

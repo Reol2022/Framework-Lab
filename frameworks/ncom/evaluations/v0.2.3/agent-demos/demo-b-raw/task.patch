@@ -1,0 +1,22 @@
+diff --git a/example/component/input/index.ts b/example/component/input/index.ts
+index f168a57..6cca78a 100644
+--- a/example/component/input/index.ts
++++ b/example/component/input/index.ts
+@@ -8,6 +8,7 @@ import "./components/ex5.ts";
+ import "./components/ex6.ts";
+ import "./components/ex7.ts";
+ import "./components/ex8.ts";
++import "./components/ex9.ts";
+ 
+ export default class App extends NComponent {
+   template() {
+@@ -61,6 +62,9 @@ export default class App extends NComponent {
+       
+       <h4>8.事件</h4>
+       <nc-input-ex8></nc-input-ex8>
++      <h4>9. Input family event state</h4>
++      <div>Use the documented input/change events to keep the displayed state in sync.</div>
++      <nc-input-ex9></nc-input-ex9>
+     </div>
+     `;
+   }

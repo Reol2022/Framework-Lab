@@ -1,0 +1,25 @@
+diff --git a/example/component/card/index.ts b/example/component/card/index.ts
+index 5fd6f13..83bf96b 100644
+--- a/example/component/card/index.ts
++++ b/example/component/card/index.ts
+@@ -4,6 +4,7 @@ import "./components/ex1.ts";
+ import "./components/ex2.ts";
+ import "./components/ex3.ts";
+ import "./components/ex4.ts";
++import "./components/ex5.ts";
+ 
+ export default class App extends NComponent {
+   template() {
+@@ -35,6 +36,12 @@ export default class App extends NComponent {
+           定义卡片阴影效果的展示时机，通过 shadow 属性设置，可选值为 always、hover 或 never。
+         </div>
+       <nc-card-ex4></nc-card-ex4>
++
++      <h4>5. Header, content, and footer slots</h4>
++      <div>
++          This card places visible content in the header, default, and footer slots.
++      </div>
++      <nc-card-ex5></nc-card-ex5>
+     </div>
+     `;
+   }

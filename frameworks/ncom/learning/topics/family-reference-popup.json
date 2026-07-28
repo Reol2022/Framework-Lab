@@ -1,0 +1,26 @@
+{
+  "id": "family-reference-popup",
+  "frameworkId": "ncom",
+  "type": "component_family",
+  "title": "Reference-anchored popup family",
+  "description": "Record the explicitly reviewed reference-slot family.",
+  "packageIds": [],
+  "symbolIds": [],
+  "componentIds": [
+    "component-baf8eef39d4e3bee",
+    "component-1211c985a80a45a7"
+  ],
+  "documentSectionIds": [],
+  "exampleIds": [],
+  "prerequisiteTopicIds": [],
+  "priority": 82,
+  "learningStatus": "published",
+  "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+  "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+  "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+  "coverageTargets": [
+    "family",
+    "slot"
+  ],
+  "warnings": []
+}

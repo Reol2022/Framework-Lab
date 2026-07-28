@@ -133,6 +133,7 @@ export async function createAgentContext(options: {
   os?: string; nodeVersion?: string; packageManagerVersion?: string; budget?: number;
   contextId?: string; includeCards?: string[]; excludeCards?: string[]; dryRun?: boolean; force?: boolean;
   retrievalId?: string; withFrameworkKnowledge?: boolean; includeSourceSnippets?: boolean;
+  knowledgeFirst?: boolean;
   maxSnippetLines?: number; maxSymbols?: number; maxDocSections?: number; maxExamples?: number;
   maxSourceSnippets?: number; explainSelection?: boolean;
 }) {
@@ -251,7 +252,30 @@ export async function createAgentContext(options: {
   const snippetBlock = (snippet: SourceSnippet) => `### ${snippet.type}: ${snippet.path}:${snippet.lineStart}-${snippet.lineEnd}\n\n\`\`\`ts\n${snippet.content}\n\`\`\`\n\nEvidence: commit=${snippet.commit}; sha256=${snippet.fileSha256}`;
   const render = (items: typeof claims, candidates = selectedFrameworkCandidates, sourceSnippets = snippets) => `# Agent Context: ${contextId}\n\n## Task\n\n${options.task}\n\n## Framework and Version Scope\n\n- Commit: ${commit ?? "unknown"}\n- OS: ${os ?? "unknown"}\n- Node: ${node ?? "unknown"}\n- Package manager: ${pm ?? "unknown"}\n${retrieval ? `- Catalog: ${retrieval.catalogSnapshotId} / ${retrieval.catalogRootHash}\n- Symbols: ${retrieval.symbolSnapshotId} / ${retrieval.symbolRootHash}\n` : ""}\n## Development Constraints\n\n${constraints.map((item) => `- ${item}`).join("\n") || "- None recorded."}\n\n${candidates.length ? `## Public API and Components\n\n${candidates.map(candidateBlock).join("\n")}\n\n` : ""}${sourceSnippets.length ? `## Relevant Evidence Excerpts\n\n${sourceSnippets.map(snippetBlock).join("\n\n")}\n\n` : ""}## Validated Knowledge Claims\n\n${items.map((claim) => `- ${claim.text} ${claim.evidenceIds.map((id) => `[${id}]`).join(" ")}`).join("\n")}\n\n## Limitations and Confidence\n\n${[...contextRanked.flatMap(({ card }) => card.limitations), ...warnings].map((item) => `- ${item}`).join("\n") || "- None recorded."}\n\n## Evidence Index\n\n${contextEvidence.map(({ id, ref }) => `- [${id}] ${ref.type}: ${ref.path ?? "no-path"}${ref.runId ? `; run=${ref.runId}` : ""}${ref.stepId ? `; step=${ref.stepId}` : ""}${ref.eventId ? `; event=${ref.eventId}` : ""}${ref.commit ? `; commit=${ref.commit}` : ""}; sha256=${ref.sha256 ?? "none"}`).join("\n")}\n${retrieval ? selectedFrameworkCandidates.flatMap((candidate) => candidate.evidence).map((ref, index) => `- [R${index + 1}] retrieval: ${ref.path}:${ref.lineStart ?? "?"}-${ref.lineEnd ?? "?"}; sha256=${ref.sha256 ?? "none"}`).join("\n") : ""}\n`;
   const selectedClaims = [...claims];
-  const budgetCandidates = [...selectedFrameworkCandidates], budgetSnippets = [...snippets];
+  const knowledgeFirstUnits: Array<{ id: string; title: string; claimCount: number; category: string; score: number; reasons: string[] }> = [];
+  const rawFactCount = selectedClaims.length;
+  let duplicateFactsRemoved = 0;
+  if (options.knowledgeFirst) {
+    const { queryPublishedKnowledge } = await import("./learn.js");
+    const units = (await queryPublishedKnowledge(options.labRoot, options.frameworkId, options.task, commit ?? undefined)).slice(0, 6);
+    for (const { unit, category, score, reasons } of units) {
+      knowledgeFirstUnits.push({ id: unit.id, title: unit.title, claimCount: unit.claims.length, category, score, reasons });
+      for (const claim of unit.claims.filter((item) => item.status !== "inferred" && !item.tags.includes("rejected"))) {
+        if (selectedClaims.some((item) => item.text === claim.text)) {
+          duplicateFactsRemoved += 1;
+          continue;
+        }
+        selectedClaims.unshift({ cardId: `published:${unit.id}`, claimId: claim.id, text: claim.text, status: claim.status, evidenceIds: claim.evidenceIds.map((id) => `K:${unit.id}:${id}`) });
+      }
+    }
+    warnings.push(`knowledge-first: ${knowledgeFirstUnits.length} published units; raw fallback candidates=${selectedFrameworkCandidates.length}`);
+  }
+  const budgetCandidates = options.knowledgeFirst && knowledgeFirstUnits.length
+    ? selectedFrameworkCandidates.slice(0, 3)
+    : [...selectedFrameworkCandidates];
+  const budgetSnippets = options.knowledgeFirst && knowledgeFirstUnits.length
+    ? snippets.slice(0, 2)
+    : [...snippets];
   let markdown = render(selectedClaims, budgetCandidates, budgetSnippets), estimatedTokens = Math.ceil(markdown.length / 4);
   const budgetDecisions: string[] = ["estimatedTokens = ceil(characterCount / 4)"];
   while (estimatedTokens > budget && (budgetCandidates.length > 1 || budgetSnippets.length > 1 || selectedClaims.length > 1)) {
@@ -271,7 +295,26 @@ export async function createAgentContext(options: {
     selectedCandidates: budgetCandidates.map((candidate) => candidate.id), snippets: budgetSnippets,
     semanticAvailable: retrieval.semanticAvailable, catalogRootHash: retrieval.catalogRootHash, symbolRootHash: retrieval.symbolRootHash,
   } : null;
-  const context = { schemaVersion: "1.0.0", contextId, frameworkId: options.frameworkId, task: options.task, generatedAt: new Date().toISOString(), sourceScope, budget, estimatedTokens, selectedCards, claims: selectedClaims, constraints: [...new Set(constraints)], evidenceIndex: contextEvidence, warnings, frameworkKnowledge };
+  const knowledgeFactCount = selectedClaims.filter((item) => item.cardId.startsWith("published:")).length;
+  const hitCount = (category: string) => knowledgeFirstUnits.filter((item) => item.category === category).length;
+  const context = { schemaVersion: "1.0.0", contextId, frameworkId: options.frameworkId, task: options.task, generatedAt: new Date().toISOString(), sourceScope, budget, estimatedTokens, selectedCards, claims: selectedClaims, constraints: [...new Set(constraints)], evidenceIndex: contextEvidence, warnings, frameworkKnowledge, knowledgeFirst: options.knowledgeFirst ? {
+    knowledgeFactCount,
+    rawFactCount,
+    knowledgeCoverageOfTask: selectedClaims.length ? knowledgeFactCount / selectedClaims.length : 0,
+    knowledgeUnitHits: knowledgeFirstUnits.length,
+    familyKnowledgeHits: hitCount("component_family"),
+    componentKnowledgeHits: hitCount("exact_component"),
+    workflowKnowledgeHits: hitCount("workflow"),
+    validationKnowledgeHits: hitCount("validation"),
+    rawFallbackCount: budgetCandidates.length,
+    rawFallbackReasons: budgetCandidates.map((candidate) => `knowledge insufficient for ${candidate.type}:${candidate.id}`),
+    duplicateFactsRemoved,
+    selectedSnippetCount: budgetSnippets.length,
+    contextEstimatedTokens: estimatedTokens,
+    knowledgeHitCount: knowledgeFirstUnits.length,
+    reusedKnowledgeUnitCount: knowledgeFirstUnits.length,
+    source: knowledgeFirstUnits,
+  } : null };
   const index = options.dryRun
     ? await readFile(path.join(options.labRoot, "frameworks", options.frameworkId, "knowledge", "index.json"), "utf8")
       .then((value) => JSON.parse(value))

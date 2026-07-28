@@ -1,0 +1,59 @@
+diff --git a/example/component/input/components/ex9.ts b/example/component/input/components/ex9.ts
+new file mode 100644
+index 0000000..5d27fbe
+--- /dev/null
++++ b/example/component/input/components/ex9.ts
+@@ -0,0 +1,53 @@
++import { ChangeEventDetail, defineComponent, NComponent } from "@ncom/all";
++
++export default class Input9 extends NComponent {
++  inputValue = "";
++  selectValue: unknown = "small";
++  checkboxValue: unknown = 0;
++
++  options = [
++    { value: "small", label: "Small" },
++    { value: "medium", label: "Medium" },
++    { value: "large", label: "Large" },
++  ];
++
++  template() {
++    return `
++      <div style="display: grid; gap: 12px; max-width: 360px;">
++        <label>
++          Text input
++          <nc-input value={this.inputValue} placeholder="Type here" @nc-input={this.handleInput}></nc-input>
++        </label>
++        <div>Input value: ${this.inputValue || "(empty)"}</div>
++
++        <label>
++          Select
++          <nc-select value={this.selectValue} items={this.options} style="width: 180px;" @nc-change={this.handleSelectChange}></nc-select>
++        </label>
++        <div>Select value: ${String(this.selectValue)}</div>
++
++        <nc-checkbox value={this.checkboxValue} @nc-change={this.handleCheckboxChange}>
++          Enable notifications
++        </nc-checkbox>
++        <div>Checkbox value: ${String(this.checkboxValue)}</div>
++      </div>
++    `;
++  }
++
++  handleInput(event: CustomEvent<{ value: string }>) {
++    this.inputValue = event.detail.value;
++    this.update();
++  }
++
++  handleSelectChange(event: CustomEvent<ChangeEventDetail>) {
++    this.selectValue = event.detail.value;
++    this.update();
++  }
++
++  handleCheckboxChange(event: CustomEvent<ChangeEventDetail>) {
++    this.checkboxValue = event.detail.value;
++    this.update();
++  }
++}
++
++defineComponent("nc-input-ex9", Input9);

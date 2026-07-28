@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "frameworkId": "ncom",
+  "generatedAt": "2026-07-28T03:27:49.997Z",
+  "topicCounts": {
+    "planned": 6,
+    "bundled": 0,
+    "handed_off": 0,
+    "draft_imported": 0,
+    "validated": 0,
+    "reviewed": 0,
+    "published": 22,
+    "superseded": 0,
+    "blocked": 0
+  },
+  "publishedKnowledgeCount": 22,
+  "packageCoverage": 4,
+  "packageCoverageDetail": {
+    "numerator": 4,
+    "denominator": 4,
+    "ratio": 1,
+    "excludes": [
+      "root package",
+      "virtual packages"
+    ]
+  },
+  "publicSymbolCoverage": 29,
+  "componentCoverage": 24,
+  "componentApiCoverage": 8,
+  "documentCoverage": 0,
+  "exampleCoverage": 0,
+  "workflowCoverage": 4,
+  "staleKnowledgeCount": 0,
+  "evidenceCompleteness": 1,
+  "lowConfidenceCount": 0,
+  "warning": "Coverage means unique structured knowledge references, not complete framework understanding. Package coverage reports numerator, denominator, and excluded root/virtual packages."
+}

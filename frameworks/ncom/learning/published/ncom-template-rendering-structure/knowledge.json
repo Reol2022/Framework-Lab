@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ncom-template-rendering-structure",
+  "frameworkId": "ncom",
+  "type": "framework_concept",
+  "title": "NCom template and rendering structure",
+  "summary": "NComponent 模板片段、挂载状态、root 与 Shadow DOM 的结构化证据。",
+  "scope": {
+    "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+    "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+    "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297"
+  },
+  "relatedPackages": [
+    "package-ncom-core"
+  ],
+  "relatedSymbols": [],
+  "relatedComponents": [],
+  "prerequisites": [],
+  "claims": [
+    {
+      "id": "ncom-template-rendering-structure-claim-1",
+      "text": "NComponent 声明 _templateFrag、_mounted 和 root 成员，构造阶段创建 open ShadowRoot。",
+      "status": "observed",
+      "confidence": "high",
+      "evidenceIds": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "appliesTo": [
+        "a350b576bbeae6c6254273037a17d2a8730fb80f"
+      ],
+      "exceptions": [],
+      "limitations": [
+        "仅适用于锁定 commit 与所列 Evidence；不推断未提供的运行时行为。"
+      ],
+      "tags": [
+        "mechanism",
+        "template",
+        "render"
+      ]
+    }
+  ],
+  "recipes": [],
+  "constraints": [],
+  "limitations": [
+    "仅适用于锁定 commit 与所列 Evidence；不推断未提供的运行时行为。"
+  ],
+  "evidence": [
+    {
+      "id": "E1"
+    },
+    {
+      "id": "E2"
+    },
+    {
+      "id": "E3"
+    },
+    {
+      "id": "E4"
+    },
+    {
+      "id": "E5"
+    },
+    {
+      "id": "E6"
+    }
+  ],
+  "sourceBundleId": "bundle-template-rendering-a350b57-5a3b507c",
+  "generator": "manual-evidence-normalization-v0.2.3",
+  "reviewStatus": "reviewed",
+  "publicationStatus": "published",
+  "createdAt": "2026-07-27T00:00:00.000Z",
+  "updatedAt": "2026-07-27T06:35:00.440Z"
+}

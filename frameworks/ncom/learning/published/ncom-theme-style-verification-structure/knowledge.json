@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ncom-theme-style-verification-structure",
+  "frameworkId": "ncom",
+  "type": "build_workflow",
+  "title": "NCom theme and component style entry structure",
+  "summary": "当前 Framework Lab 配置与 Run 证据中可定位的样式相关验证边界。",
+  "scope": {
+    "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+    "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+    "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297"
+  },
+  "relatedPackages": [
+    "package-ncom-theme",
+    "package-ncom-all"
+  ],
+  "relatedSymbols": [],
+  "relatedComponents": [],
+  "prerequisites": [],
+  "claims": [
+    {
+      "id": "ncom-theme-style-verification-structure-claim-1",
+      "text": "锁定的 Framework Lab 配置把 install、lint、build 作为顺序 baseline steps，并将 build 标记为必需步骤。",
+      "status": "observed",
+      "confidence": "high",
+      "evidenceIds": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "appliesTo": [
+        "a350b576bbeae6c6254273037a17d2a8730fb80f"
+      ],
+      "exceptions": [],
+      "limitations": [
+        "仅适用于锁定 commit 与所列 Evidence；不推断未提供的运行时行为。"
+      ],
+      "tags": [
+        "mechanism",
+        "style",
+        "theme",
+        "validation"
+      ]
+    }
+  ],
+  "recipes": [],
+  "constraints": [],
+  "limitations": [
+    "仅适用于锁定 commit 与所列 Evidence；不推断未提供的运行时行为。"
+  ],
+  "evidence": [
+    {
+      "id": "E1"
+    },
+    {
+      "id": "E2"
+    },
+    {
+      "id": "E3"
+    },
+    {
+      "id": "E4"
+    }
+  ],
+  "sourceBundleId": "bundle-theme-style-entry-a350b57-5a91e024",
+  "generator": "manual-evidence-normalization-v0.2.3",
+  "reviewStatus": "reviewed",
+  "publicationStatus": "published",
+  "createdAt": "2026-07-27T00:00:00.000Z",
+  "updatedAt": "2026-07-27T06:35:13.348Z"
+}

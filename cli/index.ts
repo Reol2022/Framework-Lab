@@ -5,6 +5,7 @@ import { runBaseline } from "./lib/baseline.js";
 import { diffCatalog, listCatalog, scanCatalog, validateCatalog } from "./lib/catalog.js";
 import { loadFrameworkConfig } from "./lib/config.js";
 import { parseHistoricalRunErrors } from "./lib/errors.js";
+import { runKnowledgeEvaluation, validateEvaluationSet } from "./lib/evaluation.js";
 import { createAgentContext, generateKnowledgeIndex, validateKnowledge } from "./lib/knowledge.js";
 import { displayPath, findLabRoot, resolveFromLab } from "./lib/paths.js";
 import { normalizeRunId, previewNextRunId } from "./lib/run-id.js";
@@ -22,8 +23,19 @@ import {
   validateTask,
   verifyTask,
 } from "./lib/task.js";
+import { carryForwardKnowledge, coverage, createBundle, createRefreshBundle, createRefreshPlan, handoffLearning, importDraft, listLearning, planLearning, publishDraft, queryPublishedKnowledge, retireKnowledge, reviewDraft, showKnowledge, supersedeKnowledge, validateDraft } from "./lib/learn.js";
+import {
+  analyzeGaps,
+  analyzeKnowledgeEconomics,
+  deriveFamilies,
+  detectKnowledgeConflicts,
+  evaluateKnowledgeQuality,
+  prioritizeLearning,
+  reviewFamily,
+} from "./lib/learning-analysis.js";
+import { createVersion, createVersionDiff, freshness, knowledgeImpact, listVersions, validateVersion } from "./lib/version.js";
 
-const HELP = `Framework Lab v0.2.0
+const HELP = `Framework Lab v0.2.3
 
 用法：
   pnpm framework-lab task create <framework-id> --task <text> [options]
@@ -36,6 +48,16 @@ const HELP = `Framework Lab v0.2.0
   pnpm framework-lab task status <framework-id> <task-id>
   pnpm framework-lab task close <framework-id> <task-id> [options]
   pnpm framework-lab task list <framework-id>
+  pnpm framework-lab learn plan <framework-id>
+  pnpm framework-lab learn bundle <framework-id> <topic-id> [--budget <n>]
+  pnpm framework-lab learn handoff <framework-id> <bundle-id>
+  pnpm framework-lab learn import <framework-id> <bundle-id> --input <file>
+  pnpm framework-lab learn validate|review|publish|supersede <framework-id> <knowledge-id>
+  pnpm framework-lab learn coverage|list <framework-id>
+  pnpm framework-lab learn gaps|prioritize|families|quality|conflicts|economics <framework-id>
+  pnpm framework-lab learn evaluate|validate-evaluation <framework-id>
+  pnpm framework-lab learn review-family <framework-id> <family-id> --decision approved|rejected --name <name> --reviewer <reviewer>
+  pnpm framework-lab learn show <framework-id> <knowledge-id>
   pnpm framework-lab symbols extract <framework-id> [options]
   pnpm framework-lab symbols validate <framework-id>
   pnpm framework-lab symbols list <framework-id>
@@ -142,6 +164,53 @@ async function handleTask(labRoot: string, args: string[]): Promise<boolean> {
     console.log(`${taskId}: closed (${String(result.outcome)})`); return true;
   }
   throw new Error(`未知 task 操作：${action}`);
+}
+
+async function handleLearn(labRoot: string, args: string[]): Promise<boolean> {
+  if (args[0] !== "learn") return false;
+  const action = args[1], frameworkId = args[2], id = args[3];
+  if (!action || !frameworkId) throw new Error("请使用 learn <action> <framework-id>。");
+  const one = (name: string) => optionValues(args, name).at(-1);
+  if (action === "plan") { const result = await planLearning(labRoot, frameworkId); console.log(`${frameworkId}: ${result.topics.length} topics`); return true; }
+  if (action === "bundle") { if (!id) throw new Error("learn bundle 缺少 topic-id。"); const result = await createBundle(labRoot, frameworkId, id, Number(one("--budget") ?? 6000)); console.log(`${result.bundle.bundleId}: ${result.bundle.estimatedTokens} estimated tokens`); return true; }
+  if (action === "handoff") { if (!id) throw new Error("learn handoff 缺少 bundle-id。"); await handoffLearning(labRoot, frameworkId, id); console.log(`${id}: handed_off`); return true; }
+  if (action === "import") { if (!id || !one("--input")) throw new Error("learn import 需要 bundle-id 和 --input。"); const knowledgeId = await importDraft(labRoot, frameworkId, id, resolveFromLab(labRoot, one("--input")!), args.includes("--dry-run")); console.log(`${knowledgeId}: ${args.includes("--dry-run") ? "preflight_passed" : "draft_imported"}`); return true; }
+  if (action === "validate") { if (!id) throw new Error("learn validate 缺少 knowledge-id。"); await validateDraft(labRoot, frameworkId, id); console.log(`${id}: validated`); return true; }
+  if (action === "review") { if (!id) throw new Error("learn review 缺少 knowledge-id。"); await reviewDraft(labRoot, frameworkId, id, { approve: optionValues(args, "--approve-claim"), reject: optionValues(args, "--reject-claim"), manual: optionValues(args, "--mark-manual"), limitations: optionValues(args, "--add-limitation"), approveRecipes: optionValues(args, "--approve-recipe"), rejectRecipes: optionValues(args, "--reject-recipe") }); console.log(`${id}: reviewed`); return true; }
+  if (action === "publish") { if (!id) throw new Error("learn publish 缺少 knowledge-id。"); await publishDraft(labRoot, frameworkId, id); console.log(`${id}: published`); return true; }
+  if (action === "supersede") { if (!id) throw new Error("learn supersede 缺少 knowledge-id。"); await supersedeKnowledge(labRoot, frameworkId, id); console.log(`${id}: superseded`); return true; }
+  if (action === "refresh-plan") { if (!id) throw new Error("learn refresh-plan 缺少 impact-id。"); const result = await createRefreshPlan(labRoot, frameworkId, id); console.log(`${result.refreshId}: ${result.topics.length} topics`); return true; }
+  if (action === "refresh-bundle") { if (!id || !args[4]) throw new Error("learn refresh-bundle 需要 refresh-id 和 refresh-topic-id。"); const result = await createRefreshBundle(labRoot, frameworkId, id, args[4]); console.log(`${result.bundleId}: ${result.estimatedTokens} estimated tokens`); return true; }
+  if (action === "carry-forward") { if (!id) throw new Error("learn carry-forward 缺少 knowledge-id。"); const revision = await carryForwardKnowledge(labRoot, frameworkId, id); console.log(`${revision}: carried_forward`); return true; }
+  if (action === "retire") { if (!id) throw new Error("learn retire 缺少 knowledge-id。"); await retireKnowledge(labRoot, frameworkId, id); console.log(`${id}: retired record created`); return true; }
+  if (action === "coverage") { console.log(JSON.stringify(await coverage(labRoot, frameworkId), null, 2)); return true; }
+  if (action === "gaps") { console.log(JSON.stringify(await analyzeGaps(labRoot, frameworkId), null, 2)); return true; }
+  if (action === "prioritize") { console.log(JSON.stringify(await prioritizeLearning(labRoot, frameworkId), null, 2)); return true; }
+  if (action === "families") { console.log(JSON.stringify(await deriveFamilies(labRoot, frameworkId), null, 2)); return true; }
+  if (action === "review-family") {
+    if (!id) throw new Error("learn review-family 缺少 family-id。");
+    const decision = one("--decision");
+    if (decision !== "approved" && decision !== "rejected") throw new Error("--decision 必须是 approved 或 rejected。");
+    const name = one("--name"), reviewer = one("--reviewer");
+    if (!name || !reviewer) throw new Error("learn review-family 需要 --name 和 --reviewer。");
+    console.log(JSON.stringify(await reviewFamily(labRoot, frameworkId, id, {
+      decision,
+      name,
+      reviewer,
+      includeComponents: optionValues(args, "--component"),
+      limitations: optionValues(args, "--add-limitation"),
+    }), null, 2));
+    return true;
+  }
+  if (action === "quality") { console.log(JSON.stringify(await evaluateKnowledgeQuality(labRoot, frameworkId), null, 2)); return true; }
+  if (action === "conflicts") { console.log(JSON.stringify(await detectKnowledgeConflicts(labRoot, frameworkId), null, 2)); return true; }
+  if (action === "economics") { console.log(JSON.stringify(await analyzeKnowledgeEconomics(labRoot, frameworkId), null, 2)); return true; }
+  if (action === "validate-evaluation") { const result = await validateEvaluationSet(labRoot, frameworkId); console.log(`${frameworkId}: ${result.tasks.length} evaluation tasks validated`); return true; }
+  if (action === "evaluate") { const result = await runKnowledgeEvaluation(labRoot, frameworkId); console.log(`${frameworkId}: ${result.aggregate.taskCount} tasks evaluated, ${result.businessHash}`); return true; }
+  if (action === "list") { console.log(JSON.stringify(await listLearning(labRoot, frameworkId), null, 2)); return true; }
+  if (action === "show") { if (!id) throw new Error("learn show 缺少 knowledge-id。"); console.log(JSON.stringify(await showKnowledge(labRoot, frameworkId, id), null, 2)); return true; }
+  if (action === "query") { const text = one("--text"); if (!text) throw new Error("learn query 需要 --text。"); console.log(JSON.stringify(await queryPublishedKnowledge(labRoot, frameworkId, text, one("--source-commit")), null, 2)); return true; }
+  throw new Error(`未知 learn 操作：${action}`);
 }
 
 async function handleRetrieval(labRoot: string, args: string[]): Promise<boolean> {
@@ -287,7 +356,9 @@ function optionValues(args: string[], name: string): string[] {
 async function handleKnowledge(labRoot: string, args: string[]): Promise<boolean> {
   if (args[0] !== "knowledge") return false;
   const action = args[1], frameworkId = args[2];
-  if (!frameworkId || !["validate", "index"].includes(action ?? "")) throw new Error("请使用 knowledge validate|index <framework-id>。");
+  if (!frameworkId || !["validate", "index", "impact", "freshness"].includes(action ?? "")) throw new Error("请使用 knowledge validate|index|impact|freshness <framework-id>。");
+  if (action === "impact") { const diffId = args[3]; if (!diffId) throw new Error("knowledge impact 缺少 version-diff-id。"); const result = await knowledgeImpact(labRoot, frameworkId, diffId); console.log(`${result.impactId}: impacted=${result.summary.affected}`); return true; }
+  if (action === "freshness") { const result = await freshness(labRoot, frameworkId, optionValues(args, "--target-version").at(-1)); console.log(JSON.stringify(result, null, 2)); return true; }
   if (action === "validate") {
     const result = await validateKnowledge(labRoot, frameworkId);
     for (const warning of result.warnings) console.warn(`Warning: ${warning}`);
@@ -298,6 +369,17 @@ async function handleKnowledge(labRoot: string, args: string[]): Promise<boolean
     console.log(`${frameworkId}: index.json 已生成，${index.cardCount} 张卡片。`);
   }
   return true;
+}
+
+async function handleVersion(labRoot: string, args: string[]): Promise<boolean> {
+  if (args[0] !== "version") return false;
+  const action = args[1], frameworkId = args[2], one = (name: string) => optionValues(args, name).at(-1);
+  if (!action || !frameworkId) throw new Error("请使用 version create|validate|list|diff <framework-id>。");
+  if (action === "create") { const catalogSnapshotId = one("--catalog-snapshot"), symbolSnapshotId = one("--symbol-snapshot"), versionId = one("--version-id"); const result = await createVersion(labRoot, frameworkId, { ...(catalogSnapshotId ? { catalogSnapshotId } : {}), ...(symbolSnapshotId ? { symbolSnapshotId } : {}), ...(versionId ? { versionId } : {}), sourceTag: one("--tag") ?? null, branch: one("--branch") ?? null }); console.log(`${result.versionId}: ${result.sourceCommit}`); return true; }
+  if (action === "validate") { const id = args[3]; if (!id) throw new Error("version validate 缺少 version-id。"); await validateVersion(labRoot, frameworkId, id); console.log(`${id}: validated`); return true; }
+  if (action === "list") { for (const row of await listVersions(labRoot, frameworkId)) console.log(`${row.versionId} ${row.sourceCommit} catalog=${row.catalogSnapshotId} symbols=${row.symbolSnapshotId}`); return true; }
+  if (action === "diff") { const from = args[3], to = args[4]; if (!from || !to) throw new Error("version diff 需要 from-version 和 to-version。"); const result = await createVersionDiff(labRoot, frameworkId, from, to); console.log(`${result.diffId}: ${result.rootHash}`); return true; }
+  throw new Error(`未知 version 操作：${action}`);
 }
 
 async function handleContext(labRoot: string, args: string[]): Promise<boolean> {
@@ -318,6 +400,7 @@ async function handleContext(labRoot: string, args: string[]): Promise<boolean> 
     ...(budget ? { budget: Number(budget) } : {}), ...(contextId ? { contextId } : {}),
     ...(retrievalId ? { retrievalId } : {}),
     withFrameworkKnowledge: !args.includes("--without-framework-knowledge"),
+    knowledgeFirst: args.includes("--knowledge-first"),
     includeSourceSnippets: args.includes("--include-source-snippets") || Boolean(retrievalId),
     ...(maxSnippetLines ? { maxSnippetLines: Number(maxSnippetLines) } : {}),
     ...(maxSymbols ? { maxSymbols: Number(maxSymbols) } : {}),
@@ -426,7 +509,7 @@ async function main(): Promise<void> {
       console.log(HELP);
       return;
     }
-    if (await handleTask(labRoot, args) || await handleSymbols(labRoot, args) || await handleCatalog(labRoot, args) || await handleKnowledge(labRoot, args) || await handleRetrieval(labRoot, args) || await handleContext(labRoot, args)) return;
+    if (await handleTask(labRoot, args) || await handleLearn(labRoot, args) || await handleVersion(labRoot, args) || await handleSymbols(labRoot, args) || await handleCatalog(labRoot, args) || await handleKnowledge(labRoot, args) || await handleRetrieval(labRoot, args) || await handleContext(labRoot, args)) return;
     const options = parseArguments(args);
     if (!options) {
       console.log(HELP);

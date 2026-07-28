@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "impactId": "impact-ncom-0eddf72--ncom-a350b57",
+  "frameworkId": "ncom",
+  "versionDiffId": "ncom-0eddf72--ncom-a350b57",
+  "fromVersionId": "ncom-0eddf72",
+  "toVersionId": "ncom-a350b57",
+  "generatedAt": "2026-07-23T11:03:44.165Z",
+  "rootHash": "sha256:4fb45cadae6ad2850a7abcf7f842473d726008b82cb962c6b3d42fe88a6df4bd",
+  "propagationRulesVersion": "1.0.0",
+  "summary": {
+    "units": 6,
+    "affected": 0,
+    "evidenceChanged": 7
+  },
+  "warnings": []
+}

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ncom-example-workflow",
+  "frameworkId": "ncom",
+  "type": "development_convention",
+  "title": "Example addition and registration workflow",
+  "summary": "Bounded evidence and validated task references for example work.",
+  "scope": {
+    "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+    "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+    "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297"
+  },
+  "relatedPackages": [
+    "package-ncom-example"
+  ],
+  "relatedSymbols": [],
+  "relatedComponents": [],
+  "prerequisites": [
+    "ncom-component-base-model"
+  ],
+  "claims": [
+    {
+      "id": "example-workflow-observed",
+      "text": "The bounded evidence contains example-related declarations and package metadata for this commit.",
+      "status": "observed",
+      "confidence": "medium",
+      "evidenceIds": [
+        "E1"
+      ],
+      "appliesTo": [
+        "a350b576bbeae6c6254273037a17d2a8730fb80f"
+      ],
+      "exceptions": [],
+      "limitations": [
+        "Task verification is separate evidence and browser behavior remains manual."
+      ],
+      "tags": [
+        "example",
+        "workflow"
+      ]
+    }
+  ],
+  "recipes": [
+    {
+      "id": "add-button-example",
+      "title": "Add a Button example",
+      "intent": "Add an example under the existing Button example area.",
+      "steps": [
+        "Add the example file.",
+        "Register it in the existing entry.",
+        "Run configured theme and example builds."
+      ],
+      "requiredSymbols": [],
+      "filesTypicallyRead": [
+        "example/component/button/index.ts"
+      ],
+      "filesTypicallyModified": [
+        "example/component/button/**"
+      ],
+      "validatedCommands": [
+        "theme-build",
+        "example-build"
+      ],
+      "acceptanceHints": [
+        "HTTP and browser checks are separate."
+      ],
+      "constraints": [
+        "Keep package manifests unchanged."
+      ],
+      "evidenceIds": [
+        "E1"
+      ],
+      "validationStatus": "reviewed"
+    }
+  ],
+  "constraints": [
+    "Do not infer a universal convention from one task."
+  ],
+  "limitations": [
+    "Static bundle plus reviewed task evidence only.",
+    "Published after evidence validation and explicit review."
+  ],
+  "evidence": [
+    {
+      "id": "E1"
+    }
+  ],
+  "sourceBundleId": "bundle-example-workflow-a350b57-0db2c62b",
+  "generator": "manual-evidence-normalization",
+  "reviewStatus": "reviewed",
+  "publicationStatus": "published",
+  "createdAt": "2026-07-23T09:20:00.000Z",
+  "updatedAt": "2026-07-23T09:18:37.992Z"
+}

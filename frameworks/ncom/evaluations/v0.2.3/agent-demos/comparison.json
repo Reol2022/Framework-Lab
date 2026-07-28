@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "frameworkId": "ncom",
+  "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+  "codexVersion": "0.146.0-alpha.3",
+  "model": null,
+  "modelLimitation": "成功会话均使用同一 Codex 默认配置，但 JSONL 未暴露默认模型名。",
+  "sharedInitialTrackedPatch": {
+    "path": "packages/all/build/shared.ts",
+    "issueId": "ISSUE-NCOM-CJK-SASS-001",
+    "sha256": "e4c0112fd30ac7ca2e701fa2793cbe55f1e641dbf75bb07cf57a00e1c7f3b81d"
+  },
+  "sharedTask": "新增同时展示 NCInput、NCSelect、NCCheckbox 及 input/change 事件状态更新的 example。",
+  "sharedPolicy": {
+    "allowedModifiedFiles": [
+      "example/component/input/index.ts",
+      "example/component/input/components/ex9.ts"
+    ],
+    "forbidden": [
+      "package.json",
+      "pnpm-lock.yaml",
+      "framework source",
+      "commit",
+      "push"
+    ]
+  },
+  "raw": {
+    "completed": true,
+    "targetedLint": "passed",
+    "rootBuild": "passed",
+    "browserBehavior": "not_verified",
+    "commandCount": 13,
+    "readCommandCount": 6,
+    "searchCommandCount": 2,
+    "reportedUsage": {
+      "inputTokens": 679370,
+      "cachedInputTokens": 624896,
+      "outputTokens": 9136,
+      "reasoningOutputTokens": 4194
+    },
+    "patchSha256": {
+      "tracked": "416064313437d6ae7055a7f39a94ecba1c5b27ee899b4aa8b15042994ecfa52e",
+      "newFile": "1ba4dfda992adcce1ebe020c7bc9c8d2b9a8f0d64468bbade44e4a52b0ad3ea1"
+    }
+  },
+  "knowledgeFirst": {
+    "completed": true,
+    "targetedLint": "passed",
+    "rootBuild": "passed",
+    "browserBehavior": "not_verified",
+    "commandCount": 14,
+    "readCommandCount": 11,
+    "searchCommandCount": 0,
+    "reportedUsage": {
+      "inputTokens": 816687,
+      "cachedInputTokens": 762624,
+      "outputTokens": 8808,
+      "reasoningOutputTokens": 3648
+    },
+    "patchSha256": {
+      "tracked": "9c6585ef4ba9c85050eb2af9cd9ca341a2197d444fec8eb91d358cbfcbca3940",
+      "newFile": "561959cf511ed2a6ae87e6b619a1972f10874049c01d29fc1ec56108ba0654a5"
+    }
+  },
+  "observations": [
+    "两组都遵守修改边界并通过 targeted lint、git diff --check 和 root build。",
+    "Knowledge-first 组记录 0 次搜索命令，Raw 组记录 2 次。",
+    "Knowledge-first 组的读取命令数和实际会话 input tokens 高于 Raw 组；该样本不支持真实 token 节省结论。",
+    "两组实现 diff 不相同，但都满足静态验收；未执行浏览器行为验证。",
+    "单一任务、两个会话不足以推断总体质量或生产收益。"
+  ]
+}

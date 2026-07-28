@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "demo", "codexVersion", "requestedModel", "observedModel", "modelLimitation", "commandCount", "commandKinds", "readCommandCount", "searchCommandCount", "lintCommandObserved", "buildCommandObserved", "sessionUsage", "finalSha256", "limitations"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "demo": { "type": "string" },
+    "codexVersion": { "type": "string" },
+    "requestedModel": { "type": ["string", "null"] },
+    "observedModel": { "type": ["string", "null"] },
+    "modelLimitation": { "type": "string" },
+    "commandCount": { "type": "integer", "minimum": 0 },
+    "commandKinds": { "type": "object" },
+    "readCommandCount": { "type": "integer", "minimum": 0 },
+    "searchCommandCount": { "type": "integer", "minimum": 0 },
+    "lintCommandObserved": { "type": "boolean" },
+    "buildCommandObserved": { "type": "boolean" },
+    "sessionUsage": { "type": ["object", "null"] },
+    "finalSha256": { "type": "string", "pattern": "^sha256:" },
+    "limitations": { "type": "array", "items": { "type": "string" } }
+  }
+}

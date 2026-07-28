@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["schemaVersion","refreshId","frameworkId","impactId","topics","rootHash"],"properties":{"schemaVersion":{"type":"string"},"refreshId":{"type":"string"},"frameworkId":{"type":"string"},"impactId":{"type":"string"},"topics":{"type":"array"},"rootHash":{"type":"string","pattern":"^sha256:"}}}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "impactId": "impact-ncom-0eddf72--ncom-a350b57",
+  "rootHash": "sha256:4fb45cadae6ad2850a7abcf7f842473d726008b82cb962c6b3d42fe88a6df4bd",
+  "files": {
+    "impact.json": "sha256:a97909298615e484d92c83ab58973bcde2e96d94850caedff101e191bb710785",
+    "claims.json": "sha256:c7bddd8ee95285f78c2b01b9b1c37e0a7a3e5742d50c0bf0b863886d60fe67af",
+    "units.json": "sha256:aa3d6c557405bb8909db32fb384c13154846a639727fb61e6daf227f2d053a85",
+    "topics.json": "sha256:ae68b11a5213f2947622c655f33f024018cf19cdf5b0fc8710162f9e1607d6b2",
+    "report.md": "sha256:d52c2fe63170e75b84c97737d2a1b4220dd9c6f5b2901554a13edc970cf67b1d"
+  }
+}

@@ -1,5 +1,16 @@
 # 数据结构
 
+## v0.2.3
+
+- `learning-gaps.schema.json`、`learning-priorities.schema.json`
+- `component-families.schema.json`、`component-family-review.schema.json`
+- `knowledge-quality.schema.json`、`knowledge-conflicts.schema.json`
+- `knowledge-evaluation-set.schema.json`、`knowledge-evaluation-result.schema.json`
+- `knowledge-economics.schema.json`
+- `agent-demo-metrics.schema.json`、`agent-demo-comparison.schema.json`
+
+新 Schema 约束覆盖、复核、质量、评测和脱敏 Demo 指标，不收紧既有 baseline/errors/knowledge/context Schema。时间戳不参与业务 hash；estimated tokens 必须声明估计公式。
+
 本目录使用 JSON Schema Draft 2020-12 定义可机读结构。`examples/` 只展示字段形状，不代表已验证框架事实或真实命令结果。
 
 v0.1.2 新增：
@@ -23,3 +34,8 @@ v0.1.8 不新增或收紧 Schema。NCButton A/B 探索性实验复用 `run-recor
 # v0.2.0 Task Schema
 
 任务系统使用 `task`、`acceptance`、`change-policy`、`verification-plan`、`task-verification`、`task-comparison`、`task-worktree`、`task-handoff`、`task-history` 与 `task-manifest` Schema。运行时还检查 acceptance id 唯一、verification dependency 无环、路径可移植、history 追加顺序和 manifest SHA256；旧版 Task 示例继续由兼容分支校验。
+
+v0.2.1 新增 `learning-plan`、`learning-topic`、`learning-bundle`、`framework-knowledge-unit` 和 `learning-coverage` Schema。Draft 与 Bundle 的原始片段保持本地，Published Knowledge 仅保存结构化声明和 Evidence 引用。
+# v0.2.2
+
+版本、影响和增量学习产物使用 `framework-version`、`framework-version-diff`、`evidence-impact`、`claim-impact`、`knowledge-impact`、`knowledge-freshness`、`refresh-plan`、`refresh-topic`、`refresh-bundle` 与 `knowledge-revision` Schema。新增字段保持可选或允许附加字段，因此既有发布知识仍可读取。

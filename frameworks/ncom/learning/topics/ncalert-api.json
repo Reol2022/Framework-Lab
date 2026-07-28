@@ -1,0 +1,26 @@
+{
+  "id": "ncalert-api",
+  "frameworkId": "ncom",
+  "type": "component",
+  "title": "NCAlert public structure",
+  "description": "Record NCAlert public component and close event evidence.",
+  "packageIds": [],
+  "symbolIds": [],
+  "componentIds": [
+    "component-078563e274bd74a1"
+  ],
+  "documentSectionIds": [],
+  "exampleIds": [],
+  "prerequisiteTopicIds": [],
+  "priority": 81,
+  "learningStatus": "published",
+  "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+  "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+  "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+  "coverageTargets": [
+    "component",
+    "event",
+    "example"
+  ],
+  "warnings": []
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "frameworkId", "sourceCommit", "generatedAt", "coverage", "gaps", "businessHash"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "frameworkId": { "type": "string" },
+    "sourceCommit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "coverage": { "type": "object" },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "targetId", "targetName", "packageId", "currentKnowledgeIds", "reason", "publicReachable", "documentationAvailable", "exampleAvailable", "structuralImportance", "retrievalCount", "rawFallbackCount", "snippetCount", "taskCount", "evidenceAvailability", "estimatedLearningCost", "reusePotential", "priorityScore", "scoreBreakdown", "recommendedTopicType", "warnings"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "enum": ["uncovered_framework_concept", "uncovered_package", "uncovered_component_family", "uncovered_component_api", "uncovered_public_symbol", "missing_workflow", "missing_event_pattern", "missing_lifecycle", "missing_style_knowledge", "frequent_raw_fallback", "low_quality_knowledge", "stale_knowledge"] },
+          "targetId": { "type": "string" },
+          "targetName": { "type": "string" },
+          "packageId": { "type": ["string", "null"] },
+          "currentKnowledgeIds": { "type": "array", "items": { "type": "string" } },
+          "reason": { "type": "string" },
+          "publicReachable": { "type": "boolean" },
+          "documentationAvailable": { "type": "boolean" },
+          "exampleAvailable": { "type": "boolean" },
+          "structuralImportance": { "type": "number" },
+          "retrievalCount": { "type": "integer", "minimum": 0 },
+          "rawFallbackCount": { "type": "integer", "minimum": 0 },
+          "snippetCount": { "type": "integer", "minimum": 0 },
+          "taskCount": { "type": "integer", "minimum": 0 },
+          "evidenceAvailability": { "type": "number" },
+          "estimatedLearningCost": { "type": "number" },
+          "reusePotential": { "type": "number" },
+          "priorityScore": { "type": "number" },
+          "scoreBreakdown": { "type": "object" },
+          "recommendedTopicType": { "type": "string" },
+          "warnings": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "businessHash": { "type": "string", "pattern": "^sha256:" }
+  }
+}

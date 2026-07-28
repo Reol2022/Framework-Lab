@@ -1,0 +1,711 @@
+{
+  "schemaVersion": "1.0.0",
+  "frameworkId": "ncom",
+  "generatedAt": "2026-07-28T03:27:49.025Z",
+  "topics": [
+    {
+      "id": "package-public-exports",
+      "frameworkId": "ncom",
+      "type": "framework_concept",
+      "title": "NCom package and public export structure",
+      "description": "Learn package boundaries and public exports.",
+      "packageIds": [
+        "package-ncom-all",
+        "package-ncom-components",
+        "package-ncom-core"
+      ],
+      "symbolIds": [],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 100,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "package",
+        "public_symbol"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "component-base-model",
+      "frameworkId": "ncom",
+      "type": "framework_concept",
+      "title": "NComponent and defineComponent base model",
+      "description": "Learn base component and registration facts.",
+      "packageIds": [],
+      "symbolIds": [
+        "symbol-fca3708ca106bc60",
+        "symbol-ce1be56437963bb3"
+      ],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 99,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "component",
+        "lifecycle"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "event-system",
+      "frameworkId": "ncom",
+      "type": "event_system",
+      "title": "NCom event system",
+      "description": "Learn observable component event facts.",
+      "packageIds": [],
+      "symbolIds": [
+        "symbol-4ef0a65933001699"
+      ],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 95,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "event"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "ncbutton-api",
+      "frameworkId": "ncom",
+      "type": "component",
+      "title": "NCButton API and usage patterns",
+      "description": "Learn NCButton public API and event usage.",
+      "packageIds": [],
+      "symbolIds": [
+        "symbol-4ef0a65933001699",
+        "symbol-c7b514bbc7b95fb6"
+      ],
+      "componentIds": [
+        "component-6279f9bfe1af1227"
+      ],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [
+        "component-base-model",
+        "event-system"
+      ],
+      "priority": 94,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "component",
+        "public_symbol",
+        "example"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "ncinput-events",
+      "frameworkId": "ncom",
+      "type": "component",
+      "title": "NCInput API and value change event",
+      "description": "Learn NCInput API and public value-change usage.",
+      "packageIds": [],
+      "symbolIds": [
+        "symbol-a99fecb6fdc985b4"
+      ],
+      "componentIds": [
+        "component-79de77ea33744632"
+      ],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [
+        "component-base-model"
+      ],
+      "priority": 93,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "component",
+        "event"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "example-workflow",
+      "frameworkId": "ncom",
+      "type": "development_workflow",
+      "title": "Example addition and registration workflow",
+      "description": "Learn example directory, registration and validated build flow.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 92,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "example",
+        "workflow"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "build-workflow",
+      "frameworkId": "ncom",
+      "type": "build_workflow",
+      "title": "Theme and example build verification workflow",
+      "description": "Learn validated build ordering.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 91,
+      "learningStatus": "planned",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "workflow"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "lifecycle-callbacks",
+      "frameworkId": "ncom",
+      "type": "lifecycle",
+      "title": "NCom lifecycle callback structure",
+      "description": "Record commit-bound lifecycle callback declarations without inferring runtime order.",
+      "packageIds": [],
+      "symbolIds": [
+        "symbol-fca3708ca106bc60"
+      ],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 89,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "lifecycle",
+        "public_symbol"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "template-rendering",
+      "frameworkId": "ncom",
+      "type": "framework_concept",
+      "title": "NCom template and rendering structure",
+      "description": "Record bounded template and rendering symbols.",
+      "packageIds": [],
+      "symbolIds": [
+        "symbol-fca3708ca106bc60"
+      ],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 88,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "template",
+        "render"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "props-reflection",
+      "frameworkId": "ncom",
+      "type": "framework_concept",
+      "title": "NCom props declaration and reflection structure",
+      "description": "Record bounded props and observed attributes evidence.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 87,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "props",
+        "public_symbol"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "theme-style-entry",
+      "frameworkId": "ncom",
+      "type": "styling",
+      "title": "NCom theme and component style entry structure",
+      "description": "Record theme package and component style entry evidence.",
+      "packageIds": [
+        "package-ncom-theme"
+      ],
+      "symbolIds": [],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 86,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "style",
+        "theme"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "template-shadow-dom",
+      "frameworkId": "ncom",
+      "type": "lifecycle",
+      "title": "Component templates and Shadow DOM",
+      "description": "Learn observed template and component rendering facts.",
+      "packageIds": [],
+      "symbolIds": [
+        "symbol-fca3708ca106bc60"
+      ],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 85,
+      "learningStatus": "planned",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "lifecycle"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "family-input-controls",
+      "frameworkId": "ncom",
+      "type": "component_family",
+      "title": "NCBaseInput component family",
+      "description": "Record the explicitly reviewed family sharing NCBaseInput.",
+      "packageIds": [],
+      "symbolIds": [
+        "symbol-e1062f7761f20c65"
+      ],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 84,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "family",
+        "component"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "family-closable",
+      "frameworkId": "ncom",
+      "type": "component_family",
+      "title": "Closable feedback and overlay family",
+      "description": "Record the explicitly reviewed close-event family.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [
+        "component-078563e274bd74a1",
+        "component-59e4204498fb6bcd",
+        "component-ea5dc8d798d1d252"
+      ],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 83,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "family",
+        "event"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "family-reference-popup",
+      "frameworkId": "ncom",
+      "type": "component_family",
+      "title": "Reference-anchored popup family",
+      "description": "Record the explicitly reviewed reference-slot family.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [
+        "component-baf8eef39d4e3bee",
+        "component-1211c985a80a45a7"
+      ],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 82,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "family",
+        "slot"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "ncalert-api",
+      "frameworkId": "ncom",
+      "type": "component",
+      "title": "NCAlert public structure",
+      "description": "Record NCAlert public component and close event evidence.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [
+        "component-078563e274bd74a1"
+      ],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 81,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "component",
+        "event",
+        "example"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "nccard-api",
+      "frameworkId": "ncom",
+      "type": "component",
+      "title": "NCCard public structure",
+      "description": "Record NCCard public component and named slot evidence.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [
+        "component-8945793b5db3b667"
+      ],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 81,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "component",
+        "slot",
+        "example"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "nccheckbox-api",
+      "frameworkId": "ncom",
+      "type": "component",
+      "title": "NCCheckbox public structure",
+      "description": "Record NCCheckbox public component, event, slot, document and example evidence.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [
+        "component-0cf2173ee5c9baab"
+      ],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 81,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "component",
+        "event",
+        "slot",
+        "example"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "ncdrawer-api",
+      "frameworkId": "ncom",
+      "type": "component",
+      "title": "NCDrawer public structure",
+      "description": "Record NCDrawer public component, open/close events and slot evidence.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [
+        "component-59e4204498fb6bcd"
+      ],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 81,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "component",
+        "event",
+        "slot"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "ncselect-api",
+      "frameworkId": "ncom",
+      "type": "component",
+      "title": "NCSelect public structure",
+      "description": "Record NCSelect public component, event, document and example evidence.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [
+        "component-b0fbcb97a7f707f4"
+      ],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 81,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "component",
+        "event",
+        "example"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "nctable-api",
+      "frameworkId": "ncom",
+      "type": "component",
+      "title": "NCTable public structure",
+      "description": "Record NCTable public component, row events, slot and example evidence.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [
+        "component-d61ac725a2d438d4"
+      ],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 81,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "component",
+        "event",
+        "slot",
+        "example"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "props-interfaces",
+      "frameworkId": "ncom",
+      "type": "framework_concept",
+      "title": "Props and interface conventions",
+      "description": "Learn component props declarations.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 80,
+      "learningStatus": "planned",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "public_symbol"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "event-state-update",
+      "frameworkId": "ncom",
+      "type": "development_workflow",
+      "title": "Event-driven state update workflow",
+      "description": "Record examples where component events update local example state.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 79,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "workflow",
+        "event",
+        "example"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "public-import-types",
+      "frameworkId": "ncom",
+      "type": "development_workflow",
+      "title": "Public import and type location workflow",
+      "description": "Record package export and symbol evidence used to locate public imports and types.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 79,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "workflow",
+        "public_symbol",
+        "package"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "theme-example-chain",
+      "frameworkId": "ncom",
+      "type": "build_workflow",
+      "title": "Theme and example dependency chain",
+      "description": "Record bounded package and example build-chain evidence without asserting unexecuted behavior.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 79,
+      "learningStatus": "published",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "workflow",
+        "theme",
+        "example"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "styles-themes",
+      "frameworkId": "ncom",
+      "type": "styling",
+      "title": "Component style and theme organization",
+      "description": "Learn style and theme layout.",
+      "packageIds": [
+        "package-ncom-theme"
+      ],
+      "symbolIds": [],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 78,
+      "learningStatus": "planned",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "style"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "cjk-sass",
+      "frameworkId": "ncom",
+      "type": "troubleshooting",
+      "title": "Windows CJK Sass known issue",
+      "description": "Learn bounded evidence for the recorded Sass issue.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 70,
+      "learningStatus": "planned",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "troubleshooting"
+      ],
+      "warnings": []
+    },
+    {
+      "id": "version-change",
+      "frameworkId": "ncom",
+      "type": "version_change",
+      "title": "NCom version-bound evidence",
+      "description": "Learn commit-bound evidence scope.",
+      "packageIds": [],
+      "symbolIds": [],
+      "componentIds": [],
+      "documentSectionIds": [],
+      "exampleIds": [],
+      "prerequisiteTopicIds": [],
+      "priority": 60,
+      "learningStatus": "planned",
+      "sourceCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+      "catalogRootHash": "sha256:0dbfa378eedaaef0b31867b679e7932157eb63bb0cc4e3fa0fb0a0d1869c6518",
+      "symbolRootHash": "sha256:52e4461d185ce375263aca5e412b2d93f402d906867bf0940bffc9807eec6297",
+      "coverageTargets": [
+        "version"
+      ],
+      "warnings": []
+    }
+  ],
+  "businessHash": "sha256:4f32e000051b339bf8c33ebf8d7011b8f249d6c871d030757ed08619939cc4ff"
+}

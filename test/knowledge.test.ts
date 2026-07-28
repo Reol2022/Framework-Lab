@@ -73,6 +73,21 @@ test("非法 commit 返回错误", async () => {
 test("最小预算不足返回错误", async () => {
   await assert.rejects(() => createAgentContext({ labRoot: root, frameworkId: "ncom", task: "x", budget: 10, dryRun: true }), /最小安全预算/u);
 });
+test("Knowledge-first Context 暴露复用、fallback 和去重指标", async () => {
+  const result = await createAgentContext({
+    labRoot: root,
+    frameworkId: "ncom",
+    task: "使用 NCSelect change 事件更新页面状态",
+    sourceCommit: "a350b576bbeae6c6254273037a17d2a8730fb80f",
+    knowledgeFirst: true,
+    dryRun: true,
+  });
+  assert.ok(result.context.knowledgeFirst);
+  assert.ok(result.context.knowledgeFirst.knowledgeUnitHits > 0);
+  assert.equal(typeof result.context.knowledgeFirst.duplicateFactsRemoved, "number");
+  assert.equal(result.context.knowledgeFirst.contextEstimatedTokens, result.context.estimatedTokens);
+  assert.equal(result.context.knowledgeFirst.selectedSnippetCount, result.context.frameworkKnowledge?.snippets.length ?? 0);
+});
 test("dry-run 不写 context 目录", async () => {
   const id = "dry-run-must-not-exist";
   await createAgentContext({ labRoot: root, frameworkId: "ncom", task: "验证补丁", runId: "run-010", contextId: id, dryRun: true });

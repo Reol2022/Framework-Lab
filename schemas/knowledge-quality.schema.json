@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "frameworkId", "sourceCommit", "generatedAt", "dimensions", "records", "summary", "warning"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "frameworkId": { "type": "string" },
+    "sourceCommit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "dimensions": { "type": "array", "items": { "type": "string" } },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["knowledgeId", "evidenceCompleteness", "scopeSpecificity", "publicInternalSeparation", "claimAtomicity", "documentationSupport", "exampleSupport", "recipeValidation", "runtimeValidation", "limitationCompleteness", "freshness", "duplication", "overallQuality", "qualityWarnings"],
+        "properties": {
+          "knowledgeId": { "type": "string" },
+          "evidenceCompleteness": { "type": "string" },
+          "scopeSpecificity": { "type": "string" },
+          "publicInternalSeparation": { "type": "string" },
+          "claimAtomicity": { "type": "string" },
+          "documentationSupport": { "type": "string" },
+          "exampleSupport": { "type": "string" },
+          "recipeValidation": { "type": "string" },
+          "runtimeValidation": { "type": "string" },
+          "limitationCompleteness": { "type": "string" },
+          "freshness": { "type": "string" },
+          "duplication": { "type": "string" },
+          "overallQuality": { "enum": ["high", "medium", "low", "blocked"] },
+          "qualityWarnings": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "summary": { "type": "object" },
+    "warning": { "type": "string" }
+  }
+}
