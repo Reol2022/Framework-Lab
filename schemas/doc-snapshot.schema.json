@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://framework-lab.example/schemas/doc-snapshot.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "collectionId", "frameworkId", "frameworkCommit", "sourceId", "sourceType", "url", "httpStatus", "requestedMode", "captureMode", "capturedAt", "title", "rawHtmlHash", "renderedHtmlHash", "contentHash", "bodyTextHash", "headings", "codeBlocks", "links", "rawSnapshotPath", "quality", "attempts"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "collectionId": { "type": "string", "minLength": 1 },
+    "frameworkId": { "type": "string", "minLength": 1 },
+    "frameworkCommit": { "type": ["string", "null"], "pattern": "^[0-9a-f]{40}$" },
+    "sourceId": { "type": "string", "minLength": 1 },
+    "sourceType": { "enum": ["official-doc", "official-example", "test", "runtime-record"] },
+    "url": { "type": "string", "minLength": 1 },
+    "httpStatus": { "type": ["integer", "null"], "minimum": 100, "maximum": 599 },
+    "requestedMode": { "enum": ["http", "browser", "file", "auto"] },
+    "captureMode": { "enum": ["http", "browser", "file"] },
+    "capturedAt": { "type": "string", "format": "date-time" },
+    "title": { "type": ["string", "null"] },
+    "rawHtmlHash": { "$ref": "#/$defs/hash" },
+    "renderedHtmlHash": { "anyOf": [{ "$ref": "#/$defs/hash" }, { "type": "null" }] },
+    "contentHash": { "$ref": "#/$defs/hash" },
+    "bodyTextHash": { "$ref": "#/$defs/hash" },
+    "headings": { "type": "array" },
+    "codeBlocks": { "type": "array" },
+    "links": { "type": "array" },
+    "rawSnapshotPath": {
+      "type": "string",
+      "pattern": "^(?![A-Za-z]:)(?!/)(?!.*\\\\)(?!.*(?:^|/)\\.\\.(?:/|$)).+$"
+    },
+    "quality": { "type": "object" },
+    "attempts": { "type": "array", "minItems": 1 }
+  },
+  "$defs": {
+    "hash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  }
+}

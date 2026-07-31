@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://framework-lab.example/schemas/context-v2.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "contextId", "generatedAt", "frameworkId", "commit", "components", "commands", "limitations", "rootHash"],
+  "properties": {
+    "schemaVersion": { "const": "2.0.0" },
+    "contextId": { "type": "string", "minLength": 1 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "frameworkId": { "type": "string", "minLength": 1 },
+    "commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+    "components": { "type": "array", "minItems": 1 },
+    "commands": {
+      "type": "object",
+      "required": ["install", "build", "baseline"],
+      "properties": {
+        "install": { "type": "string" },
+        "build": { "type": "string" },
+        "baseline": { "type": "string" }
+      }
+    },
+    "limitations": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "rootHash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  }
+}

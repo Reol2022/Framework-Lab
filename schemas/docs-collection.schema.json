@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://framework-lab.example/schemas/docs-collection.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "collectionId", "frameworkId", "frameworkCommit", "generatedAt", "pages", "rootHash"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "collectionId": { "type": "string", "minLength": 1 },
+    "frameworkId": { "type": "string", "minLength": 1 },
+    "frameworkCommit": { "type": ["string", "null"], "pattern": "^[0-9a-f]{40}$" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "sourceId", "contentHash", "qualityStatus"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "sourceId": { "type": "string", "minLength": 1 },
+          "contentHash": { "$ref": "#/$defs/hash" },
+          "qualityStatus": { "enum": ["complete", "partial", "empty", "failed"] }
+        }
+      }
+    },
+    "rootHash": { "$ref": "#/$defs/hash" }
+  },
+  "$defs": {
+    "hash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://framework-lab.example/schemas/doc-page.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "id", "sourceId", "url", "title", "capturedAt", "contentHash", "sections", "codeBlocks", "links", "quality", "components"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "id": { "type": "string", "minLength": 1 },
+    "sourceId": { "type": "string", "minLength": 1 },
+    "url": { "type": "string", "minLength": 1 },
+    "title": { "type": ["string", "null"] },
+    "capturedAt": { "type": "string", "format": "date-time" },
+    "contentHash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "sections": { "type": "array" },
+    "codeBlocks": { "type": "array" },
+    "links": { "type": "array" },
+    "quality": { "$ref": "#/$defs/quality" },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description", "attributes", "events", "methods", "slots", "examples", "sourceRefs", "quality"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "description": { "type": ["string", "null"] },
+          "attributes": { "type": "array" },
+          "events": { "type": "array" },
+          "methods": { "type": "array" },
+          "slots": { "type": "array" },
+          "examples": { "type": "array" },
+          "sourceRefs": { "type": "array" },
+          "quality": { "$ref": "#/$defs/quality" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "quality": {
+      "type": "object",
+      "required": ["attributeCount", "eventCount", "methodCount", "slotCount", "exampleCount", "codeBlockCount", "missingSections", "parseWarnings", "qualityStatus"],
+      "properties": {
+        "attributeCount": { "type": "integer", "minimum": 0 },
+        "eventCount": { "type": "integer", "minimum": 0 },
+        "methodCount": { "type": "integer", "minimum": 0 },
+        "slotCount": { "type": "integer", "minimum": 0 },
+        "exampleCount": { "type": "integer", "minimum": 0 },
+        "codeBlockCount": { "type": "integer", "minimum": 0 },
+        "missingSections": { "type": "array", "items": { "type": "string" } },
+        "parseWarnings": { "type": "array", "items": { "type": "string" } },
+        "qualityStatus": { "enum": ["complete", "partial", "empty", "failed"] }
+      }
+    }
+  }
+}

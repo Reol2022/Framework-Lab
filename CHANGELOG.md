@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- 在当前 v0.2.3 上补齐 v0.1.7 官方文档采集兼容能力：通用 HTTP/browser/file/auto Provider、质量门禁、不可变快照和历史 Diff。
+- 新增文档 API 结构化、多来源 ComponentKnowledge、冲突/覆盖报告与受证据约束的 Context v2。
+- NCom 固定 commit 的 8 个组件仓库文档完成结构化校验；真实官网 HTTP 仅返回动态壳，浏览器适配器未配置，结果如实记录为失败。
+
 ## 0.2.3 - 2026-07-27
 
 - 新增 Knowledge Gap、透明 Priority、结构化 Component Family 与显式 family review。

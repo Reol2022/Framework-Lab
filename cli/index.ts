@@ -34,6 +34,15 @@ import {
   reviewFamily,
 } from "./lib/learning-analysis.js";
 import { createVersion, createVersionDiff, freshness, knowledgeImpact, listVersions, validateVersion } from "./lib/version.js";
+import {
+  buildContextV2,
+  collectDocs,
+  diffDocs,
+  inspectDocs,
+  parseDocs,
+  readReconciledArtifact,
+  reconcileKnowledge,
+} from "./lib/docs.js";
 
 const HELP = `Framework Lab v0.2.3
 
@@ -75,6 +84,13 @@ const HELP = `Framework Lab v0.2.3
   pnpm framework-lab retrieval validate <framework-id> <retrieval-id>
   pnpm framework-lab retrieval explain <framework-id> <retrieval-id>
   pnpm framework-lab context create <framework-id> --task <text> [options]
+  pnpm framework-lab docs collect <framework-id> [--source <source-id>]
+  pnpm framework-lab docs parse <framework-id> [--collection <collection-id>]
+  pnpm framework-lab docs inspect <framework-id> --component <name>
+  pnpm framework-lab docs diff <framework-id> <from-collection> <to-collection>
+  pnpm framework-lab knowledge reconcile <framework-id> [--component <name>]
+  pnpm framework-lab knowledge conflicts|coverage <framework-id> [--format markdown]
+  pnpm framework-lab context build <framework-id> --components <name,name>
 
 baseline run 选项：
   --run-id <id>       指定 run id（例如 run-011 或 011）
@@ -85,6 +101,40 @@ errors parse 选项：
   --force             显式覆盖已有 errors.json
   --help              显示帮助
 `;
+
+async function handleDocs(labRoot: string, args: string[]): Promise<boolean> {
+  if (args[0] !== "docs") return false;
+  const action = args[1], frameworkId = args[2];
+  if (!action || !frameworkId) throw new Error("请使用 docs collect|parse|inspect|diff <framework-id>。");
+  const one = (name: string) => optionValues(args, name).at(-1);
+  if (action === "collect") {
+    assertKnownOptions(args, ["--source"], 3);
+    const sourceId = one("--source");
+    const result = await collectDocs({ labRoot, frameworkId, ...(sourceId ? { sourceId } : {}) });
+    console.log(`${result.collectionId}: ${result.pages.length} pages collected`);
+    return true;
+  }
+  if (action === "parse") {
+    assertKnownOptions(args, ["--collection"], 3);
+    const result = await parseDocs(labRoot, frameworkId, one("--collection"));
+    console.log(`${result.collectionId}: ${result.pages.length} pages validated`);
+    return true;
+  }
+  if (action === "inspect") {
+    assertKnownOptions(args, ["--component"], 3);
+    const component = one("--component");
+    if (!component) throw new Error("docs inspect 需要 --component。");
+    console.log(JSON.stringify(await inspectDocs(labRoot, frameworkId, component), null, 2));
+    return true;
+  }
+  if (action === "diff") {
+    assertKnownOptions(args, [], 5);
+    if (!args[3] || !args[4]) throw new Error("docs diff 需要 from-collection 和 to-collection。");
+    console.log(JSON.stringify(await diffDocs(labRoot, frameworkId, args[3], args[4]), null, 2));
+    return true;
+  }
+  throw new Error(`未知 docs 操作：${action}`);
+}
 
 async function handleTask(labRoot: string, args: string[]): Promise<boolean> {
   if (args[0] !== "task") return false;
@@ -353,9 +403,36 @@ function optionValues(args: string[], name: string): string[] {
   return values;
 }
 
+function assertKnownOptions(args: string[], allowed: string[], start: number): void {
+  for (let index = start; index < args.length; index += 1) {
+    const argument = args[index] ?? "";
+    if (!argument.startsWith("--")) continue;
+    if (!allowed.includes(argument)) throw new Error(`未知选项：${argument}`);
+    if (!args[index + 1] || args[index + 1]?.startsWith("--")) throw new Error(`${argument} 缺少参数。`);
+    index += 1;
+  }
+}
+
 async function handleKnowledge(labRoot: string, args: string[]): Promise<boolean> {
   if (args[0] !== "knowledge") return false;
   const action = args[1], frameworkId = args[2];
+  if (frameworkId && action === "reconcile") {
+    assertKnownOptions(args, ["--component"], 3);
+    const component = optionValues(args, "--component").at(-1);
+    const result = await reconcileKnowledge({ labRoot, frameworkId, ...(component ? { component } : {}) });
+    console.log(`${frameworkId}: ${result.components.length} components reconciled, ${result.conflicts.length} conflicts`);
+    return true;
+  }
+  if (frameworkId && (action === "conflicts" || action === "coverage")) {
+    assertKnownOptions(args, ["--format"], 3);
+    const name = action === "conflicts" ? "knowledge-conflicts.json" : "documentation-coverage.json";
+    const result = await readReconciledArtifact(labRoot, frameworkId, name);
+    if (optionValues(args, "--format").at(-1) === "markdown") {
+      const file = action === "conflicts" ? "knowledge-conflicts.md" : "documentation-coverage.md";
+      console.log(await (await import("node:fs/promises")).readFile(path.join(labRoot, "frameworks", frameworkId, "knowledge", "reconciled", file), "utf8"));
+    } else console.log(JSON.stringify(result, null, 2));
+    return true;
+  }
   if (!frameworkId || !["validate", "index", "impact", "freshness"].includes(action ?? "")) throw new Error("请使用 knowledge validate|index|impact|freshness <framework-id>。");
   if (action === "impact") { const diffId = args[3]; if (!diffId) throw new Error("knowledge impact 缺少 version-diff-id。"); const result = await knowledgeImpact(labRoot, frameworkId, diffId); console.log(`${result.impactId}: impacted=${result.summary.affected}`); return true; }
   if (action === "freshness") { const result = await freshness(labRoot, frameworkId, optionValues(args, "--target-version").at(-1)); console.log(JSON.stringify(result, null, 2)); return true; }
@@ -384,6 +461,15 @@ async function handleVersion(labRoot: string, args: string[]): Promise<boolean> 
 
 async function handleContext(labRoot: string, args: string[]): Promise<boolean> {
   if (args[0] !== "context") return false;
+  if (args[1] === "build" && args[2]) {
+    assertKnownOptions(args, ["--components", "--context-id"], 3);
+    const values = optionValues(args, "--components").at(-1)?.split(",").map((item) => item.trim()).filter(Boolean) ?? [];
+    if (!values.length) throw new Error("context build 需要 --components <name,name>。");
+    const outputId = optionValues(args, "--context-id").at(-1);
+    const result = await buildContextV2({ labRoot, frameworkId: args[2], components: values, ...(outputId ? { outputId } : {}) });
+    console.log(`${String((result.context as { contextId: string }).contextId)}: ${values.length} components`);
+    return true;
+  }
   if (args[1] !== "create" || !args[2]) throw new Error("请使用 context create <framework-id> --task <text>。");
   const one = (name: string) => optionValues(args, name).at(-1);
   const sourceCommit = one("--source-commit"), runId = one("--run-id"), os = one("--os");
@@ -509,7 +595,7 @@ async function main(): Promise<void> {
       console.log(HELP);
       return;
     }
-    if (await handleTask(labRoot, args) || await handleLearn(labRoot, args) || await handleVersion(labRoot, args) || await handleSymbols(labRoot, args) || await handleCatalog(labRoot, args) || await handleKnowledge(labRoot, args) || await handleRetrieval(labRoot, args) || await handleContext(labRoot, args)) return;
+    if (await handleTask(labRoot, args) || await handleLearn(labRoot, args) || await handleVersion(labRoot, args) || await handleSymbols(labRoot, args) || await handleCatalog(labRoot, args) || await handleDocs(labRoot, args) || await handleKnowledge(labRoot, args) || await handleRetrieval(labRoot, args) || await handleContext(labRoot, args)) return;
     const options = parseArguments(args);
     if (!options) {
       console.log(HELP);

@@ -1,0 +1,1856 @@
+{
+  "schemaVersion": "1.0.0",
+  "frameworkId": "ncom",
+  "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+  "generatedAt": "2026-07-30T08:03:42.486Z",
+  "conflicts": [
+    {
+      "id": "conflict-79746bc3a8d9894c",
+      "component": "NCCard",
+      "itemKind": "attribute",
+      "itemName": "shadow",
+      "sourceA": "official-doc",
+      "sourceB": "type-definition",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/card.md",
+          "url": null,
+          "lineStart": 19,
+          "lineEnd": 19,
+          "sha256": "sha256:b6f9d4c259290a5a98e96f110029a9e48621e83241e0f9ab049f7c2b729b0ce4",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:symbol-369ca190b7de7991",
+          "sourceType": "type-definition",
+          "path": "packages/components/src/card/types.ts",
+          "url": null,
+          "lineStart": 8,
+          "lineEnd": 8,
+          "sha256": "sha256:563f74dbdfe0e617a21aa8a607c8a9a4ec24e919a321990cd571db7dcb830892",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对所列证据；本报告不自动选择冲突值。",
+      "conflictType": "type-mismatch"
+    },
+    {
+      "id": "conflict-926b32b21ace4a51",
+      "component": "NCCard",
+      "itemKind": "attribute",
+      "itemName": "width",
+      "sourceA": "type-definition",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:symbol-b89cc6173317d04b",
+          "sourceType": "type-definition",
+          "path": "packages/components/src/card/types.ts",
+          "url": null,
+          "lineStart": 10,
+          "lineEnd": 10,
+          "sha256": "sha256:563f74dbdfe0e617a21aa8a607c8a9a4ec24e919a321990cd571db7dcb830892",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/card.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:b6f9d4c259290a5a98e96f110029a9e48621e83241e0f9ab049f7c2b729b0ce4",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-85a05152e99bf58e",
+      "component": "NCCard",
+      "itemKind": "attribute",
+      "itemName": "height",
+      "sourceA": "type-definition",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:symbol-0161d76a10cafbe1",
+          "sourceType": "type-definition",
+          "path": "packages/components/src/card/types.ts",
+          "url": null,
+          "lineStart": 11,
+          "lineEnd": 11,
+          "sha256": "sha256:563f74dbdfe0e617a21aa8a607c8a9a4ec24e919a321990cd571db7dcb830892",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/card.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:b6f9d4c259290a5a98e96f110029a9e48621e83241e0f9ab049f7c2b729b0ce4",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-e8c22ad68417f5c8",
+      "component": "NCCard",
+      "itemKind": "slot",
+      "itemName": "default",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:NCCard",
+          "sourceType": "source-code",
+          "path": "packages/components/src/card/index.ts",
+          "url": null,
+          "lineStart": 25,
+          "lineEnd": 25,
+          "sha256": "sha256:37cd9d9ede0cc520809dc0c85fe76ba5c3e63e8d53a1cd9cbc1de4c56005dd69",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/card.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:b6f9d4c259290a5a98e96f110029a9e48621e83241e0f9ab049f7c2b729b0ce4",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-08b47925ec96ad75",
+      "component": "NCCard",
+      "itemKind": "slot",
+      "itemName": "footer",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:NCCard",
+          "sourceType": "source-code",
+          "path": "packages/components/src/card/index.ts",
+          "url": null,
+          "lineStart": 25,
+          "lineEnd": 25,
+          "sha256": "sha256:37cd9d9ede0cc520809dc0c85fe76ba5c3e63e8d53a1cd9cbc1de4c56005dd69",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/card.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:b6f9d4c259290a5a98e96f110029a9e48621e83241e0f9ab049f7c2b729b0ce4",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-74284b9daf083ce7",
+      "component": "NCCard",
+      "itemKind": "slot",
+      "itemName": "header",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:NCCard",
+          "sourceType": "source-code",
+          "path": "packages/components/src/card/index.ts",
+          "url": null,
+          "lineStart": 25,
+          "lineEnd": 25,
+          "sha256": "sha256:37cd9d9ede0cc520809dc0c85fe76ba5c3e63e8d53a1cd9cbc1de4c56005dd69",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/card.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:b6f9d4c259290a5a98e96f110029a9e48621e83241e0f9ab049f7c2b729b0ce4",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-a798f32999a90891",
+      "component": "NCCheckbox",
+      "itemKind": "attribute",
+      "itemName": "value",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/checkbox.md",
+          "url": null,
+          "lineStart": 16,
+          "lineEnd": 16,
+          "sha256": "sha256:66ee8885cdda01b4315ef2d7c6e541923730f4218c15b17b15bda79bcf26c85c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCCheckbox",
+          "sourceType": "source-code",
+          "path": "packages/components/src/checkbox/index.ts",
+          "url": null,
+          "lineStart": 12,
+          "lineEnd": 12,
+          "sha256": "sha256:982a003822f54de1f742f2180aa64e18ac17d69dd62e528311f0cd1b599b4ef5",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-649c9efd7c8b5954",
+      "component": "NCCheckbox",
+      "itemKind": "attribute",
+      "itemName": "disabled",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/checkbox.md",
+          "url": null,
+          "lineStart": 17,
+          "lineEnd": 17,
+          "sha256": "sha256:66ee8885cdda01b4315ef2d7c6e541923730f4218c15b17b15bda79bcf26c85c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCCheckbox",
+          "sourceType": "source-code",
+          "path": "packages/components/src/checkbox/index.ts",
+          "url": null,
+          "lineStart": 12,
+          "lineEnd": 12,
+          "sha256": "sha256:982a003822f54de1f742f2180aa64e18ac17d69dd62e528311f0cd1b599b4ef5",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-77f4a14fb5fd383b",
+      "component": "NCCheckbox",
+      "itemKind": "method",
+      "itemName": "value",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:symbol-43f829569cd5568f",
+          "sourceType": "source-code",
+          "path": "packages/components/src/checkbox/index.ts",
+          "url": null,
+          "lineStart": 23,
+          "lineEnd": 23,
+          "sha256": "sha256:982a003822f54de1f742f2180aa64e18ac17d69dd62e528311f0cd1b599b4ef5",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/checkbox.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:66ee8885cdda01b4315ef2d7c6e541923730f4218c15b17b15bda79bcf26c85c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-77f4a14fb5fd383b",
+      "component": "NCCheckbox",
+      "itemKind": "method",
+      "itemName": "value",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:symbol-1df343e6a989c318",
+          "sourceType": "source-code",
+          "path": "packages/components/src/checkbox/index.ts",
+          "url": null,
+          "lineStart": 43,
+          "lineEnd": 43,
+          "sha256": "sha256:982a003822f54de1f742f2180aa64e18ac17d69dd62e528311f0cd1b599b4ef5",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/checkbox.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:66ee8885cdda01b4315ef2d7c6e541923730f4218c15b17b15bda79bcf26c85c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-409c95fd0c578605",
+      "component": "NCCheckbox",
+      "itemKind": "method",
+      "itemName": "disabled",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:symbol-de269ba07e8b7e6c",
+          "sourceType": "source-code",
+          "path": "packages/components/src/checkbox/index.ts",
+          "url": null,
+          "lineStart": 51,
+          "lineEnd": 51,
+          "sha256": "sha256:982a003822f54de1f742f2180aa64e18ac17d69dd62e528311f0cd1b599b4ef5",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/checkbox.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:66ee8885cdda01b4315ef2d7c6e541923730f4218c15b17b15bda79bcf26c85c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-409c95fd0c578605",
+      "component": "NCCheckbox",
+      "itemKind": "method",
+      "itemName": "disabled",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:symbol-bc179372391bf87d",
+          "sourceType": "source-code",
+          "path": "packages/components/src/checkbox/index.ts",
+          "url": null,
+          "lineStart": 63,
+          "lineEnd": 63,
+          "sha256": "sha256:982a003822f54de1f742f2180aa64e18ac17d69dd62e528311f0cd1b599b4ef5",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/checkbox.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:66ee8885cdda01b4315ef2d7c6e541923730f4218c15b17b15bda79bcf26c85c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-33b5f540f015a8a7",
+      "component": "NCCheckbox",
+      "itemKind": "slot",
+      "itemName": "default",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:NCCheckbox",
+          "sourceType": "source-code",
+          "path": "packages/components/src/checkbox/index.ts",
+          "url": null,
+          "lineStart": 12,
+          "lineEnd": 12,
+          "sha256": "sha256:982a003822f54de1f742f2180aa64e18ac17d69dd62e528311f0cd1b599b4ef5",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/checkbox.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:66ee8885cdda01b4315ef2d7c6e541923730f4218c15b17b15bda79bcf26c85c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-dbe98206b43b7f9e",
+      "component": "NCColorPicker",
+      "itemKind": "method",
+      "itemName": "setPresets",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:symbol-d6d4ca510f086b47",
+          "sourceType": "source-code",
+          "path": "packages/components/src/colorpicker/index.ts",
+          "url": null,
+          "lineStart": 115,
+          "lineEnd": 115,
+          "sha256": "sha256:11e507c71be2488f522055c6e619888d2a8983d35d1138e9fc027248cd2e78a6",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/colorpicker.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:e2a9c2b05a61444f5d4a244eb507554f3e4a48cfac86947f6ffd67c1f3054862",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-af7343b74dd1da22",
+      "component": "NCComplextTable",
+      "itemKind": "attribute",
+      "itemName": "keyname",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+          "url": null,
+          "lineStart": 16,
+          "lineEnd": 16,
+          "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCComplextTable",
+          "sourceType": "source-code",
+          "path": "packages/components/src/complexttable/index.ts",
+          "url": null,
+          "lineStart": 39,
+          "lineEnd": 39,
+          "sha256": "sha256:bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-c244e91c6b8ca1cb",
+      "component": "NCComplextTable",
+      "itemKind": "attribute",
+      "itemName": "data-source",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+          "url": null,
+          "lineStart": 17,
+          "lineEnd": 17,
+          "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCComplextTable",
+          "sourceType": "source-code",
+          "path": "packages/components/src/complexttable/index.ts",
+          "url": null,
+          "lineStart": 39,
+          "lineEnd": 39,
+          "sha256": "sha256:bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-d4c79214a706c15e",
+      "component": "NCComplextTable",
+      "itemKind": "attribute",
+      "itemName": "items",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+          "url": null,
+          "lineStart": 18,
+          "lineEnd": 18,
+          "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCComplextTable",
+          "sourceType": "source-code",
+          "path": "packages/components/src/complexttable/index.ts",
+          "url": null,
+          "lineStart": 39,
+          "lineEnd": 39,
+          "sha256": "sha256:bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-7eefda1fdfcb3fba",
+      "component": "NCComplextTable",
+      "itemKind": "attribute",
+      "itemName": "sub-items",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+          "url": null,
+          "lineStart": 19,
+          "lineEnd": 19,
+          "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCComplextTable",
+          "sourceType": "source-code",
+          "path": "packages/components/src/complexttable/index.ts",
+          "url": null,
+          "lineStart": 39,
+          "lineEnd": 39,
+          "sha256": "sha256:bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-8aa6ce92c99e8b48",
+      "component": "NCComplextTable",
+      "itemKind": "attribute",
+      "itemName": "children-key",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+          "url": null,
+          "lineStart": 20,
+          "lineEnd": 20,
+          "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCComplextTable",
+          "sourceType": "source-code",
+          "path": "packages/components/src/complexttable/index.ts",
+          "url": null,
+          "lineStart": 39,
+          "lineEnd": 39,
+          "sha256": "sha256:bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-cc1ed2e38a74c181",
+      "component": "NCComplextTable",
+      "itemKind": "attribute",
+      "itemName": "expandable",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+          "url": null,
+          "lineStart": 21,
+          "lineEnd": 21,
+          "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCComplextTable",
+          "sourceType": "source-code",
+          "path": "packages/components/src/complexttable/index.ts",
+          "url": null,
+          "lineStart": 39,
+          "lineEnd": 39,
+          "sha256": "sha256:bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-2d23aba82f4a89c8",
+      "component": "NCComplextTable",
+      "itemKind": "attribute",
+      "itemName": "grid-line",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+          "url": null,
+          "lineStart": 22,
+          "lineEnd": 22,
+          "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCComplextTable",
+          "sourceType": "source-code",
+          "path": "packages/components/src/complexttable/index.ts",
+          "url": null,
+          "lineStart": 39,
+          "lineEnd": 39,
+          "sha256": "sha256:bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-593983e7f806dcea",
+      "component": "NCComplextTable",
+      "itemKind": "attribute",
+      "itemName": "row-alt",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+          "url": null,
+          "lineStart": 23,
+          "lineEnd": 23,
+          "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCComplextTable",
+          "sourceType": "source-code",
+          "path": "packages/components/src/complexttable/index.ts",
+          "url": null,
+          "lineStart": 39,
+          "lineEnd": 39,
+          "sha256": "sha256:bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-6bfbb3fa245db7ca",
+      "component": "NCComplextTable",
+      "itemKind": "attribute",
+      "itemName": "header-style",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+          "url": null,
+          "lineStart": 24,
+          "lineEnd": 24,
+          "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCComplextTable",
+          "sourceType": "source-code",
+          "path": "packages/components/src/complexttable/index.ts",
+          "url": null,
+          "lineStart": 39,
+          "lineEnd": 39,
+          "sha256": "sha256:bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-c71c6bdbaa2b52c9",
+      "component": "NCComplextTable",
+      "itemKind": "attribute",
+      "itemName": "checkable",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+          "url": null,
+          "lineStart": 25,
+          "lineEnd": 25,
+          "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCComplextTable",
+          "sourceType": "source-code",
+          "path": "packages/components/src/complexttable/index.ts",
+          "url": null,
+          "lineStart": 39,
+          "lineEnd": 39,
+          "sha256": "sha256:bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-b7b77ba204cf267d",
+      "component": "NCComplextTable",
+      "itemKind": "attribute",
+      "itemName": "single",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+          "url": null,
+          "lineStart": 26,
+          "lineEnd": 26,
+          "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCComplextTable",
+          "sourceType": "source-code",
+          "path": "packages/components/src/complexttable/index.ts",
+          "url": null,
+          "lineStart": 39,
+          "lineEnd": 39,
+          "sha256": "sha256:bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-eadcee8f7fad8501",
+      "component": "NCComplextTable",
+      "itemKind": "attribute",
+      "itemName": "editable",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+          "url": null,
+          "lineStart": 27,
+          "lineEnd": 27,
+          "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCComplextTable",
+          "sourceType": "source-code",
+          "path": "packages/components/src/complexttable/index.ts",
+          "url": null,
+          "lineStart": 39,
+          "lineEnd": 39,
+          "sha256": "sha256:bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-354076010c07954a",
+      "component": "NCComplextTable",
+      "itemKind": "method",
+      "itemName": "getSubColumns",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:symbol-22b4acd441a8c157",
+          "sourceType": "source-code",
+          "path": "packages/components/src/complexttable/index.ts",
+          "url": null,
+          "lineStart": 140,
+          "lineEnd": 140,
+          "sha256": "sha256:bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-b7c11d87d4063148",
+      "component": "NCComplextTable",
+      "itemKind": "method",
+      "itemName": "getChildrenByKey",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:symbol-2a0f187bfa35b472",
+          "sourceType": "source-code",
+          "path": "packages/components/src/complexttable/index.ts",
+          "url": null,
+          "lineStart": 145,
+          "lineEnd": 145,
+          "sha256": "sha256:bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-c9b611256b5f5c71",
+      "component": "NCComplextTable",
+      "itemKind": "slot",
+      "itemName": "default",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:NCComplextTable",
+          "sourceType": "source-code",
+          "path": "packages/components/src/complexttable/index.ts",
+          "url": null,
+          "lineStart": 39,
+          "lineEnd": 39,
+          "sha256": "sha256:bd1956fee692259392e9fb1d50e9931256e6f4566e2b4e1215e83f385e408535",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-e7a8836379c55c8a",
+      "component": "NCLayout",
+      "itemKind": "attribute",
+      "itemName": "splitter",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": 16,
+          "lineEnd": 16,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCLayout",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 33,
+          "lineEnd": 33,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-8f423e8d5284be0a",
+      "component": "NCLayout",
+      "itemKind": "attribute",
+      "itemName": "min-size",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": 17,
+          "lineEnd": 17,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCLayout",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 33,
+          "lineEnd": 33,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-4aa1d497b72a1836",
+      "component": "NCLayout",
+      "itemKind": "attribute",
+      "itemName": "style",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": 18,
+          "lineEnd": 18,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCLayout",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 33,
+          "lineEnd": 33,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-cd44156b280550fa",
+      "component": "NCLayout",
+      "itemKind": "method",
+      "itemName": "splitter",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:symbol-7d5c04e35cfa83db",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 42,
+          "lineEnd": 42,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-cd44156b280550fa",
+      "component": "NCLayout",
+      "itemKind": "method",
+      "itemName": "splitter",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:symbol-eadc2cb72563e026",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 46,
+          "lineEnd": 46,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-5163f493558f4b49",
+      "component": "NCLayout",
+      "itemKind": "method",
+      "itemName": "minSize",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:symbol-6146cd59828c2188",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 50,
+          "lineEnd": 50,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-5163f493558f4b49",
+      "component": "NCLayout",
+      "itemKind": "method",
+      "itemName": "minSize",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:symbol-d10738edc45520a1",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 55,
+          "lineEnd": 55,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-068134507870fd45",
+      "component": "NCLayout",
+      "itemKind": "slot",
+      "itemName": "center",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:NCLayout",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 33,
+          "lineEnd": 33,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-5c19b95960781b83",
+      "component": "NCLayout",
+      "itemKind": "slot",
+      "itemName": "east",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:NCLayout",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 33,
+          "lineEnd": 33,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-78cbf3ebd226916a",
+      "component": "NCLayout",
+      "itemKind": "slot",
+      "itemName": "north",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:NCLayout",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 33,
+          "lineEnd": 33,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-8eb1d3cbe96dde0a",
+      "component": "NCLayout",
+      "itemKind": "slot",
+      "itemName": "south",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:NCLayout",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 33,
+          "lineEnd": 33,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-0642fef8625c8836",
+      "component": "NCLayout",
+      "itemKind": "slot",
+      "itemName": "west",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:NCLayout",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 33,
+          "lineEnd": 33,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-f6bf51d17cf7dbc7",
+      "component": "NCLayout",
+      "itemKind": "slot",
+      "itemName": "=north",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": 19,
+          "lineEnd": 19,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCLayout",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 33,
+          "lineEnd": 33,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-1d5995957f5da71e",
+      "component": "NCLayout",
+      "itemKind": "slot",
+      "itemName": "=south",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": 20,
+          "lineEnd": 20,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCLayout",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 33,
+          "lineEnd": 33,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-4a31fb7b7b1e480b",
+      "component": "NCLayout",
+      "itemKind": "slot",
+      "itemName": "=west",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": 21,
+          "lineEnd": 21,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCLayout",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 33,
+          "lineEnd": 33,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-db8c442027f48f99",
+      "component": "NCLayout",
+      "itemKind": "slot",
+      "itemName": "=east",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": 22,
+          "lineEnd": 22,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCLayout",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 33,
+          "lineEnd": 33,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-6e656d89a7289e3d",
+      "component": "NCLayout",
+      "itemKind": "slot",
+      "itemName": "=center",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+          "url": null,
+          "lineStart": 23,
+          "lineEnd": 23,
+          "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCLayout",
+          "sourceType": "source-code",
+          "path": "packages/components/src/layout/index.ts",
+          "url": null,
+          "lineStart": 33,
+          "lineEnd": 33,
+          "sha256": "sha256:74c03ac246a5907909e1165fed918ed07f2992c2e35c65aab7864e293254151d",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-dda4130a8c2d6780",
+      "component": "NCMessage",
+      "itemKind": "attribute",
+      "itemName": "type",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/message.md",
+          "url": null,
+          "lineStart": 16,
+          "lineEnd": 16,
+          "sha256": "sha256:8b509e79d43a226ff23516b5fe3930452c03f52065cfc47e17e0cb006d87ba82",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCMessage",
+          "sourceType": "source-code",
+          "path": "packages/components/src/message/index.ts",
+          "url": null,
+          "lineStart": 8,
+          "lineEnd": 8,
+          "sha256": "sha256:1693eb9da91d921f8b247a21839c34569809b67e71031918dd7d24e58d81d7b6",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-dc3bdd14cdb8a1fa",
+      "component": "NCMessage",
+      "itemKind": "attribute",
+      "itemName": "closable",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/message.md",
+          "url": null,
+          "lineStart": 17,
+          "lineEnd": 17,
+          "sha256": "sha256:8b509e79d43a226ff23516b5fe3930452c03f52065cfc47e17e0cb006d87ba82",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCMessage",
+          "sourceType": "source-code",
+          "path": "packages/components/src/message/index.ts",
+          "url": null,
+          "lineStart": 8,
+          "lineEnd": 8,
+          "sha256": "sha256:1693eb9da91d921f8b247a21839c34569809b67e71031918dd7d24e58d81d7b6",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-737ce3cb5662182e",
+      "component": "NCMessage",
+      "itemKind": "attribute",
+      "itemName": "duration",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/message.md",
+          "url": null,
+          "lineStart": 18,
+          "lineEnd": 18,
+          "sha256": "sha256:8b509e79d43a226ff23516b5fe3930452c03f52065cfc47e17e0cb006d87ba82",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCMessage",
+          "sourceType": "source-code",
+          "path": "packages/components/src/message/index.ts",
+          "url": null,
+          "lineStart": 8,
+          "lineEnd": 8,
+          "sha256": "sha256:1693eb9da91d921f8b247a21839c34569809b67e71031918dd7d24e58d81d7b6",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-9b2774ba59d0a18c",
+      "component": "NCMessage",
+      "itemKind": "attribute",
+      "itemName": "hide-icon",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/message.md",
+          "url": null,
+          "lineStart": 19,
+          "lineEnd": 19,
+          "sha256": "sha256:8b509e79d43a226ff23516b5fe3930452c03f52065cfc47e17e0cb006d87ba82",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCMessage",
+          "sourceType": "source-code",
+          "path": "packages/components/src/message/index.ts",
+          "url": null,
+          "lineStart": 8,
+          "lineEnd": 8,
+          "sha256": "sha256:1693eb9da91d921f8b247a21839c34569809b67e71031918dd7d24e58d81d7b6",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-315bab0c8379073b",
+      "component": "NCMessage",
+      "itemKind": "attribute",
+      "itemName": "content",
+      "sourceA": "official-doc",
+      "sourceB": "source-code",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/message.md",
+          "url": null,
+          "lineStart": 20,
+          "lineEnd": 20,
+          "sha256": "sha256:8b509e79d43a226ff23516b5fe3930452c03f52065cfc47e17e0cb006d87ba82",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:NCMessage",
+          "sourceType": "source-code",
+          "path": "packages/components/src/message/index.ts",
+          "url": null,
+          "lineStart": 8,
+          "lineEnd": 8,
+          "sha256": "sha256:1693eb9da91d921f8b247a21839c34569809b67e71031918dd7d24e58d81d7b6",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对文档项是否仍由组件公开实现。",
+      "conflictType": "documented-item-not-found-in-source"
+    },
+    {
+      "id": "conflict-6663a2ea5332f336",
+      "component": "NCMessage",
+      "itemKind": "method",
+      "itemName": "setOptions",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:symbol-72f35fd51c8425cd",
+          "sourceType": "source-code",
+          "path": "packages/components/src/message/index.ts",
+          "url": null,
+          "lineStart": 135,
+          "lineEnd": 135,
+          "sha256": "sha256:1693eb9da91d921f8b247a21839c34569809b67e71031918dd7d24e58d81d7b6",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/message.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:8b509e79d43a226ff23516b5fe3930452c03f52065cfc47e17e0cb006d87ba82",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    },
+    {
+      "id": "conflict-a5325c4be4dcad2e",
+      "component": "NCPopconfirm",
+      "itemKind": "attribute",
+      "itemName": "cancel-type",
+      "sourceA": "official-doc",
+      "sourceB": "type-definition",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/popconfirm.md",
+          "url": null,
+          "lineStart": 21,
+          "lineEnd": 21,
+          "sha256": "sha256:20d605a20fbde3cee28291279c9a581197ae3aaf705f1b5f9b6c946d0619b5e2",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:symbol-4813c01f156e45e7",
+          "sourceType": "type-definition",
+          "path": "packages/components/src/popconfirm/types.ts",
+          "url": null,
+          "lineStart": 18,
+          "lineEnd": 18,
+          "sha256": "sha256:f4b6e7c1cf8299ae93aa6b2d45d0c94faa1fd61bf14a2c10f12a4c3713ea0a87",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对所列证据；本报告不自动选择冲突值。",
+      "conflictType": "type-mismatch"
+    },
+    {
+      "id": "conflict-b5dee302dc827250",
+      "component": "NCPopconfirm",
+      "itemKind": "attribute",
+      "itemName": "confirm-type",
+      "sourceA": "official-doc",
+      "sourceB": "type-definition",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/popconfirm.md",
+          "url": null,
+          "lineStart": 22,
+          "lineEnd": 22,
+          "sha256": "sha256:20d605a20fbde3cee28291279c9a581197ae3aaf705f1b5f9b6c946d0619b5e2",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:symbol-7a557046c582b694",
+          "sourceType": "type-definition",
+          "path": "packages/components/src/popconfirm/types.ts",
+          "url": null,
+          "lineStart": 20,
+          "lineEnd": 20,
+          "sha256": "sha256:f4b6e7c1cf8299ae93aa6b2d45d0c94faa1fd61bf14a2c10f12a4c3713ea0a87",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对所列证据；本报告不自动选择冲突值。",
+      "conflictType": "type-mismatch"
+    },
+    {
+      "id": "conflict-5294c356e96b8097",
+      "component": "NCPopconfirm",
+      "itemKind": "attribute",
+      "itemName": "placement",
+      "sourceA": "official-doc",
+      "sourceB": "type-definition",
+      "evidence": [
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/popconfirm.md",
+          "url": null,
+          "lineStart": 17,
+          "lineEnd": 17,
+          "sha256": "sha256:20d605a20fbde3cee28291279c9a581197ae3aaf705f1b5f9b6c946d0619b5e2",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "symbol:symbol-8d9600fbcd6079b3",
+          "sourceType": "type-definition",
+          "path": "packages/components/src/popconfirm/types.ts",
+          "url": null,
+          "lineStart": 10,
+          "lineEnd": 10,
+          "sha256": "sha256:f4b6e7c1cf8299ae93aa6b2d45d0c94faa1fd61bf14a2c10f12a4c3713ea0a87",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "error",
+      "suggestedAction": "人工核对所列证据；本报告不自动选择冲突值。",
+      "conflictType": "type-mismatch"
+    },
+    {
+      "id": "conflict-7ff9ef30236c7f74",
+      "component": "NCPopconfirm",
+      "itemKind": "slot",
+      "itemName": "default",
+      "sourceA": "source-code",
+      "sourceB": "official-doc",
+      "evidence": [
+        {
+          "sourceId": "symbol:NCPopconfirm",
+          "sourceType": "source-code",
+          "path": "packages/components/src/popconfirm/index.ts",
+          "url": null,
+          "lineStart": 11,
+          "lineEnd": 11,
+          "sha256": "sha256:91534aefbaec47d3e9f49983664e8b62a23c4c88dc39baa4901ba06ace4fcfc9",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        },
+        {
+          "sourceId": "ncom-repository-docs",
+          "sourceType": "official-doc",
+          "path": ".framework-sources/ncom-a350b57/doc/api/components/popconfirm.md",
+          "url": null,
+          "lineStart": null,
+          "lineEnd": null,
+          "sha256": "sha256:20d605a20fbde3cee28291279c9a581197ae3aaf705f1b5f9b6c946d0619b5e2",
+          "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+        }
+      ],
+      "severity": "warning",
+      "suggestedAction": "人工确认该公开项是否应补充到官方文档。",
+      "conflictType": "source-public-item-not-documented"
+    }
+  ]
+}

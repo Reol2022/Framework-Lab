@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://framework-lab.example/schemas/component-knowledge.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "frameworkId", "commit", "generatedAt", "components", "rootHash"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "frameworkId": { "type": "string", "minLength": 1 },
+    "commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["component", "commit", "imports", "attributes", "events", "methods", "slots", "examples", "conflicts", "coverage", "verification"],
+        "properties": {
+          "component": { "type": "string", "minLength": 1 },
+          "commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+          "imports": { "type": "array", "items": { "type": "string" } },
+          "attributes": { "$ref": "#/$defs/items" },
+          "events": { "$ref": "#/$defs/items" },
+          "methods": { "$ref": "#/$defs/items" },
+          "slots": { "$ref": "#/$defs/items" },
+          "examples": { "type": "array" },
+          "conflicts": { "type": "array", "items": { "type": "string" } },
+          "coverage": { "type": "object" },
+          "verification": { "type": "object" }
+        }
+      }
+    },
+    "rootHash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  },
+  "$defs": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["value", "sources", "evidenceRefs", "status", "confidence", "lastVerifiedAt"],
+        "properties": {
+          "value": { "type": "object" },
+          "sources": { "type": "array" },
+          "evidenceRefs": { "type": "array", "minItems": 1 },
+          "status": { "enum": ["verified", "documented", "inferred", "conflict", "missing", "unverified"] },
+          "confidence": { "enum": ["high", "medium", "low"] },
+          "lastVerifiedAt": { "type": ["string", "null"], "format": "date-time" }
+        }
+      }
+    }
+  }
+}

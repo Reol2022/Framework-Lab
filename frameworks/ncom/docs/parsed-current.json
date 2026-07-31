@@ -1,0 +1,2253 @@
+{
+  "schemaVersion": "1.0.0",
+  "collectionId": "docs-20260730080339265-a7f74ece",
+  "frameworkId": "ncom",
+  "frameworkCommit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+  "pages": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "doc-c0c14dd857f855e8",
+      "sourceId": "ncom-repository-docs",
+      "url": "file:.framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+      "title": "ComplextTable（nc-complexttable）",
+      "capturedAt": "2026-07-30T08:03:39.268Z",
+      "contentHash": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+      "sections": [
+        {
+          "level": 1,
+          "title": "ComplextTable（nc-complexttable）",
+          "line": 1
+        },
+        {
+          "level": 2,
+          "title": "组件名",
+          "line": 3
+        },
+        {
+          "level": 2,
+          "title": "组件描述",
+          "line": 7
+        },
+        {
+          "level": 2,
+          "title": "属性（Attributes）",
+          "line": 11
+        },
+        {
+          "level": 3,
+          "title": "items / sub-items（ComplextTableColumn）配置项",
+          "line": 28
+        },
+        {
+          "level": 3,
+          "title": "GridLine（grid-line 属性）",
+          "line": 43
+        },
+        {
+          "level": 3,
+          "title": "Editor（editor 属性）",
+          "line": 51
+        },
+        {
+          "level": 3,
+          "title": "子表格数据",
+          "line": 60
+        },
+        {
+          "level": 2,
+          "title": "Public 方法",
+          "line": 64
+        },
+        {
+          "level": 3,
+          "title": "`insertRow`",
+          "line": 66
+        },
+        {
+          "level": 3,
+          "title": "`updateRow`",
+          "line": 77
+        },
+        {
+          "level": 3,
+          "title": "`updateCell`",
+          "line": 87
+        },
+        {
+          "level": 3,
+          "title": "`removeRow`",
+          "line": 99
+        },
+        {
+          "level": 3,
+          "title": "`setRecords`",
+          "line": 109
+        },
+        {
+          "level": 3,
+          "title": "`getRecords`",
+          "line": 119
+        },
+        {
+          "level": 3,
+          "title": "`getSelectedRows`",
+          "line": 127
+        },
+        {
+          "level": 3,
+          "title": "`selectRow`",
+          "line": 135
+        },
+        {
+          "level": 3,
+          "title": "`setRowStyle`",
+          "line": 146
+        },
+        {
+          "level": 3,
+          "title": "`setCellStyle`",
+          "line": 157
+        },
+        {
+          "level": 3,
+          "title": "`expandRow`",
+          "line": 169
+        },
+        {
+          "level": 3,
+          "title": "`collapseRow`",
+          "line": 179
+        },
+        {
+          "level": 3,
+          "title": "`toggleExpand`",
+          "line": 189
+        },
+        {
+          "level": 3,
+          "title": "`setChildren`",
+          "line": 199
+        },
+        {
+          "level": 3,
+          "title": "`startEdit`",
+          "line": 210
+        },
+        {
+          "level": 3,
+          "title": "`saveEdit`",
+          "line": 220
+        },
+        {
+          "level": 3,
+          "title": "`cancelEdit`",
+          "line": 230
+        },
+        {
+          "level": 3,
+          "title": "`isEditing`",
+          "line": 240
+        },
+        {
+          "level": 3,
+          "title": "`getEditingKey`",
+          "line": 250
+        },
+        {
+          "level": 3,
+          "title": "`setColDataSource`",
+          "line": 258
+        },
+        {
+          "level": 2,
+          "title": "事件",
+          "line": 269
+        }
+      ],
+      "codeBlocks": [],
+      "links": [],
+      "quality": {
+        "attributeCount": 12,
+        "eventCount": 7,
+        "methodCount": 20,
+        "slotCount": 0,
+        "exampleCount": 0,
+        "codeBlockCount": 0,
+        "missingSections": [
+          "slots",
+          "examples"
+        ],
+        "parseWarnings": [],
+        "qualityStatus": "partial"
+      },
+      "components": [
+        {
+          "name": "ComplextTable",
+          "description": null,
+          "attributes": [
+            {
+              "name": "keyname",
+              "type": "string",
+              "required": null,
+              "defaultValue": "key",
+              "description": "行数据唯一标识字段名",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 16,
+                "lineEnd": 16,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "data-source",
+              "type": "Record<string, unknown>[]",
+              "required": null,
+              "defaultValue": null,
+              "description": "表格数据源；可含 children（或 children-key）",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 17,
+                "lineEnd": 17,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "items",
+              "type": "ComplextTableColumn[]",
+              "required": null,
+              "defaultValue": null,
+              "description": "主表列定义",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 18,
+                "lineEnd": 18,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "sub-items",
+              "type": "ComplextTableColumn[]",
+              "required": null,
+              "defaultValue": null,
+              "description": "子表格列定义；配置后自动开启展开",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 19,
+                "lineEnd": 19,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "children-key",
+              "type": "string",
+              "required": null,
+              "defaultValue": "children",
+              "description": "子表格数据字段名",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 20,
+                "lineEnd": 20,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "expandable",
+              "type": "boolean（无值属性）",
+              "required": null,
+              "defaultValue": null,
+              "description": "开启展开列；配置 sub-items 时也会开启，无值属性",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 21,
+                "lineEnd": 21,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "grid-line",
+              "type": "rows | cols | both",
+              "required": null,
+              "defaultValue": null,
+              "description": "网格线类型",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 22,
+                "lineEnd": 22,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "row-alt",
+              "type": "boolean（无值属性）",
+              "required": null,
+              "defaultValue": null,
+              "description": "行颜色交替，无值属性",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 23,
+                "lineEnd": 23,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "header-style",
+              "type": "string",
+              "required": null,
+              "defaultValue": null,
+              "description": "表头行内样式",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 24,
+                "lineEnd": 24,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "checkable",
+              "type": "boolean（无值属性）",
+              "required": null,
+              "defaultValue": null,
+              "description": "显示复选框列，无值属性",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 25,
+                "lineEnd": 25,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "single",
+              "type": "boolean（无值属性）",
+              "required": null,
+              "defaultValue": null,
+              "description": "单选模式（需 checkable），无值属性",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 26,
+                "lineEnd": 26,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "editable",
+              "type": "boolean（无值属性）",
+              "required": null,
+              "defaultValue": null,
+              "description": "开启行内编辑；自动追加操作列，无值属性",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 27,
+                "lineEnd": 27,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "nc-rowclick",
+              "payloadType": "e:CustomEvent,e.detail={data:行数据,dom:行element}",
+              "description": "行单击事件",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 274,
+                "lineEnd": 274,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "nc-rowdblclick",
+              "payloadType": "e:CustomEvent,e.detail={data:行数据,dom:行element}",
+              "description": "行双击事件（editable 时会进入编辑）",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 275,
+                "lineEnd": 275,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "nc-expand",
+              "payloadType": "e:CustomEvent,e.detail={data:行数据,dom:行element}",
+              "description": "行展开子表格",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 276,
+                "lineEnd": 276,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "nc-collapse",
+              "payloadType": "e:CustomEvent,e.detail={data:行数据,dom:行element}",
+              "description": "行折叠子表格",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 277,
+                "lineEnd": 277,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "nc-editstart",
+              "payloadType": "e:CustomEvent,e.detail={data:行数据,dom:行element}",
+              "description": "开始行内编辑",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 278,
+                "lineEnd": 278,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "nc-change",
+              "payloadType": "e:CustomEvent,e.detail={oldValue:旧行,value:新行,dom:行element}",
+              "description": "保存行内编辑后触发",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 279,
+                "lineEnd": 279,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "nc-cancel",
+              "payloadType": "e:CustomEvent,e.detail={data:行数据,dom:行element}",
+              "description": "取消行内编辑",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 280,
+                "lineEnd": 280,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "methods": [
+            {
+              "name": "insertRow",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 66,
+                "lineEnd": 66,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "updateRow",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 77,
+                "lineEnd": 77,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "updateCell",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 87,
+                "lineEnd": 87,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "removeRow",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 99,
+                "lineEnd": 99,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "setRecords",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 109,
+                "lineEnd": 109,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "getRecords",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 119,
+                "lineEnd": 119,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "getSelectedRows",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 127,
+                "lineEnd": 127,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "selectRow",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 135,
+                "lineEnd": 135,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "setRowStyle",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 146,
+                "lineEnd": 146,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "setCellStyle",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 157,
+                "lineEnd": 157,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "expandRow",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 169,
+                "lineEnd": 169,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "collapseRow",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 179,
+                "lineEnd": 179,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "toggleExpand",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 189,
+                "lineEnd": 189,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "setChildren",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 199,
+                "lineEnd": 199,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "startEdit",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 210,
+                "lineEnd": 210,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "saveEdit",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 220,
+                "lineEnd": 220,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "cancelEdit",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 230,
+                "lineEnd": 230,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "isEditing",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 240,
+                "lineEnd": 240,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "getEditingKey",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 250,
+                "lineEnd": 250,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "setColDataSource",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+                "url": null,
+                "lineStart": 258,
+                "lineEnd": 258,
+                "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "slots": [],
+          "examples": [],
+          "sourceRefs": [
+            {
+              "sourceId": "ncom-repository-docs",
+              "sourceType": "official-doc",
+              "path": ".framework-sources/ncom-a350b57/doc/api/components/complexttable.md",
+              "url": null,
+              "lineStart": null,
+              "lineEnd": null,
+              "sha256": "sha256:5d1fcb6a733e292ae1a42f288a93c25220a9cbfd0279f540a409840cb6d1f01c",
+              "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+            }
+          ],
+          "quality": {
+            "attributeCount": 12,
+            "eventCount": 7,
+            "methodCount": 20,
+            "slotCount": 0,
+            "exampleCount": 0,
+            "codeBlockCount": 0,
+            "missingSections": [
+              "slots",
+              "examples"
+            ],
+            "parseWarnings": [],
+            "qualityStatus": "partial"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "doc-8206232b1452ede2",
+      "sourceId": "ncom-repository-docs",
+      "url": "file:.framework-sources/ncom-a350b57/doc/api/components/layout.md",
+      "title": "Layout（nc-layout）",
+      "capturedAt": "2026-07-30T08:03:39.318Z",
+      "contentHash": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+      "sections": [
+        {
+          "level": 1,
+          "title": "Layout（nc-layout）",
+          "line": 1
+        },
+        {
+          "level": 2,
+          "title": "组件名",
+          "line": 3
+        },
+        {
+          "level": 2,
+          "title": "组件描述",
+          "line": 7
+        },
+        {
+          "level": 2,
+          "title": "属性（Attributes）",
+          "line": 11
+        },
+        {
+          "level": 3,
+          "title": "LayoutSlotContent（插槽内容）",
+          "line": 24
+        },
+        {
+          "level": 2,
+          "title": "事件",
+          "line": 32
+        }
+      ],
+      "codeBlocks": [],
+      "links": [],
+      "quality": {
+        "attributeCount": 3,
+        "eventCount": 1,
+        "methodCount": 0,
+        "slotCount": 5,
+        "exampleCount": 0,
+        "codeBlockCount": 0,
+        "missingSections": [
+          "methods",
+          "slots",
+          "examples"
+        ],
+        "parseWarnings": [],
+        "qualityStatus": "partial"
+      },
+      "components": [
+        {
+          "name": "Layout",
+          "description": null,
+          "attributes": [
+            {
+              "name": "splitter",
+              "type": null,
+              "required": null,
+              "defaultValue": null,
+              "description": "开启区域分隔条，可拖拽调整 north/south 高度与 west/east 宽度，无值属性",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+                "url": null,
+                "lineStart": 16,
+                "lineEnd": 16,
+                "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "min-size",
+              "type": "number",
+              "required": null,
+              "defaultValue": "48",
+              "description": "拖拽时区域最小尺寸（px）",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+                "url": null,
+                "lineStart": 17,
+                "lineEnd": 17,
+                "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "style",
+              "type": "string",
+              "required": null,
+              "defaultValue": null,
+              "description": "布局容器样式",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+                "url": null,
+                "lineStart": 18,
+                "lineEnd": 18,
+                "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "nc-change",
+              "payloadType": "e: CustomEvent<{ oldValue: string; value: string }>，oldValue 为区域名，value 为新尺寸如 120px",
+              "description": "开启 splitter 时，拖拽分隔条结束触发",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+                "url": null,
+                "lineStart": 37,
+                "lineEnd": 37,
+                "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "methods": [],
+          "slots": [
+            {
+              "name": "=north",
+              "scope": null,
+              "description": "头部插槽",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+                "url": null,
+                "lineStart": 19,
+                "lineEnd": 19,
+                "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "=south",
+              "scope": null,
+              "description": "脚部插槽",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+                "url": null,
+                "lineStart": 20,
+                "lineEnd": 20,
+                "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "=west",
+              "scope": null,
+              "description": "左侧插槽（需设置 width；开启 splitter 后可拖拽）",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+                "url": null,
+                "lineStart": 21,
+                "lineEnd": 21,
+                "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "=east",
+              "scope": null,
+              "description": "右侧插槽（需设置 width；开启 splitter 后可拖拽）",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+                "url": null,
+                "lineStart": 22,
+                "lineEnd": 22,
+                "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "=center",
+              "scope": null,
+              "description": "中间内容插槽",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+                "url": null,
+                "lineStart": 23,
+                "lineEnd": 23,
+                "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "examples": [],
+          "sourceRefs": [
+            {
+              "sourceId": "ncom-repository-docs",
+              "sourceType": "official-doc",
+              "path": ".framework-sources/ncom-a350b57/doc/api/components/layout.md",
+              "url": null,
+              "lineStart": null,
+              "lineEnd": null,
+              "sha256": "sha256:7e2595ed98eadbacb5c90df4f892e557303d735ba6594de80a4b0128b99fabde",
+              "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+            }
+          ],
+          "quality": {
+            "attributeCount": 3,
+            "eventCount": 1,
+            "methodCount": 0,
+            "slotCount": 5,
+            "exampleCount": 0,
+            "codeBlockCount": 0,
+            "missingSections": [
+              "methods",
+              "slots",
+              "examples"
+            ],
+            "parseWarnings": [],
+            "qualityStatus": "partial"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "doc-253768bf8a3e4aa0",
+      "sourceId": "ncom-repository-docs",
+      "url": "file:.framework-sources/ncom-a350b57/doc/api/components/colorpicker.md",
+      "title": "ColorPicker（nc-colorpicker）",
+      "capturedAt": "2026-07-30T08:03:39.321Z",
+      "contentHash": "sha256:e2a9c2b05a61444f5d4a244eb507554f3e4a48cfac86947f6ffd67c1f3054862",
+      "sections": [
+        {
+          "level": 1,
+          "title": "ColorPicker（nc-colorpicker）",
+          "line": 1
+        },
+        {
+          "level": 2,
+          "title": "组件名",
+          "line": 3
+        },
+        {
+          "level": 2,
+          "title": "组件描述",
+          "line": 7
+        },
+        {
+          "level": 2,
+          "title": "属性（Attributes）",
+          "line": 11
+        },
+        {
+          "level": 3,
+          "title": "ColorValue（value 属性）",
+          "line": 20
+        },
+        {
+          "level": 2,
+          "title": "事件",
+          "line": 28
+        }
+      ],
+      "codeBlocks": [],
+      "links": [],
+      "quality": {
+        "attributeCount": 4,
+        "eventCount": 1,
+        "methodCount": 0,
+        "slotCount": 0,
+        "exampleCount": 0,
+        "codeBlockCount": 0,
+        "missingSections": [
+          "methods",
+          "slots",
+          "examples"
+        ],
+        "parseWarnings": [],
+        "qualityStatus": "partial"
+      },
+      "components": [
+        {
+          "name": "ColorPicker",
+          "description": null,
+          "attributes": [
+            {
+              "name": "value",
+              "type": "string",
+              "required": null,
+              "defaultValue": "#409eff",
+              "description": "当前颜色（hex）",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/colorpicker.md",
+                "url": null,
+                "lineStart": 16,
+                "lineEnd": 16,
+                "sha256": "sha256:e2a9c2b05a61444f5d4a244eb507554f3e4a48cfac86947f6ffd67c1f3054862",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "disabled",
+              "type": null,
+              "required": null,
+              "defaultValue": null,
+              "description": "是否禁用，无值属性",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/colorpicker.md",
+                "url": null,
+                "lineStart": 17,
+                "lineEnd": 17,
+                "sha256": "sha256:e2a9c2b05a61444f5d4a244eb507554f3e4a48cfac86947f6ffd67c1f3054862",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "show-presets",
+              "type": "boolean",
+              "required": null,
+              "defaultValue": "true",
+              "description": "是否显示预设色，设为 false 可关闭",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/colorpicker.md",
+                "url": null,
+                "lineStart": 18,
+                "lineEnd": 18,
+                "sha256": "sha256:e2a9c2b05a61444f5d4a244eb507554f3e4a48cfac86947f6ffd67c1f3054862",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "presets",
+              "type": "string[]",
+              "required": null,
+              "defaultValue": "内置默认色板",
+              "description": "预设色列表",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/colorpicker.md",
+                "url": null,
+                "lineStart": 19,
+                "lineEnd": 19,
+                "sha256": "sha256:e2a9c2b05a61444f5d4a244eb507554f3e4a48cfac86947f6ffd67c1f3054862",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "nc-change",
+              "payloadType": "e: CustomEvent<{ oldValue: string; value: string }>，value 为 hex",
+              "description": "颜色变更时触发",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/colorpicker.md",
+                "url": null,
+                "lineStart": 33,
+                "lineEnd": 33,
+                "sha256": "sha256:e2a9c2b05a61444f5d4a244eb507554f3e4a48cfac86947f6ffd67c1f3054862",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "methods": [],
+          "slots": [],
+          "examples": [],
+          "sourceRefs": [
+            {
+              "sourceId": "ncom-repository-docs",
+              "sourceType": "official-doc",
+              "path": ".framework-sources/ncom-a350b57/doc/api/components/colorpicker.md",
+              "url": null,
+              "lineStart": null,
+              "lineEnd": null,
+              "sha256": "sha256:e2a9c2b05a61444f5d4a244eb507554f3e4a48cfac86947f6ffd67c1f3054862",
+              "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+            }
+          ],
+          "quality": {
+            "attributeCount": 4,
+            "eventCount": 1,
+            "methodCount": 0,
+            "slotCount": 0,
+            "exampleCount": 0,
+            "codeBlockCount": 0,
+            "missingSections": [
+              "methods",
+              "slots",
+              "examples"
+            ],
+            "parseWarnings": [],
+            "qualityStatus": "partial"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "doc-dedcf3e3f2870546",
+      "sourceId": "ncom-repository-docs",
+      "url": "file:.framework-sources/ncom-a350b57/doc/api/components/popconfirm.md",
+      "title": "Popconfirm（nc-popconfirm）",
+      "capturedAt": "2026-07-30T08:03:39.324Z",
+      "contentHash": "sha256:20d605a20fbde3cee28291279c9a581197ae3aaf705f1b5f9b6c946d0619b5e2",
+      "sections": [
+        {
+          "level": 1,
+          "title": "Popconfirm（nc-popconfirm）",
+          "line": 1
+        },
+        {
+          "level": 2,
+          "title": "组件名",
+          "line": 3
+        },
+        {
+          "level": 2,
+          "title": "组件描述",
+          "line": 7
+        },
+        {
+          "level": 2,
+          "title": "属性（Attributes）",
+          "line": 11
+        },
+        {
+          "level": 3,
+          "title": "Placement（placement 属性）",
+          "line": 23
+        },
+        {
+          "level": 3,
+          "title": "ButtonType（cancel-type / confirm-type 属性）",
+          "line": 32
+        },
+        {
+          "level": 2,
+          "title": "事件",
+          "line": 47
+        }
+      ],
+      "codeBlocks": [],
+      "links": [],
+      "quality": {
+        "attributeCount": 7,
+        "eventCount": 2,
+        "methodCount": 0,
+        "slotCount": 0,
+        "exampleCount": 0,
+        "codeBlockCount": 0,
+        "missingSections": [
+          "methods",
+          "slots",
+          "examples"
+        ],
+        "parseWarnings": [],
+        "qualityStatus": "partial"
+      },
+      "components": [
+        {
+          "name": "Popconfirm",
+          "description": null,
+          "attributes": [
+            {
+              "name": "title",
+              "type": "string",
+              "required": null,
+              "defaultValue": "确定进行此操作吗？",
+              "description": "气泡确认框的标题内容",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/popconfirm.md",
+                "url": null,
+                "lineStart": 16,
+                "lineEnd": 16,
+                "sha256": "sha256:20d605a20fbde3cee28291279c9a581197ae3aaf705f1b5f9b6c946d0619b5e2",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "placement",
+              "type": "string",
+              "required": null,
+              "defaultValue": "bottom",
+              "description": "气泡确认框的显示位置",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/popconfirm.md",
+                "url": null,
+                "lineStart": 17,
+                "lineEnd": 17,
+                "sha256": "sha256:20d605a20fbde3cee28291279c9a581197ae3aaf705f1b5f9b6c946d0619b5e2",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "width",
+              "type": "string",
+              "required": null,
+              "defaultValue": "auto",
+              "description": "气泡确认框的宽度",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/popconfirm.md",
+                "url": null,
+                "lineStart": 18,
+                "lineEnd": 18,
+                "sha256": "sha256:20d605a20fbde3cee28291279c9a581197ae3aaf705f1b5f9b6c946d0619b5e2",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "cancel-text",
+              "type": "string",
+              "required": null,
+              "defaultValue": "取消",
+              "description": "取消按钮的文字内容",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/popconfirm.md",
+                "url": null,
+                "lineStart": 19,
+                "lineEnd": 19,
+                "sha256": "sha256:20d605a20fbde3cee28291279c9a581197ae3aaf705f1b5f9b6c946d0619b5e2",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "ok-text",
+              "type": "string",
+              "required": null,
+              "defaultValue": "确定",
+              "description": "确认按钮的文字内容",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/popconfirm.md",
+                "url": null,
+                "lineStart": 20,
+                "lineEnd": 20,
+                "sha256": "sha256:20d605a20fbde3cee28291279c9a581197ae3aaf705f1b5f9b6c946d0619b5e2",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "cancel-type",
+              "type": "string",
+              "required": null,
+              "defaultValue": "danger",
+              "description": "取消按钮的类型",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/popconfirm.md",
+                "url": null,
+                "lineStart": 21,
+                "lineEnd": 21,
+                "sha256": "sha256:20d605a20fbde3cee28291279c9a581197ae3aaf705f1b5f9b6c946d0619b5e2",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "confirm-type",
+              "type": "string",
+              "required": null,
+              "defaultValue": "primary",
+              "description": "确认按钮的类型",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/popconfirm.md",
+                "url": null,
+                "lineStart": 22,
+                "lineEnd": 22,
+                "sha256": "sha256:20d605a20fbde3cee28291279c9a581197ae3aaf705f1b5f9b6c946d0619b5e2",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "nc-ok",
+              "payloadType": "e: CustomEvent",
+              "description": "点击确认按钮时触发",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/popconfirm.md",
+                "url": null,
+                "lineStart": 52,
+                "lineEnd": 52,
+                "sha256": "sha256:20d605a20fbde3cee28291279c9a581197ae3aaf705f1b5f9b6c946d0619b5e2",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "nc-cancel",
+              "payloadType": "e: CustomEvent",
+              "description": "点击取消按钮时触发",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/popconfirm.md",
+                "url": null,
+                "lineStart": 53,
+                "lineEnd": 53,
+                "sha256": "sha256:20d605a20fbde3cee28291279c9a581197ae3aaf705f1b5f9b6c946d0619b5e2",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "methods": [],
+          "slots": [],
+          "examples": [],
+          "sourceRefs": [
+            {
+              "sourceId": "ncom-repository-docs",
+              "sourceType": "official-doc",
+              "path": ".framework-sources/ncom-a350b57/doc/api/components/popconfirm.md",
+              "url": null,
+              "lineStart": null,
+              "lineEnd": null,
+              "sha256": "sha256:20d605a20fbde3cee28291279c9a581197ae3aaf705f1b5f9b6c946d0619b5e2",
+              "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+            }
+          ],
+          "quality": {
+            "attributeCount": 7,
+            "eventCount": 2,
+            "methodCount": 0,
+            "slotCount": 0,
+            "exampleCount": 0,
+            "codeBlockCount": 0,
+            "missingSections": [
+              "methods",
+              "slots",
+              "examples"
+            ],
+            "parseWarnings": [],
+            "qualityStatus": "partial"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "doc-469cad9ccfe68c6a",
+      "sourceId": "ncom-repository-docs",
+      "url": "file:.framework-sources/ncom-a350b57/doc/api/components/checkbox.md",
+      "title": "Checkbox（nc-checkbox）",
+      "capturedAt": "2026-07-30T08:03:39.326Z",
+      "contentHash": "sha256:66ee8885cdda01b4315ef2d7c6e541923730f4218c15b17b15bda79bcf26c85c",
+      "sections": [
+        {
+          "level": 1,
+          "title": "Checkbox（nc-checkbox）",
+          "line": 1
+        },
+        {
+          "level": 2,
+          "title": "组件名",
+          "line": 3
+        },
+        {
+          "level": 2,
+          "title": "组件描述",
+          "line": 7
+        },
+        {
+          "level": 2,
+          "title": "属性（Attributes）",
+          "line": 11
+        },
+        {
+          "level": 3,
+          "title": "CheckboxValue（value 属性）",
+          "line": 18
+        },
+        {
+          "level": 2,
+          "title": "事件",
+          "line": 30
+        }
+      ],
+      "codeBlocks": [],
+      "links": [],
+      "quality": {
+        "attributeCount": 2,
+        "eventCount": 1,
+        "methodCount": 0,
+        "slotCount": 0,
+        "exampleCount": 0,
+        "codeBlockCount": 0,
+        "missingSections": [
+          "methods",
+          "slots",
+          "examples"
+        ],
+        "parseWarnings": [],
+        "qualityStatus": "partial"
+      },
+      "components": [
+        {
+          "name": "Checkbox",
+          "description": null,
+          "attributes": [
+            {
+              "name": "value",
+              "type": "boolean",
+              "required": null,
+              "defaultValue": "false",
+              "description": "是否选中",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/checkbox.md",
+                "url": null,
+                "lineStart": 16,
+                "lineEnd": 16,
+                "sha256": "sha256:66ee8885cdda01b4315ef2d7c6e541923730f4218c15b17b15bda79bcf26c85c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "disabled",
+              "type": null,
+              "required": null,
+              "defaultValue": null,
+              "description": "是否禁用,无值属性",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/checkbox.md",
+                "url": null,
+                "lineStart": 17,
+                "lineEnd": 17,
+                "sha256": "sha256:66ee8885cdda01b4315ef2d7c6e541923730f4218c15b17b15bda79bcf26c85c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "nc-change",
+              "payloadType": "e:CustomEvent",
+              "description": "状态改变",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/checkbox.md",
+                "url": null,
+                "lineStart": 35,
+                "lineEnd": 35,
+                "sha256": "sha256:66ee8885cdda01b4315ef2d7c6e541923730f4218c15b17b15bda79bcf26c85c",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "methods": [],
+          "slots": [],
+          "examples": [],
+          "sourceRefs": [
+            {
+              "sourceId": "ncom-repository-docs",
+              "sourceType": "official-doc",
+              "path": ".framework-sources/ncom-a350b57/doc/api/components/checkbox.md",
+              "url": null,
+              "lineStart": null,
+              "lineEnd": null,
+              "sha256": "sha256:66ee8885cdda01b4315ef2d7c6e541923730f4218c15b17b15bda79bcf26c85c",
+              "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+            }
+          ],
+          "quality": {
+            "attributeCount": 2,
+            "eventCount": 1,
+            "methodCount": 0,
+            "slotCount": 0,
+            "exampleCount": 0,
+            "codeBlockCount": 0,
+            "missingSections": [
+              "methods",
+              "slots",
+              "examples"
+            ],
+            "parseWarnings": [],
+            "qualityStatus": "partial"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "doc-87b4b020d6849fdb",
+      "sourceId": "ncom-repository-docs",
+      "url": "file:.framework-sources/ncom-a350b57/doc/api/components/message.md",
+      "title": "Message（nc-message）",
+      "capturedAt": "2026-07-30T08:03:39.329Z",
+      "contentHash": "sha256:8b509e79d43a226ff23516b5fe3930452c03f52065cfc47e17e0cb006d87ba82",
+      "sections": [
+        {
+          "level": 1,
+          "title": "Message（nc-message）",
+          "line": 1
+        },
+        {
+          "level": 2,
+          "title": "组件名",
+          "line": 3
+        },
+        {
+          "level": 2,
+          "title": "组件描述",
+          "line": 7
+        },
+        {
+          "level": 2,
+          "title": "属性（Attributes）",
+          "line": 11
+        },
+        {
+          "level": 3,
+          "title": "MessageType（type 属性）",
+          "line": 21
+        },
+        {
+          "level": 2,
+          "title": "Public 方法",
+          "line": 30
+        },
+        {
+          "level": 3,
+          "title": "`close`",
+          "line": 32
+        },
+        {
+          "level": 2,
+          "title": "事件",
+          "line": 40
+        }
+      ],
+      "codeBlocks": [],
+      "links": [],
+      "quality": {
+        "attributeCount": 5,
+        "eventCount": 0,
+        "methodCount": 1,
+        "slotCount": 0,
+        "exampleCount": 0,
+        "codeBlockCount": 0,
+        "missingSections": [
+          "slots",
+          "examples"
+        ],
+        "parseWarnings": [],
+        "qualityStatus": "partial"
+      },
+      "components": [
+        {
+          "name": "Message",
+          "description": null,
+          "attributes": [
+            {
+              "name": "type",
+              "type": "success|warning|info|danger",
+              "required": null,
+              "defaultValue": "info",
+              "description": "消息类型",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/message.md",
+                "url": null,
+                "lineStart": 16,
+                "lineEnd": 16,
+                "sha256": "sha256:8b509e79d43a226ff23516b5fe3930452c03f52065cfc47e17e0cb006d87ba82",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "closable",
+              "type": "boolean",
+              "required": null,
+              "defaultValue": "false",
+              "description": "是否显示关闭按钮",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/message.md",
+                "url": null,
+                "lineStart": 17,
+                "lineEnd": 17,
+                "sha256": "sha256:8b509e79d43a226ff23516b5fe3930452c03f52065cfc47e17e0cb006d87ba82",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "duration",
+              "type": "number",
+              "required": null,
+              "defaultValue": "3000",
+              "description": "消息显示时长（毫秒），0表示不自动关闭",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/message.md",
+                "url": null,
+                "lineStart": 18,
+                "lineEnd": 18,
+                "sha256": "sha256:8b509e79d43a226ff23516b5fe3930452c03f52065cfc47e17e0cb006d87ba82",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "hide-icon",
+              "type": "boolean",
+              "required": null,
+              "defaultValue": "false",
+              "description": "是否隐藏默认图标",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/message.md",
+                "url": null,
+                "lineStart": 19,
+                "lineEnd": 19,
+                "sha256": "sha256:8b509e79d43a226ff23516b5fe3930452c03f52065cfc47e17e0cb006d87ba82",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "content",
+              "type": "string",
+              "required": null,
+              "defaultValue": null,
+              "description": "消息内容，支持HTML片段",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/message.md",
+                "url": null,
+                "lineStart": 20,
+                "lineEnd": 20,
+                "sha256": "sha256:8b509e79d43a226ff23516b5fe3930452c03f52065cfc47e17e0cb006d87ba82",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "events": [],
+          "methods": [
+            {
+              "name": "close",
+              "signature": null,
+              "description": null,
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/message.md",
+                "url": null,
+                "lineStart": 32,
+                "lineEnd": 32,
+                "sha256": "sha256:8b509e79d43a226ff23516b5fe3930452c03f52065cfc47e17e0cb006d87ba82",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "slots": [],
+          "examples": [],
+          "sourceRefs": [
+            {
+              "sourceId": "ncom-repository-docs",
+              "sourceType": "official-doc",
+              "path": ".framework-sources/ncom-a350b57/doc/api/components/message.md",
+              "url": null,
+              "lineStart": null,
+              "lineEnd": null,
+              "sha256": "sha256:8b509e79d43a226ff23516b5fe3930452c03f52065cfc47e17e0cb006d87ba82",
+              "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+            }
+          ],
+          "quality": {
+            "attributeCount": 5,
+            "eventCount": 0,
+            "methodCount": 1,
+            "slotCount": 0,
+            "exampleCount": 0,
+            "codeBlockCount": 0,
+            "missingSections": [
+              "slots",
+              "examples"
+            ],
+            "parseWarnings": [],
+            "qualityStatus": "partial"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "doc-78bcd5c2ae1852a8",
+      "sourceId": "ncom-repository-docs",
+      "url": "file:.framework-sources/ncom-a350b57/doc/api/components/card.md",
+      "title": "Card（nc-card）",
+      "capturedAt": "2026-07-30T08:03:39.331Z",
+      "contentHash": "sha256:b6f9d4c259290a5a98e96f110029a9e48621e83241e0f9ab049f7c2b729b0ce4",
+      "sections": [
+        {
+          "level": 1,
+          "title": "Card（nc-card）",
+          "line": 1
+        },
+        {
+          "level": 2,
+          "title": "组件名",
+          "line": 3
+        },
+        {
+          "level": 2,
+          "title": "组件描述",
+          "line": 7
+        },
+        {
+          "level": 2,
+          "title": "属性（Attributes）",
+          "line": 11
+        },
+        {
+          "level": 3,
+          "title": "CardShadow（shadow 属性）",
+          "line": 20
+        },
+        {
+          "level": 2,
+          "title": "事件",
+          "line": 32
+        }
+      ],
+      "codeBlocks": [],
+      "links": [],
+      "quality": {
+        "attributeCount": 4,
+        "eventCount": 0,
+        "methodCount": 0,
+        "slotCount": 0,
+        "exampleCount": 0,
+        "codeBlockCount": 0,
+        "missingSections": [
+          "methods",
+          "slots",
+          "examples"
+        ],
+        "parseWarnings": [],
+        "qualityStatus": "partial"
+      },
+      "components": [
+        {
+          "name": "Card",
+          "description": null,
+          "attributes": [
+            {
+              "name": "header",
+              "type": "string",
+              "required": null,
+              "defaultValue": null,
+              "description": "卡片头部内容（字符串形式，优先级低于 header 具名插槽）",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/card.md",
+                "url": null,
+                "lineStart": 16,
+                "lineEnd": 16,
+                "sha256": "sha256:b6f9d4c259290a5a98e96f110029a9e48621e83241e0f9ab049f7c2b729b0ce4",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "footer",
+              "type": "string",
+              "required": null,
+              "defaultValue": null,
+              "description": "卡片底部内容（字符串形式，优先级低于 footer 具名插槽）",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/card.md",
+                "url": null,
+                "lineStart": 17,
+                "lineEnd": 17,
+                "sha256": "sha256:b6f9d4c259290a5a98e96f110029a9e48621e83241e0f9ab049f7c2b729b0ce4",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "body-style",
+              "type": "string",
+              "required": null,
+              "defaultValue": null,
+              "description": "自定义 body 部分的样式",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/card.md",
+                "url": null,
+                "lineStart": 18,
+                "lineEnd": 18,
+                "sha256": "sha256:b6f9d4c259290a5a98e96f110029a9e48621e83241e0f9ab049f7c2b729b0ce4",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "shadow",
+              "type": "string",
+              "required": null,
+              "defaultValue": "always",
+              "description": "卡片阴影出现的时机",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/card.md",
+                "url": null,
+                "lineStart": 19,
+                "lineEnd": 19,
+                "sha256": "sha256:b6f9d4c259290a5a98e96f110029a9e48621e83241e0f9ab049f7c2b729b0ce4",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "events": [],
+          "methods": [],
+          "slots": [],
+          "examples": [],
+          "sourceRefs": [
+            {
+              "sourceId": "ncom-repository-docs",
+              "sourceType": "official-doc",
+              "path": ".framework-sources/ncom-a350b57/doc/api/components/card.md",
+              "url": null,
+              "lineStart": null,
+              "lineEnd": null,
+              "sha256": "sha256:b6f9d4c259290a5a98e96f110029a9e48621e83241e0f9ab049f7c2b729b0ce4",
+              "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+            }
+          ],
+          "quality": {
+            "attributeCount": 4,
+            "eventCount": 0,
+            "methodCount": 0,
+            "slotCount": 0,
+            "exampleCount": 0,
+            "codeBlockCount": 0,
+            "missingSections": [
+              "methods",
+              "slots",
+              "examples"
+            ],
+            "parseWarnings": [],
+            "qualityStatus": "partial"
+          }
+        }
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "doc-b8a054c5942f00d6",
+      "sourceId": "ncom-repository-docs",
+      "url": "file:.framework-sources/ncom-a350b57/doc/api/components/watermark.md",
+      "title": "Watermark（nc-watermark）",
+      "capturedAt": "2026-07-30T08:03:39.333Z",
+      "contentHash": "sha256:8c2e38404bd5e1a9997d6107400cdea0bc957680336ee06ba2dd60397a6e716f",
+      "sections": [
+        {
+          "level": 1,
+          "title": "Watermark（nc-watermark）",
+          "line": 1
+        },
+        {
+          "level": 2,
+          "title": "组件名",
+          "line": 3
+        },
+        {
+          "level": 2,
+          "title": "组件描述",
+          "line": 7
+        },
+        {
+          "level": 2,
+          "title": "属性（Attributes）",
+          "line": 11
+        },
+        {
+          "level": 2,
+          "title": "事件",
+          "line": 28
+        }
+      ],
+      "codeBlocks": [],
+      "links": [],
+      "quality": {
+        "attributeCount": 7,
+        "eventCount": 0,
+        "methodCount": 0,
+        "slotCount": 1,
+        "exampleCount": 0,
+        "codeBlockCount": 0,
+        "missingSections": [
+          "methods",
+          "slots",
+          "examples"
+        ],
+        "parseWarnings": [],
+        "qualityStatus": "partial"
+      },
+      "components": [
+        {
+          "name": "Watermark",
+          "description": null,
+          "attributes": [
+            {
+              "name": "content",
+              "type": "string",
+              "required": null,
+              "defaultValue": "NCOM",
+              "description": "水印文字",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/watermark.md",
+                "url": null,
+                "lineStart": 16,
+                "lineEnd": 16,
+                "sha256": "sha256:8c2e38404bd5e1a9997d6107400cdea0bc957680336ee06ba2dd60397a6e716f",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "rotate",
+              "type": "number",
+              "required": null,
+              "defaultValue": "-22",
+              "description": "旋转角度（度）",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/watermark.md",
+                "url": null,
+                "lineStart": 17,
+                "lineEnd": 17,
+                "sha256": "sha256:8c2e38404bd5e1a9997d6107400cdea0bc957680336ee06ba2dd60397a6e716f",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "font-size",
+              "type": "number",
+              "required": null,
+              "defaultValue": "14",
+              "description": "字体大小（px）",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/watermark.md",
+                "url": null,
+                "lineStart": 18,
+                "lineEnd": 18,
+                "sha256": "sha256:8c2e38404bd5e1a9997d6107400cdea0bc957680336ee06ba2dd60397a6e716f",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "required": null,
+              "defaultValue": "rgba(0,0,0,0.12)",
+              "description": "字体颜色",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/watermark.md",
+                "url": null,
+                "lineStart": 19,
+                "lineEnd": 19,
+                "sha256": "sha256:8c2e38404bd5e1a9997d6107400cdea0bc957680336ee06ba2dd60397a6e716f",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "gap-x",
+              "type": "number",
+              "required": null,
+              "defaultValue": "160",
+              "description": "水平间距（px）",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/watermark.md",
+                "url": null,
+                "lineStart": 20,
+                "lineEnd": 20,
+                "sha256": "sha256:8c2e38404bd5e1a9997d6107400cdea0bc957680336ee06ba2dd60397a6e716f",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "gap-y",
+              "type": "number",
+              "required": null,
+              "defaultValue": "120",
+              "description": "垂直间距（px）",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/watermark.md",
+                "url": null,
+                "lineStart": 21,
+                "lineEnd": 21,
+                "sha256": "sha256:8c2e38404bd5e1a9997d6107400cdea0bc957680336ee06ba2dd60397a6e716f",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            },
+            {
+              "name": "z-index",
+              "type": "number",
+              "required": null,
+              "defaultValue": "10",
+              "description": "层级",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/watermark.md",
+                "url": null,
+                "lineStart": 22,
+                "lineEnd": 22,
+                "sha256": "sha256:8c2e38404bd5e1a9997d6107400cdea0bc957680336ee06ba2dd60397a6e716f",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "events": [],
+          "methods": [],
+          "slots": [
+            {
+              "name": "default",
+              "scope": null,
+              "description": "被水印覆盖的内容区域",
+              "sourceRef": {
+                "sourceId": "ncom-repository-docs",
+                "sourceType": "official-doc",
+                "path": ".framework-sources/ncom-a350b57/doc/api/components/watermark.md",
+                "url": null,
+                "lineStart": 23,
+                "lineEnd": 23,
+                "sha256": "sha256:8c2e38404bd5e1a9997d6107400cdea0bc957680336ee06ba2dd60397a6e716f",
+                "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+              }
+            }
+          ],
+          "examples": [],
+          "sourceRefs": [
+            {
+              "sourceId": "ncom-repository-docs",
+              "sourceType": "official-doc",
+              "path": ".framework-sources/ncom-a350b57/doc/api/components/watermark.md",
+              "url": null,
+              "lineStart": null,
+              "lineEnd": null,
+              "sha256": "sha256:8c2e38404bd5e1a9997d6107400cdea0bc957680336ee06ba2dd60397a6e716f",
+              "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f"
+            }
+          ],
+          "quality": {
+            "attributeCount": 7,
+            "eventCount": 0,
+            "methodCount": 0,
+            "slotCount": 1,
+            "exampleCount": 0,
+            "codeBlockCount": 0,
+            "missingSections": [
+              "methods",
+              "slots",
+              "examples"
+            ],
+            "parseWarnings": [],
+            "qualityStatus": "partial"
+          }
+        }
+      ]
+    }
+  ],
+  "rootHash": "sha256:6072c8bc19143f449687b9b7b6b3306b1ffa9dd7d4e68c8229e8772f0b21a662"
+}

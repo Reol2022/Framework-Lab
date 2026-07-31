@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://framework-lab.example/schemas/docs-diff.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "frameworkId", "fromCollectionId", "toCollectionId", "added", "removed", "modified", "rootHash"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "frameworkId": { "type": "string", "minLength": 1 },
+    "fromCollectionId": { "type": "string", "minLength": 1 },
+    "toCollectionId": { "type": "string", "minLength": 1 },
+    "added": { "type": "array", "items": { "type": "string" } },
+    "removed": { "type": "array", "items": { "type": "string" } },
+    "modified": { "type": "array" },
+    "rootHash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+  }
+}

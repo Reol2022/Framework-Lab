@@ -73,6 +73,12 @@ frameworks/*/reports/raw/**
 frameworks/*/contexts/*
 !frameworks/*/contexts/README.md
 
+# Raw or rendered documentation snapshots may contain copyrighted pages or session data
+frameworks/*/docs/snapshots/*
+!frameworks/*/docs/snapshots/README.md
+frameworks/*/docs/parsed/*
+!frameworks/*/docs/parsed/README.md
+
 # Local source catalogs may expose repository structure and binary metadata
 frameworks/*/catalog/current.json
 frameworks/*/catalog/snapshots/*

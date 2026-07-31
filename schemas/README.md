@@ -1,5 +1,11 @@
 # 数据结构
 
+## v0.1.7 官方文档采集兼容扩展（在 v0.2.3 上补齐）
+
+- `docs-config.schema.json`、`docs-current.schema.json`、`docs-collection.schema.json`、`doc-snapshot.schema.json`、`doc-page.schema.json`、`parsed-docs.schema.json` 和 `docs-diff.schema.json` 约束文档源配置、采集指针、清单、原始快照元数据、结构化页面、当前解析结果与历史差异。
+- `component-knowledge.schema.json`、`documentation-conflicts.schema.json`、`documentation-coverage.schema.json` 和 `context-v2.schema.json` 约束多来源校验、冲突、覆盖率与最小 Context v2。
+- 快照路径必须为正斜杠相对路径；原始 HTML/Markdown 位于本地忽略目录。旧 baseline、errors、knowledge、context Schema 未收紧。
+
 ## v0.2.3
 
 - `learning-gaps.schema.json`、`learning-priorities.schema.json`

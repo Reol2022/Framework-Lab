@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0.0",
+  "frameworkId": "ncom",
+  "commit": "a350b576bbeae6c6254273037a17d2a8730fb80f",
+  "generatedAt": "2026-07-30T08:03:42.484Z",
+  "components": [
+    {
+      "component": "NCCard",
+      "attributeCount": 4,
+      "eventCount": 0,
+      "methodCount": 0,
+      "slotCount": 0,
+      "exampleCount": 1,
+      "codeBlockCount": 0,
+      "missingSections": [
+        "methods",
+        "slots"
+      ],
+      "parseWarnings": [],
+      "qualityStatus": "partial",
+      "conflictCount": 6
+    },
+    {
+      "component": "NCCheckbox",
+      "attributeCount": 2,
+      "eventCount": 1,
+      "methodCount": 0,
+      "slotCount": 0,
+      "exampleCount": 1,
+      "codeBlockCount": 0,
+      "missingSections": [
+        "methods",
+        "slots"
+      ],
+      "parseWarnings": [],
+      "qualityStatus": "partial",
+      "conflictCount": 7
+    },
+    {
+      "component": "NCColorPicker",
+      "attributeCount": 4,
+      "eventCount": 1,
+      "methodCount": 0,
+      "slotCount": 0,
+      "exampleCount": 1,
+      "codeBlockCount": 0,
+      "missingSections": [
+        "methods",
+        "slots"
+      ],
+      "parseWarnings": [],
+      "qualityStatus": "partial",
+      "conflictCount": 1
+    },
+    {
+      "component": "NCComplextTable",
+      "attributeCount": 12,
+      "eventCount": 7,
+      "methodCount": 20,
+      "slotCount": 0,
+      "exampleCount": 1,
+      "codeBlockCount": 0,
+      "missingSections": [
+        "slots"
+      ],
+      "parseWarnings": [],
+      "qualityStatus": "partial",
+      "conflictCount": 15
+    },
+    {
+      "component": "NCLayout",
+      "attributeCount": 3,
+      "eventCount": 1,
+      "methodCount": 0,
+      "slotCount": 5,
+      "exampleCount": 1,
+      "codeBlockCount": 0,
+      "missingSections": [
+        "methods",
+        "slots"
+      ],
+      "parseWarnings": [],
+      "qualityStatus": "partial",
+      "conflictCount": 17
+    },
+    {
+      "component": "NCMessage",
+      "attributeCount": 5,
+      "eventCount": 0,
+      "methodCount": 1,
+      "slotCount": 0,
+      "exampleCount": 1,
+      "codeBlockCount": 0,
+      "missingSections": [
+        "slots"
+      ],
+      "parseWarnings": [],
+      "qualityStatus": "partial",
+      "conflictCount": 6
+    },
+    {
+      "component": "NCPopconfirm",
+      "attributeCount": 7,
+      "eventCount": 2,
+      "methodCount": 0,
+      "slotCount": 0,
+      "exampleCount": 1,
+      "codeBlockCount": 0,
+      "missingSections": [
+        "methods",
+        "slots"
+      ],
+      "parseWarnings": [],
+      "qualityStatus": "partial",
+      "conflictCount": 4
+    },
+    {
+      "component": "NCWatermark",
+      "attributeCount": 7,
+      "eventCount": 0,
+      "methodCount": 0,
+      "slotCount": 1,
+      "exampleCount": 1,
+      "codeBlockCount": 0,
+      "missingSections": [
+        "methods",
+        "slots"
+      ],
+      "parseWarnings": [],
+      "qualityStatus": "partial",
+      "conflictCount": 0
+    }
+  ],
+  "summary": {
+    "componentCount": 8,
+    "complete": 0,
+    "partial": 8,
+    "empty": 0,
+    "failed": 0
+  }
+}

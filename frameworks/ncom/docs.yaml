@@ -1,0 +1,21 @@
+schema_version: 1.0.0
+sources:
+  - id: ncom-official-site
+    mode: auto
+    baseUrl: http://ncom.lab209.com/doc
+    entryPages:
+      - /component/overview
+    sourceType: official-doc
+  - id: ncom-repository-docs
+    mode: file
+    basePath: .framework-sources/ncom-a350b57/doc/api/components
+    entryPages:
+      - complexttable.md
+      - layout.md
+      - colorpicker.md
+      - popconfirm.md
+      - checkbox.md
+      - message.md
+      - card.md
+      - watermark.md
+    sourceType: official-doc

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://framework-lab.example/schemas/docs-current.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "frameworkId", "collectionId", "frameworkCommit", "rootHash", "updatedAt"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "frameworkId": { "type": "string", "minLength": 1 },
+    "collectionId": { "type": "string", "minLength": 1 },
+    "frameworkCommit": { "type": ["string", "null"], "pattern": "^[0-9a-f]{40}$" },
+    "rootHash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

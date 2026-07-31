@@ -11,7 +11,7 @@
   "scripts": {
     "framework-lab": "tsx cli/index.ts",
     "lint": "eslint cli test",
-    "test": "tsx --test test/framework-lab.test.ts test/errors.test.ts test/knowledge.test.ts test/catalog.test.ts test/symbols.test.ts test/retrieval.test.ts test/task.test.ts test/learn.test.ts test/learning-analysis.test.ts test/version.test.ts",
+    "test": "tsx --test test/framework-lab.test.ts test/errors.test.ts test/knowledge.test.ts test/catalog.test.ts test/symbols.test.ts test/retrieval.test.ts test/task.test.ts test/learn.test.ts test/learning-analysis.test.ts test/version.test.ts test/docs.test.ts",
     "typecheck": "tsc --noEmit",
     "build": "tsc -p tsconfig.build.json"
   },

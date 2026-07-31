@@ -4,6 +4,24 @@ Framework Lab 是一个面向 Coding Agent 的框架学习与验证工作流。�
 
 当前版本：`v0.2.3`
 
+## 官方文档采集与多来源校验（v0.1.7 兼容能力）
+
+当前 `v0.2.3` 保留全部后续功能，并补齐早期 v0.1.7 规划的文档采集能力；没有回退 package 版本。
+
+```powershell
+pnpm framework-lab docs collect ncom --source ncom-official-site
+pnpm framework-lab docs collect ncom --source ncom-repository-docs
+pnpm framework-lab docs parse ncom
+pnpm framework-lab docs inspect ncom --component Card
+pnpm framework-lab docs diff ncom <from-collection> <to-collection>
+pnpm framework-lab knowledge reconcile ncom
+pnpm framework-lab knowledge conflicts ncom --format markdown
+pnpm framework-lab knowledge coverage ncom
+pnpm framework-lab context build ncom --components NCCard,NCCheckbox
+```
+
+`auto` 采集先执行 HTTP，再依据正文、标题、代码块和组件数据判断质量；动态应用壳会触发 browser provider。浏览器 provider 可显式注入，也可使用 `FRAMEWORK_LAB_BROWSER` 或本机 Edge/Chrome 的 headless 模式；超时或不可用会记录失败，不会把 HTTP 200 当作有效文档。原始网页保存在本地忽略目录，仓库只保留可移植元数据、哈希、解析结果和脱敏报告。详见 [采集说明](docs/docs-collection.md) 与 [校验说明](docs/knowledge-reconciliation.md)。
+
 ## NCom 知识覆盖与多任务评测
 
 ```powershell

@@ -34,6 +34,9 @@ export interface FrameworkConfig {
   };
   stop_on_failure: boolean;
   baseline_steps: FrameworkStepConfig[];
+  docs?: {
+    sources: DocsSourceConfig[];
+  };
   analysis?: {
     typescript?: {
       componentDetection?: {
@@ -51,6 +54,17 @@ export interface FrameworkConfig {
       aliases?: Record<string, string[]>;
     };
   };
+}
+
+export type DocsMode = "http" | "browser" | "file" | "auto";
+
+export interface DocsSourceConfig {
+  id: string;
+  mode: DocsMode;
+  baseUrl?: string;
+  basePath?: string;
+  entryPages: string[];
+  sourceType?: "official-doc" | "official-example" | "test" | "runtime-record";
 }
 
 export interface GitSnapshot {
